@@ -146,6 +146,7 @@ public class pn_qm_and_ipqc_point_check_editor_screwdriver extends pn_editor {
             });
             if (!TextUtils.isEmpty(code)) {
                 button_text_cell_4.setContentText(code);
+
             } else {
                 code = sharedPreferences.getString("code", "");
                 button_text_cell_4.setContentText(code);
