@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="x15">28.8px</dimen>
+    <dimen name="x30">57.6px</dimen>
+    <dimen name="x40">60.79px</dimen>
+</resources>

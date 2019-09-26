@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dynsoft.xone.android.ui.CheckLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:src="@color/megmeet_green" />
+
+    <TextView
+        android:id="@+id/textview_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="5"
+        android:text="生产任务"
+        android:textColor="@color/blue" />
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:src="@color/megmeet_green" />
+
+    <TextView
+        android:id="@+id/textview_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="3"
+        android:text="线别"
+        android:textColor="@color/blue" />
+
+    <ImageView
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:src="@color/megmeet_green" />
+
+    <TextView
+        android:id="@+id/textview_3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="2"
+        android:text="工段"
+        android:textColor="@color/blue" />
+
+    <ImageView
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:src="@color/megmeet_green" />
+
+    <TextView
+        android:id="@+id/textview_4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="5"
+        android:text="工序"
+        android:textColor="@color/blue" />
+
+    <ImageView
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:src="@color/megmeet_green" />
+
+    <TextView
+        android:id="@+id/textview_5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="6"
+        android:text="作业人员"
+        android:textColor="@color/blue" />
+
+    <ImageView
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:src="@color/megmeet_green" />
+
+    <TextView
+        android:id="@+id/textview_6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="3"
+        android:text="上线时间"
+        android:textColor="@color/blue" />
+
+    <ImageView
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:src="@color/megmeet_green" />
+
+    <TextView
+        android:id="@+id/textview_7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="3"
+        android:text="离线时间"
+        android:textColor="@color/blue" />
+
+    <ImageView
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:src="@color/megmeet_green" />
+
+    <TextView
+        android:id="@+id/textview_8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="3"
+        android:text="累计工时(时)"
+        android:textColor="@color/blue" />
+
+    <ImageView
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:src="@color/megmeet_green" />
+
+    <TextView
+        android:id="@+id/textview_9"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="2"
+        android:text="状态"
+        android:textColor="@color/blue" />
+
+    <ImageView
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:src="@color/megmeet_green" />
+
+    <HorizontalScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="3"
+        android:scrollbars="none">
+
+        <TextView
+            android:id="@+id/textview_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="备注"
+            android:textColor="@color/blue" />
+    </HorizontalScrollView>
+
+    <ImageView
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:src="@color/megmeet_green" />
+</dynsoft.xone.android.ui.CheckLinearLayout>

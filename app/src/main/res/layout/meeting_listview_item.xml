@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/item_textview_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:paddingBottom="@dimen/card_text_size"
+        android:paddingTop="@dimen/card_text_size"
+        android:textSize="@dimen/header_footer_left_right_padding"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="@dimen/metting_line_size"
+        android:layout_height="match_parent"
+        android:src="@color/silver" />
+
+    <TextView
+        android:id="@+id/item_textview_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:paddingBottom="@dimen/card_text_size"
+        android:paddingTop="@dimen/card_text_size"
+        android:textSize="@dimen/header_footer_left_right_padding"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="@dimen/metting_line_size"
+        android:layout_height="match_parent"
+        android:src="@color/silver" />
+
+    <TextView
+        android:id="@+id/item_textview_3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:paddingBottom="@dimen/card_text_size"
+        android:paddingTop="@dimen/card_text_size"
+        android:textSize="@dimen/header_footer_left_right_padding"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="@dimen/metting_line_size"
+        android:layout_height="match_parent"
+        android:src="@color/silver" />
+
+    <TextView
+        android:id="@+id/item_textview_4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:paddingBottom="@dimen/card_text_size"
+        android:paddingTop="@dimen/card_text_size"
+        android:textSize="@dimen/header_footer_left_right_padding"
+        android:textStyle="bold" />
+
+</LinearLayout>

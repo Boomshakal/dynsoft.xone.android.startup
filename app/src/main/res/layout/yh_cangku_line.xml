@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:src="@color/black" />
+
+    <TextView
+        android:id="@+id/textview_1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="9"
+        android:gravity="center"
+        android:text="仓管员"
+        android:textColor="@color/black"
+        android:textSize="@dimen/indicator_corner_radius" />
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:src="@color/black" />
+
+    <TextView
+        android:id="@+id/textview_2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:text="今日未入"
+        android:textColor="@color/black"
+        android:textSize="@dimen/indicator_corner_radius" />
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:src="@color/black" />
+
+    <TextView
+        android:id="@+id/textview_3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:text="今日新增"
+        android:textColor="@color/black"
+        android:textSize="@dimen/indicator_corner_radius" />
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:src="@color/black" />
+
+    <TextView
+        android:id="@+id/textview_4"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:text="今日入库"
+        android:textColor="@color/black"
+        android:textSize="@dimen/indicator_corner_radius" />
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:src="@color/black" />
+
+    <TextView
+        android:id="@+id/textview_5"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:text="截止未入"
+        android:textColor="@color/black"
+        android:textSize="@dimen/indicator_corner_radius" />
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:src="@color/black" />
+
+    <TextView
+        android:id="@+id/textview_6"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:text="预警未入"
+        android:textColor="@color/black"
+        android:textSize="@dimen/indicator_corner_radius" />
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:src="@color/black" />
+
+    <TextView
+        android:id="@+id/textview_7"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:text="截至今日未发"
+        android:textColor="@color/black"
+        android:textSize="@dimen/indicator_corner_radius" />
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:src="@color/black" />
+
+    <TextView
+        android:id="@+id/textview_8"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:text="今日新增发料"
+        android:textColor="@color/black"
+        android:textSize="@dimen/indicator_corner_radius" />
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:src="@color/black" />
+
+    <TextView
+        android:id="@+id/textview_9"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:text="今日发料"
+        android:textColor="@color/black"
+        android:textSize="@dimen/indicator_corner_radius" />
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:src="@color/black" />
+
+    <TextView
+        android:id="@+id/textview_10"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:text="截至未发"
+        android:textColor="@color/black"
+        android:textSize="@dimen/indicator_corner_radius" />
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:src="@color/black" />
+
+    <TextView
+        android:id="@+id/textview_11"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:text="预警未发"
+        android:textColor="@color/black"
+        android:textSize="@dimen/indicator_corner_radius" />
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:src="@color/black" />
+
+    <TextView
+        android:id="@+id/textview_12"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:text="截止今日未盘"
+        android:textColor="@color/black"
+        android:textSize="@dimen/indicator_corner_radius" />
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:src="@color/black" />
+
+    <TextView
+        android:id="@+id/textview_13"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:text="今日盘点"
+        android:textColor="@color/black"
+        android:textSize="@dimen/indicator_corner_radius" />
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:src="@color/black" />
+
+    <TextView
+        android:id="@+id/textview_14"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:text="总条数"
+        android:textColor="@color/black"
+        android:textSize="@dimen/indicator_corner_radius" />
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:src="@color/black" />
+
+    <TextView
+        android:id="@+id/textview_15"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:text="总完成量"
+        android:textColor="@color/black"
+        android:textSize="@dimen/indicator_corner_radius" />
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:src="@color/black" />
+
+    <TextView
+        android:id="@+id/textview_16"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:text="总未完成量"
+        android:textColor="@color/black"
+        android:textSize="@dimen/indicator_corner_radius" />
+
+
+
+</LinearLayout>

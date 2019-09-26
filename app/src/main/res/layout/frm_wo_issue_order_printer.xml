@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+    
+    <dynsoft.xone.android.control.TextCell
+	    android:id="@+id/txt_server_cell"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"/>
+
+    <dynsoft.xone.android.control.TextCell
+        android:id="@+id/txt_printer_cell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    
+    <dynsoft.xone.android.control.TextCell
+        android:id="@+id/txt_code_cell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    
+    <dynsoft.xone.android.control.TextCell
+        android:id="@+id/txt_type_cell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    
+    <dynsoft.xone.android.control.DecimalCell
+        android:id="@+id/txt_copy_cell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    
+    <Button
+        android:id="@+id/btn_print"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:text="打印"
+        android:textSize="24sp" />
+    
+</LinearLayout>

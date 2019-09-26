@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/txt_lot_number"
+        android:text="序列号"
+        style="@style/style_work_textview"
+        android:layout_weight="3" />
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:src="@color/megmeet_green" />
+
+    <TextView
+        android:id="@+id/txt_bind_lot_number"
+        android:text="绑定序列号"
+        style="@style/style_work_textview"
+        android:layout_weight="3" />
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:src="@color/megmeet_green" />
+
+    <TextView
+        android:id="@+id/txt_result"
+        android:text="结果"
+        style="@style/style_work_textview"
+        android:layout_weight="2" />
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:src="@color/megmeet_green" />
+
+    <TextView
+        android:id="@+id/txt_work_time"
+        android:text="作业时间"
+        style="@style/style_work_textview"
+        android:layout_weight="2" />
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:src="@color/megmeet_green" />
+
+    <TextView
+        android:id="@+id/txt_worker"
+        android:text="作业员"
+        style="@style/style_work_textview"
+        android:layout_weight="2" />
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:src="@color/megmeet_green" />
+
+    <TextView
+        android:id="@+id/txt_cur_sequence"
+        android:text="工序"
+        style="@style/style_work_textview"
+        android:layout_weight="2" />
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:src="@color/megmeet_green" />
+
+    <TextView
+        android:id="@+id/txt_next_sequence"
+        android:text="后工序"
+        style="@style/style_work_textview"
+        android:layout_weight="2" />
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:src="@color/megmeet_green" />
+
+    <TextView
+        android:id="@+id/txt_task_order_code"
+        android:text="生产任务"
+        style="@style/style_work_textview"
+        android:layout_weight="3" />
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:src="@color/megmeet_green" />
+
+    <TextView
+        android:id="@+id/txt_item_code"
+        style="@style/style_work_textview"
+        android:text="产品名称"
+        android:layout_weight="4" />
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:src="@color/megmeet_green" />
+
+    <TextView
+        android:id="@+id/txt_work_line"
+        android:text="产线"
+        style="@style/style_work_textview"
+        android:layout_weight="2" />
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:src="@color/megmeet_green" />
+</LinearLayout>

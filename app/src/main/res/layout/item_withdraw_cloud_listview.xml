@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/txt_sn"
+        android:text="SN号"
+        style="@style/style_work_textview"
+        android:layout_weight="3" />
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:src="@color/megmeet_green" />
+
+    <TextView
+        android:id="@+id/txt_mac"
+        android:text="MAC地址"
+        style="@style/style_work_textview"
+        android:layout_weight="3" />
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:src="@color/megmeet_green" />
+
+    <TextView
+        android:id="@+id/txt_id"
+        android:text="设备ID"
+        style="@style/style_work_textview"
+        android:layout_weight="2" />
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:src="@color/megmeet_green" />
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:text="设备名称"
+        style="@style/style_work_textview"
+        android:layout_weight="2" />
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:src="@color/megmeet_green" />
+
+</LinearLayout>

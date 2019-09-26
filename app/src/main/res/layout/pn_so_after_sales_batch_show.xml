@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDFDFD"
+    android:orientation="vertical" >
+    
+     <dynsoft.xone.android.control.PaneHeader
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/body"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <dynsoft.xone.android.control.TextCell
+                android:id="@+id/txt_pc_nunber_cell"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <Button
+                android:id="@+id/txt_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <dynsoft.xone.android.control.TextCell
+                android:id="@+id/txt_customer_name_cell"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <dynsoft.xone.android.control.TextCell
+                android:id="@+id/txt_is_return_cell"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" /> 
+                
+            
+           <dynsoft.xone.android.control.TextCell
+            android:id="@+id/txt_sh_date_cell"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+            <dynsoft.xone.android.control.TextCell
+                android:id="@+id/txt_comment_cell"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <dynsoft.xone.android.control.TextCell
+                android:id="@+id/txt_quantity_cell"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <dynsoft.xone.android.control.TextCell
+                android:id="@+id/txt_item_code_cell"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <dynsoft.xone.android.control.TextCell
+                android:id="@+id/txt_datecode_cell"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <dynsoft.xone.android.control.TextCell
+                android:id="@+id/txt_storage_number_cell"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/chk_is_scrap"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+
+                <TextView
+                    android:text="打印绑定批次信息(测试)"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <CheckBox
+                    android:id="@+id/change_storage_number"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="更改储位"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10pt"
+                android:background="@color/yellow"
+                android:textColor="@color/green"
+                android:gravity="center"
+                android:text="批次信息"
+                ></TextView
+                >
+
+
+            <ListView
+                android:id="@+id/txt_item_main_cell"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+                
+             <!--<CheckBox
+	            android:id="@+id/chk_is_scrap"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginBottom="5dp"
+	            android:layout_marginLeft="80dp"
+	            android:text="打印外箱标签"
+	            android:textColor="#ff000000" ></CheckBox>-->
+
+            
+        </LinearLayout>
+
+    <dynsoft.xone.android.control.PaneFooter
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp" >
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:scaleType="fitCenter" />
+
+        <ImageButton
+            android:id="@+id/btn_commit"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:scaleType="fitCenter" />
+    </dynsoft.xone.android.control.PaneFooter>
+    
+</LinearLayout>

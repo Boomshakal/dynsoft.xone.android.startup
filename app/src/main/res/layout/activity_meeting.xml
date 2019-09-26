@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:alpha="0.8"-->
+        <!--android:background="@drawable/background" />-->
+
+    <ImageView
+        android:src="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:background="#2569d7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textSize="@dimen/ikahe_led_text_size"
+                android:text="MEGMEET"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:padding="@dimen/ikahe_led_text_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!--<ImageView-->
+                <!--android:layout_width="@dimen/metting_line_size"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:src="@color/black" />-->
+
+            <!--  android:layout_gravity="center" 文字居中-->
+            <TextView
+                android:id="@+id/text_view_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:lines="1"
+                android:textSize="@dimen/ikahe_led_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_view_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:paddingLeft="@dimen/activity_vertical_margin"
+                android:textSize="@dimen/ikahe_led_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_view_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:padding="@dimen/card_text_size"
+                android:paddingRight="@dimen/activity_vertical_margin"
+                android:textSize="@dimen/ikahe_led_text_size"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/metting_line_size"
+            android:src="@color/silver" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_view_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/card_text_size"
+                android:paddingLeft="@dimen/card_text_size"
+                android:paddingTop="@dimen/card_text_size"
+                android:textSize="@dimen/ikahe_led_text_size"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/metting_line_size"
+            android:src="@color/silver" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_view_5"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:paddingBottom="@dimen/card_text_size"
+                    android:paddingTop="@dimen/card_text_size"
+                    android:textSize="@dimen/header_footer_left_right_padding"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/metting_line_size"
+                    android:src="@color/silver" />
+
+                <TextView
+                    android:id="@+id/text_view_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="@dimen/ikahe_led_text_size" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="@dimen/metting_line_size"
+                android:layout_height="match_parent"
+                android:src="@color/silver" />
+
+            <ListView
+                android:id="@+id/list_view_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="9"
+                android:divider="@color/silver"
+                android:dividerHeight="@dimen/metting_line_size"></ListView>
+
+            <ImageView
+                android:layout_width="@dimen/metting_line_size"
+                android:layout_height="match_parent"
+                android:src="@color/silver" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_view_9"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="会议室基本配置"
+                    android:textSize="@dimen/header_footer_left_right_padding" />
+
+                <TextView
+                    android:id="@+id/text_view_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:lines="3"
+                    android:textSize="@dimen/ikahe_led_text_size"></TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/metting_line_size"
+            android:src="@color/silver" />
+
+        <TextView
+            android:id="@+id/text_view_7"
+            android:background="#477fdc"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="温馨提示：请大家爱护公物，会议结束后带走随身物品并关闭设备"
+            android:textSize="@dimen/ikahe_led_text_size" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/metting_line_size"
+            android:src="@color/silver" />
+    </LinearLayout>
+</FrameLayout>

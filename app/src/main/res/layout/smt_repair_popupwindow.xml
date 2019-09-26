@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/moccasin"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/megmeet_green"
+            android:gravity="center"
+            android:text="缺陷登记"
+            android:textColor="@color/white"
+            android:textSize="@dimen/header_footer_left_right_padding" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <dynsoft.xone.android.control.ButtonTextCell
+                android:id="@+id/text_cell_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></dynsoft.xone.android.control.ButtonTextCell>
+
+            <dynsoft.xone.android.control.ButtonTextCell
+                android:id="@+id/text_cell_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></dynsoft.xone.android.control.ButtonTextCell>
+
+            <dynsoft.xone.android.control.ButtonTextCell
+                android:id="@+id/text_cell_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></dynsoft.xone.android.control.ButtonTextCell>
+
+            <dynsoft.xone.android.control.ButtonTextCell
+                android:id="@+id/text_cell_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></dynsoft.xone.android.control.ButtonTextCell>
+
+            <dynsoft.xone.android.control.ButtonTextCell
+                android:id="@+id/text_cell_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></dynsoft.xone.android.control.ButtonTextCell>
+
+            <dynsoft.xone.android.control.ButtonTextCell
+                android:id="@+id/text_cell_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></dynsoft.xone.android.control.ButtonTextCell>
+
+            <dynsoft.xone.android.control.ButtonTextCell
+                android:id="@+id/text_cell_7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></dynsoft.xone.android.control.ButtonTextCell>
+
+            <dynsoft.xone.android.control.ButtonTextCell
+                android:id="@+id/text_cell_8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></dynsoft.xone.android.control.ButtonTextCell>
+
+            <dynsoft.xone.android.control.ButtonTextCell
+                android:id="@+id/text_cell_9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></dynsoft.xone.android.control.ButtonTextCell>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_textview"
+                android:clickable="true"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="取消"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
+
+            <TextView
+                android:id="@+id/confirm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_textview"
+                android:clickable="true"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="确定"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

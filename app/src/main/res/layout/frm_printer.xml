@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+    
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="15dp"
+        android:text="生产发料单"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+    
+    <dynsoft.xone.android.control.ButtonTextCell
+	    android:id="@+id/txt_server_cell"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"/>
+
+    <dynsoft.xone.android.control.TextCell
+	    android:id="@+id/txt_url_cell"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"/>
+    
+    <dynsoft.xone.android.control.ButtonTextCell
+        android:id="@+id/txt_printer_cell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <dynsoft.xone.android.control.DecimalCell
+        android:id="@+id/txt_copy_cell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    
+    <Button
+        android:id="@+id/btn_print"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:text="PRINT"
+        android:textSize="24sp" />
+    
+</LinearLayout>

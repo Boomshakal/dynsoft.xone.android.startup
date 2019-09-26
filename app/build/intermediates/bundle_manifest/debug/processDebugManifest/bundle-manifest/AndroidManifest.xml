@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="dynsoft.xone.android.core"
+    android:versionCode="1"
+    android:versionName="2019.09.06.1037" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="23" />
+
+    <!-- <uses-sdk -->
+    <!-- android:targetSdkVersion="19" /> -->
+    <!-- android:minSdkVersion="14" -->
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.NFC" />
+
+    <!-- 读内存卡权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- 使用网络功能所需权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <!-- SDK离线地图和cache功能需要读写外部存储器 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- 获取设置信息和详情页直接拨打电话需要以下权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <!-- 是否支持谷歌什么硬件一般可以忽略 -->
+    <uses-feature android:name="android.hardware.nfc" />
+
+    <application
+        android:name="dynsoft.xone.android.core.App"
+        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:icon="@drawable/logo"
+        android:label="MEGMEET移动企业管理平台"
+        android:testOnly="true"
+        android:theme="@android:style/Theme.NoTitleBar" >
+        <activity
+            android:name="dynsoft.xone.android.start.FrmLogin"
+            android:configChanges="locale|orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="dynsoft.xone.android.core.Workbench"
+            android:configChanges="locale|orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="dynsoft.xone.android.control.Calculator"
+            android:configChanges="locale|orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="dynsoft.xone.android.core.frm_printer"
+            android:configChanges="locale|orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="dynsoft.xone.android.wms.frm_item_lot_printer"
+            android:configChanges="locale|orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="dynsoft.xone.android.wms.frm_item_lot_printer_init"
+            android:configChanges="locale|orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="dynsoft.xone.android.activity.AlbumActivity"
+            android:configChanges="locale|orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="dynsoft.xone.android.activity.GalleryActivity"
+            android:configChanges="locale|orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="dynsoft.xone.android.activity.ImageFile"
+            android:configChanges="locale|orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="dynsoft.xone.android.activity.ShowAllPhoto"
+            android:configChanges="locale|orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="dynsoft.xone.android.wms.frm_wo_issue_order_printer"
+            android:configChanges="locale|orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="dynsoft.xone.android.activity.SopActivity"
+            android:configChanges="locale|orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="dynsoft.xone.android.sopactivity.LoadVideoActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="dynsoft.xone.android.activity.WIPActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="dynsoft.xone.android.sopactivity.SetParameterActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="dynsoft.xone.android.activity.WeldKanbanActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="dynsoft.xone.android.sopactivity.ScanTestActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="dynsoft.xone.android.activity.SMTOnPartActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="dynsoft.xone.android.sopactivity.CardRegistrationActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="dynsoft.xone.android.activity.CardRegistrationKeyActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="dynsoft.xone.android.activity.FirstKanbanActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="dynsoft.xone.android.activity.IKAHEKanbanActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="dynsoft.xone.android.sopactivity.WithdrawActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="dynsoft.xone.android.sopactivity.ProductionKanbanActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="dynsoft.xone.android.activity.MeetingActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="dynsoft.xone.android.activity.YhActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="dynsoft.xone.android.activity.YhcangkuActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="dynsoft.xone.android.activity.MesLightActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="dynsoft.xone.android.activity.RawMaterialKanbanActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="dynsoft.xone.android.sopactivity.LocationCheckActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="dynsoft.xone.android.sopactivity.CheckReportActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="dynsoft.xone.android.activity.ThirdKanbanActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="dynsoft.xone.android.activity.PostSkillActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="dynsoft.xone.android.activity.LightKanbanActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="dynsoft.xone.android.activity.ShortReportKanbanActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="dynsoft.xone.android.activity.PurchaseExamKanbanActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="dynsoft.xone.android.activity.FirstDepartmentKanbanActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="dynsoft.xone.android.activity.ThirdDepartmentKanbanActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="dynsoft.xone.android.activity.LocationCheckSMTActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="dynsoft.xone.android.ui.ImageShower"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="dynsoft.xone.android.activity.PatrolCardActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="dynsoft.xone.android.sopactivity.EmployeeMessageActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="dynsoft.xone.android.activity.MPSActivity"
+            android:screenOrientation="landscape" />
+        <activity android:name="dynsoft.xone.android.blueprint.Demo_ad_escActivity" />
+        <activity android:name="dynsoft.xone.android.blueprint.Demo_ad_escActivity2" />
+        <activity android:name="dynsoft.xone.android.blueprint.FaliaoStatusActivity" />
+        <activity android:name="dynsoft.xone.android.blueprint.ZaxiangStatusActivity" />
+        <activity android:name="dynsoft.xone.android.blueprint.ZhuankuStatusActivity" />
+    </application>
+
+</manifest>

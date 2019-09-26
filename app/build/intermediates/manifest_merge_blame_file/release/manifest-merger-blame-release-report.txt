@@ -1,0 +1,419 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="dynsoft.xone.android.core"
+4    android:versionCode="1"
+5    android:versionName="2019.09.06.1037" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="14"
+8-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="23" />
+9-->[com.bigkoo:pickerview:2.1.1] C:\Users\ThinkPad\.gradle\caches\transforms-2\files-2.1\62b141333b2ff8a4c50cbc033f3eb38d\pickerview-2.1.1\AndroidManifest.xml:9:9-38
+10
+11    <!-- <uses-sdk -->
+12    <!-- android:targetSdkVersion="19" /> -->
+13    <!-- android:minSdkVersion="14" -->
+14
+15    <uses-permission android:name="android.permission.CALL_PHONE" />
+15-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:11:5-69
+15-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:11:22-66
+16    <uses-permission android:name="android.permission.SEND_SMS" />
+16-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:12:5-67
+16-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:12:22-64
+17    <uses-permission android:name="android.permission.GET_TASKS" />
+17-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:13:5-68
+17-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:13:22-65
+18    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+18-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:14:5-71
+18-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:14:22-68
+19    <uses-permission android:name="android.permission.NFC" />
+19-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:15:5-62
+19-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:15:22-59
+20
+21    <!-- 读内存卡权限 -->
+22    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+22-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:18:5-80
+22-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:18:22-77
+23
+24    <!-- 使用网络功能所需权限 -->
+25    <uses-permission android:name="android.permission.INTERNET" />
+25-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:22:5-67
+25-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:22:22-64
+26    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+26-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:23:5-79
+26-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:23:22-76
+27    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+27-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:24:5-76
+27-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:24:22-73
+28    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+28-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:25:5-76
+28-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:25:22-73
+29
+30    <!-- SDK离线地图和cache功能需要读写外部存储器 -->
+31    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+31-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:28:5-81
+31-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:28:22-78
+32    <uses-permission android:name="android.permission.CAMERA" />
+32-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:29:5-65
+32-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:29:22-62
+33
+34    <!-- 获取设置信息和详情页直接拨打电话需要以下权限 -->
+35    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+35-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:32:5-75
+35-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:32:22-72
+36    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+36-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:33:5-79
+36-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:33:22-76
+37    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+37-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:34:5-81
+37-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:34:22-78
+38    <uses-permission android:name="android.permission.ACCESS_GPS" />
+38-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:35:5-69
+38-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:35:22-66
+39    <uses-permission android:name="android.permission.BLUETOOTH" />
+39-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:37:5-84
+39-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:37:22-65
+40    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+40-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:38:5-90
+40-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:38:22-71
+41
+42    <!-- 是否支持谷歌什么硬件一般可以忽略 -->
+43    <uses-feature android:name="android.hardware.nfc" />
+43-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:41:5-57
+43-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:41:19-54
+44
+45    <application
+45-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:43:5-238:19
+46        android:name="dynsoft.xone.android.core.App"
+46-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:44:9-53
+47        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+47-->[com.android.support:support-compat:28.0.0] C:\Users\ThinkPad\.gradle\caches\transforms-2\files-2.1\74a3e18f4a9d0d70080af4dd9eef513c\support-compat-28.0.0\AndroidManifest.xml:22:18-91
+48        android:icon="@drawable/logo"
+48-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:45:9-38
+49        android:label="MEGMEET移动企业管理平台"
+49-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:46:9-40
+50        android:theme="@android:style/Theme.NoTitleBar" >
+50-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:47:9-56
+51        <activity
+51-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:49:9-57:20
+52            android:name="dynsoft.xone.android.start.FrmLogin"
+52-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:50:13-63
+53            android:configChanges="locale|orientation|keyboardHidden"
+53-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:51:13-70
+54            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+54-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:52:13-72
+55            <intent-filter>
+55-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:53:13-56:29
+56                <action android:name="android.intent.action.MAIN" />
+56-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:54:17-69
+56-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:54:25-66
+57
+58                <category android:name="android.intent.category.LAUNCHER" />
+58-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:55:17-77
+58-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:55:27-74
+59            </intent-filter>
+60        </activity>
+61        <activity
+61-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:59:9-62:75
+62            android:name="dynsoft.xone.android.core.Workbench"
+62-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:60:13-63
+63            android:configChanges="locale|orientation|keyboardHidden"
+63-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:61:13-70
+64            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+64-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:62:13-72
+65        <activity
+65-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:64:9-67:75
+66            android:name="dynsoft.xone.android.control.Calculator"
+66-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:65:13-67
+67            android:configChanges="locale|orientation|keyboardHidden"
+67-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:66:13-70
+68            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+68-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:67:13-72
+69        <activity
+69-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:69:9-72:75
+70            android:name="dynsoft.xone.android.core.frm_printer"
+70-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:70:13-65
+71            android:configChanges="locale|orientation|keyboardHidden"
+71-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:71:13-70
+72            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+72-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:72:13-72
+73        <activity
+73-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:74:9-77:75
+74            android:name="dynsoft.xone.android.wms.frm_item_lot_printer"
+74-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:75:13-73
+75            android:configChanges="locale|orientation|keyboardHidden"
+75-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:76:13-70
+76            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+76-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:77:13-72
+77        <activity
+77-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:79:9-82:75
+78            android:name="dynsoft.xone.android.wms.frm_item_lot_printer_init"
+78-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:80:13-78
+79            android:configChanges="locale|orientation|keyboardHidden"
+79-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:81:13-70
+80            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+80-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:82:13-72
+81        <activity
+81-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:84:9-87:75
+82            android:name="dynsoft.xone.android.activity.AlbumActivity"
+82-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:85:13-71
+83            android:configChanges="locale|orientation|keyboardHidden"
+83-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:86:13-70
+84            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+84-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:87:13-72
+85        <activity
+85-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:89:9-92:75
+86            android:name="dynsoft.xone.android.activity.GalleryActivity"
+86-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:90:13-73
+87            android:configChanges="locale|orientation|keyboardHidden"
+87-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:91:13-70
+88            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+88-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:92:13-72
+89        <activity
+89-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:94:9-97:75
+90            android:name="dynsoft.xone.android.activity.ImageFile"
+90-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:95:13-67
+91            android:configChanges="locale|orientation|keyboardHidden"
+91-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:96:13-70
+92            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+92-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:97:13-72
+93        <activity
+93-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:99:9-102:75
+94            android:name="dynsoft.xone.android.activity.ShowAllPhoto"
+94-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:100:13-70
+95            android:configChanges="locale|orientation|keyboardHidden"
+95-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:101:13-70
+96            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+96-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:102:13-72
+97        <activity
+97-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:105:9-108:75
+98            android:name="dynsoft.xone.android.wms.frm_wo_issue_order_printer"
+98-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:106:13-79
+99            android:configChanges="locale|orientation|keyboardHidden"
+99-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:107:13-70
+100            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+100-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:108:13-72
+101        <activity
+101-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:111:9-117:75
+102            android:name="dynsoft.xone.android.activity.SopActivity"
+102-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:112:13-69
+103            android:configChanges="locale|orientation|keyboardHidden"
+103-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:113:13-70
+104            android:launchMode="singleTask"
+104-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:114:13-44
+105            android:screenOrientation="landscape"
+105-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:115:13-50
+106            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+106-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:116:13-77
+107            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+107-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:117:13-72
+108        <activity
+108-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:119:9-121:53
+109            android:name="dynsoft.xone.android.sopactivity.LoadVideoActivity"
+109-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:120:13-78
+110            android:screenOrientation="landscape" />
+110-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:121:13-50
+111        <activity
+111-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:123:9-125:53
+112            android:name="dynsoft.xone.android.activity.WIPActivity"
+112-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:124:13-69
+113            android:screenOrientation="landscape" />
+113-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:125:13-50
+114        <activity
+114-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:127:9-130:64
+115            android:name="dynsoft.xone.android.sopactivity.SetParameterActivity"
+115-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:128:13-81
+116            android:screenOrientation="landscape"
+116-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:129:13-50
+117            android:theme="@android:style/Theme.Translucent" />
+117-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:130:13-61
+118        <activity
+118-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:131:9-133:53
+119            android:name="dynsoft.xone.android.activity.WeldKanbanActivity"
+119-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:132:13-76
+120            android:screenOrientation="landscape" />
+120-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:133:13-50
+121        <activity
+121-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:135:9-138:86
+122            android:name="dynsoft.xone.android.sopactivity.ScanTestActivity"
+122-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:136:13-77
+123            android:screenOrientation="landscape"
+123-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:137:13-50
+124            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+124-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:138:13-83
+125        <activity
+125-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:139:9-141:53
+126            android:name="dynsoft.xone.android.activity.SMTOnPartActivity"
+126-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:140:13-75
+127            android:screenOrientation="landscape" />
+127-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:141:13-50
+128        <activity
+128-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:142:9-144:53
+129            android:name="dynsoft.xone.android.sopactivity.CardRegistrationActivity"
+129-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:143:13-85
+130            android:screenOrientation="landscape" />
+130-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:144:13-50
+131        <activity
+131-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:145:9-147:53
+132            android:name="dynsoft.xone.android.activity.CardRegistrationKeyActivity"
+132-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:146:13-85
+133            android:screenOrientation="landscape" />
+133-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:147:13-50
+134        <activity
+134-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:149:9-151:53
+135            android:name="dynsoft.xone.android.activity.FirstKanbanActivity"
+135-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:150:13-77
+136            android:screenOrientation="landscape" />
+136-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:151:13-50
+137        <activity
+137-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:153:9-155:53
+138            android:name="dynsoft.xone.android.activity.IKAHEKanbanActivity"
+138-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:154:13-77
+139            android:screenOrientation="landscape" />
+139-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:155:13-50
+140        <activity
+140-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:157:9-159:53
+141            android:name="dynsoft.xone.android.sopactivity.WithdrawActivity"
+141-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:158:13-77
+142            android:screenOrientation="landscape" />
+142-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:159:13-50
+143        <activity
+143-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:160:9-162:53
+144            android:name="dynsoft.xone.android.sopactivity.ProductionKanbanActivity"
+144-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:161:13-85
+145            android:screenOrientation="landscape" />
+145-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:162:13-50
+146        <activity
+146-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:164:9-167:80
+147            android:name="dynsoft.xone.android.activity.MeetingActivity"
+147-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:165:13-73
+148            android:screenOrientation="landscape"
+148-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:166:13-50
+149            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+149-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:167:13-77
+150        <activity
+150-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:169:9-171:53
+151            android:name="dynsoft.xone.android.activity.YhActivity"
+151-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:170:13-68
+152            android:screenOrientation="landscape" />
+152-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:171:13-50
+153        <activity
+153-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:173:9-175:53
+154            android:name="dynsoft.xone.android.activity.YhcangkuActivity"
+154-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:174:13-74
+155            android:screenOrientation="landscape" />
+155-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:175:13-50
+156        <activity
+156-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:177:9-179:53
+157            android:name="dynsoft.xone.android.activity.MesLightActivity"
+157-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:178:13-74
+158            android:screenOrientation="landscape" />
+158-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:179:13-50
+159        <activity
+159-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:181:9-183:53
+160            android:name="dynsoft.xone.android.activity.RawMaterialKanbanActivity"
+160-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:182:13-83
+161            android:screenOrientation="landscape" />
+161-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:183:13-50
+162        <activity
+162-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:185:9-187:53
+163            android:name="dynsoft.xone.android.sopactivity.LocationCheckActivity"
+163-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:186:13-82
+164            android:screenOrientation="landscape" />
+164-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:187:13-50
+165        <activity
+165-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:189:9-191:53
+166            android:name="dynsoft.xone.android.sopactivity.CheckReportActivity"
+166-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:190:13-80
+167            android:screenOrientation="landscape" />
+167-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:191:13-50
+168        <activity
+168-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:194:9-196:53
+169            android:name="dynsoft.xone.android.activity.ThirdKanbanActivity"
+169-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:195:13-77
+170            android:screenOrientation="landscape" />
+170-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:196:13-50
+171        <activity
+171-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:198:9-200:53
+172            android:name="dynsoft.xone.android.activity.PostSkillActivity"
+172-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:199:13-75
+173            android:screenOrientation="landscape" />
+173-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:200:13-50
+174        <activity
+174-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:202:9-204:62
+175            android:name="dynsoft.xone.android.activity.LightKanbanActivity"
+175-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:203:13-77
+176            android:screenOrientation="landscape" />
+176-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:204:13-50
+177        <activity
+177-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:206:9-208:62
+178            android:name="dynsoft.xone.android.activity.ShortReportKanbanActivity"
+178-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:207:13-83
+179            android:screenOrientation="landscape" />
+179-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:208:13-50
+180        <activity
+180-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:209:9-211:62
+181            android:name="dynsoft.xone.android.activity.PurchaseExamKanbanActivity"
+181-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:210:13-84
+182            android:screenOrientation="landscape" />
+182-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:211:13-50
+183        <activity
+183-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:212:9-214:53
+184            android:name="dynsoft.xone.android.activity.FirstDepartmentKanbanActivity"
+184-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:213:13-87
+185            android:screenOrientation="landscape" />
+185-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:214:13-50
+186        <activity
+186-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:215:9-217:53
+187            android:name="dynsoft.xone.android.activity.ThirdDepartmentKanbanActivity"
+187-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:216:13-87
+188            android:screenOrientation="landscape" />
+188-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:217:13-50
+189        <activity
+189-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:218:9-220:53
+190            android:name="dynsoft.xone.android.activity.LocationCheckSMTActivity"
+190-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:219:13-82
+191            android:screenOrientation="landscape" />
+191-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:220:13-50
+192        <activity
+192-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:221:9-223:53
+193            android:name="dynsoft.xone.android.ui.ImageShower"
+193-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:222:13-63
+194            android:screenOrientation="landscape" />
+194-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:223:13-50
+195        <activity
+195-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:224:9-226:53
+196            android:name="dynsoft.xone.android.activity.PatrolCardActivity"
+196-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:225:13-76
+197            android:screenOrientation="landscape" />
+197-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:226:13-50
+198        <activity
+198-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:227:9-229:53
+199            android:name="dynsoft.xone.android.sopactivity.EmployeeMessageActivity"
+199-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:228:13-84
+200            android:screenOrientation="landscape" />
+200-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:229:13-50
+201        <activity
+201-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:230:9-232:53
+202            android:name="dynsoft.xone.android.activity.MPSActivity"
+202-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:231:13-69
+203            android:screenOrientation="landscape" />
+203-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:232:13-50
+204        <activity android:name="dynsoft.xone.android.blueprint.Demo_ad_escActivity" />
+204-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:233:9-87
+204-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:233:19-84
+205        <activity android:name="dynsoft.xone.android.blueprint.Demo_ad_escActivity2" />
+205-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:234:9-88
+205-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:234:19-85
+206        <activity android:name="dynsoft.xone.android.blueprint.FaliaoStatusActivity" />
+206-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:235:9-88
+206-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:235:19-85
+207        <activity android:name="dynsoft.xone.android.blueprint.ZaxiangStatusActivity" />
+207-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:236:9-89
+207-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:236:19-86
+208        <activity android:name="dynsoft.xone.android.blueprint.ZhuankuStatusActivity" />
+208-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:237:9-89
+208-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:237:19-86
+209    </application>
+210
+211</manifest>

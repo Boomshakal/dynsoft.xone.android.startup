@@ -1,0 +1,118 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppTheme" parent="android:Theme.Light">
+    </style>
+    
+    <style name="line_label" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">#909090</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:gravity">right</item>
+        <item name="android:layout_width">80dp</item>
+        <item name="android:paddingRight">10dp</item>
+    </style>
+    
+    <style name="text_title" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">#E05000</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    
+    <style name="text_block" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+    
+    <style name="datetime_block" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+    
+    <style name="line_text_box" parent="@android:style/Widget.EditText">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <style name="transparent_dialog">
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:colorForeground">#000000</item>
+	</style>
+    
+     <style name="toast_style">
+        <item name="android:minHeight">50dp</item>
+        <item name="android:gravity">left|center</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">#bfbfbf</item>
+    </style>
+    
+     <style name="PopupAnimation" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/activity_translate_in</item>
+        <item name="android:windowExitAnimation">@anim/activity_translate_out</item>
+    </style>
+	
+	<style name="PopupAnimation1" parent="android:Animation" mce_bogus="1">          
+        <item name="android:windowEnterAnimation">@anim/popup_enter</item>     
+        <item name="android:windowExitAnimation">@anim/popup_exit</item>     
+    </style> 
+    
+	
+	<style name="megmeet_ratingbar" parent="@android:style/Widget.RatingBar">
+    <item name="android:progressDrawable">@drawable/bg_light_star</item>
+    <item name="android:minHeight">64dp</item>
+    <item name="android:maxHeight">96dp</item>
+    </style>
+
+	<style name="style_light_textview">
+    <item name="android:layout_gravity">center</item>
+    <item name="android:gravity">center</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:textColor">@color/black</item>
+    <item name="android:textSize">@dimen/x30</item>
+</style>
+
+    <style name="style_smt_on_part_list">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/kanban_text_size</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="style_popup_smt_on_part_text">
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="style_wip_list">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/card_text_size_d</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="style_work_textview">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/ikahe_card_text_size</item>
+    </style>
+
+
+</resources>

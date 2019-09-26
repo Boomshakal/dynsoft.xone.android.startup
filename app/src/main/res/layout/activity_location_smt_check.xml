@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <GridView
+            android:id="@+id/gridview_location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:numColumns="3"></GridView>
+
+        <RadioGroup
+            android:id="@+id/location_radiogroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/card_text_size">
+
+            <RadioButton
+                android:id="@+id/radiobutton_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="单层"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/radiobutton_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/card_text_size"
+                android:text="多层"
+                android:textColor="@color/black" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@color/black" />
+
+    <include layout="@layout/location_smt_header_item" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@color/black" />
+
+    <ListView
+        android:id="@+id/listview_location_1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></ListView>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:src="@color/black" />
+
+    <ListView
+        android:id="@+id/listview_location_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+</LinearLayout>

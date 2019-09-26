@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/item_post_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--<TextView-->
+            <!--android:id="@+id/textview_worker_name"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="3"-->
+            <!--android:background="textview_border"-->
+            <!--android:textSize="@dimen/x15" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/textview_plugin"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="2"-->
+            <!--android:background="textview_border"-->
+            <!--android:textSize="@dimen/x15" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/textview_appea_position"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="2"-->
+            <!--android:background="textview_border"-->
+            <!--android:textSize="@dimen/x15" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/textview_wave_solder"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="2"-->
+            <!--android:background="textview_border"-->
+            <!--android:textSize="@dimen/x15" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/textview_repair_weld"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="2"-->
+            <!--android:background="textview_border"-->
+            <!--android:textSize="@dimen/x15" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/textview_high_pressure"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="2"-->
+            <!--android:background="textview_border"-->
+            <!--android:textSize="@dimen/x15" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/textview_ict"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="2"-->
+            <!--android:background="textview_border"-->
+            <!--android:textSize="@dimen/x15" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/textview_aoi"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="2"-->
+            <!--android:background="textview_border"-->
+            <!--android:textSize="@dimen/x15" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/textview_function_test"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="2"-->
+            <!--android:background="textview_border"-->
+            <!--android:textSize="@dimen/x15" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/textview_package"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="2"-->
+            <!--android:background="textview_border"-->
+            <!--android:textSize="@dimen/x15" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/textview_ultrasonic"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="2"-->
+            <!--android:background="textview_border"-->
+            <!--android:textSize="@dimen/x15" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/textview_sub_board_machine"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="2"-->
+            <!--android:background="textview_border"-->
+            <!--android:textSize="@dimen/x15" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/textview_dispenser"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="2"-->
+            <!--android:background="textview_border"-->
+            <!--android:textSize="@dimen/x15" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/textview_5s"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="2"-->
+            <!--android:background="textview_border"-->
+            <!--android:textSize="@dimen/x15" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/textview_lean_production"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="2"-->
+            <!--android:background="textview_border"-->
+            <!--android:textSize="@dimen/x15" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/textview_comment"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="2"-->
+            <!--android:background="textview_border"-->
+            <!--android:textSize="@dimen/x15" />-->
+    </LinearLayout>
+
+</LinearLayout>

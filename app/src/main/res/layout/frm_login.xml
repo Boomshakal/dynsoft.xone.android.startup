@@ -1,0 +1,317 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4A87EE"
+    android:orientation="vertical"
+    tools:context=".FrmLogin" >
+
+   <LinearLayout
+        android:layout_width="wrap_content"
+   	    android:layout_height="wrap_content"
+   	    android:layout_gravity="center_horizontal"
+   	    android:orientation="vertical"
+   	    android:paddingTop="5dp"
+   	    android:paddingBottom="10dp">
+
+        <TextView
+	        android:id="@+id/lblTitle"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:textColor="#FFFFFF"
+	        android:text="MEGMEET"
+	        android:textSize="24sp"
+	        android:textStyle="bold"/>
+
+        <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_horizontal"
+	        android:text="企业移动应用平台"
+	        android:textColor="#FFFFFF"
+	        android:textSize="14sp" />
+        
+        <TextView
+	        android:id="@+id/txtVersion"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_horizontal"
+	        android:text="v1.0.0.0"
+	        android:textColor="#FFFFFF"
+	        android:textSize="14sp" />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+	    
+        <ScrollView
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:background="#F0F0F0"
+	        android:layout_weight="1">
+            
+            <LinearLayout
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="vertical">
+	            
+                <LinearLayout
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:orientation="vertical"
+			        android:background="@drawable/bg_line_editable">
+		
+                    <LinearLayout
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:paddingTop="5dp"
+				        android:paddingBottom="5dp"
+				        android:layout_gravity="center_horizontal">
+                        
+                        <TextView
+				            style="@style/line_label"
+				            android:id="@+id/lblServer"
+				            android:layout_height="wrap_content"
+				            android:layout_gravity="center_vertical"
+				            android:text="@string/frm_login_server" />
+				
+				        <EditText
+				            android:id="@+id/txtServer"
+				            android:layout_width="432dp"
+				            android:layout_height="wrap_content"
+				            android:layout_weight="1"
+				            android:layout_marginRight="5dp"
+				            android:background="@drawable/bg_textbox_editable"
+				            android:layout_gravity="center_vertical"
+				            style="@style/line_text_box">
+				
+				            <requestFocus />
+				        </EditText>
+			        
+                    </LinearLayout>
+				</LinearLayout>
+			
+		        <LinearLayout
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:orientation="vertical"
+			        android:background="@drawable/bg_line_editable" >
+			
+		            <LinearLayout
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:paddingTop="5dp"
+				        android:paddingBottom="5dp"
+				        android:layout_gravity="center_horizontal">
+		                
+		                <TextView
+				            style="@style/line_label"
+				            android:id="@+id/lblPort"
+				            android:layout_height="wrap_content"
+				            android:layout_gravity="center_vertical"
+				            android:text="@string/frm_login_port" />
+				
+				        <EditText
+				            android:id="@+id/txtPort"
+				            android:layout_width="432dp"
+				            android:layout_height="wrap_content"
+				            android:layout_weight="1"
+				            android:layout_marginRight="5dp"
+				            android:background="@drawable/bg_textbox_editable"
+				            android:layout_gravity="center_vertical"
+				            style="@style/line_text_box">
+				
+				        </EditText>
+			        
+		            </LinearLayout>
+			    </LinearLayout>
+			    
+		        <LinearLayout
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:orientation="vertical"
+			        android:background="@drawable/bg_line_editable">
+		
+		            <LinearLayout
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:paddingTop="5dp"
+				        android:paddingBottom="5dp"
+				        android:layout_gravity="center_horizontal">
+		                
+		                <TextView
+				            style="@style/line_label"
+				            android:id="@+id/lblBook"
+				            android:layout_height="wrap_content"
+				            android:layout_gravity="center_vertical"
+				            android:text="@string/frm_login_book" />
+				
+				        <EditText
+				            android:id="@+id/txtBook"
+				            android:layout_width="400dp"
+				            android:layout_height="wrap_content"
+				            android:layout_weight="1"
+				            android:layout_marginRight="5dp"
+				            android:background="@drawable/bg_textbox_editable"
+				            android:layout_gravity="center_vertical"
+				            android:editable="false"
+				            style="@style/line_text_box">
+				
+				        </EditText>
+			
+				        <ImageButton
+		                    android:id="@+id/btnBook"
+		                    android:layout_width="32dp"
+		                    android:layout_height="32dp"
+		                    android:background="#FFFFFF"
+		                    android:scaleType="fitCenter"
+		                    android:layout_marginRight="5dp"
+		                    android:src="@drawable/img_down"/>
+			        
+		            </LinearLayout>
+				</LinearLayout>
+				
+			    <LinearLayout
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:orientation="vertical"
+			        android:background="@drawable/bg_line_editable" >
+			
+			        <LinearLayout
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:paddingTop="5dp"
+				        android:paddingBottom="5dp"
+				        android:layout_gravity="center_horizontal">
+			            
+			            <TextView
+				            style="@style/line_label"
+				            android:id="@+id/lblUser"
+				            android:layout_height="wrap_content"
+				            android:layout_gravity="center_vertical"
+				            android:text="@string/frm_login_user" />
+				
+				        <EditText
+				            android:id="@+id/txtUser"
+				            android:layout_width="432dp"
+				            android:layout_height="wrap_content"
+				            android:layout_weight="1"
+				            android:layout_marginRight="5dp"
+				            android:background="@drawable/bg_textbox_editable"
+				            android:layout_gravity="center_vertical"
+				            style="@style/line_text_box" />
+			        
+			        </LinearLayout>
+			    </LinearLayout>
+			    
+			   	<LinearLayout
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:orientation="vertical"
+			        android:background="@drawable/bg_line_editable" >
+			
+			   	    <LinearLayout
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:paddingTop="5dp"
+				        android:paddingBottom="5dp"
+				        android:layout_gravity="center_horizontal">
+			   	        
+			   	        <TextView
+				            style="@style/line_label"
+				            android:id="@+id/lblPassword"
+				            android:layout_height="wrap_content"
+				            android:layout_gravity="center_vertical"
+				            android:text="@string/frm_login_pwd" />
+				
+				        <EditText
+				            android:id="@+id/txtPassword"
+				            android:layout_width="432dp"
+				            android:layout_height="wrap_content"
+				            android:layout_weight="1"
+				            android:layout_marginRight="5dp"
+				            android:background="@drawable/bg_textbox_editable"
+				            android:inputType="textPassword"
+				            android:layout_gravity="center_vertical"
+				            style="@style/line_text_box"/>
+			        
+			   	    </LinearLayout>
+			    </LinearLayout>
+			    
+			   	<LinearLayout
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:orientation="vertical"
+			        android:background="@drawable/bg_line_editable" >
+			
+			   	    <LinearLayout
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:paddingTop="5dp"
+				        android:paddingBottom="5dp"
+				        android:layout_gravity="center_horizontal">
+			   	        
+			   	        <TextView
+				            style="@style/line_label"
+				            android:id="@+id/lblRemember"
+				            android:layout_height="wrap_content"
+				            android:layout_gravity="center_vertical"
+				            android:text="@string/frm_login_remember" />
+			   	    
+			   	        <TextView
+			   	            android:layout_width="400dp"
+				            android:layout_height="wrap_content"
+				            android:layout_marginRight="5dp"
+				            android:layout_weight="1"/>
+			   	        
+				   	    <ToggleButton
+			                android:id="@+id/chkRemember"
+			                android:layout_width="32dp"
+			                android:layout_height="32dp"
+			                android:layout_marginRight="5dp"
+			                android:layout_gravity="center_horizontal"
+			                android:background="@drawable/bg_checkbox"
+			                android:textOn=""
+			                android:textOff=""/>
+			   	    
+			   	    </LinearLayout>
+			    </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        
+    </LinearLayout>
+
+   <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+        
+        <ImageButton
+            android:id="@+id/btnExit"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_exit" />
+
+        <ImageButton
+            android:id="@+id/btnLogin"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_login" />
+            
+    </LinearLayout>
+	     
+</LinearLayout>

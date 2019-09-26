@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:src="@color/black" />
+
+    <TextView
+        android:id="@+id/text_view_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:paddingBottom="@dimen/ikahe_listview_card_text_size"
+        android:paddingTop="@dimen/ikahe_listview_card_text_size"
+        android:text="线体"
+        android:textColor="@color/black"
+        android:textSize="@dimen/ikahe_led_text_size" />
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:src="@color/black" />
+
+    <TextView
+        android:id="@+id/text_view_2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:clickable="true"
+        android:gravity="center"
+        android:paddingBottom="@dimen/ikahe_listview_card_text_size"
+        android:paddingTop="@dimen/ikahe_listview_card_text_size"
+        android:text="0-30天"
+        android:textColor="@color/black"
+        android:textSize="@dimen/ikahe_led_text_size" />
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:src="@color/black" />
+
+    <TextView
+        android:id="@+id/text_view_3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:clickable="true"
+        android:gravity="center"
+        android:paddingBottom="@dimen/ikahe_listview_card_text_size"
+        android:paddingTop="@dimen/ikahe_listview_card_text_size"
+        android:text="30-60天"
+        android:textColor="@color/black"
+        android:textSize="@dimen/ikahe_led_text_size" />
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:src="@color/black" />
+
+    <TextView
+        android:id="@+id/text_view_4"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:clickable="true"
+        android:gravity="center"
+        android:paddingBottom="@dimen/ikahe_listview_card_text_size"
+        android:paddingTop="@dimen/ikahe_listview_card_text_size"
+        android:text="60-100天"
+        android:textColor="@color/black"
+        android:textSize="@dimen/ikahe_led_text_size" />
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:src="@color/black" />
+
+    <TextView
+        android:id="@+id/text_view_5"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:clickable="true"
+        android:gravity="center"
+        android:paddingBottom="@dimen/ikahe_listview_card_text_size"
+        android:paddingTop="@dimen/ikahe_listview_card_text_size"
+        android:text="100-200天"
+        android:textColor="@color/black"
+        android:textSize="@dimen/ikahe_led_text_size" />
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:src="@color/black" />
+
+    <TextView
+        android:id="@+id/text_view_6"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:clickable="true"
+        android:gravity="center"
+        android:paddingBottom="@dimen/ikahe_listview_card_text_size"
+        android:paddingTop="@dimen/ikahe_listview_card_text_size"
+        android:text="200天以上"
+        android:textColor="@color/black"
+        android:textSize="@dimen/ikahe_led_text_size" />
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:src="@color/black" />
+
+    <TextView
+        android:id="@+id/text_view_7"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:clickable="true"
+        android:gravity="center"
+        android:paddingBottom="@dimen/ikahe_listview_card_text_size"
+        android:paddingTop="@dimen/ikahe_listview_card_text_size"
+        android:text="合计"
+        android:textColor="@color/black"
+        android:textSize="@dimen/ikahe_led_text_size" />
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:src="@color/black" />
+</LinearLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="@dimen/card_text_size"
+                android:src="@drawable/megmeet_logo" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="生产三部车间总看板"
+                android:textColor="@color/black"
+                android:textSize="@dimen/led_text_size1" />
+
+            <TextView
+                android:id="@+id/textview_time"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/card_text_size"
+                android:paddingRight="@dimen/card_text_size"
+                android:text="时间:2018年4月9日"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radiobutton_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/bg_radiobutton"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="各线体生产看板"
+                android:textColor="@color/black"
+                android:textSize="@dimen/ikahe_led_text_size" />
+
+            <RadioButton
+                android:id="@+id/radiobutton_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/bg_radiobutton"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="WIP数据"
+                android:textColor="@color/black"
+                android:textSize="@dimen/ikahe_led_text_size" />
+
+            <RadioButton
+                android:id="@+id/radiobutton_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/bg_radiobutton"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="OQC检验实时数据"
+                android:textColor="@color/black"
+                android:textSize="@dimen/ikahe_led_text_size" />
+        </RadioGroup>
+
+        <ImageView
+            android:src="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <dynsoft.xone.android.zoom.ViewPagerFixed
+            android:id="@+id/viewpager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></dynsoft.xone.android.zoom.ViewPagerFixed>
+    </LinearLayout>
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/imageview_left"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/imageview_right"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content" />-->
+    <!--</RelativeLayout>-->
+</FrameLayout>

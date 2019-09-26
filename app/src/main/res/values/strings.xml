@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="pane"/>
+    <item type="id" name="element"/>
+    
+    <string name="frm_login_lang">语言</string>
+    <string name="frm_login_net">网络</string>
+    <string name="frm_login_net_lan">内网</string>
+    <string name="frm_login_net_wan">外网</string>
+    <string name="frm_login_server">服务器</string>
+    <string name="frm_login_port">端口</string>
+    <string name="frm_login_book">环境</string>
+    <string name="frm_login_user">用户</string>
+    <string name="frm_login_pwd">密码</string>
+    <string name="frm_login_remember">记住登录</string>
+    <string name="frm_login_dynsoft">深圳市华讯软件技术有限公司</string>
+    <string name="frm_login_logining">正在登录</string>
+    <string name="frm_login_lang_selector">选择语言</string>
+    <string name="frm_login_net_selector">选择网络</string>
+    <string name="frm_login_book_selector">选择账套</string>
+    <string name="frm_login_cancel">取消</string>
+    <string name="frm_login_miss_network">请选择网络</string>
+    <string name="frm_login_miss_server">请输入服务器</string>
+    <string name="frm_login_miss_port">请输入端口</string>
+    <string name="frm_login_miss_book">请选择账套</string>
+    <string name="frm_login_miss_user">请输入用户名</string>
+    <string name="load_footer_text">更多...</string>
+       <!-- 图片浏览 -->
+    <string name="only_choose_num">超出可选图片张数</string>
+    <string name="finish">完成</string>
+    <string name="invalidSD">sdcard无效或没有插入！</string>
+    <string name="photo">选择相册</string>
+    <string name="preview">预览</string>
+    <string name="unfinished">完成</string> 
+    <string name="camera_cancel">取消</string>
+    <string name="no_photo">相册没有图片</string>
+    <string name="album">相册</string>
+    
+    <string name="loadvideoactivity">加载视频</string>
+	<string name="setparameteractivity">MES参数</string>
+	<string name="scantestactivity">MES扫描</string>
+	<string name="cardregistrationactivity">打卡登记</string>
+	<string name="productionkanbanactivity">生产看板</string>
+	<string name="locationcheckactivity">定位检查</string>
+    <string name="checkreportactivity">功能测试</string>
+	<string name="withdrawactivity">撤回条码记录</string>
+    <string name="employeemessageactivity">打卡人员信息</string>
+
+</resources>

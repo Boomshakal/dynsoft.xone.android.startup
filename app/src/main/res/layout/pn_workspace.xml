@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+ 	<dynsoft.xone.android.control.PaneHeader
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+ 	<ScrollView
+ 	    android:id="@+id/scroll"
+ 	    android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F0F0F0"
+        android:layout_weight="1">
+        
+ 	    <LinearLayout
+ 	        android:id="@+id/body"
+ 	        android:orientation="vertical"
+ 	        android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            
+ 	        <dynsoft.xone.android.control.TreeViewItem
+		        android:id="@+id/tvi_mm_po_shipment"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" />
+ 	        
+ 	        <dynsoft.xone.android.control.TreeViewItem
+		        android:id="@+id/tvi_mm_po_receive"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" />
+		
+		    <dynsoft.xone.android.control.TreeViewItem
+		        android:id="@+id/tvi_mm_po_accept"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" />
+		    
+		    <dynsoft.xone.android.control.TreeViewItem
+		        android:id="@+id/tvi_mm_po_reject"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" />
+		    
+		    <dynsoft.xone.android.control.TreeViewItem
+		        android:id="@+id/tvi_mm_po_entry"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" />
+		    
+		    <dynsoft.xone.android.control.TreeViewItem
+                android:id="@+id/tvi_mm_po_return"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+	 	</LinearLayout>
+ 	</ScrollView>
+
+   <dynsoft.xone.android.control.PaneFooter
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+       
+        <ImageButton
+            android:id="@+id/btn_exit"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_exit" />
+
+
+        <ImageButton
+            android:id="@+id/btn_info"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_about" />
+
+    </dynsoft.xone.android.control.PaneFooter>
+    
+</LinearLayout>

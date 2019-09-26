@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <GridView
+            android:id="@+id/gridview"
+            android:numColumns="2"
+            android:background="@color/megmeet_green"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></GridView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:padding="@dimen/x15"
+        android:background="@color/lightblue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/barchart_1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"></com.github.mikephil.charting.charts.BarChart>
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/barchart_2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"></com.github.mikephil.charting.charts.BarChart>
+    </LinearLayout>
+</LinearLayout>

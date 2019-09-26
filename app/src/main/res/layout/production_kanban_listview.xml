@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="left|center_horizontal"
+            android:paddingLeft="10dp"
+            android:text="生产工单:"
+            android:textColor="@color/black"
+            android:textSize="@dimen/activity_vertical_margin" />
+
+        <TextView
+            android:id="@+id/textview_code"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/activity_vertical_margin" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="left|center_horizontal"
+            android:paddingLeft="10dp"
+            android:text="标准人力:"
+            android:textColor="@color/black"
+            android:textSize="@dimen/activity_vertical_margin" />
+
+        <TextView
+            android:id="@+id/textview_men"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/activity_vertical_margin" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="left|center_horizontal"
+            android:paddingLeft="10dp"
+            android:text="实际人力:"
+            android:textColor="@color/black"
+            android:textSize="@dimen/activity_vertical_margin" />
+
+        <TextView
+            android:id="@+id/textview_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/activity_vertical_margin" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@color/black" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:scrollbars="none">
+
+        <TextView
+            android:id="@+id/textview_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:textSize="@dimen/activity_vertical_margin" />
+    </HorizontalScrollView>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="left|center_horizontal"
+            android:paddingLeft="10dp"
+            android:text="生产节拍时间"
+            android:textColor="@color/black"
+            android:textSize="@dimen/activity_vertical_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="right|center_horizontal"
+            android:paddingRight="10dp"
+            android:text="TAKT TIME:"
+            android:textColor="@color/black"
+            android:textSize="@dimen/activity_vertical_margin" />
+
+        <ImageView
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:src="@color/black" />
+
+
+        <EditText
+            android:id="@+id/edittext"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_bg"
+            android:gravity="right|center_horizontal"
+            android:padding="2dp"
+            android:textSize="@dimen/activity_vertical_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="SEC"
+            android:textColor="@color/black"
+            android:textSize="@dimen/activity_vertical_margin" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="left|center_horizontal"
+            android:paddingLeft="10dp"
+            android:text="计划产量"
+            android:textColor="@color/black"
+            android:textSize="@dimen/activity_vertical_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="right|center_horizontal"
+            android:paddingRight="10dp"
+            android:text="DAILY PLAN QTY:"
+            android:textColor="@color/black"
+            android:textSize="@dimen/activity_vertical_margin" />
+
+        <ImageView
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:src="@color/black" />
+
+
+        <EditText
+            android:id="@+id/edittext_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_bg"
+            android:gravity="right|center_horizontal"
+            android:padding="2dp"
+            android:textSize="@dimen/activity_vertical_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="PCS"
+            android:textColor="@color/black"
+            android:textSize="@dimen/activity_vertical_margin" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="left|center_horizontal"
+            android:paddingLeft="10dp"
+            android:text="包装数量"
+            android:textColor="@color/black"
+            android:textSize="@dimen/activity_vertical_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="right|center_horizontal"
+            android:paddingRight="10dp"
+            android:text="ACCUMULATE QTY:"
+            android:textColor="@color/black"
+            android:textSize="@dimen/activity_vertical_margin" />
+
+        <ImageView
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:src="@color/black" />
+
+        <EditText
+            android:id="@+id/edittext_2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_bg"
+            android:gravity="right|center_horizontal"
+            android:padding="2dp"
+            android:textSize="@dimen/activity_vertical_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="PCS"
+            android:textColor="@color/black"
+            android:textSize="@dimen/activity_vertical_margin" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="left|center_horizontal"
+            android:paddingLeft="10dp"
+            android:text="目标产能"
+            android:textColor="@color/black"
+            android:textSize="@dimen/activity_vertical_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="right|center_horizontal"
+            android:paddingRight="10dp"
+            android:text="TARGET QTY:"
+            android:textColor="@color/black"
+            android:textSize="@dimen/activity_vertical_margin" />
+
+        <ImageView
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:src="@color/black" />
+
+        <EditText
+            android:id="@+id/edittext_3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_bg"
+            android:gravity="right|center_horizontal"
+            android:padding="2dp"
+            android:textSize="@dimen/activity_vertical_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="PCS"
+            android:textColor="@color/black"
+            android:textSize="@dimen/activity_vertical_margin" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="left|center_horizontal"
+            android:paddingLeft="10dp"
+            android:text="平均产能"
+            android:textColor="@color/black"
+            android:textSize="@dimen/activity_vertical_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="right|center_horizontal"
+            android:paddingRight="10dp"
+            android:text="AVERAGE QTY:"
+            android:textColor="@color/black"
+            android:textSize="@dimen/activity_vertical_margin" />
+
+        <ImageView
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:src="@color/black" />
+
+        <EditText
+            android:id="@+id/edittext_4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_bg"
+            android:gravity="right|center_horizontal"
+            android:padding="2dp"
+            android:textSize="@dimen/activity_vertical_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="PCS"
+            android:textColor="@color/black"
+            android:textSize="@dimen/activity_vertical_margin" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="left|center_horizontal"
+            android:paddingLeft="10dp"
+            android:text="实时产能"
+            android:textColor="@color/black"
+            android:textSize="@dimen/activity_vertical_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="right|center_horizontal"
+            android:paddingRight="10dp"
+            android:text="REAL TIME QTY:"
+            android:textColor="@color/black"
+            android:textSize="@dimen/activity_vertical_margin" />
+
+        <ImageView
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:src="@color/black" />
+
+        <EditText
+            android:id="@+id/edittext_5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_bg"
+            android:gravity="right|center_horizontal"
+            android:padding="2dp"
+            android:textSize="@dimen/activity_vertical_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="PCS"
+            android:textColor="@color/black"
+            android:textSize="@dimen/activity_vertical_margin" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="left|center_horizontal"
+            android:paddingLeft="10dp"
+            android:text="投入差异"
+            android:textColor="@color/black"
+            android:textSize="@dimen/activity_vertical_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="right|center_horizontal"
+            android:lines="1"
+            android:paddingRight="10dp"
+            android:text="INPUT VARIANCE QTY:"
+            android:textColor="@color/black"
+            android:textSize="@dimen/activity_vertical_margin" />
+
+        <ImageView
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:src="@color/black" />
+
+        <EditText
+            android:id="@+id/edittext_6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_bg"
+            android:gravity="right|center_horizontal"
+            android:padding="2dp"
+            android:textSize="@dimen/activity_vertical_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="PCS"
+            android:textColor="@color/black"
+            android:textSize="@dimen/activity_vertical_margin" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="left|center_horizontal"
+            android:paddingLeft="10dp"
+            android:text="不良总数"
+            android:textColor="@color/black"
+            android:textSize="@dimen/activity_vertical_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="right|center_horizontal"
+            android:paddingRight="10dp"
+            android:text="FAILURE QTY:"
+            android:textColor="@color/black"
+            android:textSize="@dimen/activity_vertical_margin" />
+
+        <ImageView
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:src="@color/black" />
+
+        <EditText
+            android:id="@+id/edittext_7"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_bg"
+            android:gravity="right|center_horizontal"
+            android:padding="2dp"
+            android:textSize="@dimen/activity_vertical_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="PCS"
+            android:textColor="@color/black"
+            android:textSize="@dimen/activity_vertical_margin" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="left|center_horizontal"
+            android:paddingLeft="10dp"
+            android:text="一次通过率"
+            android:textColor="@color/black"
+            android:textSize="@dimen/activity_vertical_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="right|center_horizontal"
+            android:paddingRight="10dp"
+            android:text="FPY:"
+            android:textColor="@color/black"
+            android:textSize="@dimen/activity_vertical_margin" />
+
+        <ImageView
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:src="@color/black" />
+
+        <EditText
+            android:id="@+id/edittext_8"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_bg"
+            android:gravity="right|center_horizontal"
+            android:padding="2dp"
+            android:textSize="@dimen/activity_vertical_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="%"
+            android:textColor="@color/black"
+            android:textSize="@dimen/activity_vertical_margin" />
+    </LinearLayout>
+</LinearLayout>

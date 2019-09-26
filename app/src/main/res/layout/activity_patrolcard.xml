@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/parameter_color"
+        android:textSize="@dimen/x30"
+        android:gravity="center"
+        android:text="巡线记录打卡"
+        android:textColor="@color/white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <dynsoft.xone.android.control.ButtonTextCell
+            android:id="@+id/tc_cardtype"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"></dynsoft.xone.android.control.ButtonTextCell>
+
+        <dynsoft.xone.android.control.ButtonTextCell
+            android:id="@+id/tc_workline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"></dynsoft.xone.android.control.ButtonTextCell>
+
+        <dynsoft.xone.android.control.ButtonTextCell
+            android:id="@+id/tc_result"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"></dynsoft.xone.android.control.ButtonTextCell>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <dynsoft.xone.android.control.ButtonTextCell
+            android:id="@+id/tc_cardperson"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"></dynsoft.xone.android.control.ButtonTextCell>
+
+        <dynsoft.xone.android.control.ButtonTextCell
+            android:id="@+id/tc_comment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"></dynsoft.xone.android.control.ButtonTextCell>
+
+        <dynsoft.xone.android.control.ButtonTextCell
+            android:id="@+id/location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="invisible"></dynsoft.xone.android.control.ButtonTextCell>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageview_photo"
+            android:layout_width="600dp"
+            android:layout_height="360dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_addpic_unfocused" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tackpgoto_again"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_textview"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="重新拍照"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/upload"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_textview"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="上传"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>
