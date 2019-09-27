@@ -48,6 +48,7 @@
         android:debuggable="true"
         android:icon="@drawable/logo"
         android:label="MEGMEET移动企业管理平台"
+        android:testOnly="true"
         android:theme="@android:style/Theme.NoTitleBar" >
         <activity
             android:name="dynsoft.xone.android.start.FrmLogin"
