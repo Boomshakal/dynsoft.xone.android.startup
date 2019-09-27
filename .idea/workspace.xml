@@ -11,10 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb2c14a7-132f-4fe8-9967-47d2011d65aa" name="Default Changelist" comment="push">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_and_ipqc_point_check_screwdriver_record_parameter_mgr.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_and_ipqc_point_check_editor_screwdriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_and_ipqc_point_check_editor_screwdriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_and_ipqc_point_check_editor.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_and_ipqc_point_check_editor.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,8 +55,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_and_ipqc_point_check_editor_screwdriver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="274" column="69" selection-start-line="274" selection-start-column="27" selection-end-line="274" selection-end-column="69" />
+            <state relative-caret-position="296">
+              <caret line="66" column="107" selection-start-line="66" selection-start-column="107" selection-end-line="66" selection-end-column="119" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_and_ipqc_point_check_editor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="398">
+              <caret line="110" column="91" lean-forward="true" selection-start-line="110" selection-start-column="91" selection-end-line="110" selection-end-column="91" />
             </state>
           </provider>
         </entry>
@@ -116,17 +123,17 @@
         <option value="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_ipqc_point_check_record_parameter_mgr.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_and_ipqc_point_check_record_parameter_mgr.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_and_ipqc_point_check_mgr.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_and_ipqc_point_check_editor.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_and_ipqc_point_check_mgr_screwdriver.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/pn_qm_win_ipqc_point_check_editor.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/pn_qm_win_ipqc_point_check_editor_screwdriver.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_and_ipqc_point_check_screwdriver_record_parameter_mgr.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_and_ipqc_point_check_editor_screwdriver.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_and_ipqc_point_check_editor.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="844" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="843" />
     <option name="y" value="21" />
     <option name="width" value="1437" />
     <option name="height" value="1392" />
@@ -202,8 +209,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -349,10 +356,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="488" y="14" width="958" height="928" extended-state="0" />
+    <frame x="-7" y="-7" width="1721" height="935" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.68742216" visible="true" weight="0.40111113" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.68742216" visible="true" weight="0.21707757" />
       <window_info id="Structure" order="2" sideWeight="0.31257784" side_tool="true" weight="0.1966326" />
       <window_info id="Build Variants" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
@@ -364,7 +372,7 @@
       <window_info anchor="bottom" id="Logcat" order="1" weight="0.29265255" />
       <window_info anchor="bottom" id="TODO" order="2" weight="0.32876712" />
       <window_info anchor="bottom" id="Android Profiler" order="3" weight="0.32876712" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="4" visible="true" weight="0.32663316" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="4" visible="true" weight="0.32254046" />
       <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5015033" side_tool="true" weight="0.31382316" />
       <window_info anchor="bottom" id="Build" order="6" sideWeight="0.49849668" weight="0.2117061" />
       <window_info anchor="bottom" id="Run" order="7" sideWeight="0.49849668" weight="0.32876712" />
@@ -835,13 +843,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_and_ipqc_point_check_editor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="243" column="91" selection-start-line="243" selection-start-column="44" selection-end-line="243" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_and_ipqc_point_check_screwdriver_record_parameter_mgr.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
@@ -849,10 +850,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_and_ipqc_point_check_editor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="110" column="91" lean-forward="true" selection-start-line="110" selection-start-column="91" selection-end-line="110" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_and_ipqc_point_check_editor_screwdriver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="274" column="69" selection-start-line="274" selection-start-column="27" selection-end-line="274" selection-end-column="69" />
+        <state relative-caret-position="296">
+          <caret line="66" column="107" selection-start-line="66" selection-start-column="107" selection-end-line="66" selection-end-column="119" />
         </state>
       </provider>
     </entry>

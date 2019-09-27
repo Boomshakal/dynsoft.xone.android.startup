@@ -108,34 +108,37 @@ public class pn_qm_and_ipqc_point_check_editor extends pn_editor {
         if (button_text_cell_2 != null) {
             button_text_cell_2.setLabelText("点检时间");
             button_text_cell_2.setReadOnly();
-            button_text_cell_2.Button.setImageBitmap(App.Current.ResourceManager.getImage("@/core_acl_gray"));
-            button_text_cell_2.Button.setOnClickListener(new OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    TimePickerView timePickerView = new TimePickerView(getContext(), TimePickerView.Type.YEAR_MONTH_DAY);
-                    timePickerView.setCyclic(true);
-                    timePickerView.setTime(new Date());//获取当前时间
-//                    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyy-MM-dd HH:mm:ss");
-//                    Date format = null;
-//                    try {
-//                        format = simpleDateFormat.parse(button_text_cell_2.getContentText());
-//                    } catch (ParseException e) {
-//                        e.printStackTrace();
-//                    }
-//                    timePickerView.setTime(format);
-
-                    timePickerView.setOnTimeSelectListener(new TimePickerView.OnTimeSelectListener() {
-                        @Override
-                        public void onTimeSelect(Date date) {
-
-                            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyy-MM-dd HH:mm:ss");
-                            String chooseDate = simpleDateFormat.format(date);
-                            button_text_cell_2.setContentText(chooseDate);
-                        }
-                    });
-                    timePickerView.show();
-                }
-            });
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyy-MM-dd HH:mm:ss");
+            String chooseDate = simpleDateFormat.format(new Date());
+            button_text_cell_2.setContentText(chooseDate);
+//            button_text_cell_2.Button.setImageBitmap(App.Current.ResourceManager.getImage("@/core_acl_gray"));
+//            button_text_cell_2.Button.setOnClickListener(new OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    TimePickerView timePickerView = new TimePickerView(getContext(), TimePickerView.Type.YEAR_MONTH_DAY);
+//                    timePickerView.setCyclic(true);
+//                    timePickerView.setTime(new Date());//获取当前时间
+////                    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyy-MM-dd HH:mm:ss");
+////                    Date format = null;
+////                    try {
+////                        format = simpleDateFormat.parse(button_text_cell_2.getContentText());
+////                    } catch (ParseException e) {
+////                        e.printStackTrace();
+////                    }
+////                    timePickerView.setTime(format);
+//
+//                    timePickerView.setOnTimeSelectListener(new TimePickerView.OnTimeSelectListener() {
+//                        @Override
+//                        public void onTimeSelect(Date date) {
+//
+//                            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyy-MM-dd HH:mm:ss");
+//                            String chooseDate = simpleDateFormat.format(date);
+//                            button_text_cell_2.setContentText(chooseDate);
+//                        }
+//                    });
+//                    timePickerView.show();
+//                }
+//            });
         }
 
 
@@ -328,7 +331,7 @@ public class pn_qm_and_ipqc_point_check_editor extends pn_editor {
 
 
                     Date check_date = value.Value.getValue("check_date", new Date());
-                    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+                    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                     String format_date = simpleDateFormat.format(check_date);
 
                     text_cell_1.setContentText(code);
