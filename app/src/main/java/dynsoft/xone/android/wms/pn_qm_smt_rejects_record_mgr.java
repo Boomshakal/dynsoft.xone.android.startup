@@ -396,10 +396,14 @@ public class pn_qm_smt_rejects_record_mgr extends pn_editor {
                     getWhFromPartNumber(button_textcell_3, number);
                 }
             }
-        } else if (lot_number.matches("^[1-9]\\d*$") && popupOldWindow.isShowing()) {
-            Log.e("len", "lo:" + lot_number);
-            if (buttonTextCell9 != null) {
-                getScanDatas(buttonTextCell9, lot_number);
+        } else if (lot_number.matches("^[1-9]\\d*$")) {
+            //判断扫描的是条码 还是故障代码
+            if (popupOldWindow != null && popupOldWindow.isShowing()) {
+                if (buttonTextCell9 != null) {
+                    getScanDatas(buttonTextCell9, lot_number);
+                }
+            } else {
+                initScanNumber(lot_number);
             }
         } else {
             if (TextUtils.isEmpty(textcell_1.getContentText())) {
