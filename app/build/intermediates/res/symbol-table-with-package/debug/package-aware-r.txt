@@ -1916,6 +1916,8 @@ layout activity_thirdkanban
 layout activity_weld_kanban
 layout activity_wip
 layout activity_withdraw
+layout bom_line
+layout bomactivity
 layout calculator
 layout cardregister__all_item
 layout cardregistration_item
@@ -2121,6 +2123,7 @@ layout plugin_camera_select_imageview
 layout plugin_camera_show_all_photo
 layout pn_begin_stock_editor
 layout pn_begin_stock_mgr
+layout pn_bom_query_mgr
 layout pn_core_message_editor
 layout pn_core_message_mgr
 layout pn_first_barcode_check_editor

@@ -59,24 +59,24 @@ public final class R {
     public static final class id {
         private id() {}
 
-        public static final int btnCancel = 0x7f080039;
-        public static final int btnSubmit = 0x7f08004a;
-        public static final int center = 0x7f080077;
-        public static final int content_container = 0x7f080092;
-        public static final int day = 0x7f0800a1;
-        public static final int hour = 0x7f0800d0;
-        public static final int left = 0x7f080107;
-        public static final int min = 0x7f080138;
-        public static final int month = 0x7f08013a;
-        public static final int options1 = 0x7f08014a;
-        public static final int options2 = 0x7f08014b;
-        public static final int options3 = 0x7f08014c;
-        public static final int optionspicker = 0x7f08014d;
-        public static final int outmost_container = 0x7f08014e;
-        public static final int right = 0x7f080175;
-        public static final int timepicker = 0x7f080244;
-        public static final int tvTitle = 0x7f08024d;
-        public static final int year = 0x7f08038f;
+        public static final int btnCancel = 0x7f08003d;
+        public static final int btnSubmit = 0x7f08004e;
+        public static final int center = 0x7f08007c;
+        public static final int content_container = 0x7f080097;
+        public static final int day = 0x7f0800a6;
+        public static final int hour = 0x7f0800d5;
+        public static final int left = 0x7f08010c;
+        public static final int min = 0x7f08013d;
+        public static final int month = 0x7f08013f;
+        public static final int options1 = 0x7f08014f;
+        public static final int options2 = 0x7f080150;
+        public static final int options3 = 0x7f080151;
+        public static final int optionspicker = 0x7f080152;
+        public static final int outmost_container = 0x7f080153;
+        public static final int right = 0x7f08017a;
+        public static final int timepicker = 0x7f080249;
+        public static final int tvTitle = 0x7f080252;
+        public static final int year = 0x7f080394;
     }
     public static final class integer {
         private integer() {}
@@ -86,10 +86,10 @@ public final class R {
     public static final class layout {
         private layout() {}
 
-        public static final int include_pickerview_topbar = 0x7f0a0063;
-        public static final int layout_basepickerview = 0x7f0a0092;
-        public static final int pickerview_options = 0x7f0a00fb;
-        public static final int pickerview_time = 0x7f0a00fc;
+        public static final int include_pickerview_topbar = 0x7f0a0065;
+        public static final int layout_basepickerview = 0x7f0a0094;
+        public static final int pickerview_options = 0x7f0a00fe;
+        public static final int pickerview_time = 0x7f0a00ff;
     }
     public static final class string {
         private string() {}

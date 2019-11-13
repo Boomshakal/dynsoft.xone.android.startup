@@ -3,7 +3,7 @@
     package="dynsoft.xone.android.core"
     android:targetSandboxVersion="2"
     android:versionCode="1"
-    android:versionName="2019.09.06.1037" >
+    android:versionName="2019.11.11.1037" >
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -150,6 +150,9 @@
             android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
         <activity
             android:name="dynsoft.xone.android.activity.YhActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="dynsoft.xone.android.activity.BomActivity"
             android:screenOrientation="landscape" />
         <activity
             android:name="dynsoft.xone.android.activity.YhcangkuActivity"

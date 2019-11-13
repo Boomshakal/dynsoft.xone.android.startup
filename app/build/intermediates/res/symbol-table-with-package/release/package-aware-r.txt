@@ -940,6 +940,10 @@ id FUNCTION
 id META
 id SHIFT
 id SYM
+id _text_cell_10
+id _text_cell_7
+id _text_cell_8
+id _text_cell_9
 id action0
 id action_bar
 id action_bar_activity_content
@@ -1045,6 +1049,7 @@ id button_text_cell_1
 id button_text_cell_2
 id button_text_cell_3
 id button_text_cell_4
+id button_text_cell_5
 id button_text_cell_6
 id button_text_cell_department
 id button_textcell_3
@@ -1911,6 +1916,8 @@ layout activity_thirdkanban
 layout activity_weld_kanban
 layout activity_wip
 layout activity_withdraw
+layout bom_line
+layout bomactivity
 layout calculator
 layout cardregister__all_item
 layout cardregistration_item
@@ -2007,6 +2014,7 @@ layout ln_core_server
 layout ln_fm_bi_check
 layout ln_ipqc_check_item
 layout ln_ipqc_patrol_record
+layout ln_ipqc_point_check
 layout ln_ipqc_record_mgr_listview_item
 layout ln_iqc_escape
 layout ln_lot_number
@@ -2115,6 +2123,7 @@ layout plugin_camera_select_imageview
 layout plugin_camera_show_all_photo
 layout pn_begin_stock_editor
 layout pn_begin_stock_mgr
+layout pn_bom_query_mgr
 layout pn_core_message_editor
 layout pn_core_message_mgr
 layout pn_first_barcode_check_editor
@@ -2146,6 +2155,7 @@ layout pn_po_reject_mgr
 layout pn_po_return_editor
 layout pn_po_return_mgr
 layout pn_po_shipment_mgr
+layout pn_qm_and_ipqc_point_check_mgr
 layout pn_qm_department_kanban_editor
 layout pn_qm_device_daily_check_editor
 layout pn_qm_device_daily_check_mgr
@@ -2169,6 +2179,8 @@ layout pn_qm_oqc_editor
 layout pn_qm_oqc_mgr
 layout pn_qm_post_skill_mgr
 layout pn_qm_smt_rejects_record_mgr
+layout pn_qm_win_ipqc_point_check_editor
+layout pn_qm_win_ipqc_point_check_editor_screwdriver
 layout pn_smt_accessories_editor
 layout pn_smt_back_editor
 layout pn_smt_change_editor

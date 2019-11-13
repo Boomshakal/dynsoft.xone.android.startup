@@ -4,9 +4,7 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/69756a89f0ef9c7b6e088633fd6922e6/pickerview-2.1.1/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/69756a89f0ef9c7b6e088633fd6922e6/pickerview-2.1.1/res" />
     </CLASSES>
-    <JAVADOC>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.bigkoo/pickerview/2.1.1/b3524d0500b4ed89b2a6a68f4d18da9ca6050f6/pickerview-2.1.1-javadoc.jar!/" />
-    </JAVADOC>
+    <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.bigkoo/pickerview/2.1.1/66e9e38de6a65c068d4637fdd914abc871efcdc1/pickerview-2.1.1-sources.jar!/" />
     </SOURCES>

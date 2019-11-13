@@ -86,10 +86,10 @@ public final class R {
     public static final class layout {
         private layout() {}
 
-        public static final int include_pickerview_topbar = 0x7f0a0063;
-        public static final int layout_basepickerview = 0x7f0a0092;
-        public static final int pickerview_options = 0x7f0a00fc;
-        public static final int pickerview_time = 0x7f0a00fd;
+        public static final int include_pickerview_topbar = 0x7f0a0065;
+        public static final int layout_basepickerview = 0x7f0a0094;
+        public static final int pickerview_options = 0x7f0a00fe;
+        public static final int pickerview_time = 0x7f0a00ff;
     }
     public static final class string {
         private string() {}

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-240:12
-INJECTED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-240:12
-INJECTED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-240:12
-INJECTED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-240:12
+ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-244:12
+INJECTED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-244:12
+INJECTED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-244:12
+INJECTED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-244:12
 MERGED from [com.android.support:multidex:1.0.2] C:\Users\ThinkPad\.gradle\caches\transforms-2\files-2.1\0a3ad8c57653c89db3811a1c6df91c28\multidex-1.0.2\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-v4:28.0.0] C:\Users\ThinkPad\.gradle\caches\transforms-2\files-2.1\69ee415b12564ec70670df83c9fdfa6f\support-v4-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\ThinkPad\.gradle\caches\transforms-2\files-2.1\bbf07aa1da9ab954374e693dfcc335b9\appcompat-v7-28.0.0\AndroidManifest.xml:17:1-22:12
@@ -35,9 +35,9 @@ MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\ThinkPad\.gradle\c
 MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\ThinkPad\.gradle\caches\transforms-2\files-2.1\b5f1a18436322a4d6243b4d563cfece4\livedata-1.1.1\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\ThinkPad\.gradle\caches\transforms-2\files-2.1\6104c576404b17797d5f42ae60105d1d\livedata-core-1.1.1\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\ThinkPad\.gradle\caches\transforms-2\files-2.1\7c5e711cb7599bc18a19cc1df98bc8d6\runtime-1.1.1\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-240:12
-INJECTED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-240:12
-INJECTED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-240:12
+INJECTED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-244:12
+INJECTED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-244:12
+INJECTED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-244:12
 	package
 		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:3:5-40
 		INJECTED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml
@@ -129,7 +129,7 @@ ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\
 	android:name
 		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:41:19-54
 application
-ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:43:5-238:19
+ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:43:5-242:19
 MERGED from [com.android.support:support-compat:28.0.0] C:\Users\ThinkPad\.gradle\caches\transforms-2\files-2.1\dd1cf78f22bdd94f550130b281f27c97\support-compat-28.0.0\AndroidManifest.xml:22:5-94
 MERGED from [com.android.support:support-compat:28.0.0] C:\Users\ThinkPad\.gradle\caches\transforms-2\files-2.1\dd1cf78f22bdd94f550130b281f27c97\support-compat-28.0.0\AndroidManifest.xml:22:5-94
 MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\ThinkPad\.gradle\caches\transforms-2\files-2.1\8bb2478d12c0baf5b421024800cd7dbb\versionedparcelable-28.0.0\AndroidManifest.xml:22:5-23:19
@@ -346,128 +346,134 @@ ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\
 		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:171:13-50
 	android:name
 		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:170:13-68
-activity#dynsoft.xone.android.activity.YhcangkuActivity
+activity#dynsoft.xone.android.activity.BomActivity
 ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:173:9-175:53
 	android:screenOrientation
 		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:175:13-50
 	android:name
-		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:174:13-74
-activity#dynsoft.xone.android.activity.MesLightActivity
+		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:174:13-69
+activity#dynsoft.xone.android.activity.YhcangkuActivity
 ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:177:9-179:53
 	android:screenOrientation
 		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:179:13-50
 	android:name
 		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:178:13-74
-activity#dynsoft.xone.android.activity.RawMaterialKanbanActivity
+activity#dynsoft.xone.android.activity.MesLightActivity
 ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:181:9-183:53
 	android:screenOrientation
 		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:183:13-50
 	android:name
-		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:182:13-83
-activity#dynsoft.xone.android.sopactivity.LocationCheckActivity
+		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:182:13-74
+activity#dynsoft.xone.android.activity.RawMaterialKanbanActivity
 ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:185:9-187:53
 	android:screenOrientation
 		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:187:13-50
 	android:name
-		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:186:13-82
-activity#dynsoft.xone.android.sopactivity.CheckReportActivity
+		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:186:13-83
+activity#dynsoft.xone.android.sopactivity.LocationCheckActivity
 ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:189:9-191:53
 	android:screenOrientation
 		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:191:13-50
 	android:name
-		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:190:13-80
-activity#dynsoft.xone.android.activity.ThirdKanbanActivity
-ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:194:9-196:53
+		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:190:13-82
+activity#dynsoft.xone.android.sopactivity.CheckReportActivity
+ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:193:9-195:53
 	android:screenOrientation
-		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:196:13-50
+		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:195:13-50
 	android:name
-		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:195:13-77
-activity#dynsoft.xone.android.activity.PostSkillActivity
+		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:194:13-80
+activity#dynsoft.xone.android.activity.ThirdKanbanActivity
 ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:198:9-200:53
 	android:screenOrientation
 		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:200:13-50
 	android:name
-		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:199:13-75
-activity#dynsoft.xone.android.activity.LightKanbanActivity
-ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:202:9-204:62
+		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:199:13-77
+activity#dynsoft.xone.android.activity.PostSkillActivity
+ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:202:9-204:53
 	android:screenOrientation
 		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:204:13-50
 	android:name
-		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:203:13-77
-activity#dynsoft.xone.android.activity.ShortReportKanbanActivity
+		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:203:13-75
+activity#dynsoft.xone.android.activity.LightKanbanActivity
 ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:206:9-208:62
 	android:screenOrientation
 		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:208:13-50
 	android:name
-		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:207:13-83
+		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:207:13-77
+activity#dynsoft.xone.android.activity.ShortReportKanbanActivity
+ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:210:9-212:62
+	android:screenOrientation
+		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:212:13-50
+	android:name
+		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:211:13-83
 activity#dynsoft.xone.android.activity.PurchaseExamKanbanActivity
-ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:209:9-211:62
+ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:213:9-215:62
 	android:screenOrientation
-		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:211:13-50
+		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:215:13-50
 	android:name
-		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:210:13-84
+		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:214:13-84
 activity#dynsoft.xone.android.activity.FirstDepartmentKanbanActivity
-ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:212:9-214:53
+ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:216:9-218:53
 	android:screenOrientation
-		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:214:13-50
+		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:218:13-50
 	android:name
-		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:213:13-87
+		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:217:13-87
 activity#dynsoft.xone.android.activity.ThirdDepartmentKanbanActivity
-ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:215:9-217:53
+ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:219:9-221:53
 	android:screenOrientation
-		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:217:13-50
+		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:221:13-50
 	android:name
-		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:216:13-87
+		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:220:13-87
 activity#dynsoft.xone.android.activity.LocationCheckSMTActivity
-ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:218:9-220:53
+ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:222:9-224:53
 	android:screenOrientation
-		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:220:13-50
+		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:224:13-50
 	android:name
-		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:219:13-82
+		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:223:13-82
 activity#dynsoft.xone.android.ui.ImageShower
-ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:221:9-223:53
+ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:225:9-227:53
 	android:screenOrientation
-		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:223:13-50
+		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:227:13-50
 	android:name
-		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:222:13-63
+		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:226:13-63
 activity#dynsoft.xone.android.activity.PatrolCardActivity
-ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:224:9-226:53
+ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:228:9-230:53
 	android:screenOrientation
-		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:226:13-50
+		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:230:13-50
 	android:name
-		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:225:13-76
+		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:229:13-76
 activity#dynsoft.xone.android.sopactivity.EmployeeMessageActivity
-ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:227:9-229:53
+ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:231:9-233:53
 	android:screenOrientation
-		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:229:13-50
+		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:233:13-50
 	android:name
-		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:228:13-84
+		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:232:13-84
 activity#dynsoft.xone.android.activity.MPSActivity
-ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:230:9-232:53
+ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:234:9-236:53
 	android:screenOrientation
-		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:232:13-50
+		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:236:13-50
 	android:name
-		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:231:13-69
+		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:235:13-69
 activity#dynsoft.xone.android.blueprint.Demo_ad_escActivity
-ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:233:9-87
+ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:237:9-87
 	android:name
-		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:233:19-84
+		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:237:19-84
 activity#dynsoft.xone.android.blueprint.Demo_ad_escActivity2
-ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:234:9-88
+ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:238:9-88
 	android:name
-		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:234:19-85
+		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:238:19-85
 activity#dynsoft.xone.android.blueprint.FaliaoStatusActivity
-ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:235:9-88
+ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:239:9-88
 	android:name
-		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:235:19-85
+		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:239:19-85
 activity#dynsoft.xone.android.blueprint.ZaxiangStatusActivity
-ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:236:9-89
+ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:240:9-89
 	android:name
-		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:236:19-86
+		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:240:19-86
 activity#dynsoft.xone.android.blueprint.ZhuankuStatusActivity
-ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:237:9-89
+ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:241:9-89
 	android:name
-		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:237:19-86
+		ADDED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:241:19-86
 uses-sdk
 INJECTED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\ThinkPad\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml
