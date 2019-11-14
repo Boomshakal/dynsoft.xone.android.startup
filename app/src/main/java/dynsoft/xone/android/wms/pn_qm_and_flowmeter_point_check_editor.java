@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Message;
 import android.text.TextUtils;
 import android.util.Log;
@@ -302,6 +303,12 @@ public class pn_qm_and_flowmeter_point_check_editor extends pn_editor {
                     text_cell_6.setContentText(checked_equip);
                     text_cell_7.setContentText(n_standard);
                     text_cell_8.setContentText(n_actual);
+
+                    if (n_actual != "" && n_standard != "") {
+                        if (Math.abs(Float.parseFloat(n_actual.trim()) - Float.parseFloat(n_standard.trim())) > 20.0) {
+                            text_cell_8.TextBox.setTextColor(Color.RED);
+                        } else text_cell_8.TextBox.setTextColor(Color.BLACK);
+                    }
 
 
                 }
