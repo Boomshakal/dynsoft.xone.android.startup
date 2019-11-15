@@ -18,11 +18,11 @@ public final class R {
     public static final class attr {
         private attr() {}
 
-        public static final int pickerview_dividerColor = 0x7f0300b4;
-        public static final int pickerview_gravity = 0x7f0300b5;
-        public static final int pickerview_textColorCenter = 0x7f0300b6;
-        public static final int pickerview_textColorOut = 0x7f0300b7;
-        public static final int pickerview_textSize = 0x7f0300b8;
+        public static final int pickerview_dividerColor = 0x7f0300ba;
+        public static final int pickerview_gravity = 0x7f0300bb;
+        public static final int pickerview_textColorCenter = 0x7f0300bc;
+        public static final int pickerview_textColorOut = 0x7f0300bd;
+        public static final int pickerview_textSize = 0x7f0300be;
     }
     public static final class bool {
         private bool() {}
@@ -44,12 +44,12 @@ public final class R {
     public static final class dimen {
         private dimen() {}
 
-        public static final int pickerview_textsize = 0x7f06007d;
-        public static final int pickerview_topbar_btn_textsize = 0x7f06007e;
-        public static final int pickerview_topbar_height = 0x7f06007f;
-        public static final int pickerview_topbar_paddingleft = 0x7f060080;
-        public static final int pickerview_topbar_paddingright = 0x7f060081;
-        public static final int pickerview_topbar_title_textsize = 0x7f060082;
+        public static final int pickerview_textsize = 0x7f060083;
+        public static final int pickerview_topbar_btn_textsize = 0x7f060084;
+        public static final int pickerview_topbar_height = 0x7f060085;
+        public static final int pickerview_topbar_paddingleft = 0x7f060086;
+        public static final int pickerview_topbar_paddingright = 0x7f060087;
+        public static final int pickerview_topbar_title_textsize = 0x7f060088;
     }
     public static final class drawable {
         private drawable() {}
@@ -65,18 +65,18 @@ public final class R {
         public static final int content_container = 0x7f080097;
         public static final int day = 0x7f0800a6;
         public static final int hour = 0x7f0800d5;
-        public static final int left = 0x7f08010c;
-        public static final int min = 0x7f08013d;
-        public static final int month = 0x7f08013f;
-        public static final int options1 = 0x7f08014f;
-        public static final int options2 = 0x7f080150;
-        public static final int options3 = 0x7f080151;
-        public static final int optionspicker = 0x7f080152;
-        public static final int outmost_container = 0x7f080153;
-        public static final int right = 0x7f08017a;
-        public static final int timepicker = 0x7f080249;
-        public static final int tvTitle = 0x7f080252;
-        public static final int year = 0x7f080394;
+        public static final int left = 0x7f08010d;
+        public static final int min = 0x7f08013e;
+        public static final int month = 0x7f080140;
+        public static final int options1 = 0x7f080150;
+        public static final int options2 = 0x7f080151;
+        public static final int options3 = 0x7f080152;
+        public static final int optionspicker = 0x7f080153;
+        public static final int outmost_container = 0x7f080154;
+        public static final int right = 0x7f08017b;
+        public static final int timepicker = 0x7f08024a;
+        public static final int tvTitle = 0x7f080253;
+        public static final int year = 0x7f080395;
     }
     public static final class integer {
         private integer() {}
@@ -106,7 +106,7 @@ public final class R {
     public static final class styleable {
         private styleable() {}
 
-        public static final int[] pickerview = { 0x7f0300b4, 0x7f0300b5, 0x7f0300b6, 0x7f0300b7, 0x7f0300b8 };
+        public static final int[] pickerview = { 0x7f0300ba, 0x7f0300bb, 0x7f0300bc, 0x7f0300bd, 0x7f0300be };
         public static final int pickerview_pickerview_dividerColor = 0;
         public static final int pickerview_pickerview_gravity = 1;
         public static final int pickerview_pickerview_textColorCenter = 2;

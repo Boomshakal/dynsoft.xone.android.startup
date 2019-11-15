@@ -8,12 +8,12 @@
         "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\dd1cf78f22bdd94f550130b281f27c97\\support-compat-28.0.0\\res\\drawable-mdpi-v4\\notification_bg_low_pressed.9.png"
     },
     {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_item_addmore_scan.xml.flat",
-        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\item_addmore_scan.xml"
-    },
-    {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_patrol_alert_dialog.xml.flat",
         "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\patrol_alert_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_item_addmore_scan.xml.flat",
+        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\item_addmore_scan.xml"
     },
     {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_abc_text_select_handle_left_mtrl_dark.png.flat",
@@ -80,12 +80,12 @@
         "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\dd1cf78f22bdd94f550130b281f27c97\\support-compat-28.0.0\\res\\drawable-xhdpi-v4\\notification_bg_normal.9.png"
     },
     {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_pn_wo_issue_editor.xml.flat",
-        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\pn_wo_issue_editor.xml"
-    },
-    {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_ln_up_issue.xml.flat",
         "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\ln_up_issue.xml"
+    },
+    {
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_pn_wo_issue_editor.xml.flat",
+        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\pn_wo_issue_editor.xml"
     },
     {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_support_simple_spinner_dropdown_item.xml.flat",
@@ -144,12 +144,12 @@
         "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\device_maintain_check_mgr_editor_item.xml"
     },
     {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\color-v23_abc_tint_switch_track.xml.flat",
-        "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\color-v23\\abc_tint_switch_track.xml"
-    },
-    {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_ln_ipqc_record_mgr_listview_item.xml.flat",
         "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\ln_ipqc_record_mgr_listview_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\color-v23_abc_tint_switch_track.xml.flat",
+        "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\color-v23\\abc_tint_switch_track.xml"
     },
     {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_ln_so_issue.xml.flat",
@@ -196,12 +196,12 @@
         "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\pn_tr_entry_mgr.xml"
     },
     {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_abc_text_select_handle_right_mtrl_light.png.flat",
-        "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable-hdpi-v4\\abc_text_select_handle_right_mtrl_light.png"
-    },
-    {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_pn_sop_parameter_mgr.xml.flat",
         "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\pn_sop_parameter_mgr.xml"
+    },
+    {
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_abc_text_select_handle_right_mtrl_light.png.flat",
+        "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable-hdpi-v4\\abc_text_select_handle_right_mtrl_light.png"
     },
     {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_feeder_maintain_editor.xml.flat",
@@ -228,20 +228,20 @@
         "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\pn_qm_ipqc_check_mgr.xml"
     },
     {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_item_toast_choose_cpk.xml.flat",
-        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\item_toast_choose_cpk.xml"
-    },
-    {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_plugin_camera_no_pictures.png.flat",
         "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\drawable-hdpi\\plugin_camera_no_pictures.png"
     },
     {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\color-v23_abc_tint_edittext.xml.flat",
-        "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\color-v23\\abc_tint_edittext.xml"
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_item_toast_choose_cpk.xml.flat",
+        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\item_toast_choose_cpk.xml"
     },
     {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_pn_qm_device_daily_check_mgr.xml.flat",
         "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\pn_qm_device_daily_check_mgr.xml"
+    },
+    {
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\color-v23_abc_tint_edittext.xml.flat",
+        "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\color-v23\\abc_tint_edittext.xml"
     },
     {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable_abc_ratingbar_material.xml.flat",
@@ -268,28 +268,28 @@
         "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable-mdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_login.xml.flat",
-        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\login.xml"
-    },
-    {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_pn_so_after_storage_editor.xml.flat",
         "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\pn_so_after_storage_editor.xml"
+    },
+    {
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_login.xml.flat",
+        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\login.xml"
     },
     {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_indicator_arrow.png.flat",
         "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\drawable-hdpi\\indicator_arrow.png"
     },
     {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldrtl-hdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
-        "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable-ldrtl-hdpi-v17\\abc_spinner_mtrl_am_alpha.9.png"
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_pn_qm_device_daily_maintain_check_editor.xml.flat",
+        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\pn_qm_device_daily_maintain_check_editor.xml"
     },
     {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable-hdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_pn_qm_device_daily_maintain_check_editor.xml.flat",
-        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\pn_qm_device_daily_maintain_check_editor.xml"
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldrtl-hdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
+        "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable-ldrtl-hdpi-v17\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
@@ -320,16 +320,16 @@
         "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable-xxxhdpi-v4\\abc_text_select_handle_right_mtrl_light.png"
     },
     {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable_statusbox_shape.xml.flat",
-        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\drawable\\statusbox_shape.xml"
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable_img_about.png.flat",
+        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\drawable\\img_about.png"
     },
     {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable_textview_border.xml.flat",
         "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\drawable\\textview_border.xml"
     },
     {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable_img_about.png.flat",
-        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\drawable\\img_about.png"
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable_statusbox_shape.xml.flat",
+        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\drawable\\statusbox_shape.xml"
     },
     {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_ln_wo_part_online.xml.flat",
@@ -408,20 +408,20 @@
         "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\meeting_listview_item.xml"
     },
     {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_pn_qm_electric_equipment_check_mgr_editor.xml.flat",
-        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\pn_qm_electric_equipment_check_mgr_editor.xml"
-    },
-    {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_meeting.xml.flat",
         "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\activity_meeting.xml"
     },
     {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_pn_begin_stock_mgr.xml.flat",
-        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\pn_begin_stock_mgr.xml"
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_pn_qm_electric_equipment_check_mgr_editor.xml.flat",
+        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\pn_qm_electric_equipment_check_mgr_editor.xml"
     },
     {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout-watch-v20_abc_alert_dialog_button_bar_material.xml.flat",
         "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\layout-watch-v20\\abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_pn_begin_stock_mgr.xml.flat",
+        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\pn_begin_stock_mgr.xml"
     },
     {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_item_smt_rejects.xml.flat",
@@ -444,12 +444,12 @@
         "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\drawable-xhdpi\\sigin_null.png"
     },
     {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable_bg_radiobutton.xml.flat",
-        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\drawable\\bg_radiobutton.xml"
-    },
-    {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_pn_smt_roast_editorr.xml.flat",
         "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\pn_smt_roast_editorr.xml"
+    },
+    {
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable_bg_radiobutton.xml.flat",
+        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\drawable\\bg_radiobutton.xml"
     },
     {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_pn_qm_device_daily_check_mgr_editor.xml.flat",
@@ -464,20 +464,20 @@
         "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\messagebox.xml"
     },
     {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_ipqc_first_chec_mgr_item.xml.flat",
-        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\ipqc_first_chec_mgr_item.xml"
-    },
-    {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\anim_abc_shrink_fade_out_from_bottom.xml.flat",
         "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
     },
     {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat",
-        "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_right_mtrl_dark.png"
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_ipqc_first_chec_mgr_item.xml.flat",
+        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\ipqc_first_chec_mgr_item.xml"
     },
     {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_pn_po_entry_editor.xml.flat",
         "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\pn_po_entry_editor.xml"
+    },
+    {
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat",
+        "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_right_mtrl_dark.png"
     },
     {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_pn_po_reject_mgr.xml.flat",
@@ -512,12 +512,12 @@
         "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\ln_sop_parameter_item.xml"
     },
     {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable-xhdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
-    },
-    {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable-mdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable-xhdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_short_report_item.xml.flat",
@@ -616,24 +616,24 @@
         "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\drawable\\text_while.xml"
     },
     {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable-xhdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
-    },
-    {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_ikahe_kanban_listview.xml.flat",
         "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\ikahe_kanban_listview.xml"
+    },
+    {
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable-xhdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
         "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable-xhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
     },
     {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_load_footer.xml.flat",
-        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\load_footer.xml"
-    },
-    {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable-mdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_load_footer.xml.flat",
+        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\load_footer.xml"
     },
     {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_pn_qm_electric_equipment_check_editor.xml.flat",
@@ -688,36 +688,36 @@
         "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\pn_smt_mobilestorage_editor.xml"
     },
     {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\anim_activity_translate_in.xml.flat",
-        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\anim\\activity_translate_in.xml"
-    },
-    {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_abc_list_longpressed_holo.9.png.flat",
         "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable-mdpi-v4\\abc_list_longpressed_holo.9.png"
+    },
+    {
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\anim_activity_translate_in.xml.flat",
+        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\anim\\activity_translate_in.xml"
     },
     {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable_bg_textview.xml.flat",
         "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\drawable\\bg_textview.xml"
     },
     {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable_abc_list_divider_material.xml.flat",
-        "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable\\abc_list_divider_material.xml"
-    },
-    {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\anim_slide_in_bottom.xml.flat",
         "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\69756a89f0ef9c7b6e088633fd6922e6\\pickerview-2.1.1\\res\\anim\\slide_in_bottom.xml"
     },
     {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_toast.xml.flat",
-        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\toast.xml"
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable_abc_list_divider_material.xml.flat",
+        "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable\\abc_list_divider_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_pn_smt_accessories_editor.xml.flat",
+        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\pn_smt_accessories_editor.xml"
     },
     {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_abc_text_select_handle_left_mtrl_dark.png.flat",
         "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable-xhdpi-v4\\abc_text_select_handle_left_mtrl_dark.png"
     },
     {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_pn_smt_accessories_editor.xml.flat",
-        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\pn_smt_accessories_editor.xml"
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_toast.xml.flat",
+        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\toast.xml"
     },
     {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_statusbox.xml.flat",
@@ -788,12 +788,12 @@
         "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\item_listview_raw_material_2.xml"
     },
     {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldrtl-xhdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
-        "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable-ldrtl-xhdpi-v17\\abc_ic_menu_cut_mtrl_alpha.png"
-    },
-    {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
         "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable-xxhdpi-v4\\abc_popup_background_mtrl_mult.9.png"
+    },
+    {
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldrtl-xhdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
+        "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable-ldrtl-xhdpi-v17\\abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_pn_wo_diet_arrangemen_mgr.xml.flat",
@@ -820,20 +820,20 @@
         "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable-v23\\abc_control_background_material.xml"
     },
     {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable_bg_line_readonly.xml.flat",
-        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\drawable\\bg_line_readonly.xml"
-    },
-    {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_third_item_wip_fragment.xml.flat",
-        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\third_item_wip_fragment.xml"
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_purchase_exam_item.xml.flat",
+        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\purchase_exam_item.xml"
     },
     {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_pn_wo_part_online_editor.xml.flat",
         "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\pn_wo_part_online_editor.xml"
     },
     {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_purchase_exam_item.xml.flat",
-        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\purchase_exam_item.xml"
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_third_item_wip_fragment.xml.flat",
+        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\third_item_wip_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable_bg_line_readonly.xml.flat",
+        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\drawable\\bg_line_readonly.xml"
     },
     {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_item_withdraw_listview.xml.flat",
@@ -856,24 +856,24 @@
         "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\dd1cf78f22bdd94f550130b281f27c97\\support-compat-28.0.0\\res\\drawable-mdpi-v4\\notification_bg_normal.9.png"
     },
     {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_ln_wo_entry_oqc.xml.flat",
-        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\ln_wo_entry_oqc.xml"
-    },
-    {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
         "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable-xxxhdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
     },
     {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_abc_ic_star_half_black_36dp.png.flat",
-        "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable-xhdpi-v4\\abc_ic_star_half_black_36dp.png"
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_ln_wo_entry_oqc.xml.flat",
+        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\ln_wo_entry_oqc.xml"
+    },
+    {
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable-hdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\animator_open_enter.xml.flat",
         "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\animator\\open_enter.xml"
     },
     {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable-hdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_abc_ic_star_half_black_36dp.png.flat",
+        "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable-xhdpi-v4\\abc_ic_star_half_black_36dp.png"
     },
     {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
@@ -920,12 +920,12 @@
         "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\drawable-hdpi\\default_ptr_rotate.png"
     },
     {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldrtl-hdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
-        "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable-ldrtl-hdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
-    },
-    {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
         "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable-xxxhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldrtl-hdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
+        "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable-ldrtl-hdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_ikahe_griditem.xml.flat",
@@ -940,16 +940,16 @@
         "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\fragment_oqc.xml"
     },
     {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable_abc_list_selector_background_transition_holo_light.xml.flat",
-        "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_abc_ic_star_half_black_16dp.png.flat",
+        "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable-xxhdpi-v4\\abc_ic_star_half_black_16dp.png"
     },
     {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
         "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable-mdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
     },
     {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_abc_ic_star_half_black_16dp.png.flat",
-        "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable-xxhdpi-v4\\abc_ic_star_half_black_16dp.png"
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable_abc_list_selector_background_transition_holo_light.xml.flat",
+        "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
     },
     {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_item_light_exception.xml.flat",
@@ -960,12 +960,12 @@
         "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\ln_smt_feed.xml"
     },
     {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_abc_list_menu_item_radio.xml.flat",
-        "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\layout\\abc_list_menu_item_radio.xml"
-    },
-    {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
         "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable-mdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_abc_list_menu_item_radio.xml.flat",
+        "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\layout\\abc_list_menu_item_radio.xml"
     },
     {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_pn_smt_steel_mesh_storage_editorr.xml.flat",
@@ -1120,32 +1120,32 @@
         "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\anim\\abc_slide_in_bottom.xml"
     },
     {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\color_abc_tint_seek_thumb.xml.flat",
-        "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\color\\abc_tint_seek_thumb.xml"
-    },
-    {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_ln_fm_bi_check.xml.flat",
         "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\ln_fm_bi_check.xml"
+    },
+    {
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\color_abc_tint_seek_thumb.xml.flat",
+        "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\color\\abc_tint_seek_thumb.xml"
     },
     {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat",
         "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\dd1cf78f22bdd94f550130b281f27c97\\support-compat-28.0.0\\res\\drawable-xhdpi-v4\\notify_panel_notification_icon_bg.png"
     },
     {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_plugin_camera_cancel_pressed.png.flat",
-        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\drawable-hdpi\\plugin_camera_cancel_pressed.png"
-    },
-    {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
         "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable-mdpi-v4\\abc_text_select_handle_left_mtrl_light.png"
     },
     {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_pn_iqc_escape_editor.xml.flat",
-        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\pn_iqc_escape_editor.xml"
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_plugin_camera_cancel_pressed.png.flat",
+        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\drawable-hdpi\\plugin_camera_cancel_pressed.png"
     },
     {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_notification_template_big_media.xml.flat",
         "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\d1a6c7ee41fbe72753318d9586f1a513\\support-media-compat-28.0.0\\res\\layout\\notification_template_big_media.xml"
+    },
+    {
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_pn_iqc_escape_editor.xml.flat",
+        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\pn_iqc_escape_editor.xml"
     },
     {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
@@ -1176,16 +1176,16 @@
         "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\layout\\abc_list_menu_item_icon.xml"
     },
     {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable_bg_line_editable.xml.flat",
-        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\drawable\\bg_line_editable.xml"
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_ln_core_printer.xml.flat",
+        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\ln_core_printer.xml"
     },
     {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_abc_list_pressed_holo_light.9.png.flat",
         "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable-hdpi-v4\\abc_list_pressed_holo_light.9.png"
     },
     {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_ln_core_printer.xml.flat",
-        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\ln_core_printer.xml"
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable_bg_line_editable.xml.flat",
+        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\drawable\\bg_line_editable.xml"
     },
     {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_pn_qm_light_kanban_mgr.xml.flat",
@@ -1200,12 +1200,12 @@
         "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable-xhdpi-v4\\abc_list_focused_holo.9.png"
     },
     {
-        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\raw_error.wav.flat",
-        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\raw\\error.wav"
-    },
-    {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\drawable_abc_spinner_textfield_background_material.xml.flat",
         "source": "C:\\Users\\ThinkPad\\.gradle\\caches\\transforms-2\\files-2.1\\bbf07aa1da9ab954374e693dfcc335b9\\appcompat-v7-28.0.0\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\raw_error.wav.flat",
+        "source": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\raw\\error.wav"
     },
     {
         "merged": "C:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_post_skill.xml.flat",

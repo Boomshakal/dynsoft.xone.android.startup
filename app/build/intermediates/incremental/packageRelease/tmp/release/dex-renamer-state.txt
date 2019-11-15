@@ -1,4 +1,4 @@
-#Mon Nov 11 16:53:58 CST 2019
+#Fri Nov 15 11:32:16 CST 2019
 base.0=C\:\\Users\\ThinkPad\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\out\\classes.dex
 path.1=classes2.dex
 renamed.1=classes2.dex

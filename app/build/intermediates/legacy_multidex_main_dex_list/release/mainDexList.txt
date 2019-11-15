@@ -116,6 +116,10 @@ android/support/v7/graphics/drawable/DrawerArrowDrawable$ArrowDirection.class
 android/support/v7/view/menu/CascadingMenuPopup$HorizPosition.class
 android/support/v7/widget/LinearLayoutCompat$DividerMode.class
 android/support/v7/widget/LinearLayoutCompat$OrientationMode.class
+android/support/v7/widget/RecyclerView$EdgeEffectFactory$EdgeDirection.class
+android/support/v7/widget/RecyclerView$ItemAnimator$AdapterChanges.class
+android/support/v7/widget/RecyclerView$Orientation.class
+android/support/v7/widget/ViewBoundsCheck$ViewBounds.class
 androidx/versionedparcelable/NonParcelField.class
 androidx/versionedparcelable/ParcelField.class
 androidx/versionedparcelable/VersionedParcelize.class
