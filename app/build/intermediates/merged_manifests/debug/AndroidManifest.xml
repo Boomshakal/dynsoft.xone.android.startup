@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="dynsoft.xone.android.core"
     android:versionCode="1"
-    android:versionName="2019.11.11.1037" >
+    android:versionName="2019.11.15.1037" >
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -48,6 +48,7 @@
         android:debuggable="true"
         android:icon="@drawable/logo"
         android:label="MEGMEET移动企业管理平台"
+        android:testOnly="true"
         android:theme="@android:style/Theme.NoTitleBar" >
         <activity
             android:name="dynsoft.xone.android.start.FrmLogin"

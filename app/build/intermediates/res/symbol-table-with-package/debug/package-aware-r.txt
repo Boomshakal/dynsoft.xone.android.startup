@@ -140,6 +140,11 @@ attr editTextColor
 attr editTextStyle
 attr elevation
 attr expandActivityOverflowButtonDrawable
+attr fastScrollEnabled
+attr fastScrollHorizontalThumbDrawable
+attr fastScrollHorizontalTrackDrawable
+attr fastScrollVerticalThumbDrawable
+attr fastScrollVerticalTrackDrawable
 attr firstBaselineToTopHeight
 attr font
 attr fontFamily
@@ -170,6 +175,7 @@ attr itemPadding
 attr keylines
 attr lastBaselineToBottomHeight
 attr layout
+attr layoutManager
 attr layout_anchor
 attr layout_anchorGravity
 attr layout_behavior
@@ -241,6 +247,7 @@ attr radioButtonStyle
 attr ratingBarStyle
 attr ratingBarStyleIndicator
 attr ratingBarStyleSmall
+attr reverseLayout
 attr searchHintIcon
 attr searchIcon
 attr searchViewStyle
@@ -252,11 +259,13 @@ attr showDividers
 attr showText
 attr showTitle
 attr singleChoiceItemLayout
+attr spanCount
 attr spinBars
 attr spinnerDropDownItemStyle
 attr spinnerStyle
 attr splitTrack
 attr srcCompat
+attr stackFromEnd
 attr state_above_anchor
 attr statusBarBackground
 attr subMenuArrow
@@ -664,6 +673,9 @@ dimen compat_notification_large_icon_max_height
 dimen compat_notification_large_icon_max_width
 dimen disabled_alpha_material_dark
 dimen disabled_alpha_material_light
+dimen fastscroll_default_thickness
+dimen fastscroll_margin
+dimen fastscroll_minimum_range
 dimen header_footer_left_right_padding
 dimen header_footer_top_bottom_padding
 dimen highlight_alpha_material_colored
@@ -681,6 +693,9 @@ dimen ikahe_qty_text_size
 dimen indicator_corner_radius
 dimen indicator_internal_padding
 dimen indicator_right_padding
+dimen item_touch_helper_max_drag_scroll_per_frame
+dimen item_touch_helper_swipe_escape_max_velocity
+dimen item_touch_helper_swipe_escape_velocity
 dimen kanban_text_size
 dimen led_text_size
 dimen led_text_size1
@@ -1183,6 +1198,7 @@ id item_textview_1
 id item_textview_2
 id item_textview_3
 id item_textview_4
+id item_touch_helper_previous_elevation
 id itemcode
 id itemname
 id lblBook
@@ -2798,6 +2814,7 @@ styleable PopupWindow android_popupBackground android_popupAnimationStyle overla
 styleable PopupWindowBackgroundState state_above_anchor
 styleable PullToRefresh ptrAdapterViewBackground ptrAnimationStyle ptrDrawable ptrDrawableBottom ptrDrawableEnd ptrDrawableStart ptrDrawableTop ptrHeaderBackground ptrHeaderSubTextColor ptrHeaderTextAppearance ptrHeaderTextColor ptrListViewExtrasEnabled ptrMode ptrOverScroll ptrRefreshableViewBackground ptrRotateDrawableWhilePulling ptrScrollingWhileRefreshingEnabled ptrShowIndicator ptrSubHeaderTextAppearance
 styleable RecycleListView paddingBottomNoButtons paddingTopNoTitle
+styleable RecyclerView android_orientation android_descendantFocusability fastScrollEnabled fastScrollHorizontalThumbDrawable fastScrollHorizontalTrackDrawable fastScrollVerticalThumbDrawable fastScrollVerticalTrackDrawable layoutManager reverseLayout spanCount stackFromEnd
 styleable SearchView android_focusable android_maxWidth android_inputType android_imeOptions closeIcon commitIcon defaultQueryHint goIcon iconifiedByDefault layout queryBackground queryHint searchHintIcon searchIcon submitBackground suggestionRowLayout voiceIcon
 styleable Spinner android_entries android_popupBackground android_prompt android_dropDownWidth popupTheme
 styleable StateListDrawable android_dither android_visible android_variablePadding android_constantSize android_enterFadeDuration android_exitFadeDuration

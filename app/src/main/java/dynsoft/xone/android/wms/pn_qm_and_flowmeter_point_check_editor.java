@@ -211,7 +211,7 @@ public class pn_qm_and_flowmeter_point_check_editor extends pn_editor {
 //    }
 
     private void loadComfirmName(final ButtonTextCell button_text_cell_4) {
-        Link link = new Link("pane://x:code=pn_qm_and_ipqc_point_check_screwdriver_record_parameter_mgr");
+        Link link = new Link("pane://x:code=pn_qm_and_flowmeter_point_check_record_parameter_mgr");
 //        link.Parameters.add("textcell", textcell_1);
         link.Open(null, getContext(), null);
         this.close();
