@@ -9,5 +9,5 @@ public final class BuildConfig {
   public static final String BUILD_TYPE = "release";
   public static final String FLAVOR = "";
   public static final int VERSION_CODE = 1;
-  public static final String VERSION_NAME = "2019.11.15.1037";
+  public static final String VERSION_NAME = "2019.11.20.1037";
 }
