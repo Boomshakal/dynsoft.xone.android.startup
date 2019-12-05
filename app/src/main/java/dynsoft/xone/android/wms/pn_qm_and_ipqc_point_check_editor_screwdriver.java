@@ -308,6 +308,12 @@ public class pn_qm_and_ipqc_point_check_editor_screwdriver extends pn_editor {
                     text_cell_7.setContentText(n_standard);
                     text_cell_8.setContentText(n_actual);
 
+                    if (n_actual != "" && n_standard != "") {
+                        if (Math.abs(Float.parseFloat(n_actual.trim()) - Float.parseFloat(n_standard.trim())) > 0.5) {
+                            text_cell_8.TextBox.setTextColor(Color.RED);
+                        } else text_cell_8.TextBox.setTextColor(Color.BLACK);
+                    }
+
 
                 }
 //                else {
