@@ -340,6 +340,12 @@ public class pn_qm_and_ipqc_point_check_editor_screwdriver extends pn_editor {
         } else if (TextUtils.isEmpty(text_cell_6.getContentText())) {
             App.Current.toastInfo(getContext(), "请输入设备编号！");
             App.Current.playSound(R.raw.error);
+        } else if (!isNumeric(text_cell_7.getContentText())) {
+            App.Current.toastInfo(getContext(), "请输入标准数值");
+            App.Current.playSound(R.raw.error);
+        } else if (!isNumeric(text_cell_8.getContentText())) {
+            App.Current.toastInfo(getContext(), "请输入测试数值");
+            App.Current.playSound(R.raw.error);
         } else {
             App.Current.question(this.getContext(), "确定要提交吗？", new DialogInterface.OnClickListener() {
                 @Override
@@ -383,6 +389,15 @@ public class pn_qm_and_ipqc_point_check_editor_screwdriver extends pn_editor {
                     });
                 }
             });
+        }
+    }
+
+    public boolean isNumeric(String str) {
+        try {
+            Double.parseDouble(str);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
         }
     }
 }
