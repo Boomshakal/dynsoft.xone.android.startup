@@ -13,25 +13,24 @@
     <list default="true" id="bb2c14a7-132f-4fe8-9967-47d2011d65aa" name="Default Changelist" comment="push">
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/dynsoft/xone/android/core/BuildConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/dynsoft/xone/android/core/BuildConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/release/dynsoft/xone/android/core/BuildConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/buildConfig/release/dynsoft/xone/android/core/BuildConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/apk_list/debug/mainApkListPersistenceDebug/apk-list.gson" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/apk_list/debug/mainApkListPersistenceDebug/apk-list.gson" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/apk_list/release/mainApkListPersistenceRelease/apk-list.gson" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/apk_list/release/mainApkListPersistenceRelease/apk-list.gson" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/debug.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/bundle_manifest/debug/processDebugManifest/bundle-manifest/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/bundle_manifest/debug/processDebugManifest/bundle-manifest/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/bundle_manifest/debug/processDebugManifest/bundle-manifest/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/bundle_manifest/debug/processDebugManifest/bundle-manifest/output.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/bundle_manifest/release/processReleaseManifest/bundle-manifest/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/bundle_manifest/release/processReleaseManifest/bundle-manifest/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/bundle_manifest/release/processReleaseManifest/bundle-manifest/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/bundle_manifest/release/processReleaseManifest/bundle-manifest/output.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/release/mergeDexRelease/out/classes2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/release/mergeDexRelease/out/classes2.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageRelease/tmp/release/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageRelease/tmp/release/dex-renamer-state.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/instant_app_manifest/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/instant_app_manifest/debug/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/instant_app_manifest/debug/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/instant_app_manifest/debug/output.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/instant_app_manifest/release/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/instant_app_manifest/release/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/instant_app_manifest/release/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/instant_app_manifest/release/output.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/core/BuildConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/core/BuildConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_qm_and_ipqc_point_check_editor$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_qm_and_ipqc_point_check_editor$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_qm_and_ipqc_point_check_editor.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_qm_and_ipqc_point_check_editor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_qm_and_ipqc_point_check_editor_screwdriver$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_qm_and_ipqc_point_check_editor_screwdriver$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_qm_and_ipqc_point_check_editor_screwdriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_qm_and_ipqc_point_check_editor_screwdriver.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_so_return_editor$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_so_return_editor$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_so_return_editor$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_so_return_editor$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_so_return_editor$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_so_return_editor$3.class" afterDir="false" />
@@ -40,6 +39,13 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_so_return_editor$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_so_return_editor$6.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_so_return_editor.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_so_return_editor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/release/classes/dynsoft/xone/android/core/BuildConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/release/classes/dynsoft/xone/android/core/BuildConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/release/classes/dynsoft/xone/android/wms/pn_so_return_editor$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/release/classes/dynsoft/xone/android/wms/pn_so_return_editor$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/release/classes/dynsoft/xone/android/wms/pn_so_return_editor$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/release/classes/dynsoft/xone/android/wms/pn_so_return_editor$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/release/classes/dynsoft/xone/android/wms/pn_so_return_editor$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/release/classes/dynsoft/xone/android/wms/pn_so_return_editor$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/release/classes/dynsoft/xone/android/wms/pn_so_return_editor$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/release/classes/dynsoft/xone/android/wms/pn_so_return_editor$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/release/classes/dynsoft/xone/android/wms/pn_so_return_editor$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/release/classes/dynsoft/xone/android/wms/pn_so_return_editor$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/release/classes/dynsoft/xone/android/wms/pn_so_return_editor$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/release/classes/dynsoft/xone/android/wms/pn_so_return_editor$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/release/classes/dynsoft/xone/android/wms/pn_so_return_editor.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/release/classes/dynsoft/xone/android/wms/pn_so_return_editor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/release/manifest-merger-blame-release-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/release/manifest-merger-blame-release-report.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml" afterDir="false" />
@@ -52,10 +58,29 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/processDebugResources/out/resources-debug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/processDebugResources/out/resources-debug.ap_" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/processed_res/release/processReleaseResources/out/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/processed_res/release/processReleaseResources/out/output.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/processed_res/release/processReleaseResources/out/resources-release.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/processed_res/release/processReleaseResources/out/resources-release.ap_" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_pn_so_return_editor.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_pn_so_return_editor.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/dynsoft/xone/android/core/BuildConfig.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/dynsoft/xone/android/core/BuildConfig.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/dynsoft/xone/android/wms/pn_so_return_editor$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/dynsoft/xone/android/wms/pn_so_return_editor$1.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/dynsoft/xone/android/wms/pn_so_return_editor$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/dynsoft/xone/android/wms/pn_so_return_editor$2.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/dynsoft/xone/android/wms/pn_so_return_editor$3.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/dynsoft/xone/android/wms/pn_so_return_editor$3.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/dynsoft/xone/android/wms/pn_so_return_editor$4.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/dynsoft/xone/android/wms/pn_so_return_editor$4.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/dynsoft/xone/android/wms/pn_so_return_editor$5.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/dynsoft/xone/android/wms/pn_so_return_editor$5.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/dynsoft/xone/android/wms/pn_so_return_editor$6.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/dynsoft/xone/android/wms/pn_so_return_editor$6.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/dynsoft/xone/android/wms/pn_so_return_editor.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/dynsoft/xone/android/wms/pn_so_return_editor.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/release/0/dynsoft/xone/android/core/BuildConfig.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/release/0/dynsoft/xone/android/core/BuildConfig.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/release/0/dynsoft/xone/android/wms/pn_so_return_editor$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/release/0/dynsoft/xone/android/wms/pn_so_return_editor$1.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/release/0/dynsoft/xone/android/wms/pn_so_return_editor$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/release/0/dynsoft/xone/android/wms/pn_so_return_editor$2.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/release/0/dynsoft/xone/android/wms/pn_so_return_editor$3.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/release/0/dynsoft/xone/android/wms/pn_so_return_editor$3.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/release/0/dynsoft/xone/android/wms/pn_so_return_editor$4.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/release/0/dynsoft/xone/android/wms/pn_so_return_editor$4.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/release/0/dynsoft/xone/android/wms/pn_so_return_editor$5.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/release/0/dynsoft/xone/android/wms/pn_so_return_editor$5.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/release/0/dynsoft/xone/android/wms/pn_so_return_editor$6.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/release/0/dynsoft/xone/android/wms/pn_so_return_editor$6.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/release/0/dynsoft/xone/android/wms/pn_so_return_editor.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/release/0/dynsoft/xone/android/wms/pn_so_return_editor.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/debug/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/apk/debug/output.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/release/app-release.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/release/app-release.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/release/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/release/output.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_so_return_editor.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_so_return_editor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/pn_so_return_editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/pn_so_return_editor.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +91,7 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="f19ad00d" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="b6c3a851" />
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
@@ -95,11 +120,61 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_begin_stock_editor_yh.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="153" column="9" selection-start-line="153" selection-start-column="9" selection-end-line="153" selection-end-column="9" />
+              <folding>
+                <element signature="e#3938#5020#1" />
+                <element signature="e#5070#6153#1" />
+                <element signature="method#onScan#0;class#pn_begin_stock_editor_yh#0" />
+                <element signature="method#loadLotNumber#0;class#pn_begin_stock_editor_yh#0" />
+                <element signature="method#loadLocation#0;class#pn_begin_stock_editor_yh#0" />
+                <element signature="method#loadOrgCode#0;class#pn_begin_stock_editor_yh#0" />
+                <element signature="method#loadVendorInfo#0;class#pn_begin_stock_editor_yh#0" />
+                <element signature="method#loaditemmodel#0;class#pn_begin_stock_editor_yh#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_smt_rejects_record_mgr.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="662" column="61" lean-forward="true" selection-start-line="662" selection-start-column="61" selection-end-line="662" selection-end-column="61" />
+              <folding>
+                <element signature="e#78186#79107#0" expanded="true" />
+                <element signature="e#79106#79107#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-28/android.jar!/android/widget/PopupWindow.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="167">
+              <caret line="221" column="16" selection-start-line="221" selection-start-column="16" selection-end-line="221" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/core/App.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="183">
+              <caret line="262" column="16" selection-start-line="262" selection-start-column="16" selection-end-line="262" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_so_return_editor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="368" column="19" lean-forward="true" selection-start-line="368" selection-start-column="19" selection-end-line="368" selection-end-column="19" />
+            <state relative-caret-position="493">
+              <caret line="460" column="73" lean-forward="true" selection-start-line="460" selection-start-column="12" selection-end-line="460" selection-end-column="73" />
             </state>
           </provider>
         </entry>
@@ -136,6 +211,8 @@
       <find>exec</find>
       <find>edittext_1</find>
       <find>commit</find>
+      <find>txt_item_code_cell</find>
+      <find>txt_item_code_cell.get</find>
     </findStrings>
     <replaceStrings>
       <replace>-</replace>
@@ -153,7 +230,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_smt_rejects_record_mgr.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/activity/YhActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/pn_bom_query_mgr.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_bom_query_mgr.java" />
@@ -177,13 +253,15 @@
         <option value="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_and_ipqc_point_check_editor.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_and_ipqc_point_check_editor_screwdriver.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/pn_so_return_editor.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_so_return_editor.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_smt_rejects_record_mgr.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="789" />
-    <option name="y" value="51" />
+    <option name="x" value="606" />
+    <option name="y" value="153" />
     <option name="width" value="1776" />
     <option name="height" value="1398" />
   </component>
@@ -226,31 +304,12 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="dynsoft.xone.android.startup" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dynsoft.xone.android.startup" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="android" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dynsoft.xone.android.startup" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dynsoft.xone.android.startup" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="android" type="462c0819:PsiDirectoryNode" />
-              <item name="wms" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -410,10 +469,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1721" height="935" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.249549" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.57409716" visible="true" weight="0.27540588" />
-      <window_info id="Structure" order="2" sideWeight="0.42590287" side_tool="true" weight="0.24834636" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.42045453" visible="true" weight="0.1599519" />
+      <window_info id="Structure" order="2" sideWeight="0.58034027" side_tool="true" weight="0.1599519" />
       <window_info id="Build Variants" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
       <window_info id="Designer" order="5" />
@@ -421,21 +481,21 @@
       <window_info id="Capture Tool" order="7" />
       <window_info id="Favorites" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="0" weight="0.32991013" />
-      <window_info anchor="bottom" id="Logcat" order="1" weight="0.41720155" />
+      <window_info anchor="bottom" id="Logcat" order="1" weight="0.3863928" />
       <window_info anchor="bottom" id="TODO" order="2" weight="0.32991013" />
       <window_info anchor="bottom" id="Android Profiler" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.49969932" weight="0.32435897" />
-      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50210464" side_tool="true" weight="0.25417203" />
-      <window_info active="true" anchor="bottom" id="Build" order="6" sideWeight="0.49789536" visible="true" weight="0.25417203" />
+      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.49969932" weight="0.32307693" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50270593" side_tool="true" weight="0.25417203" />
+      <window_info anchor="bottom" id="Build" order="6" sideWeight="0.49729404" weight="0.25417203" />
       <window_info anchor="bottom" id="Run" order="7" weight="0.32991013" />
-      <window_info anchor="bottom" id="Debug" order="8" />
+      <window_info active="true" anchor="bottom" id="Debug" order="8" visible="true" weight="0.39537868" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.32991013" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" weight="0.32952496" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" weight="0.32952496" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="right" id="Preview" order="5" weight="0.24774504" />
+      <window_info anchor="right" id="Preview" order="5" weight="0.20926037" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -463,7 +523,14 @@
               <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
                 <collection />
               </option>
-              <option name="COLUMN_ORDER" />
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
             </State>
           </value>
         </entry>
@@ -488,85 +555,56 @@
     <MESSAGE value="push" />
     <option name="LAST_COMMIT_MESSAGE" value="push" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_smt_rejects_record_mgr.java</url>
+          <line>1574</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_smt_rejects_record_mgr.java</url>
+          <line>1588</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_smt_rejects_record_mgr.java</url>
+          <line>465</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_smt_rejects_record_mgr.java</url>
+          <line>476</line>
+          <properties />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_smt_rejects_record_mgr.java</url>
+          <line>493</line>
+          <properties />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_smt_rejects_record_mgr.java</url>
+          <line>553</line>
+          <properties />
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_and_ipqc_point_check_screwdriver_record_parameter_mgr.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/start/pn_core_message_editor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="220" column="16" lean-forward="true" selection-start-line="220" selection-start-column="16" selection-end-line="220" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_po_entry_editor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="215" column="55" lean-forward="true" selection-start-line="215" selection-start-column="55" selection-end-line="215" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/qad/opdn_editor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="214" column="93" lean-forward="true" selection-start-line="214" selection-start-column="93" selection-end-line="214" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_begin_stock_editor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="357" column="78" selection-start-line="357" selection-start-column="62" selection-end-line="357" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_wo_entry_editor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="245" column="57" selection-start-line="245" selection-start-column="57" selection-end-line="245" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/yhcangkuactivity.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="39" column="42" lean-forward="true" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main2.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_kanban.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1439" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-867" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_kanban_first.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="25" column="34" lean-forward="true" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/activity/HorizontalScrollView.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_firstkanban.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="438">
           <caret line="282" column="66" lean-forward="true" selection-start-line="282" selection-start-column="66" selection-end-line="282" selection-end-column="66" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/activity/YhcangkuActivity.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -584,8 +622,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/SlideRecyclerView.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_and_flowmeter_point_check_record_parameter_mgr.java">
@@ -600,12 +638,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/pn_sop_mgr.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_sop.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/activity/MesLightActivity.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -615,8 +653,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/popupwindow_sopactivity.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="jar://$PROJECT_DIR$/app/libs/slidingmenulibary.jar!/com/jeremyfeinstein/slidingmenu/lib/SlidingMenu.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -626,12 +664,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/slidingmenu_activity_sop.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_listview_popupwindow_sop.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-28/android.jar!/android/app/Activity.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -652,22 +690,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_scantest.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
         </state>
       </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-28/android.jar!/java/lang/String.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="290" column="33" lean-forward="true" selection-start-line="290" selection-start-column="33" selection-end-line="290" selection-end-column="33" />
-          <folding>
-            <element signature="e#8417#8418#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/sopactivity/ScanTestActivity.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -707,12 +735,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/scan_popupwindow.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="38" lean-forward="true" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_sop_mgr.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -725,8 +753,8 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_light_mes.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-28/android.jar!/java/lang/Thread.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -765,20 +793,20 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/pn_qm_win_ipqc_point_check_editor_screwdriver.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="717">
           <caret line="88" column="42" lean-forward="true" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/pn_qm_and_ipqc_point_check_mgr.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="30" column="41" lean-forward="true" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/app.iml">
       <provider selected="true" editor-type-id="text-editor" />
@@ -839,14 +867,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="75" selection-start-line="24" selection-start-column="75" selection-end-line="24" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_and_flowmeter_point_check_editor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="491">
@@ -861,23 +881,142 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="66" lean-forward="true" selection-start-line="21" selection-start-column="66" selection-end-line="21" selection-end-column="66" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest" />
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-28/android.jar!/android/view/View.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="1272" column="25" selection-start-line="1272" selection-start-column="25" selection-end-line="1272" selection-end-column="25" />
+          <folding>
+            <element signature="e#40720#40721#0" expanded="true" />
+            <element signature="e#40771#40772#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/core/Pane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-28/android.jar!/java/lang/String.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="261" column="44" lean-forward="true" selection-start-line="261" selection-start-column="44" selection-end-line="261" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/pn_so_return_editor.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="66" column="28" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/control/ButtonTextCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/pn_begin_stock_editor.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="46" column="54" selection-start-line="43" selection-start-column="12" selection-end-line="46" selection-end-column="54" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/data/DataRow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="701">
+          <caret line="92" column="44" selection-start-line="92" selection-start-column="44" selection-end-line="92" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_and_ipqc_point_check_editor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="433" column="69" lean-forward="true" selection-start-line="433" selection-start-column="69" selection-end-line="433" selection-end-column="69" />
+        <state relative-caret-position="223">
+          <caret line="439" column="62" lean-forward="true" selection-start-line="439" selection-start-column="62" selection-end-line="439" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_begin_stock_editor_yh.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="153" column="9" selection-start-line="153" selection-start-column="9" selection-end-line="153" selection-end-column="9" />
           <folding>
-            <element signature="e#6373#6374#0" expanded="true" />
-            <element signature="e#6448#6449#0" expanded="true" />
-            <element signature="e#7138#7139#0" expanded="true" />
-            <element signature="e#7214#7215#0" expanded="true" />
+            <element signature="e#3938#5020#1" />
+            <element signature="e#5070#6153#1" />
+            <element signature="method#onScan#0;class#pn_begin_stock_editor_yh#0" />
+            <element signature="method#loadLotNumber#0;class#pn_begin_stock_editor_yh#0" />
+            <element signature="method#loadLocation#0;class#pn_begin_stock_editor_yh#0" />
+            <element signature="method#loadOrgCode#0;class#pn_begin_stock_editor_yh#0" />
+            <element signature="method#loadVendorInfo#0;class#pn_begin_stock_editor_yh#0" />
+            <element signature="method#loaditemmodel#0;class#pn_begin_stock_editor_yh#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/core/Workbench.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="540" selection-start-line="540" selection-end-line="540" />
+          <folding>
+            <element signature="e#17256#17602#0" expanded="true" />
+            <element signature="e#17601#17602#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-28/android.jar!/android/os/Handler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#4506#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_so_return_editor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="368" column="19" lean-forward="true" selection-start-line="368" selection-start-column="19" selection-end-line="368" selection-end-column="19" />
+        <state relative-caret-position="493">
+          <caret line="460" column="73" lean-forward="true" selection-start-line="460" selection-start-column="12" selection-end-line="460" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/core/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="262" column="16" selection-start-line="262" selection-start-column="16" selection-end-line="262" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-28/android.jar!/android/widget/PopupWindow.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="221" column="16" selection-start-line="221" selection-start-column="16" selection-end-line="221" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_smt_rejects_record_mgr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="662" column="61" lean-forward="true" selection-start-line="662" selection-start-column="61" selection-end-line="662" selection-end-column="61" />
+          <folding>
+            <element signature="e#78186#79107#0" expanded="true" />
+            <element signature="e#79106#79107#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

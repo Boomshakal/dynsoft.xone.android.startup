@@ -41,6 +41,9 @@ public class pn_so_return_editor extends pn_editor {
         super(context);
     }
 
+    public ButtonTextCell txt_vendor_no_cell;
+    public TextCell txt_vendor_name_cell;
+    public ButtonTextCell txt_vendor_model_cell;
     public TextCell txt_return_order_cell;
     public ButtonTextCell txt_item_code_cell;
     public TextCell txt_item_name_cell;
@@ -64,7 +67,9 @@ public class pn_so_return_editor extends pn_editor {
     public void onPrepared() {
 
         super.onPrepared();
-
+        this.txt_vendor_no_cell = (ButtonTextCell) this.findViewById(R.id.txt_vendor_no_cell);
+        this.txt_vendor_name_cell = (TextCell) this.findViewById(R.id.txt_vendor_name_cell);
+        this.txt_vendor_model_cell = (ButtonTextCell) this.findViewById(R.id.txt_vendor_model_cell);
         this.txt_return_order_cell = (TextCell) this.findViewById(R.id.txt_return_order_cell);
         this.txt_item_code_cell = (ButtonTextCell) this.findViewById(R.id.txt_item_code_cell);
         this.txt_item_name_cell = (TextCell) this.findViewById(R.id.txt_item_name_cell);
@@ -76,6 +81,51 @@ public class pn_so_return_editor extends pn_editor {
         this.txt_location_cell = (TextCell) this.findViewById(R.id.txt_location_cell);
         this.btn_prev = (ImageButton) this.findViewById(R.id.btn_prev);
         this.btn_next = (ImageButton) this.findViewById(R.id.btn_next);
+
+        if (this.txt_vendor_no_cell != null) {
+            this.txt_vendor_no_cell.setLabelText("厂商编号");
+            // this.txt_shipment_code_cell.setReadOnly();
+            // this.txt_vendor_no_cell.Button.setImageBitmap(App.Current.ResourceManager.getImage("@/core_close_light"));
+            this.txt_vendor_no_cell.Button
+                    .setOnClickListener(new OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            String item_num = pn_so_return_editor.this.txt_item_code_cell
+                                    .getContentText().toString().trim();
+                            if (item_num != null && item_num.length() != 0) {
+                                pn_so_return_editor.this.loadVendorInfo();
+                            } else {
+                                App.Current.showWarning(
+                                        pn_so_return_editor.this.getContext(),
+                                        "请先输入物料编码！");
+                            }
+                        }
+                    });
+        }
+        if (this.txt_vendor_model_cell != null) {
+            this.txt_vendor_model_cell.setLabelText("型号");
+            //this.txt_shipment_code_cell.setReadOnly();
+            //this.txt_vendor_no_cell.Button.setImageBitmap(App.Current.ResourceManager.getImage("@/core_close_light"));
+            this.txt_vendor_model_cell.Button
+                    .setOnClickListener(new OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            String item_num = pn_so_return_editor.this.txt_item_code_cell
+                                    .getContentText().toString().trim();
+                            if (item_num != null && item_num.length() != 0) {
+                                pn_so_return_editor.this.loaditemmodel();
+                            } else {
+                                App.Current.showWarning(
+                                        pn_so_return_editor.this.getContext(),
+                                        "请先输入物料编码！");
+                            }
+                        }
+                    });
+        }
+        if (this.txt_vendor_name_cell != null) {
+            this.txt_vendor_name_cell.setLabelText("厂商名称");
+            this.txt_vendor_name_cell.setReadOnly();
+        }
 
         if (this.txt_return_order_cell != null) {
             this.txt_return_order_cell.setLabelText("销退通知");
@@ -192,6 +242,122 @@ public class pn_so_return_editor extends pn_editor {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
         this.txt_return_quantity_cell.onActivityResult(requestCode, resultCode, intent);
+    }
+
+    public void loadVendorInfo() {
+
+        String sql = "SELECT  VENDOR_NO,VENDOR_NAME,VENDOR_SITE_CODE,MANUFACTURER_NAME,PRIMARY_VENDOR_ITEM,vendor_id  FROM v_mm_item_vendor  WHERE   ITEM_NO=?   AND (ISNULL(?, '') = '' OR VENDOR_NO = ?)";
+        final String item_num = this.txt_item_code_cell.getContentText().split(",")[1].replace(" ","");
+
+        String lotnumber = this.txt_lot_number_cell.getContentText().trim();
+        String vendorno = this.txt_vendor_no_cell.getContentText().trim();
+        if (lotnumber == null || lotnumber.length() == 0) {
+            vendorno = "";
+        }
+
+        Parameters p = new Parameters().add(1, item_num)
+                .add(2, vendorno).add(3, vendorno);
+        final Result<DataTable> result = App.Current.DbPortal.ExecuteDataTable(
+                "mgmt_ts_erp_and", sql, p);
+        if (result.HasError) {
+            App.Current.showError(this.getContext(), result.Error);
+            return;
+        }
+        if (result.Value != null && result.Value.Rows.size() > 0) {
+            if (result.Value.Rows.size() > 1) {
+                ArrayList<String> names = new ArrayList<String>();
+                for (DataRow row : result.Value.Rows) {
+                    String name = row.getValue("VENDOR_NO", "") + " "
+                            + row.getValue("VENDOR_SITE_CODE", "") + " \n"
+                            + row.getValue("MANUFACTURER_NAME", "") + " "
+                            + row.getValue("PRIMARY_VENDOR_ITEM", "");
+                    names.add(name);
+                }
+
+                DialogInterface.OnClickListener listener = new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        if (which >= 0) {
+                            DataRow row = result.Value.Rows.get(which);
+
+                            txt_vendor_name_cell.setContentText(row.getValue(
+                                    "VENDOR_NAME", ""));
+                            txt_vendor_model_cell.setContentText(row.getValue(
+                                    "PRIMARY_VENDOR_ITEM", ""));
+                            txt_vendor_no_cell.setContentText(row.getValue(
+                                    "VENDOR_NO", ""));
+                            _order_row.setValue("vendor_id",row.getValue(
+                                    "vendor_id", ""));
+                        }
+                        dialog.dismiss();
+                    }
+                };
+
+                new AlertDialog.Builder(pn_so_return_editor.this.getContext())
+                        .setTitle("选择厂商")
+                        .setSingleChoiceItems(names.toArray(new String[0]), 0,
+                                listener).setNegativeButton("取消", null).show();
+            } else {
+                txt_vendor_name_cell.setContentText(result.Value.Rows.get(0).getValue(
+                        "VENDOR_NAME", ""));
+                txt_vendor_model_cell.setContentText(result.Value.Rows.get(0).getValue(
+                        "PRIMARY_VENDOR_ITEM", ""));
+                txt_vendor_no_cell.setContentText(result.Value.Rows.get(0).getValue(
+                        "VENDOR_NO", ""));
+                _order_row.setValue("vendor_id",result.Value.Rows.get(0).getValue(
+                        "vendor_id", ""));
+            }
+        } else {
+            txt_vendor_name_cell.setContentText("浙江怡和卫浴有限公司");
+            txt_vendor_model_cell.setContentText("/");
+            txt_vendor_no_cell.setContentText("700002");
+            _order_row.setValue("vendor_id","17487");
+        }
+    }
+
+    public void loaditemmodel() {
+
+        String sql = "SELECT  model  From  MM_ITEM_MODEL a left join mm_item b on a.item_id = b.id where b.code =? ";
+        final String item_num = this.txt_item_code_cell.getContentText().split(",")[1];
+
+        Parameters p = new Parameters().add(1, item_num);
+        final Result<DataTable> result = App.Current.DbPortal.ExecuteDataTable(
+                this.Connector, sql, p);
+        if (result.HasError) {
+            App.Current.showError(this.getContext(), result.Error);
+            return;
+        }
+        if (result.Value != null && result.Value.Rows.size() > 0) {
+            if (result.Value.Rows.size() > 1) {
+                ArrayList<String> names = new ArrayList<String>();
+                for (DataRow row : result.Value.Rows) {
+                    String name = row.getValue("model", "");
+                    names.add(name);
+                }
+
+                DialogInterface.OnClickListener listener = new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        if (which >= 0) {
+                            DataRow row = result.Value.Rows.get(which);
+                            txt_vendor_model_cell.setContentText(row.getValue(
+                                    "model", ""));
+
+                        }
+                        dialog.dismiss();
+                    }
+                };
+
+                new AlertDialog.Builder(pn_so_return_editor.this.getContext())
+                        .setTitle("选择型号")
+                        .setSingleChoiceItems(names.toArray(new String[0]), 0,
+                                listener).setNegativeButton("取消", null).show();
+            } else {
+                txt_vendor_model_cell.setContentText(result.Value.Rows.get(0).getValue(
+                        "model", ""));
+
+            }
+        }
     }
 
     @Override
@@ -381,7 +547,7 @@ public class pn_so_return_editor extends pn_editor {
         entry.put("quantity", String.valueOf(issue_quantity));
         entry.put("lot_number", lot_number);
         entry.put("date_code", dc);
-        entry.put("vendor_id", "6048");
+        entry.put("vendor_id", _order_row.getValue("vendor_id",""));
         entry.put("vendor_model", _order_row.getValue("item_name", ""));
         entry.put("vendor_lot", dc);
         entry.put("locations", txt_location);

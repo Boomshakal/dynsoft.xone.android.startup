@@ -32,6 +32,21 @@
                 android:id="@+id/txt_customer_name_cell"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
+
+           <dynsoft.xone.android.control.ButtonTextCell
+               android:id="@+id/txt_vendor_no_cell"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"/>
+
+           <dynsoft.xone.android.control.TextCell
+               android:id="@+id/txt_vendor_name_cell"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"/>
+
+           <dynsoft.xone.android.control.ButtonTextCell
+               android:id="@+id/txt_vendor_model_cell"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"/>
             
             <dynsoft.xone.android.control.ButtonTextCell
                 android:id="@+id/txt_item_code_cell"
