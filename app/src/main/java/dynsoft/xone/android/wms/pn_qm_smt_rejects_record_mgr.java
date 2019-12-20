@@ -365,7 +365,7 @@ public class pn_qm_smt_rejects_record_mgr extends pn_editor {
                     }
                 }
             });
-        } else if ((lot_number.startsWith("M") || lot_number.startsWith("YH") || lot_number.startsWith("XR") || lot_number.startsWith("SX")) && lot_number.length() <= 10) {      //扫描的工作员
+        } else if ((lot_number.startsWith("M") || lot_number.startsWith("YH") || lot_number.startsWith("XR")) && lot_number.length() <= 10) {      //扫描的工作员
             String sql = "select * from fm_worker where code = ?";
             Parameters p = new Parameters().add(1, lot_number);
             App.Current.DbPortal.ExecuteRecordAsync("core_and", sql, p, new ResultHandler<DataRow>() {

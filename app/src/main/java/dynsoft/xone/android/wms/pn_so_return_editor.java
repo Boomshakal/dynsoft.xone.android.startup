@@ -286,8 +286,8 @@ public class pn_so_return_editor extends pn_editor {
                                     "PRIMARY_VENDOR_ITEM", ""));
                             txt_vendor_no_cell.setContentText(row.getValue(
                                     "VENDOR_NO", ""));
-                            _order_row.setValue("vendor_id",row.getValue(
-                                    "vendor_id", ""));
+                            _order_row.setValue("vendor_id",String.valueOf(row.getValue(
+                                    "vendor_id", "")));
                         }
                         dialog.dismiss();
                     }
@@ -304,8 +304,8 @@ public class pn_so_return_editor extends pn_editor {
                         "PRIMARY_VENDOR_ITEM", ""));
                 txt_vendor_no_cell.setContentText(result.Value.Rows.get(0).getValue(
                         "VENDOR_NO", ""));
-                _order_row.setValue("vendor_id",result.Value.Rows.get(0).getValue(
-                        "vendor_id", ""));
+                _order_row.setValue("vendor_id",String.valueOf(result.Value.Rows.get(0).getValue(
+                        "vendor_id", "")));
             }
         } else {
             txt_vendor_name_cell.setContentText("浙江怡和卫浴有限公司");
