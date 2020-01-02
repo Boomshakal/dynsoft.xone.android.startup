@@ -177,10 +177,10 @@ public class pn_qm_and_pressure_point_check_editor extends pn_editor {
         }
 
         if (text_cell_7 != null) {
-            text_cell_7.setLabelText("流量标准值");
+            text_cell_7.setLabelText("压力标准值");
         }
         if (text_cell_8 != null) {
-            text_cell_8.setLabelText("流量测试值");
+            text_cell_8.setLabelText("压力测试值");
         }
 
 
