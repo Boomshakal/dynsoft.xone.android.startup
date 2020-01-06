@@ -8,7 +8,7 @@
 8        android:minSdkVersion="14"
 8-->C:\Users\li\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="23" />
-9-->[com.bigkoo:pickerview:2.1.1] C:\Users\li\.gradle\caches\transforms-2\files-2.1\69756a89f0ef9c7b6e088633fd6922e6\pickerview-2.1.1\AndroidManifest.xml:9:9-38
+9-->[com.bigkoo:pickerview:2.1.1] C:\Users\li\.gradle\caches\transforms-2\files-2.1\b553ef63be9f90176b19ff6963d06b99\pickerview-2.1.1\AndroidManifest.xml:9:9-38
 10
 11    <!-- <uses-sdk -->
 12    <!-- android:targetSdkVersion="19" /> -->
@@ -87,7 +87,7 @@
 46        android:name="dynsoft.xone.android.core.App"
 46-->C:\Users\li\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:44:9-53
 47        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
-47-->[com.android.support:support-compat:28.0.0] C:\Users\li\.gradle\caches\transforms-2\files-2.1\dd1cf78f22bdd94f550130b281f27c97\support-compat-28.0.0\AndroidManifest.xml:22:18-91
+47-->[com.android.support:support-compat:28.0.0] C:\Users\li\.gradle\caches\transforms-2\files-2.1\f14724208b5bfeeef0d6bdefe649bca7\support-compat-28.0.0\AndroidManifest.xml:22:18-91
 48        android:icon="@drawable/logo"
 48-->C:\Users\li\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:45:9-38
 49        android:label="MEGMEET移动企业管理平台"

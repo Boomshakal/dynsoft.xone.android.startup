@@ -20,18 +20,18 @@
         android:background="@color/white"
         android:layout_height="wrap_content"></dynsoft.xone.android.control.ButtonTextCell>
 
-    <LinearLayout
-        android:id="@+id/linearlayout"
-        android:orientation="horizontal"
-        android:background="@color/white"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+<!--    <LinearLayout-->
+<!--        android:id="@+id/linearlayout"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:background="@color/white"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
 
-        <dynsoft.xone.android.control.TextCell
-            android:id="@+id/text_cell_1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"></dynsoft.xone.android.control.TextCell>
-    </LinearLayout>
+<!--        <dynsoft.xone.android.control.TextCell-->
+<!--            android:id="@+id/text_cell_1"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"></dynsoft.xone.android.control.TextCell>-->
+<!--    </LinearLayout>-->
 
     <dynsoft.xone.android.control.ButtonTextCell
         android:id="@+id/button_text_cell_3"

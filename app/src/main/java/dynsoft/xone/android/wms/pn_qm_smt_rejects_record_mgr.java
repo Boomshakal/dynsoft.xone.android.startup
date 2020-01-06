@@ -667,7 +667,7 @@ public class pn_qm_smt_rejects_record_mgr extends pn_editor {
         });
     }
 
-    private void chooseRepairType(final ButtonTextCell buttonTextCell9) {
+    private void chooseRepairType(final ButtonTextCell buttonTextCell) {
         String sql = "SELECT code + bad_type name  FROM fm_bad_apperance";
         App.Current.DbPortal.ExecuteDataTableAsync("core_and", sql, new ResultHandler<DataTable>() {
             @Override
@@ -686,7 +686,7 @@ public class pn_qm_smt_rejects_record_mgr extends pn_editor {
                             .setItems(names.toArray(new String[0]), new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int position) {
-                                    buttonTextCell9.setContentText(names.get(position));
+                                    buttonTextCell.setContentText(names.get(position));
                                 }
                             })
                             .setNegativeButton("取消", null).show();
@@ -1402,8 +1402,8 @@ public class pn_qm_smt_rejects_record_mgr extends pn_editor {
     }
 
     private void toastChooseResult() {
-        String sql = "exec p_fm_smt_get_reason ?";
-        Parameters p = new Parameters().add(1, 1);
+        String sql = "exec p_fm_smt_get_reason";
+        Parameters p = new Parameters();
         App.Current.DbPortal.ExecuteDataTableAsync("core_and", sql, p, new ResultHandler<DataTable>() {
             @Override
             public void handleMessage(Message msg) {
@@ -1443,13 +1443,13 @@ public class pn_qm_smt_rejects_record_mgr extends pn_editor {
     private void initPopupView(final View popupView, final ArrayList<String> names) {
         final ButtonTextCell buttonTextCell = (ButtonTextCell) popupView.findViewById(R.id.button_text_cell);
         final ButtonTextCell buttonTextCell3 = (ButtonTextCell) popupView.findViewById(R.id.button_text_cell_3);
-        final TextCell textCell1 = (TextCell) popupView.findViewById(R.id.text_cell_1);
+//        final TextCell textCell1 = (TextCell) popupView.findViewById(R.id.text_cell_1);
         LinearLayout linearLayout = (LinearLayout) popupView.findViewById(R.id.linearlayout);
         TextView confirm = (TextView) popupView.findViewById(R.id.confirm);
         TextView cancel = (TextView) popupView.findViewById(R.id.cancel);
         buttonTextCell.Label.setTextColor(Color.BLACK);
         buttonTextCell3.Label.setTextColor(Color.BLACK);
-        textCell1.Label.setTextColor(Color.BLACK);
+//        textCell1.Label.setTextColor(Color.BLACK);
 
 //        //由于mllExpand的parent layout是RelativeLayout，因此需要采用RelativeLayout.LayoutParams类型
 //        LinearLayout.LayoutParams lpExpand = (LinearLayout.LayoutParams) linearLayout.getLayoutParams();
@@ -1463,16 +1463,17 @@ public class pn_qm_smt_rejects_record_mgr extends pn_editor {
             buttonTextCell.Button.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    final StringBuffer nameMessage = new StringBuffer();
-                    final boolean[] selected = new boolean[names.size()];
-                    multiChoiceDialog(nameMessage, selected, names, buttonTextCell);
+//                    final StringBuffer nameMessage = new StringBuffer();
+//                    final boolean[] selected = new boolean[names.size()];
+//                    multiChoiceDialog(nameMessage, selected, names, buttonTextCell);
+                    chooseRepairType(buttonTextCell);
                 }
             });
         }
 
-        if (textCell1 != null) {
-            textCell1.setLabelText("不良位号");
-        }
+//        if (textCell1 != null) {
+//            textCell1.setLabelText("不良位号");
+//        }
 
         if (buttonTextCell3 != null) {
             buttonTextCell3.setLabelText("流向工序");
@@ -1505,11 +1506,10 @@ public class pn_qm_smt_rejects_record_mgr extends pn_editor {
             @Override
             public void onClick(View view) {
                 if (TextUtils.isEmpty(buttonTextCell.getContentText())) {
-                    App.Current.showInfo(pn_qm_smt_rejects_record_mgr.this.getContext(), "请输入不良情况");
-                } else if (TextUtils.isEmpty(textCell1.getContentText())) {
                     App.Current.showInfo(pn_qm_smt_rejects_record_mgr.this.getContext(), "请输入不良描述");
-                } else {
-                    xml = getTestBindXml(buttonTextCell.getContentText(), textCell1.getContentText());
+                }
+                 else {
+                    xml = getTestBindXml(buttonTextCell.getContentText(), "");
                     CommitScanNumberCreate(mainCode, "FAIL");
                     popupWindow.dismiss();
                 }
