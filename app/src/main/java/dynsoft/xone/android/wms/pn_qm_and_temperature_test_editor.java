@@ -82,7 +82,7 @@ public class pn_qm_and_temperature_test_editor extends pn_editor {
 
         if (text_cell_1 != null) {
             text_cell_1.setLabelText("¹¤ºÅ");
-//            text_cell_1.setReadOnly();
+            text_cell_1.setReadOnly();
         }
 
         if (button_text_cell_2 != null) {
@@ -125,7 +125,7 @@ public class pn_qm_and_temperature_test_editor extends pn_editor {
         if (button_text_cell_3 != null) {
             button_text_cell_3.setLabelText("ÐÕÃû");
 //            button_text_cell_3.setContentText(App.Current.UserCode);
-//            button_text_cell_3.setReadOnly();
+            button_text_cell_3.setReadOnly();
             button_text_cell_3.Button.setOnClickListener(new OnClickListener() {
 
                 @Override
@@ -279,8 +279,7 @@ public class pn_qm_and_temperature_test_editor extends pn_editor {
                                     Log.e("len", "ID: " + id);
                                     if (id != 0) {
                                         loadItem(id);
-                                    }
-                                    else {
+                                    } else {
 //                                        close();
                                         clear();
                                     }
