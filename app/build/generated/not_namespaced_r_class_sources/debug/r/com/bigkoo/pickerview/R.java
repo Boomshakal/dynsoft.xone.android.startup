@@ -88,8 +88,8 @@ public final class R {
 
         public static final int include_pickerview_topbar = 0x7f0a0065;
         public static final int layout_basepickerview = 0x7f0a0094;
-        public static final int pickerview_options = 0x7f0a00fe;
-        public static final int pickerview_time = 0x7f0a00ff;
+        public static final int pickerview_options = 0x7f0a00ff;
+        public static final int pickerview_time = 0x7f0a0100;
     }
     public static final class string {
         private string() {}

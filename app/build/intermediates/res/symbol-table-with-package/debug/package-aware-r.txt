@@ -2058,6 +2058,7 @@ layout ln_so_issue
 layout ln_sop_parameter_item
 layout ln_stock_check_item
 layout ln_stock_check_lot
+layout ln_temperature_test
 layout ln_tr_transaction
 layout ln_trial_produce_editor_chooce_man
 layout ln_trial_produce_record_editor_item
@@ -2197,6 +2198,7 @@ layout pn_qm_post_skill_mgr
 layout pn_qm_smt_rejects_record_mgr
 layout pn_qm_win_ipqc_point_check_editor
 layout pn_qm_win_ipqc_point_check_editor_screwdriver
+layout pn_qm_win_temperature_test_editor
 layout pn_smt_accessories_editor
 layout pn_smt_back_editor
 layout pn_smt_change_editor
