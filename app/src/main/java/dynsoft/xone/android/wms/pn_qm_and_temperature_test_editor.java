@@ -9,10 +9,11 @@ import android.os.Message;
 import android.service.autofill.Dataset;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageButton;
 
-import com.bigkoo.pickerview.TimePickerView;
+//import com.bigkoo.pickerview.TimePickerView;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -82,7 +83,20 @@ public class pn_qm_and_temperature_test_editor extends pn_editor {
 
         if (text_cell_1 != null) {
             text_cell_1.setLabelText("¹¤ºÅ");
-            text_cell_1.setReadOnly();
+//            text_cell_1.setReadOnly();
+            text_cell_1.TextBox.setOnKeyListener(new OnKeyListener() {
+                @Override
+                public boolean onKey(View v, int keyCode, KeyEvent event) {
+                    if (keyCode == KeyEvent.KEYCODE_ENTER && event.getAction() == KeyEvent.ACTION_UP) {
+                        String bar_code = text_cell_1.getContentText().trim();
+                        text_cell_1.setContentText(bar_code);
+                        text_cell_1.TextBox.setSelection(bar_code.length());
+                        getname(bar_code);
+                        return true;
+                    }
+                    return false;
+                }
+            });
         }
 
         if (button_text_cell_2 != null) {
@@ -173,8 +187,12 @@ public class pn_qm_and_temperature_test_editor extends pn_editor {
         String barcode_text = barcode.trim();
         text_cell_1.setContentText(barcode_text);
 
-        String sql = "SELECT name from dbo.core_user WHERE code =?";
-        Parameters p = new Parameters().add(1, barcode_text);
+        getname(barcode_text);
+    }
+
+    private void getname(String code) {
+        String sql = "SELECT name from dbo.user_diff WHERE code =?";
+        Parameters p = new Parameters().add(1, code);
         App.Current.DbPortal.ExecuteRecordAsync(this.Connector, sql, p, new ResultHandler<DataRow>() {
             @Override
             public void handleMessage(Message msg) {
