@@ -7624,11 +7624,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_ipqc_first_sure_editor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="415" column="61" lean-forward="true" selection-start-line="415" selection-start-column="61" selection-end-line="415" selection-end-column="61" />
+            <state relative-caret-position="32">
+              <caret line="410" column="14" selection-start-line="410" selection-start-column="14" selection-end-line="410" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#10180#10709#1" />
@@ -7660,7 +7660,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_ipqc_first_sure_mgr.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="392">
-              <caret line="145" column="13" lean-forward="true" selection-start-line="145" selection-start-column="13" selection-end-line="145" selection-end-column="13" />
+              <caret line="145" column="13" selection-start-line="145" selection-start-column="13" selection-end-line="145" selection-end-column="13" />
               <folding>
                 <element signature="e#2377#3078#0" expanded="true" />
                 <element signature="e#3077#3078#0" expanded="true" />
@@ -7669,12 +7669,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <provider editor-type-id="android-manifest" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="28" column="64" lean-forward="true" selection-start-line="28" selection-start-column="64" selection-end-line="28" selection-end-column="64" />
+            <state relative-caret-position="266">
+              <caret line="14" column="61" lean-forward="true" selection-start-line="14" selection-start-column="61" selection-end-line="14" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -7722,7 +7722,7 @@
     </replaceStrings>
   </component>
   <component name="GenerateSignedApkSettings">
-    <option name="KEY_STORE_PATH" value="C:\Users\li\AndroidStudioProjects\dynsoft.xone.android.startup\111" />
+    <option name="KEY_STORE_PATH" value="C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\111" />
     <option name="KEY_ALIAS" value="1" />
     <option name="REMEMBER_PASSWORDS" value="true" />
     <option name="BUILD_TARGET_KEY" value="apk" />
@@ -7766,7 +7766,6 @@
         <option value="$PROJECT_DIR$/local.properties" />
         <option value="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_mgr.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_ipqc_first_check_editor.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/activity/FirstItemActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/adapter/FirstItemAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/activity/FileOpenActivity.java" />
@@ -7775,6 +7774,7 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_first_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_ipqc_first_sure_editor.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_ipqc_first_sure_mgr.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       </list>
     </option>
   </component>
@@ -7862,7 +7862,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="ExportApk.ApkPath" value="C:\Users\li\AndroidStudioProjects\dynsoft.xone.android.startup\app" />
+    <property name="ExportApk.ApkPath" value="C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app" />
     <property name="ExportApk.BuildVariants" value="release" />
     <property name="ExportApk.SignV1" value="true" />
     <property name="ExportApk.SignV2" value="true" />
@@ -8034,19 +8034,19 @@
     <layout>
       <window_info anchor="top" id="Device File Explorer" order="0" weight="0.3287879" />
       <window_info id="Captures" order="0" sideWeight="0.48426574" side_tool="true" weight="0.2230908" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.48915663" visible="true" weight="0.2627346" />
-      <window_info id="Structure" order="2" sideWeight="0.5108434" side_tool="true" visible="true" weight="0.2627346" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.4916318" visible="true" weight="0.2627346" />
+      <window_info id="Structure" order="2" sideWeight="0.5104167" side_tool="true" weight="0.2627346" />
       <window_info id="Build Variants" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
       <window_info id="Designer" order="5" />
       <window_info id="Resources Explorer" order="6" weight="0.32952496" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Favorites" order="8" sideWeight="0.48426574" side_tool="true" weight="0.2230908" />
-      <window_info anchor="bottom" id="Version Control" order="0" weight="0.3621701" />
+      <window_info anchor="bottom" id="Version Control" order="0" weight="0.36212122" />
       <window_info anchor="bottom" id="Logcat" order="1" weight="0.24340177" />
       <window_info anchor="bottom" id="TODO" order="2" weight="0.32844576" />
       <window_info anchor="bottom" id="Android Profiler" order="3" show_stripe_button="false" weight="0.32991013" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="4" sideWeight="0.4691689" visible="true" weight="0.37121212" />
+      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.4691689" weight="0.27272728" />
       <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5308311" side_tool="true" weight="0.33636364" />
       <window_info anchor="bottom" id="Build" order="6" sideWeight="0.43632707" weight="0.3530303" />
       <window_info anchor="bottom" id="Run" order="7" weight="0.28005865" />
@@ -8485,14 +8485,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="28" column="64" lean-forward="true" selection-start-line="28" selection-start-column="64" selection-end-line="28" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_ipqc_first_check_editor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -8522,7 +8514,7 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_ipqc_first_sure_mgr.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
-          <caret line="145" column="13" lean-forward="true" selection-start-line="145" selection-start-column="13" selection-end-line="145" selection-end-column="13" />
+          <caret line="145" column="13" selection-start-line="145" selection-start-column="13" selection-end-line="145" selection-end-column="13" />
           <folding>
             <element signature="e#2377#3078#0" expanded="true" />
             <element signature="e#3077#3078#0" expanded="true" />
@@ -8539,12 +8531,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_ipqc_first_sure_editor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="415" column="61" lean-forward="true" selection-start-line="415" selection-start-column="61" selection-end-line="415" selection-end-column="61" />
+        <state relative-caret-position="32">
+          <caret line="410" column="14" selection-start-line="410" selection-start-column="14" selection-end-line="410" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#10180#10709#1" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="61" lean-forward="true" selection-start-line="14" selection-start-column="61" selection-end-line="14" selection-end-column="61" />
         </state>
       </provider>
     </entry>
