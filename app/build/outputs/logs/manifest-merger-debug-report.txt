@@ -1,15 +1,18 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-244:12
-INJECTED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-244:12
-INJECTED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-244:12
-INJECTED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-244:12
+ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-264:12
+INJECTED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-264:12
+INJECTED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-264:12
+INJECTED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-264:12
+MERGED from [com.arialyy.aria:aria-core:3.5.4] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\fde73ccaaef040e461e0eabdf8fe05a8\aria-core-3.5.4\AndroidManifest.xml:2:1-18:12
 MERGED from [com.android.support:multidex:1.0.2] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\0931be45c9d9c06b6580c072fedcdf57\multidex-1.0.2\AndroidManifest.xml:17:1-22:12
+MERGED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\cdba1ac62706e0f58dc1e823f53f2341\zxing-library-2.2\AndroidManifest.xml:2:1-20:12
 MERGED from [com.android.support:support-v4:28.0.0] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\bfb533db6d1d2014a096c6efb61debb1\support-v4-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\29e2727cb3e7b3ad6292855055b1a52f\appcompat-v7-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.bigkoo:pickerview:2.1.1] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\143503ab1f0343f92d7c35969313b716\pickerview-2.1.1\AndroidManifest.xml:2:1-11:12
 MERGED from [com.github.hotchemi:permissionsdispatcher:3.1.0] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\82aa63855b4fd3700527fc8ec8694fe7\permissionsdispatcher-3.1.0\AndroidManifest.xml:2:1-10:12
 MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\f8e903249edd82e4741cea5d801f01ec\recyclerview-v7-28.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.liulishuo.filedownloader:library:1.7.4] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\205f96643f709360c9dea3ef600363e5\library-1.7.4\AndroidManifest.xml:2:1-18:12
 MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\f555422c3fe9f99382ac2cf02895942b\support-media-compat-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\8c478a397c2db4f3f2af8fdf0b8dc6ee\support-fragment-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\249427e2bea1759d642cd88de376860d\animated-vector-drawable-28.0.0\AndroidManifest.xml:17:1-22:12
@@ -36,9 +39,9 @@ MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\IKAHE\.gradle\cach
 MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\98b3fc09ba8a9a85b8c06817bf19ae68\livedata-1.1.1\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\5370d4f4cbbda8c4556754da4bee2139\livedata-core-1.1.1\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\b93134f0239d257bfaa8cbed8f660358\runtime-1.1.1\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-244:12
-INJECTED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-244:12
-INJECTED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-244:12
+INJECTED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-264:12
+INJECTED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-264:12
+INJECTED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-264:12
 	package
 		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:3:5-40
 		INJECTED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml
@@ -83,6 +86,8 @@ ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app
 		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:22:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:23:5-79
+MERGED from [com.arialyy.aria:aria-core:3.5.4] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\fde73ccaaef040e461e0eabdf8fe05a8\aria-core-3.5.4\AndroidManifest.xml:11:5-79
+MERGED from [com.arialyy.aria:aria-core:3.5.4] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\fde73ccaaef040e461e0eabdf8fe05a8\aria-core-3.5.4\AndroidManifest.xml:11:5-79
 	android:name
 		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:23:22-76
 uses-permission#android.permission.ACCESS_WIFI_STATE
@@ -130,15 +135,25 @@ ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app
 	android:name
 		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:41:19-54
 application
-ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:43:5-242:19
+ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:43:5-262:19
+MERGED from [com.arialyy.aria:aria-core:3.5.4] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\fde73ccaaef040e461e0eabdf8fe05a8\aria-core-3.5.4\AndroidManifest.xml:13:5-16:19
+MERGED from [com.arialyy.aria:aria-core:3.5.4] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\fde73ccaaef040e461e0eabdf8fe05a8\aria-core-3.5.4\AndroidManifest.xml:13:5-16:19
+MERGED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\cdba1ac62706e0f58dc1e823f53f2341\zxing-library-2.2\AndroidManifest.xml:11:5-18:19
+MERGED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\cdba1ac62706e0f58dc1e823f53f2341\zxing-library-2.2\AndroidManifest.xml:11:5-18:19
+MERGED from [com.liulishuo.filedownloader:library:1.7.4] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\205f96643f709360c9dea3ef600363e5\library-1.7.4\AndroidManifest.xml:11:5-16:19
+MERGED from [com.liulishuo.filedownloader:library:1.7.4] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\205f96643f709360c9dea3ef600363e5\library-1.7.4\AndroidManifest.xml:11:5-16:19
 MERGED from [com.android.support:support-compat:28.0.0] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\a9755f68d450457a9061779241f459b7\support-compat-28.0.0\AndroidManifest.xml:22:5-94
 MERGED from [com.android.support:support-compat:28.0.0] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\a9755f68d450457a9061779241f459b7\support-compat-28.0.0\AndroidManifest.xml:22:5-94
 MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\6fe4eef1a0f0c92854b2a9394ce81ffe\versionedparcelable-28.0.0\AndroidManifest.xml:22:5-23:19
 MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\6fe4eef1a0f0c92854b2a9394ce81ffe\versionedparcelable-28.0.0\AndroidManifest.xml:22:5-23:19
 	android:appComponentFactory
 		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\a9755f68d450457a9061779241f459b7\support-compat-28.0.0\AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from [com.arialyy.aria:aria-core:3.5.4] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\fde73ccaaef040e461e0eabdf8fe05a8\aria-core-3.5.4\AndroidManifest.xml:15:9-35
 	android:label
 		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:46:9-40
+	android:allowBackup
+		ADDED from [com.arialyy.aria:aria-core:3.5.4] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\fde73ccaaef040e461e0eabdf8fe05a8\aria-core-3.5.4\AndroidManifest.xml:14:9-35
 	android:icon
 		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:45:9-38
 	android:theme
@@ -353,133 +368,167 @@ ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app
 		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:175:13-50
 	android:name
 		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:174:13-69
-activity#dynsoft.xone.android.activity.YhcangkuActivity
+activity#dynsoft.xone.android.activity.AlbumGetPicActivity
 ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:177:9-179:53
 	android:screenOrientation
 		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:179:13-50
 	android:name
-		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:178:13-74
-activity#dynsoft.xone.android.activity.MesLightActivity
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:178:13-77
+activity#dynsoft.xone.android.activity.FirstItemActivity
 ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:181:9-183:53
 	android:screenOrientation
 		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:183:13-50
 	android:name
-		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:182:13-74
-activity#dynsoft.xone.android.activity.RawMaterialKanbanActivity
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:182:13-75
+activity#dynsoft.xone.android.activity.FirstItemNewActivity
 ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:185:9-187:53
 	android:screenOrientation
 		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:187:13-50
 	android:name
-		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:186:13-83
-activity#dynsoft.xone.android.sopactivity.LocationCheckActivity
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:186:13-78
+activity#dynsoft.xone.android.activity.FirstItemTestActivity
 ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:189:9-191:53
 	android:screenOrientation
 		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:191:13-50
 	android:name
-		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:190:13-82
-activity#dynsoft.xone.android.sopactivity.CheckReportActivity
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:190:13-79
+activity#dynsoft.xone.android.activity.GalleryGetPicActivity
 ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:193:9-195:53
 	android:screenOrientation
 		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:195:13-50
 	android:name
-		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:194:13-80
-activity#dynsoft.xone.android.activity.ThirdKanbanActivity
-ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:198:9-200:53
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:194:13-79
+activity#dynsoft.xone.android.activity.YhcangkuActivity
+ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:197:9-199:53
 	android:screenOrientation
-		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:200:13-50
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:199:13-50
 	android:name
-		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:199:13-77
-activity#dynsoft.xone.android.activity.PostSkillActivity
-ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:202:9-204:53
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:198:13-74
+activity#dynsoft.xone.android.activity.MesLightActivity
+ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:201:9-203:53
 	android:screenOrientation
-		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:204:13-50
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:203:13-50
 	android:name
-		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:203:13-75
-activity#dynsoft.xone.android.activity.LightKanbanActivity
-ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:206:9-208:62
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:202:13-74
+activity#dynsoft.xone.android.activity.RawMaterialKanbanActivity
+ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:205:9-207:53
 	android:screenOrientation
-		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:208:13-50
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:207:13-50
 	android:name
-		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:207:13-77
-activity#dynsoft.xone.android.activity.ShortReportKanbanActivity
-ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:210:9-212:62
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:206:13-83
+activity#dynsoft.xone.android.sopactivity.LocationCheckActivity
+ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:209:9-211:53
 	android:screenOrientation
-		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:212:13-50
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:211:13-50
 	android:name
-		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:211:13-83
-activity#dynsoft.xone.android.activity.PurchaseExamKanbanActivity
-ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:213:9-215:62
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:210:13-82
+activity#dynsoft.xone.android.sopactivity.CheckReportActivity
+ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:213:9-215:53
 	android:screenOrientation
 		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:215:13-50
 	android:name
-		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:214:13-84
-activity#dynsoft.xone.android.activity.FirstDepartmentKanbanActivity
-ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:216:9-218:53
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:214:13-80
+activity#dynsoft.xone.android.activity.ThirdKanbanActivity
+ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:218:9-220:53
 	android:screenOrientation
-		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:218:13-50
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:220:13-50
 	android:name
-		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:217:13-87
-activity#dynsoft.xone.android.activity.ThirdDepartmentKanbanActivity
-ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:219:9-221:53
-	android:screenOrientation
-		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:221:13-50
-	android:name
-		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:220:13-87
-activity#dynsoft.xone.android.activity.LocationCheckSMTActivity
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:219:13-77
+activity#dynsoft.xone.android.activity.PostSkillActivity
 ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:222:9-224:53
 	android:screenOrientation
 		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:224:13-50
 	android:name
-		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:223:13-82
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:223:13-75
+activity#dynsoft.xone.android.activity.LightKanbanActivity
+ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:226:9-228:62
+	android:screenOrientation
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:228:13-50
+	android:name
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:227:13-77
+activity#dynsoft.xone.android.activity.ShortReportKanbanActivity
+ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:230:9-232:62
+	android:screenOrientation
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:232:13-50
+	android:name
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:231:13-83
+activity#dynsoft.xone.android.activity.PurchaseExamKanbanActivity
+ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:233:9-235:62
+	android:screenOrientation
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:235:13-50
+	android:name
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:234:13-84
+activity#dynsoft.xone.android.activity.FirstDepartmentKanbanActivity
+ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:236:9-238:53
+	android:screenOrientation
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:238:13-50
+	android:name
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:237:13-87
+activity#dynsoft.xone.android.activity.ThirdDepartmentKanbanActivity
+ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:239:9-241:53
+	android:screenOrientation
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:241:13-50
+	android:name
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:240:13-87
+activity#dynsoft.xone.android.activity.LocationCheckSMTActivity
+ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:242:9-244:53
+	android:screenOrientation
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:244:13-50
+	android:name
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:243:13-82
 activity#dynsoft.xone.android.ui.ImageShower
-ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:225:9-227:53
+ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:245:9-247:53
 	android:screenOrientation
-		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:227:13-50
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:247:13-50
 	android:name
-		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:226:13-63
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:246:13-63
 activity#dynsoft.xone.android.activity.PatrolCardActivity
-ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:228:9-230:53
+ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:248:9-250:53
 	android:screenOrientation
-		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:230:13-50
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:250:13-50
 	android:name
-		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:229:13-76
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:249:13-76
 activity#dynsoft.xone.android.sopactivity.EmployeeMessageActivity
-ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:231:9-233:53
+ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:251:9-253:53
 	android:screenOrientation
-		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:233:13-50
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:253:13-50
 	android:name
-		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:232:13-84
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:252:13-84
 activity#dynsoft.xone.android.activity.MPSActivity
-ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:234:9-236:53
+ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:254:9-256:53
 	android:screenOrientation
-		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:236:13-50
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:256:13-50
 	android:name
-		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:235:13-69
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:255:13-69
 activity#dynsoft.xone.android.blueprint.Demo_ad_escActivity
-ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:237:9-87
+ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:257:9-87
 	android:name
-		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:237:19-84
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:257:19-84
 activity#dynsoft.xone.android.blueprint.Demo_ad_escActivity2
-ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:238:9-88
+ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:258:9-88
 	android:name
-		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:238:19-85
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:258:19-85
 activity#dynsoft.xone.android.blueprint.FaliaoStatusActivity
-ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:239:9-88
+ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:259:9-88
 	android:name
-		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:239:19-85
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:259:19-85
 activity#dynsoft.xone.android.blueprint.ZaxiangStatusActivity
-ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:240:9-89
+ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:260:9-89
 	android:name
-		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:240:19-86
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:260:19-86
 activity#dynsoft.xone.android.blueprint.ZhuankuStatusActivity
-ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:241:9-89
+ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:261:9-89
 	android:name
-		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:241:19-86
+		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:261:19-86
 uses-sdk
 INJECTED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml
+MERGED from [com.arialyy.aria:aria-core:3.5.4] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\fde73ccaaef040e461e0eabdf8fe05a8\aria-core-3.5.4\AndroidManifest.xml:7:5-9:41
+MERGED from [com.arialyy.aria:aria-core:3.5.4] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\fde73ccaaef040e461e0eabdf8fe05a8\aria-core-3.5.4\AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:multidex:1.0.2] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\0931be45c9d9c06b6580c072fedcdf57\multidex-1.0.2\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:multidex:1.0.2] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\0931be45c9d9c06b6580c072fedcdf57\multidex-1.0.2\AndroidManifest.xml:20:5-43
+MERGED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\cdba1ac62706e0f58dc1e823f53f2341\zxing-library-2.2\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\cdba1ac62706e0f58dc1e823f53f2341\zxing-library-2.2\AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:support-v4:28.0.0] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\bfb533db6d1d2014a096c6efb61debb1\support-v4-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-v4:28.0.0] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\bfb533db6d1d2014a096c6efb61debb1\support-v4-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\29e2727cb3e7b3ad6292855055b1a52f\appcompat-v7-28.0.0\AndroidManifest.xml:20:5-44
@@ -490,6 +539,8 @@ MERGED from [com.github.hotchemi:permissionsdispatcher:3.1.0] C:\Users\IKAHE\.gr
 MERGED from [com.github.hotchemi:permissionsdispatcher:3.1.0] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\82aa63855b4fd3700527fc8ec8694fe7\permissionsdispatcher-3.1.0\AndroidManifest.xml:6:5-8:41
 MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\f8e903249edd82e4741cea5d801f01ec\recyclerview-v7-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\f8e903249edd82e4741cea5d801f01ec\recyclerview-v7-28.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.liulishuo.filedownloader:library:1.7.4] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\205f96643f709360c9dea3ef600363e5\library-1.7.4\AndroidManifest.xml:7:5-9:41
+MERGED from [com.liulishuo.filedownloader:library:1.7.4] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\205f96643f709360c9dea3ef600363e5\library-1.7.4\AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\f555422c3fe9f99382ac2cf02895942b\support-media-compat-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\f555422c3fe9f99382ac2cf02895942b\support-media-compat-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\8c478a397c2db4f3f2af8fdf0b8dc6ee\support-fragment-28.0.0\AndroidManifest.xml:20:5-44
@@ -544,8 +595,30 @@ MERGED from [android.arch.core:runtime:1.1.1] C:\Users\IKAHE\.gradle\caches\tran
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\b93134f0239d257bfaa8cbed8f660358\runtime-1.1.1\AndroidManifest.xml:20:5-44
 INJECTED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		ADDED from [com.bigkoo:pickerview:2.1.1] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\143503ab1f0343f92d7c35969313b716\pickerview-2.1.1\AndroidManifest.xml:9:9-38
+		ADDED from [com.arialyy.aria:aria-core:3.5.4] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\fde73ccaaef040e461e0eabdf8fe05a8\aria-core-3.5.4\AndroidManifest.xml:9:9-38
 	android:minSdkVersion
 		INJECTED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml
 		ADDED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml
+activity#com.uuzuche.lib_zxing.activity.CaptureActivity
+ADDED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\cdba1ac62706e0f58dc1e823f53f2341\zxing-library-2.2\AndroidManifest.xml:12:9-17:63
+	android:screenOrientation
+		ADDED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\cdba1ac62706e0f58dc1e823f53f2341\zxing-library-2.2\AndroidManifest.xml:15:13-49
+	android:windowSoftInputMode
+		ADDED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\cdba1ac62706e0f58dc1e823f53f2341\zxing-library-2.2\AndroidManifest.xml:17:13-60
+	android:configChanges
+		ADDED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\cdba1ac62706e0f58dc1e823f53f2341\zxing-library-2.2\AndroidManifest.xml:14:13-63
+	android:theme
+		ADDED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\cdba1ac62706e0f58dc1e823f53f2341\zxing-library-2.2\AndroidManifest.xml:16:13-63
+	android:name
+		ADDED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\cdba1ac62706e0f58dc1e823f53f2341\zxing-library-2.2\AndroidManifest.xml:13:13-74
+service#com.liulishuo.filedownloader.services.FileDownloadService$SharedMainProcessService
+ADDED from [com.liulishuo.filedownloader:library:1.7.4] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\205f96643f709360c9dea3ef600363e5\library-1.7.4\AndroidManifest.xml:12:9-118
+	android:name
+		ADDED from [com.liulishuo.filedownloader:library:1.7.4] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\205f96643f709360c9dea3ef600363e5\library-1.7.4\AndroidManifest.xml:12:18-115
+service#com.liulishuo.filedownloader.services.FileDownloadService$SeparateProcessService
+ADDED from [com.liulishuo.filedownloader:library:1.7.4] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\205f96643f709360c9dea3ef600363e5\library-1.7.4\AndroidManifest.xml:13:9-15:49
+	android:process
+		ADDED from [com.liulishuo.filedownloader:library:1.7.4] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\205f96643f709360c9dea3ef600363e5\library-1.7.4\AndroidManifest.xml:15:13-46
+	android:name
+		ADDED from [com.liulishuo.filedownloader:library:1.7.4] C:\Users\IKAHE\.gradle\caches\transforms-2\files-2.1\205f96643f709360c9dea3ef600363e5\library-1.7.4\AndroidManifest.xml:14:13-108

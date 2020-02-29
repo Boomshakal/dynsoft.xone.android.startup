@@ -99,10 +99,26 @@
     <style name="style_wip_list">
         <item name="android:layout_width">0dp</item>
         <item name="android:textColor">@color/black</item>
-        <item name="android:textSize">@dimen/card_text_size_d</item>
+        <item name="android:textSize">23sp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:gravity">center</item>
+    </style>
+
+    <style name="style_oqc_all_textview">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="style_smt_textview">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingRight">@dimen/x15</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/card_text_size</item>
     </style>
 
     <style name="style_work_textview">
@@ -114,5 +130,49 @@
         <item name="android:textSize">@dimen/ikahe_card_text_size</item>
     </style>
 
+    <style name="AlertDialog" parent="@style/Base.V7.Theme.AppCompat.Light.Dialog">
+        <!-- 这里设置背景为透明，为了隐藏边框 -->
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowNoTitle">true</item>
+        <!-- 这里是修改顶部标题背景颜色，具体颜色自己定，可以是图片 -->
+        <item name="android:topDark">@color/white</item>
+        <!-- 这里是修改内容区域背景颜色 -->
+        <item name="android:centerDark">@color/white</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="style_release_text">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginLeft">5sp</item>
+        <item name="android:gravity">left</item>
+        <item name="android:paddingTop">8sp</item>
+        <item name="android:paddingBottom">8sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="style_lable_release_text">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginLeft">5sp</item>
+        <item name="android:gravity">right</item>
+        <item name="android:paddingTop">8sp</item>
+        <item name="android:paddingBottom">8sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="style_release_item_text">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">17sp</item>
+    </style>
 
 </resources>

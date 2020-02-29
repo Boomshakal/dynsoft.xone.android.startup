@@ -44,10 +44,13 @@
 
     <application
         android:name="dynsoft.xone.android.core.App"
+        android:allowBackup="true"
         android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
         android:debuggable="true"
         android:icon="@drawable/logo"
         android:label="MEGMEET移动企业管理平台"
+        android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@android:style/Theme.NoTitleBar" >
         <activity
             android:name="dynsoft.xone.android.start.FrmLogin"
@@ -155,6 +158,21 @@
             android:name="dynsoft.xone.android.activity.BomActivity"
             android:screenOrientation="landscape" />
         <activity
+            android:name="dynsoft.xone.android.activity.AlbumGetPicActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="dynsoft.xone.android.activity.FirstItemActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="dynsoft.xone.android.activity.FirstItemNewActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="dynsoft.xone.android.activity.FirstItemTestActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="dynsoft.xone.android.activity.GalleryGetPicActivity"
+            android:screenOrientation="landscape" />
+        <activity
             android:name="dynsoft.xone.android.activity.YhcangkuActivity"
             android:screenOrientation="landscape" />
         <activity
@@ -210,6 +228,17 @@
         <activity android:name="dynsoft.xone.android.blueprint.FaliaoStatusActivity" />
         <activity android:name="dynsoft.xone.android.blueprint.ZaxiangStatusActivity" />
         <activity android:name="dynsoft.xone.android.blueprint.ZhuankuStatusActivity" />
+        <activity
+            android:name="com.uuzuche.lib_zxing.activity.CaptureActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <service android:name="com.liulishuo.filedownloader.services.FileDownloadService$SharedMainProcessService" />
+        <service
+            android:name="com.liulishuo.filedownloader.services.FileDownloadService$SeparateProcessService"
+            android:process=":filedownloader" />
     </application>
 
 </manifest>

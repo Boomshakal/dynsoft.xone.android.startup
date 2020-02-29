@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/build.gradle" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/activity/AlbumGetPicActivity.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/activity/FileOpenActivity.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/activity/FirstItemActivity.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/adapter/FirstItemAdapter.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/adapter/FolderGetPicAdapter.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/util/JumpPermissionManagement.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_qm_measuring_equipment_mgr.java" charset="GBK" />
     <file url="PROJECT" charset="GBK" />

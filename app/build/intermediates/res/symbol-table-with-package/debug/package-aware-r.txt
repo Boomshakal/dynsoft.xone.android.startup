@@ -170,6 +170,15 @@ attr iconifiedByDefault
 attr imageButtonStyle
 attr indeterminateProgressStyle
 attr initialActivityCount
+attr inner_corner_color
+attr inner_corner_length
+attr inner_corner_width
+attr inner_height
+attr inner_margintop
+attr inner_scan_bitmap
+attr inner_scan_iscircle
+attr inner_scan_speed
+attr inner_width
 attr isLightTheme
 attr itemPadding
 attr keylines
@@ -374,6 +383,7 @@ color background_material_dark
 color background_material_light
 color beige
 color bgColor_overlay
+color bg_color
 color bisque
 color black
 color blanchedalmond
@@ -390,8 +400,10 @@ color burlywood
 color button_material_dark
 color button_material_light
 color cadetblue
+color cc
 color chartreuse
 color chocolate
+color contents_text
 color coral
 color cornflowerblue
 color cornsilk
@@ -425,6 +437,7 @@ color dim_foreground_material_light
 color dimgray
 color dimgrey
 color dodgerblue
+color encode_view
 color error_color_material_dark
 color error_color_material_light
 color firebrick
@@ -441,6 +454,10 @@ color gray
 color green
 color greenyellow
 color grey
+color grgray
+color header
+color help_button_view
+color help_view
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color honeydew
@@ -529,6 +546,7 @@ color pickerview_wheelview_textcolor_out
 color pink
 color plugin_camera_black
 color plum
+color possible_result_points
 color powderblue
 color primary_dark_material_dark
 color primary_dark_material_light
@@ -540,6 +558,11 @@ color primary_text_disabled_material_dark
 color primary_text_disabled_material_light
 color purple
 color red
+color result_image_border
+color result_minor_text
+color result_points
+color result_text
+color result_view
 color ripple_material_dark
 color ripple_material_light
 color rosybrown
@@ -547,12 +570,20 @@ color royalblue
 color saddlebrown
 color salmon
 color sandybrown
+color sbc_header_text
+color sbc_header_view
+color sbc_layout_view
+color sbc_list_item
+color sbc_page_number_text
+color sbc_snippet_text
 color seaShell
 color seagreen
 color secondary_text_default_material_dark
 color secondary_text_default_material_light
 color secondary_text_disabled_material_dark
 color secondary_text_disabled_material_light
+color share_text
+color share_view
 color sienna
 color silver
 color skyblue
@@ -561,6 +592,8 @@ color slategray
 color slategrey
 color snow
 color springgreen
+color status_text
+color status_view
 color steelblue
 color style_divider_color
 color style_red
@@ -579,6 +612,9 @@ color tooltip_background_light
 color transparent
 color transparent2
 color turquoise
+color viewfinder_frame
+color viewfinder_laser
+color viewfinder_mask
 color violet
 color wheat
 color white
@@ -825,6 +861,7 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable appendix
 drawable background
 drawable bg_body
 drawable bg_checkbox
@@ -853,8 +890,10 @@ drawable button
 drawable button_normal
 drawable button_pressed
 drawable button_selected
+drawable circle_edittext
 drawable default_ptr_flip
 drawable default_ptr_rotate
+drawable down
 drawable down_black
 drawable down_blue
 drawable edit_bg
@@ -937,6 +976,10 @@ drawable post_test
 drawable radio_button_checked
 drawable radio_button_uncheck
 drawable radiobutton_bg
+drawable right_link
+drawable scan_light
+drawable scanner
+drawable search
 drawable selector_pickerview_btn
 drawable sigin_green
 drawable sigin_null
@@ -948,6 +991,7 @@ drawable text_while
 drawable textview_border
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable up
 id ALT
 id Button1
 id CTRL
@@ -985,6 +1029,7 @@ id alertTitle
 id all
 id always
 id async
+id auto_focus
 id back
 id barchart
 id barchart_1
@@ -997,6 +1042,8 @@ id body
 id both
 id bottom
 id bottom_layout
+id btc_confirm_code
+id btn
 id btn0
 id btn1
 id btn2
@@ -1035,6 +1082,7 @@ id btn_commit
 id btn_convert
 id btn_delete
 id btn_exit
+id btn_flow
 id btn_info
 id btn_list
 id btn_load_item
@@ -1082,7 +1130,9 @@ id checkbox
 id checkbox_1
 id checkbox_2
 id checkbox_3
+id checkbox_comfirm
 id checkbox_print
+id checkbox_result
 id chkRemember
 id chk_commit_print
 id chk_is_batch
@@ -1096,6 +1146,7 @@ id clip_horizontal
 id clip_vertical
 id collapseActionView
 id comment
+id commit
 id confirm
 id content
 id contentPanel
@@ -1115,12 +1166,19 @@ id cpk_progressbar
 id custom
 id customPanel
 id day
+id decode
+id decode_failed
+id decode_succeeded
 id decor_content_parent
 id default_activity_button
 id device
 id disableHome
 id disabled
+id edit_comment
+id edit_except
+id edit_judge
 id edit_query
+id edit_result
 id edittext
 id edittext_1
 id edittext_2
@@ -1132,6 +1190,8 @@ id edittext_7
 id edittext_8
 id edittext_star
 id element
+id encode_failed
+id encode_succeeded
 id end
 id end_padder
 id expand_activities_button
@@ -1146,6 +1206,7 @@ id fill
 id fill_horizontal
 id fill_vertical
 id fl_inner
+id fl_zxing_container
 id flip
 id footer
 id forever
@@ -1167,6 +1228,9 @@ id icon_group
 id ifRoom
 id image
 id imageView1
+id image_1
+id image_2
+id image_appendix
 id image_view
 id imageview
 id imageview_1
@@ -1201,6 +1265,7 @@ id item_textview_4
 id item_touch_helper_previous_elevation
 id itemcode
 id itemname
+id launch_product_query
 id lblBook
 id lblPassword
 id lblPort
@@ -1225,14 +1290,17 @@ id linearLayout1
 id linearlayout
 id linearlayout_1
 id linearlayout_bar
+id linearlayout_bom
 id linearlayout_child
 id linearlayout_cloud
 id linearlayout_green
+id linearlayout_link
 id linearlayout_red
 id linearlayout_return_high
 id linearlayout_return_low
 id linearlayout_scantest
 id linearlayout_title
+id linearlayout_wh
 id linearlayout_work
 id linearlayout_worker
 id linenum
@@ -1279,6 +1347,7 @@ id noScrollgridview
 id no_picture_confirm
 id none
 id normal
+id noscrollgridview
 id notification_background
 id notification_main_column
 id notification_main_column_container
@@ -1302,6 +1371,7 @@ id popup_edittext_1
 id popup_edittext_2
 id position
 id preview
+id preview_view
 id price
 id print_commit
 id progress_circular
@@ -1318,6 +1388,7 @@ id pull_to_refresh_sub_text
 id pull_to_refresh_text
 id qty
 id quantity
+id quit
 id radio
 id radiobutton_1
 id radiobutton_2
@@ -1327,6 +1398,8 @@ id ratingBar1
 id ratingbar1
 id rediogroup
 id relativelayout
+id restart_preview
+id return_scan_result
 id right
 id right_icon
 id right_side
@@ -1339,6 +1412,8 @@ id scrollView
 id scrollview
 id search_badge
 id search_bar
+id search_book_contents_failed
+id search_book_contents_succeeded
 id search_button
 id search_close_btn
 id search_edit_frame
@@ -1381,8 +1456,16 @@ id tag_unhandled_key_listeners
 id task_work_code_cell
 id tc_cardperson
 id tc_cardtype
+id tc_check_code
 id tc_comment
+id tc_cust_sn
+id tc_item_code
+id tc_item_name
+id tc_plan_quantity
 id tc_result
+id tc_segment
+id tc_sn
+id tc_task_order
 id tc_workline
 id test
 id text
@@ -1398,6 +1481,7 @@ id text_4
 id text_5
 id text_6
 id text_7
+id text_ask
 id text_cell_1
 id text_cell_10
 id text_cell_11
@@ -1416,11 +1500,32 @@ id text_cell_9
 id text_cell_check_date
 id text_cell_check_user
 id text_cell_comment
+id text_cell_first_code
+id text_cell_item_code
 id text_cell_item_name
+id text_cell_plan_quantity
 id text_cell_task_order
+id text_cell_task_order_code
+id text_cell_test_code
+id text_cell_type
 id text_cell_work_line
+id text_confirm
+id text_cust
+id text_cust_sn
+id text_ecn
 id text_exceptiontype
+id text_item
+id text_item_code
+id text_item_name
+id text_level
+id text_num
+id text_qiantity
+id text_re_item_code
 id text_title
+id text_type
+id text_updatecode
+id text_updatetime
+id text_version
 id text_view
 id text_view_1
 id text_view_2
@@ -1439,6 +1544,10 @@ id textcell_4
 id textcell_5
 id textcell_6
 id textcell_7
+id textcell_first_code
+id textcell_task_order_code
+id textcell_user_card
+id textcell_work_line
 id textview
 id textview1
 id textview2
@@ -1860,6 +1969,7 @@ id upload
 id useLogo
 id videoview
 id view_pager
+id viewfinder_view
 id viewpager
 id warehouse
 id webview
@@ -1903,7 +2013,11 @@ layout abc_tooltip
 layout activity_cardregistration
 layout activity_cardregistrationkey
 layout activity_changesop
+layout activity_ecn
 layout activity_employee_message
+layout activity_first_item
+layout activity_first_item_sure
+layout activity_firstitem_test
 layout activity_firstkanban
 layout activity_ikahekanban
 layout activity_imageshower
@@ -1916,6 +2030,7 @@ layout activity_location_check
 layout activity_location_smt_check
 layout activity_main
 layout activity_meeting
+layout activity_openfile
 layout activity_oqccheck
 layout activity_parameter_set
 layout activity_patrolcard
@@ -1935,6 +2050,7 @@ layout activity_withdraw
 layout bom_line
 layout bomactivity
 layout calculator
+layout camera
 layout cardregister__all_item
 layout cardregistration_item
 layout cardregistrationkey_item
@@ -1956,6 +2072,7 @@ layout feeder_maintaininfo_editor
 layout feeder_repair_editor
 layout fm_smt_materials
 layout fm_smt_materials_mgr
+layout fragment_capture
 layout fragment_each_number
 layout fragment_first_cpk
 layout fragment_firstkanban
@@ -1975,13 +2092,22 @@ layout ikahe_griditem
 layout ikahe_kanban_listview
 layout include_pickerview_topbar
 layout ipqc_first_chec_mgr_item
+layout item1_first_item_test
+layout item2_first_item_test
 layout item_addmore_scan
+layout item_choose_first_item
 layout item_cpk_first
 layout item_cpk_listview1
 layout item_cpk_popup
 layout item_cpk_second
 layout item_each_number_fragment
 layout item_employee_skill
+layout item_first_bom
+layout item_first_item
+layout item_first_item1_test
+layout item_first_item2_test
+layout item_first_item_popupwindow
+layout item_first_item_title
 layout item_grid_locationchart
 layout item_ikahe_kanban
 layout item_kanban
@@ -2187,6 +2313,8 @@ layout pn_qm_esd_daily_mgr
 layout pn_qm_esd_daily_mgr_editor
 layout pn_qm_ipqc_check_mgr
 layout pn_qm_ipqc_first_check_editor
+layout pn_qm_ipqc_first_sure_editor
+layout pn_qm_ipqc_first_sure_mgr
 layout pn_qm_ipqc_record_mgr_editor
 layout pn_qm_iqc_mgr
 layout pn_qm_light_kanban_mgr
@@ -2319,6 +2447,7 @@ layout yh_line
 layout yh_mps_line
 layout yhactivity
 layout yhcangkuactivity
+raw beep
 raw error
 raw hook
 raw pass
@@ -2364,6 +2493,7 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string album
+string app_name
 string camera_cancel
 string cardregistrationactivity
 string checkreportactivity
@@ -2390,6 +2520,7 @@ string frm_login_pwd
 string frm_login_remember
 string frm_login_server
 string frm_login_user
+string hello_blank_fragment
 string invalidSD
 string load_footer_text
 string loadvideoactivity
@@ -2413,6 +2544,7 @@ string setparameteractivity
 string status_bar_notification_info_overflow
 string unfinished
 string withdrawactivity
+style AlertDialog
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
@@ -2772,9 +2904,15 @@ style datetime_block
 style line_label
 style line_text_box
 style megmeet_ratingbar
+style my_actionbar_style
+style style_lable_release_text
 style style_light_textview
+style style_oqc_all_textview
 style style_popup_smt_on_part_text
+style style_release_item_text
+style style_release_text
 style style_smt_on_part_list
+style style_smt_textview
 style style_wip_list
 style style_work_textview
 style text_block
@@ -2827,5 +2965,6 @@ styleable Toolbar android_gravity android_minHeight buttonGravity collapseConten
 styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewStubCompat android_id android_layout android_inflatedId
+styleable ViewfinderView inner_corner_color inner_corner_length inner_corner_width inner_height inner_margintop inner_scan_bitmap inner_scan_iscircle inner_scan_speed inner_width
 styleable percimageview all_long use_long
 styleable pickerview pickerview_dividerColor pickerview_gravity pickerview_textColorCenter pickerview_textColorOut pickerview_textSize

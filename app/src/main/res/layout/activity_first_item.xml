@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <dynsoft.xone.android.control.TextCell
+            android:id="@+id/text_cell_task_order"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"></dynsoft.xone.android.control.TextCell>
+
+
+        <dynsoft.xone.android.control.TextCell
+            android:id="@+id/text_cell_item_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"></dynsoft.xone.android.control.TextCell>
+
+
+        <dynsoft.xone.android.control.TextCell
+            android:id="@+id/text_cell_plan_quantity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"></dynsoft.xone.android.control.TextCell>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearlayout_bom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="BOM版本变更履历清单"
+            android:textSize="@dimen/kanban_text_size" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:src="@color/black" />
+
+        <include
+            layout="@layout/item_first_bom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:src="@color/black" />
+
+        <ListView
+            android:id="@+id/listview_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/black"
+            android:dividerHeight="1dp"></ListView>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:src="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60px"
+            android:layout_marginRight="@dimen/x30"
+            android:background="@drawable/circle_edittext"
+            android:drawableLeft="@drawable/scanner"
+            android:drawableRight="@drawable/search" />
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/x15">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:paddingTop="@dimen/x15"
+                android:src="@color/black" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:src="@color/black" />
+
+            <include
+                layout="@layout/item_first_item_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:src="@color/black" />
+
+            <ListView
+                android:id="@+id/listview_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/black"
+                android:dividerHeight="1dp"></ListView>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:src="@color/black" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true" />
+    </FrameLayout>
+</LinearLayout>

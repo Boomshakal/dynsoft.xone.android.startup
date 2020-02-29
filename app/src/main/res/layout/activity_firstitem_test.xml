@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <dynsoft.xone.android.control.TextCell
+            android:id="@+id/text_cell_test_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"></dynsoft.xone.android.control.TextCell>
+
+        <dynsoft.xone.android.control.TextCell
+            android:id="@+id/text_cell_first_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"></dynsoft.xone.android.control.TextCell>
+
+        <dynsoft.xone.android.control.TextCell
+            android:id="@+id/text_cell_task_order_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"></dynsoft.xone.android.control.TextCell>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <dynsoft.xone.android.control.TextCell
+            android:id="@+id/text_cell_item_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"></dynsoft.xone.android.control.TextCell>
+
+        <dynsoft.xone.android.control.TextCell
+            android:id="@+id/text_cell_item_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"></dynsoft.xone.android.control.TextCell>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <dynsoft.xone.android.control.ButtonTextCell
+            android:id="@+id/text_cell_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"></dynsoft.xone.android.control.ButtonTextCell>
+
+        <ImageView
+            android:layout_width="1dp"
+            android:src="@color/black"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="最终判定" />
+
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radiobutton_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="合格，可以正常生产" />
+
+            <RadioButton
+                android:id="@+id/radiobutton_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="不合格，重新送样确认" />
+
+            <RadioButton
+                android:id="@+id/radiobutton_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="其他" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@color/black" />
+
+    <include
+        layout="@layout/item_first_item1_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@color/black" />
+
+    <ListView
+        android:id="@+id/listview_1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:transcriptMode="normal"></ListView>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@color/black" />
+
+    <include
+        layout="@layout/item_first_item2_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@color/black" />
+
+    <ListView
+        android:id="@+id/listview_2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"></ListView>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@color/black" />
+</LinearLayout>

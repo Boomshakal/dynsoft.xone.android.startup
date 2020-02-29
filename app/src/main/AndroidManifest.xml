@@ -175,6 +175,26 @@
             android:screenOrientation="landscape" />
 
         <activity
+            android:name="dynsoft.xone.android.activity.AlbumGetPicActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name="dynsoft.xone.android.activity.FirstItemActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name="dynsoft.xone.android.activity.FirstItemNewActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name="dynsoft.xone.android.activity.FirstItemTestActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name="dynsoft.xone.android.activity.GalleryGetPicActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
             android:name="dynsoft.xone.android.activity.YhcangkuActivity"
             android:screenOrientation="landscape" />
 
