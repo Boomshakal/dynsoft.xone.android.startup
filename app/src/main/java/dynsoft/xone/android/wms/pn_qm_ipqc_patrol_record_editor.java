@@ -789,6 +789,25 @@ public class pn_qm_ipqc_patrol_record_editor extends pn_editor {
             return;
         }
 
+        BigDecimal max_value = _order_row.getValue("max_value", BigDecimal.ZERO);
+        BigDecimal min_value = _order_row.getValue("min_value", BigDecimal.ZERO);
+
+        final String real_value = this.txt_line8.getContentText();
+
+        if (!(max_value.compareTo(new BigDecimal(-99)) == 0)) {
+            if (real_value == null || real_value.length() == 0) {
+                App.Current.showError(this.getContext(), "没有输入测试值。");
+                return;
+            } else {
+                BigDecimal bigDecimal_value = new BigDecimal(real_value);
+                if (bigDecimal_value.compareTo(max_value) == 1 || bigDecimal_value.compareTo(min_value) == -1) {
+                    App.Current.showError(this.getContext(), "测试值不在范围内。");
+                    return;
+                }
+            }
+        }
+
+
         final String check_value = this.txt_line8.getContentText();
 
         App.Current.question(this.getContext(), "确定要提交吗？", new DialogInterface.OnClickListener() {
