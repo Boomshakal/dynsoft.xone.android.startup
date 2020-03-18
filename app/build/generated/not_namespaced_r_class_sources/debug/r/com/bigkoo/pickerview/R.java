@@ -74,9 +74,9 @@ public final class R {
         public static final int optionspicker = 0x7f08016c;
         public static final int outmost_container = 0x7f08016d;
         public static final int right = 0x7f080198;
-        public static final int timepicker = 0x7f08028b;
-        public static final int tvTitle = 0x7f080294;
-        public static final int year = 0x7f0803d7;
+        public static final int timepicker = 0x7f08028f;
+        public static final int tvTitle = 0x7f080298;
+        public static final int year = 0x7f0803db;
     }
     public static final class integer {
         private integer() {}

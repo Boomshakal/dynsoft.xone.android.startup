@@ -68,6 +68,46 @@
                 android:id="@+id/text_cell_9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"></dynsoft.xone.android.control.ButtonTextCell>
+            <dynsoft.xone.android.control.ButtonTextCell
+                android:id="@+id/text_cell_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></dynsoft.xone.android.control.ButtonTextCell>
+            <dynsoft.xone.android.control.ButtonTextCell
+                android:id="@+id/text_cell_11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></dynsoft.xone.android.control.ButtonTextCell>
+            <dynsoft.xone.android.control.ButtonTextCell
+                android:id="@+id/text_cell_12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></dynsoft.xone.android.control.ButtonTextCell>
+            <dynsoft.xone.android.control.ButtonTextCell
+                android:id="@+id/text_cell_13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></dynsoft.xone.android.control.ButtonTextCell>
+            <dynsoft.xone.android.control.ButtonTextCell
+                android:id="@+id/text_cell_14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></dynsoft.xone.android.control.ButtonTextCell>
+            <dynsoft.xone.android.control.ButtonTextCell
+                android:id="@+id/text_cell_15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></dynsoft.xone.android.control.ButtonTextCell>
+            <dynsoft.xone.android.control.ButtonTextCell
+                android:id="@+id/text_cell_16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></dynsoft.xone.android.control.ButtonTextCell>
+            <dynsoft.xone.android.control.ButtonTextCell
+                android:id="@+id/text_cell_17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></dynsoft.xone.android.control.ButtonTextCell>
+            <dynsoft.xone.android.control.ButtonTextCell
+                android:id="@+id/text_cell_18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></dynsoft.xone.android.control.ButtonTextCell>
+            <dynsoft.xone.android.control.ButtonTextCell
+                android:id="@+id/text_cell_19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></dynsoft.xone.android.control.ButtonTextCell>
         </LinearLayout>
 
         <LinearLayout

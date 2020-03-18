@@ -537,65 +537,77 @@ public class pn_qm_smt_rejects_record_mgr extends pn_editor {
         final ButtonTextCell buttonTextCell6 = (ButtonTextCell) popupView.findViewById(R.id.text_cell_6);
         final ButtonTextCell buttonTextCell7 = (ButtonTextCell) popupView.findViewById(R.id.text_cell_7);
         final ButtonTextCell buttonTextCell8 = (ButtonTextCell) popupView.findViewById(R.id.text_cell_8);
-        buttonTextCell9 = (ButtonTextCell) popupView.findViewById(R.id.text_cell_9);
+        final ButtonTextCell buttonTextCell9 = (ButtonTextCell) popupView.findViewById(R.id.text_cell_9);
+        final ButtonTextCell buttonTextCell10 = (ButtonTextCell) popupView.findViewById(R.id.text_cell_10);
+        final ButtonTextCell buttonTextCell11 = (ButtonTextCell) popupView.findViewById(R.id.text_cell_11);
+        final ButtonTextCell buttonTextCell12 = (ButtonTextCell) popupView.findViewById(R.id.text_cell_12);
+        final ButtonTextCell buttonTextCell13 = (ButtonTextCell) popupView.findViewById(R.id.text_cell_13);
+        final ButtonTextCell buttonTextCell14 = (ButtonTextCell) popupView.findViewById(R.id.text_cell_14);
+        final ButtonTextCell buttonTextCell15 = (ButtonTextCell) popupView.findViewById(R.id.text_cell_15);
+        final ButtonTextCell buttonTextCell16 = (ButtonTextCell) popupView.findViewById(R.id.text_cell_16);
+        final ButtonTextCell buttonTextCell17 = (ButtonTextCell) popupView.findViewById(R.id.text_cell_17);
+        final ButtonTextCell buttonTextCell18 = (ButtonTextCell) popupView.findViewById(R.id.text_cell_18);
+
+        ButtonTextCell buttonTextCell19 = (ButtonTextCell) popupView.findViewById(R.id.text_cell_19);
         TextView cancel = (TextView) popupView.findViewById(R.id.cancel);
         TextView confirm = (TextView) popupView.findViewById(R.id.confirm);
 
-        buttonTextCell1.setLabelText("水温");
-        buttonTextCell2.setLabelText("座温");
-        buttonTextCell3.setLabelText("漏水");
-        buttonTextCell4.setLabelText("清洗器");
-        buttonTextCell5.setLabelText("按键");
-        buttonTextCell6.setLabelText("水温数据");
-        buttonTextCell7.setLabelText("座温数据");
-        buttonTextCell8.setLabelText("风温数据");
-        buttonTextCell9.setLabelText("不良现象");
+        buttonTextCell1.setLabelText("整机漏水");
+        buttonTextCell2.setLabelText("按键测试");
+        buttonTextCell3.setLabelText("翻盖测试");
+        buttonTextCell4.setLabelText("翻圈测试");
+        buttonTextCell5.setLabelText("缓降测试");
+        buttonTextCell6.setLabelText("微波测试");
+        buttonTextCell7.setLabelText("冲水测试");
+        buttonTextCell8.setLabelText("水分散测试");
+        buttonTextCell9.setLabelText("挡水板复位");
+        buttonTextCell10.setLabelText("挡风板复位");
+        buttonTextCell11.setLabelText("语音测试");
+        buttonTextCell12.setLabelText("灯显测试");
+        buttonTextCell13.setLabelText("夜灯测试");
+        buttonTextCell14.setLabelText("停电冲水");
+        buttonTextCell15.setLabelText("脚踢测试");
 
-        buttonTextCell1.setReadOnly();
-        buttonTextCell2.setReadOnly();
-        buttonTextCell3.setReadOnly();
-        buttonTextCell4.setReadOnly();
-        buttonTextCell5.setReadOnly();
-        buttonTextCell9.setReadOnly();
-        buttonTextCell6.Button.setVisibility(INVISIBLE);
-        buttonTextCell7.Button.setVisibility(INVISIBLE);
-        buttonTextCell8.Button.setVisibility(INVISIBLE);
+        buttonTextCell16.setLabelText("水温数据");
+        buttonTextCell17.setLabelText("座温数据");
+        buttonTextCell18.setLabelText("风温数据");
+        buttonTextCell19.setLabelText("不良现象");
 
-        buttonTextCell1.Button.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                chooseOkAndNg(buttonTextCell1);
-            }
-        });
-        buttonTextCell2.Button.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                chooseOkAndNg(buttonTextCell2);
-            }
-        });
-        buttonTextCell3.Button.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                chooseOkAndNg(buttonTextCell3);
-            }
-        });
-        buttonTextCell4.Button.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                chooseOkAndNg(buttonTextCell4);
-            }
-        });
-        buttonTextCell5.Button.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                chooseOkAndNg(buttonTextCell5);
-            }
-        });
+        final ArrayList<ButtonTextCell> buttonTextCell_list = new ArrayList<ButtonTextCell>();
 
-        buttonTextCell9.Button.setOnClickListener(new OnClickListener() {
+        buttonTextCell_list.add(buttonTextCell1);
+        buttonTextCell_list.add(buttonTextCell2);
+        buttonTextCell_list.add(buttonTextCell3);
+        buttonTextCell_list.add(buttonTextCell4);
+        buttonTextCell_list.add(buttonTextCell5);
+        buttonTextCell_list.add(buttonTextCell6);
+        buttonTextCell_list.add(buttonTextCell7);
+        buttonTextCell_list.add(buttonTextCell8);
+        buttonTextCell_list.add(buttonTextCell9);
+        buttonTextCell_list.add(buttonTextCell10);
+        buttonTextCell_list.add(buttonTextCell11);
+        buttonTextCell_list.add(buttonTextCell12);
+        buttonTextCell_list.add(buttonTextCell13);
+        buttonTextCell_list.add(buttonTextCell14);
+        buttonTextCell_list.add(buttonTextCell15);
+
+
+        if (buttonTextCell_list.size() > 0) {
+            for (ButtonTextCell list : buttonTextCell_list) {
+                setclicklisten(list);
+            }
+        }
+
+        buttonTextCell16.Button.setVisibility(INVISIBLE);
+        buttonTextCell17.Button.setVisibility(INVISIBLE);
+        buttonTextCell18.Button.setVisibility(INVISIBLE);
+        buttonTextCell19.setReadOnly();
+
+
+        buttonTextCell19.Button.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                chooseRepairType(buttonTextCell9);
+                chooseRepairType(buttonTextCell19);
             }
         });
 
@@ -609,33 +621,31 @@ public class pn_qm_smt_rejects_record_mgr extends pn_editor {
             @Override
             public void onClick(View v) {
                 if (TextUtils.isEmpty(buttonTextCell1.getContentText())) {
-                    App.Current.toastError(getContext(), "请选择水温结果");
+                    App.Current.toastError(getContext(), "请选择整机漏水结果");
                 } else if (TextUtils.isEmpty(buttonTextCell2.getContentText())) {
-                    App.Current.toastError(getContext(), "请选择座温结果");
-                } else if (TextUtils.isEmpty(buttonTextCell3.getContentText())) {
-                    App.Current.toastError(getContext(), "请选择漏水结果");
-                } else if (TextUtils.isEmpty(buttonTextCell4.getContentText())) {
-                    App.Current.toastError(getContext(), "请选择清洗器结果");
+                    App.Current.toastError(getContext(), "请选择按键测试结果");
                 } else if (TextUtils.isEmpty(buttonTextCell5.getContentText())) {
-                    App.Current.toastError(getContext(), "请选择按键结果");
-                } else if (TextUtils.isEmpty(buttonTextCell6.getContentText())) {
-                    App.Current.toastError(getContext(), "请输入水温数据");
-                } else if (TextUtils.isEmpty(buttonTextCell7.getContentText())) {
-                    App.Current.toastError(getContext(), "请输入座温数据");
+                    App.Current.toastError(getContext(), "请选择缓降结果");
                 } else if (TextUtils.isEmpty(buttonTextCell8.getContentText())) {
+                    App.Current.toastError(getContext(), "请选择水分散结果");
+                } else if (TextUtils.isEmpty(buttonTextCell16.getContentText())) {
+                    App.Current.toastError(getContext(), "请输入水温数据");
+                } else if (TextUtils.isEmpty(buttonTextCell17.getContentText())) {
+                    App.Current.toastError(getContext(), "请输入座温数据");
+                } else if (TextUtils.isEmpty(buttonTextCell18.getContentText())) {
                     App.Current.toastError(getContext(), "请输入风温数据");
                 } else {
                     //用一个集合来添加结果，判断最终结果是PASS还是FAIL
                     ArrayList<String> results = new ArrayList<>();
-                    results.add(buttonTextCell1.getContentText());
-                    results.add(buttonTextCell2.getContentText());
-                    results.add(buttonTextCell3.getContentText());
-                    results.add(buttonTextCell4.getContentText());
-                    results.add(buttonTextCell5.getContentText());
+
+                    for (ButtonTextCell list : buttonTextCell_list) {
+                        results.add(list.getContentText());
+                    }
+
                     String result = "";
                     if (results.contains("NG")) {
                         result = "FAIL";
-                        if (TextUtils.isEmpty(buttonTextCell9.getContentText())) {
+                        if (TextUtils.isEmpty(buttonTextCell19.getContentText())) {
                             App.Current.toastError(getContext(), "请先选择不良现象");
                             return;
                         }
@@ -648,21 +658,42 @@ public class pn_qm_smt_rejects_record_mgr extends pn_editor {
                     Map<String, String> item_entry = new HashMap<String, String>();
                     item_entry.put("sn_no", mainCode);
                     item_entry.put("sn_type", work_type);
-                    item_entry.put("ng_reason", buttonTextCell9.getContentText());
-                    item_entry.put("water_temp", buttonTextCell1.getContentText());
-                    item_entry.put("seat_temp", buttonTextCell2.getContentText());
-                    item_entry.put("lost_water", buttonTextCell3.getContentText());
-                    item_entry.put("clear_machine", buttonTextCell4.getContentText());
-                    item_entry.put("press_key", buttonTextCell5.getContentText());
-                    item_entry.put("water_data", buttonTextCell6.getContentText());
-                    item_entry.put("seat_data", buttonTextCell7.getContentText());
-                    item_entry.put("wind_data", buttonTextCell8.getContentText());
+                    item_entry.put("ng_reason", buttonTextCell19.getContentText());
+                    item_entry.put("lost_water", buttonTextCell1.getContentText());
+                    item_entry.put("press_key", buttonTextCell2.getContentText());
+                    item_entry.put("reverse_lid", buttonTextCell3.getContentText());
+                    item_entry.put("reverse_circle", buttonTextCell4.getContentText());
+                    item_entry.put("slow_down", buttonTextCell5.getContentText());
+                    item_entry.put("micro_wave", buttonTextCell6.getContentText());
+                    item_entry.put("flush_water", buttonTextCell7.getContentText());
+                    item_entry.put("water_dispersed", buttonTextCell8.getContentText());
+                    item_entry.put("block_water", buttonTextCell9.getContentText());
+                    item_entry.put("block_wind", buttonTextCell10.getContentText());
+                    item_entry.put("speech", buttonTextCell11.getContentText());
+                    item_entry.put("lamp_display", buttonTextCell12.getContentText());
+                    item_entry.put("night_light", buttonTextCell13.getContentText());
+                    item_entry.put("no_electricity_flushing", buttonTextCell14.getContentText());
+                    item_entry.put("kick_test", buttonTextCell15.getContentText());
+
+                    item_entry.put("water_data", buttonTextCell16.getContentText());
+                    item_entry.put("seat_data", buttonTextCell17.getContentText());
+                    item_entry.put("wind_data", buttonTextCell18.getContentText());
                     item_entries.add(item_entry);
                     xml = XmlHelper.createXml("bindings", head_entry, "bindings", "binding", item_entries);
                     Log.e("len", "XMLXML:" + xml);
                     CommitScanNumberCreate(mainCode, result);
                     popupOldWindow.dismiss();
                 }
+            }
+        });
+    }
+
+    private void setclicklisten(ButtonTextCell buttontextcell) {
+        buttontextcell.setReadOnly();
+        buttontextcell.Button.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                chooseOkAndNg(buttontextcell);
             }
         });
     }
@@ -1507,8 +1538,7 @@ public class pn_qm_smt_rejects_record_mgr extends pn_editor {
             public void onClick(View view) {
                 if (TextUtils.isEmpty(buttonTextCell.getContentText())) {
                     App.Current.showInfo(pn_qm_smt_rejects_record_mgr.this.getContext(), "请输入不良描述");
-                }
-                 else {
+                } else {
                     xml = getTestBindXml(buttonTextCell.getContentText(), "");
                     CommitScanNumberCreate(mainCode, "FAIL");
                     popupWindow.dismiss();
