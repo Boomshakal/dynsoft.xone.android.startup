@@ -554,19 +554,19 @@ public class pn_qm_smt_rejects_record_mgr extends pn_editor {
 
         buttonTextCell1.setLabelText("’˚ª˙¬©ÀÆ");
         buttonTextCell2.setLabelText("∞¥º¸≤‚ ‘");
-        buttonTextCell3.setLabelText("∑≠∏«≤‚ ‘");
-        buttonTextCell4.setLabelText("∑≠»¶≤‚ ‘");
-        buttonTextCell5.setLabelText("ª∫Ωµ≤‚ ‘");
-        buttonTextCell6.setLabelText("Œ¢≤®≤‚ ‘");
-        buttonTextCell7.setLabelText("≥ÂÀÆ≤‚ ‘");
-        buttonTextCell8.setLabelText("ÀÆ∑÷…¢≤‚ ‘");
-        buttonTextCell9.setLabelText("µ≤ÀÆ∞Â∏¥Œª");
-        buttonTextCell10.setLabelText("µ≤∑Á∞Â∏¥Œª");
-        buttonTextCell11.setLabelText("”Ô“Ù≤‚ ‘");
-        buttonTextCell12.setLabelText("µ∆œ‘≤‚ ‘");
-        buttonTextCell13.setLabelText("“πµ∆≤‚ ‘");
-        buttonTextCell14.setLabelText("Õ£µÁ≥ÂÀÆ");
-        buttonTextCell15.setLabelText("Ω≈Ãﬂ≤‚ ‘");
+        buttonTextCell3.setLabelText("ÀÆ∑÷…¢≤‚ ‘");
+        buttonTextCell4.setLabelText("µ≤ÀÆ∞Â∏¥Œª");
+        buttonTextCell5.setLabelText("µ≤∑Á∞Â∏¥Œª");
+        buttonTextCell6.setLabelText("“πµ∆≤‚ ‘");
+        buttonTextCell7.setLabelText("ª∫Ωµ≤‚ ‘");
+        buttonTextCell8.setLabelText("≥ÂÀÆ≤‚ ‘");
+        buttonTextCell9.setLabelText("Õ£µÁ≥ÂÀÆ");
+        buttonTextCell10.setLabelText("Ω≈Ãﬂ≤‚ ‘");
+        buttonTextCell11.setLabelText("∑≠∏«≤‚ ‘");
+        buttonTextCell12.setLabelText("∑≠»¶≤‚ ‘");
+        buttonTextCell13.setLabelText("µ∆œ‘≤‚ ‘");
+        buttonTextCell14.setLabelText("Œ¢≤®≤‚ ‘");
+        buttonTextCell15.setLabelText("”Ô“Ù≤‚ ‘");
 
         buttonTextCell16.setLabelText("ÀÆŒ¬ ˝æ›");
         buttonTextCell17.setLabelText("◊˘Œ¬ ˝æ›");
@@ -624,9 +624,7 @@ public class pn_qm_smt_rejects_record_mgr extends pn_editor {
                     App.Current.toastError(getContext(), "«Î—°‘Ò’˚ª˙¬©ÀÆΩ·π˚");
                 } else if (TextUtils.isEmpty(buttonTextCell2.getContentText())) {
                     App.Current.toastError(getContext(), "«Î—°‘Ò∞¥º¸≤‚ ‘Ω·π˚");
-                } else if (TextUtils.isEmpty(buttonTextCell5.getContentText())) {
-                    App.Current.toastError(getContext(), "«Î—°‘Òª∫ΩµΩ·π˚");
-                } else if (TextUtils.isEmpty(buttonTextCell8.getContentText())) {
+                } else if (TextUtils.isEmpty(buttonTextCell3.getContentText())) {
                     App.Current.toastError(getContext(), "«Î—°‘ÒÀÆ∑÷…¢Ω·π˚");
                 } else if (TextUtils.isEmpty(buttonTextCell16.getContentText())) {
                     App.Current.toastError(getContext(), "«Î ‰»ÎÀÆŒ¬ ˝æ›");
@@ -661,19 +659,19 @@ public class pn_qm_smt_rejects_record_mgr extends pn_editor {
                     item_entry.put("ng_reason", buttonTextCell19.getContentText());
                     item_entry.put("lost_water", buttonTextCell1.getContentText());
                     item_entry.put("press_key", buttonTextCell2.getContentText());
-                    item_entry.put("reverse_lid", buttonTextCell3.getContentText());
-                    item_entry.put("reverse_circle", buttonTextCell4.getContentText());
-                    item_entry.put("slow_down", buttonTextCell5.getContentText());
-                    item_entry.put("micro_wave", buttonTextCell6.getContentText());
-                    item_entry.put("flush_water", buttonTextCell7.getContentText());
-                    item_entry.put("water_dispersed", buttonTextCell8.getContentText());
-                    item_entry.put("block_water", buttonTextCell9.getContentText());
-                    item_entry.put("block_wind", buttonTextCell10.getContentText());
-                    item_entry.put("speech", buttonTextCell11.getContentText());
-                    item_entry.put("lamp_display", buttonTextCell12.getContentText());
-                    item_entry.put("night_light", buttonTextCell13.getContentText());
-                    item_entry.put("no_electricity_flushing", buttonTextCell14.getContentText());
-                    item_entry.put("kick_test", buttonTextCell15.getContentText());
+                    item_entry.put("water_dispersed", buttonTextCell3.getContentText());
+                    item_entry.put("block_water", buttonTextCell4.getContentText());
+                    item_entry.put("block_wind", buttonTextCell5.getContentText());
+                    item_entry.put("night_light", buttonTextCell6.getContentText());
+                    item_entry.put("slow_down", buttonTextCell7.getContentText());
+                    item_entry.put("flush_water", buttonTextCell8.getContentText());
+                    item_entry.put("no_electricity_flushing", buttonTextCell9.getContentText());
+                    item_entry.put("kick_test", buttonTextCell10.getContentText());
+                    item_entry.put("reverse_lid", buttonTextCell11.getContentText());
+                    item_entry.put("reverse_circle", buttonTextCell12.getContentText());
+                    item_entry.put("lamp_display", buttonTextCell13.getContentText());
+                    item_entry.put("micro_wave", buttonTextCell14.getContentText());
+                    item_entry.put("speech", buttonTextCell15.getContentText());
 
                     item_entry.put("water_data", buttonTextCell16.getContentText());
                     item_entry.put("seat_data", buttonTextCell17.getContentText());

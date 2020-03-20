@@ -215,7 +215,8 @@ public class MesLightActivity extends Activity {
         checkBox1 = (CheckBox) view.findViewById(R.id.checkbox_1);
         checkBox2 = (CheckBox) view.findViewById(R.id.checkbox_2);
         checkBox3 = (CheckBox) view.findViewById(R.id.checkbox_3);
-        checkBox1.setChecked(true);
+
+        checkBox1.setChecked(false);
         checkBox2.setChecked(true);
         checkBox3.setChecked(false);
         if (responEditText != null) {      //¥¶¿Ì»À
