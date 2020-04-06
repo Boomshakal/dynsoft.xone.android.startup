@@ -2,10 +2,8 @@ package dynsoft.xone.android.activity;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Message;
 import android.text.TextUtils;
@@ -13,19 +11,19 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.GridView;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.RatingBar;
 import android.widget.TextView;
+
+import com.google.gson.Gson;
+import com.squareup.okhttp.ResponseBody;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -45,7 +43,7 @@ import java.util.HashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import dynsoft.xone.android.control.ButtonTextCell;
+import dynsoft.xone.android.bean.RequestBean;
 import dynsoft.xone.android.core.App;
 import dynsoft.xone.android.core.R;
 import dynsoft.xone.android.data.DataRow;
@@ -53,13 +51,24 @@ import dynsoft.xone.android.data.DataTable;
 import dynsoft.xone.android.data.Parameters;
 import dynsoft.xone.android.data.Result;
 import dynsoft.xone.android.data.ResultHandler;
+import dynsoft.xone.android.retrofit.DingdingService;
+import dynsoft.xone.android.retrofit.MarkDownBean;
+import dynsoft.xone.android.retrofit.RespondBean;
+import dynsoft.xone.android.retrofit.RetrofitDownUtil;
+import dynsoft.xone.android.retrofit.TextBean;
 import dynsoft.xone.android.util.SmsUtilV;
+import retrofit.Call;
+import retrofit.Callback;
+import retrofit.Response;
+import retrofit.Retrofit;
 
 /**
  * Created by Administrator on 2018/4/11.
  */
 
 public class MesLightActivity extends Activity {
+    private static final String appKey = "dingwcdrldanxpmn4xzm";
+    private static final String appSecret = "4Zlck9BJD_P2INzxCaaUauDoYNCs8WHZ_VxU8vN3vKnuGGJNEGzcjN8qY-YgQTlY";
     private GridView gridView;
     private ListView listView;
     private ArrayList<String> allExceptionTypes;
@@ -74,6 +83,8 @@ public class MesLightActivity extends Activity {
     private CheckBox checkBox3;
     private int task_order_id;
     private ArrayList<DataRow> dataRows;
+    private String workLine;
+    private String production;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,6 +96,8 @@ public class MesLightActivity extends Activity {
         station = sharedPreferences.getString("station", "");
         task_order_id = sharedPreferences.getInt("order_task_id", 0);
         starMap = new HashMap<Integer, String>();
+        workLine = sharedPreferences.getString("segment", "");
+        production = sharedPreferences.getString("production", "");
         //"差", "一般", "满意", "非常满意", "无可挑剔"
         starMap.put(1, "差");
         starMap.put(2, "一般");
@@ -110,10 +123,8 @@ public class MesLightActivity extends Activity {
                     return;
                 }
                 if (value.Value != null) {
-                    Log.e("len", "VALUE:" + value.Value.Rows.size());
                     for (int i = 0; i < value.Value.Rows.size(); i++) {
                         String name = value.Value.Rows.get(i).getValue("exception_class", "");
-                        Log.e("len", "EXCEPTION:" + name);
                         allExceptionTypes.add(name);
                     }
                     lightAdapter = new LightAdapter(selectedExceptions);
@@ -173,8 +184,8 @@ public class MesLightActivity extends Activity {
     }
 
     private void commitRate(final String exception_type, String s, PopupWindow popupWindow) {
-        String sql = "exec p_fm_light_exception_update_and ?,?,?,?";
-        Parameters p = new Parameters().add(1, getMacAddress()).add(2, exception_type).add(3, s).add(4, (long) currentSelect);
+        String sql = "exec p_fm_light_exception_workline_update_and ?,?,?,?,?";
+        Parameters p = new Parameters().add(1, workLine).add(2, production).add(3, exception_type).add(4, s).add(5, (long) currentSelect);
         App.Current.DbPortal.ExecuteNonQueryAsync("core_and", sql, p, new ResultHandler<Integer>() {
             @Override
             public void handleMessage(Message msg) {
@@ -215,8 +226,7 @@ public class MesLightActivity extends Activity {
         checkBox1 = (CheckBox) view.findViewById(R.id.checkbox_1);
         checkBox2 = (CheckBox) view.findViewById(R.id.checkbox_2);
         checkBox3 = (CheckBox) view.findViewById(R.id.checkbox_3);
-
-        checkBox1.setChecked(false);
+        checkBox1.setChecked(true);
         checkBox2.setChecked(true);
         checkBox3.setChecked(false);
         if (responEditText != null) {      //处理人
@@ -330,9 +340,9 @@ public class MesLightActivity extends Activity {
     }
 
     private void chooseRespondMan(final EditText edittext, String macAddress, final String s) {    //选择异常处理人
-        String sql = "exec fm_get_choose_exception_respond_and ?,?";
+        String sql = "exec fm_get_choose_exception_respond_workline_and ?,?";
         //s  异常类型
-        Parameters p = new Parameters().add(1, macAddress).add(2, s);
+        Parameters p = new Parameters().add(1, workLine).add(2, s);
         App.Current.DbPortal.ExecuteDataTableAsync("core_and", sql, p, new ResultHandler<DataTable>() {
             @Override
             public void handleMessage(Message msg) {
@@ -358,29 +368,12 @@ public class MesLightActivity extends Activity {
     }
 
     private void multiChoiceDialog(final DataTable dataTable, final EditText editText) {
-//多选框
-//        new AlertDialog.Builder(MesLightActivity.this).setTitle("请选择")
-//                .setNegativeButton("取消", null).setPositiveButton("确定", null)
-//                .setMultiChoiceItems(names.toArray(new String[0]), selected, new DialogInterface.OnMultiChoiceClickListener() {
-//                    @Override
-//                    public void onClick(DialogInterface dialogInterface, int i, boolean b) {
-//                        selected[i] = b;
-//                        if (selected[i] == true) {
-//                            nameMessage.append(names.get(i));
-//                            nameMessage.append(",");
-//                            dataRows.add(dataTable.Rows.get(i));
-//                        }
-//                        buttonTextCell.setContentText(nameMessage.toString());
-//                    }
-//                }).show();
-
-
         ArrayList<String> names = new ArrayList<String>();
         for (DataRow dataRow : dataTable.Rows) {
             String name = dataRow.getValue("name", "");
+            Log.e("len", "name : " + name);
             names.add(name);
         }
-
         final DialogInterface.OnClickListener listener = new DialogInterface.OnClickListener() {
 
             @Override
@@ -407,11 +400,11 @@ public class MesLightActivity extends Activity {
      * @param exception_comment 异常描述
      */
     private void commitException(final String exception_type, PopupWindow popupWindow, String exception_comment, int influencesCounts) {
-        final String sql = "exec p_fm_light_exception_commit_and_v2 ?, ?, ?, ?, ?, ?, ?";
+        final String sql = "exec p_fm_light_exception_commit_and ?, ?, ?, ?, ?, ?, ?, ?";
         String code = dataRows.get(0).getValue("code", "");
-        Parameters p = new Parameters().add(1, getMacAddress()).add(2, exception_type)
-                .add(3, exception_comment).add(4, task_order_id).add(5, station)
-                .add(6, influencesCounts).add(7, code);
+        Parameters p = new Parameters().add(1, workLine).add(2, production).add(3, exception_type)
+                .add(4, exception_comment).add(5, task_order_id).add(6, station)
+                .add(7, influencesCounts).add(8, code);
         App.Current.DbPortal.ExecuteRecordAsync("core_and", sql, p, new ResultHandler<DataRow>() {
             @Override
             public void handleMessage(Message msg) {
@@ -423,7 +416,8 @@ public class MesLightActivity extends Activity {
                 }
                 if (value.Value != null) {
                     if (checkBox1.isChecked()) {      //发送待办
-                        sendMessageForEIP(value.Value);
+//                        sendMessageForEIP(value.Value);
+                        sendMessageToDingding(value.Value);
                     }
                     if (checkBox2.isChecked()) {     //发送邮件
                         sendEmail(value.Value);
@@ -597,6 +591,7 @@ public class MesLightActivity extends Activity {
 //                } catch (UnsupportedEncodingException e) {
 //                    e.printStackTrace();
 //                }
+            responsible_code = "M3933";
             String nrCode = nrContent;
             String path = "http://192.168.0.10:8000/plmweb/soap.nsf/QsendEIP_ems?OpenAgent&nr=" + nrCode + "&gh={\"LoginName\":\"" + responsible_code + "\"}";
 
@@ -917,6 +912,123 @@ public class MesLightActivity extends Activity {
 //        }
     }
 
+    public void sendMessageToDingding(DataRow rw) {
+        if (rw != null) {
+            String exception_type = rw.getValue("exception_type", "").trim();
+            String exception_comment = rw.getValue("exception_comment", "").trim();
+            Date create_time = rw.getValue("create_time", new Date());
+            String createTime = new SimpleDateFormat("yyyy-MM-dd,HH:mm:ss").format(create_time).trim();
+            String dev_name = rw.getValue("dev_name", "").trim();
+            String work_line = rw.getValue("work_line", "").trim();
+            String responsible_code = rw.getValue("responsible_code", "").trim();
+            String mobile = rw.getValue("mobile", "").trim();
+            String use_name = rw.getValue("use_name", "").trim();
+            String phone_number = rw.getValue("phone_number", "").trim();
+
+//                String path = "http://192.168.0.10:8000/plmweb/soap.nsf/QsendEIP_ems?OpenAgent&nr="
+//                        + work_line + dev_name + "在" + createTime + "有" + exception_type + "异常" + exception_comment + "。"
+//                        + "&gh={\"LoginName\":\"" + "M3933" + "\"}";
+            StringBuilder sb = new StringBuilder();
+            if (TextUtils.isEmpty(phone_number)) {
+                sb.append(exception_type + "异常，" + exception_comment + "。");
+            } else {
+                sb.append(exception_type + "异常，" + exception_comment + ",可以联系" + use_name + ",号码:" + phone_number);
+            }
+
+            //发送钉钉工作通知
+            Retrofit dingdingRetrofit = RetrofitDownUtil.getInstence().getDingdingRetrofit();
+            DingdingService dingdingService = dingdingRetrofit.create(DingdingService.class);
+            Call<ResponseBody> token = dingdingService.getToken(appKey, appSecret);
+            token.enqueue(new Callback<ResponseBody>() {
+                @Override
+                public void onResponse(Response<ResponseBody> response, Retrofit retrofit) {
+                    if (response.code() == 200) {
+                        try {
+                            String string = response.body().string();
+                            Gson gson = new Gson();
+                            RespondBean respondBean = gson.fromJson(string, RespondBean.class);
+                            String access_token = respondBean.getAccess_token();
+
+                            //通过电话获取Userid
+                            Call<ResponseBody> userIdByMobile = dingdingService.getUserIdByMobile(access_token, mobile);
+                            userIdByMobile.enqueue(new Callback<ResponseBody>() {
+                                @Override
+                                public void onResponse(Response<ResponseBody> response, Retrofit retrofit) {
+                                    if (response.code() == 200) {
+                                        try {
+                                            String userMessage = response.body().string();
+                                            Gson gson = new Gson();
+                                            RespondBean respondBean = gson.fromJson(userMessage, RespondBean.class);
+                                            String userid = respondBean.getUserid();
+
+                                            RequestBean requestBean = new RequestBean();
+                                            requestBean.setAgent_id("648372786");
+                                            requestBean.setUserid_list(userid);
+                                            MarkDownBean markDownBean = new MarkDownBean();
+                                            TextBean textBean = new TextBean();
+                                            textBean.setTitle("MES安灯通知");
+                                            String content = "线体：" + workLine
+                                                    + "  \n  工序：" + production
+                                                    + "  \n  原因：" + sb.toString()
+                                                    + "  \n  时间：" + createTime;
+                                            String text = "<font color=#FF0000 size=6 face=\"黑体\">MES安灯通知 </font> " +
+                                                    " ![](https://www.ikahe.com/style/images/logo.png)\n" +
+                                                    "<font color=#000000 size=4 face=\"黑体\">" + content + "</font> ";
+                                            markDownBean.setMarkdown(textBean);
+                                            textBean.setText(text);
+                                            markDownBean.setMsgtype("markdown");
+                                            requestBean.setMsg(markDownBean);
+                                            Log.e("len", ":::" + new Gson().toJson(requestBean));
+                                            Call<ResponseBody> responseBodyCall = dingdingService.sendMessage(access_token, requestBean);
+                                            responseBodyCall.enqueue(new Callback<ResponseBody>() {
+                                                @Override
+                                                public void onResponse(Response<ResponseBody> response, Retrofit retrofit) {
+                                                    int code = response.code();
+                                                    if (code == 200) {
+                                                        try {
+                                                            Log.e("len", "sss:" + response.body().string());
+                                                        } catch (IOException e) {
+                                                            e.printStackTrace();
+                                                            Log.e("len", e.getLocalizedMessage());
+                                                        }
+                                                    } else {
+                                                        App.Current.toastError(MesLightActivity.this, code + "");
+                                                    }
+                                                }
+
+                                                @Override
+                                                public void onFailure(Throwable throwable) {
+                                                    Log.e("len", "Fail:" + throwable.getLocalizedMessage());
+                                                }
+                                            });
+                                        } catch (IOException e) {
+                                            e.printStackTrace();
+                                        }
+                                    }
+                                }
+
+                                @Override
+                                public void onFailure(Throwable throwable) {
+
+                                }
+                            });
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+
+                @Override
+                public void onFailure(Throwable throwable) {
+                    Log.e("len", "ERR: " + throwable.getLocalizedMessage());
+                }
+            });
+
+        } else {
+            App.Current.showError(MesLightActivity.this, "提交成功,但是责任人没有维护，请检查责任人设置，待办发送失败！");
+        }
+    }
+
     private String getMacAddress() {
         String strMacAddr = null;
         try {
@@ -971,8 +1083,8 @@ public class MesLightActivity extends Activity {
     }
 
     public void initListView() {
-        final String sql = "exec p_fm_light_exception_and ?";
-        Parameters p = new Parameters().add(1, getMacAddress()); //MAC_ADRESS mac地址
+        final String sql = "exec p_fm_work_light_exception_and ?,?";
+        Parameters p = new Parameters().add(1, workLine).add(2, production); //MAC_ADRESS mac地址
         App.Current.DbPortal.ExecuteDataTableAsync("core_and", sql, p, new ResultHandler<DataTable>() {
             @Override
             public void handleMessage(Message msg) {
@@ -982,23 +1094,37 @@ public class MesLightActivity extends Activity {
                     return;
                 }
                 if (value.Value != null && value.Value.Rows.size() > 0) {
-                    String result = value.Value.Rows.get(0).getValue("result", "");
-                    if ("OK".equals(result)) {
-                        for (int i = 0; i < value.Value.Rows.size(); i++) {
-                            String status = value.Value.Rows.get(i).getValue("status", "");
-                            String exception_type = value.Value.Rows.get(i).getValue("exception_type", "");
-                            if ("呼叫".equals(status) && !selectedExceptions.contains(exception_type)) {
-                                selectedExceptions.add(exception_type);
-                            }
+                    for (int i = 0; i < value.Value.Rows.size(); i++) {
+                        String status = value.Value.Rows.get(i).getValue("status", "");
+                        String exception_type = value.Value.Rows.get(i).getValue("exception_type", "");
+                        if ("呼叫".equals(status) && !selectedExceptions.contains(exception_type)) {
+                            selectedExceptions.add(exception_type);
                         }
-                        lightAdapter.fresh(selectedExceptions);
-                        LightListAdapter lightListAdapter = new LightListAdapter(value.Value);
-                        listView.setAdapter(lightListAdapter);
-                    } else {
-                        App.Current.toastError(MesLightActivity.this, result + getMacAddress());
-                        App.Current.playSound(R.raw.error);
-                        finish();
                     }
+                    if (lightAdapter != null) {
+                        lightAdapter.fresh(selectedExceptions);
+                    }
+                    LightListAdapter lightListAdapter = new LightListAdapter(value.Value);
+                    listView.setAdapter(lightListAdapter);
+//                    String result = value.Value.Rows.get(0).getValue("result", "");
+//                    if ("OK".equals(result)) {
+//                        for (int i = 0; i < value.Value.Rows.size(); i++) {
+//                            String status = value.Value.Rows.get(i).getValue("status", "");
+//                            String exception_type = value.Value.Rows.get(i).getValue("exception_type", "");
+//                            if ("呼叫".equals(status) && !selectedExceptions.contains(exception_type)) {
+//                                selectedExceptions.add(exception_type);
+//                            }
+//                        }
+//                        if (lightAdapter != null) {
+//                            lightAdapter.fresh(selectedExceptions);
+//                        }
+//                        LightListAdapter lightListAdapter = new LightListAdapter(value.Value);
+//                        listView.setAdapter(lightListAdapter);
+//                    } else {
+//                        App.Current.toastError(MesLightActivity.this, result + getMacAddress());
+//                        App.Current.playSound(R.raw.error);
+//                        finish();
+//                    }
                 } else {
                 }
             }
