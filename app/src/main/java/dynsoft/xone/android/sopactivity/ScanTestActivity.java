@@ -1318,7 +1318,7 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
         time.setToNow();
         int hour = time.hour;
         int toSeqId = getToSeqId(rslt);
-        if (toSeqId > 0) {
+       if (toSeqId > 0) {
             String sql = "exec p_fm_work_create_and_v1 ?,?,?,?,?,?,?,?,?,?,?,?,?,?";
             Parameters p = new Parameters().add(1, order_id).add(2, sequence_id).add(3, org_code).add(4, segment)
                     .add(5, station).add(6, hour > 18 ? "Ò¹°à" : "°×°à").add(7, device).add(8, foreman_id).add(9, worker_id)
@@ -1477,7 +1477,7 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
     }
 
     private int getToSeqId(String rslt) {
-        String sql = "select to_seq_id from fm_transition where result =? and from_seq_id = ? and process_id = ?";
+        String sql = "exec p_getToSeqId ?,?,?";
         Parameters p = new Parameters().add(1, rslt).add(2, sequence_id).add(3, process_id);
         Result<DataRow> result = App.Current.DbPortal.ExecuteRecord("core_and", sql, p);
         if (result.HasError) {

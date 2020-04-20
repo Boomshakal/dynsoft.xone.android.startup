@@ -9,5 +9,5 @@ public final class BuildConfig {
   public static final String BUILD_TYPE = "debug";
   public static final String FLAVOR = "";
   public static final int VERSION_CODE = 1;
-  public static final String VERSION_NAME = "2020.03.23.1037";
+  public static final String VERSION_NAME = "2020.04.06.1037";
 }
