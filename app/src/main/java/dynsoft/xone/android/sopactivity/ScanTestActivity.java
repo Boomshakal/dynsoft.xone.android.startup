@@ -581,10 +581,10 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
                                     @Override
                                     public void handleMessage(Message msg) {
                                         Result<DataRow> value = Value;
-                                        if(value.HasError) {
+                                        if (value.HasError) {
                                             App.Current.toastError(ScanTestActivity.this, value.Error);
                                         } else {
-                                            if(value.Value != null) {     //返回了混流的工单数据
+                                            if (value.Value != null) {     //返回了混流的工单数据
 
                                             } else {   //混流工单 结束   提交数据
                                                 StringBuffer stringBuffer = new StringBuffer();    //获得lot_number 的拼接
@@ -962,7 +962,10 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
     }
 
     private void toastChooseResult() {
-        String sql = "SELECT code + bad_type name  FROM fm_bad_apperance";
+        String sql;
+        if (sequence_id == 286)
+            sql = "SELECT code + bad_type name  FROM fm_bad_apperance_appearance ";
+        else sql = "SELECT code + bad_type name  FROM fm_bad_apperance";
         App.Current.DbPortal.ExecuteDataTableAsync("core_and", sql, new ResultHandler<DataTable>() {
             @Override
             public void handleMessage(Message msg) {
@@ -1318,7 +1321,7 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
         time.setToNow();
         int hour = time.hour;
         int toSeqId = getToSeqId(rslt);
-       if (toSeqId > 0) {
+        if (toSeqId > 0) {
             String sql = "exec p_fm_work_create_and_v1 ?,?,?,?,?,?,?,?,?,?,?,?,?,?";
             Parameters p = new Parameters().add(1, order_id).add(2, sequence_id).add(3, org_code).add(4, segment)
                     .add(5, station).add(6, hour > 18 ? "夜班" : "白班").add(7, device).add(8, foreman_id).add(9, worker_id)
