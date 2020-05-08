@@ -1074,6 +1074,7 @@ id btnRight
 id btnSearch1
 id btnSearch2
 id btnSubmit
+id btn_all_delivery
 id btn_back
 id btn_batch_end
 id btn_batch_start
@@ -1699,6 +1700,8 @@ id txt_B_cell
 id txt_C_cell
 id txt_D_cell
 id txt_E_cell
+id txt_JSuser_cell
+id txt_OPuser_cell
 id txt_accessories_code_cell
 id txt_accessories_name_cell
 id txt_accumulative_use_count_cell
@@ -1763,6 +1766,8 @@ id txt_finished_today
 id txt_footer
 id txt_fqc_qty_cell
 id txt_gross_weight_cell
+id txt_head_code
+id txt_head_code_cell
 id txt_id
 id txt_image_textcell
 id txt_inventory_quantity_cell
@@ -1783,6 +1788,8 @@ id txt_item_main_cell
 id txt_item_name
 id txt_item_name_cell
 id txt_item_quantity_cell
+id txt_itemcode_cell
+id txt_itemname_cell
 id txt_itemquantity_cell
 id txt_items
 id txt_keep_user_cell
@@ -1803,6 +1810,8 @@ id txt_location
 id txt_location_cell
 id txt_locations
 id txt_locations_cell
+id txt_logistics_code
+id txt_logistics_code_cell
 id txt_lot_number
 id txt_lot_number_cell
 id txt_mac
@@ -1837,6 +1846,7 @@ id txt_organization_cell
 id txt_out_quantity_cell
 id txt_pc_number_cell
 id txt_pc_nunber_cell
+id txt_pc_quantity_cell
 id txt_plan_quantity_cell
 id txt_plan_today
 id txt_planned_quantity_cell
@@ -1855,8 +1865,10 @@ id txt_prod_sn_cell
 id txt_product_lines_cell
 id txt_program
 id txt_program_cell
+id txt_qty
 id txt_qty1
 id txt_qty2
+id txt_qty_cell
 id txt_quantity
 id txt_quantity_cell
 id txt_receive_location
@@ -1886,6 +1898,7 @@ id txt_sender
 id txt_server
 id txt_server_cell
 id txt_sex_textcell
+id txt_sh_date
 id txt_sh_date_cell
 id txt_shdate_cell
 id txt_shiftday_cell
@@ -1893,8 +1906,10 @@ id txt_shipment_code
 id txt_shipment_code_cell
 id txt_size_cell
 id txt_sn
+id txt_sn_items_id_cell
 id txt_sn_no_cell
 id txt_sn_number_cell
+id txt_snitemsid_cell
 id txt_snno_cell
 id txt_snnumber_cell
 id txt_solder_code_cell
@@ -1907,6 +1922,7 @@ id txt_storage
 id txt_storage_cell
 id txt_storage_code_cell
 id txt_storage_number_cell
+id txt_storagenumber_cell
 id txt_store
 id txt_store_code_cell
 id txt_sub_type
@@ -2061,6 +2077,8 @@ layout cardregistrationkey_item
 layout cardregistrationkey_list_item
 layout cpk_griditem
 layout defect_popupwindow
+layout delivery_and_info
+layout delivery_and_sales_info
 layout device_check_mgr_editor_item
 layout device_daily_check_mgr_item
 layout device_maintain_check_mgr_editor_item
@@ -2164,6 +2182,7 @@ layout ln_ipqc_point_check
 layout ln_ipqc_record_mgr_listview_item
 layout ln_iqc_escape
 layout ln_lot_number
+layout ln_maintenance
 layout ln_mm_device_pro_item
 layout ln_mm_handover_enter_list
 layout ln_mm_handover_list
@@ -2351,10 +2370,18 @@ layout pn_smt_steel_mesh_store
 layout pn_smt_steel_mesh_tension_editor
 layout pn_smt_steel_solder_paste_editor
 layout pn_smt_z_editor
+layout pn_so_after_delivery_and_main_new
+layout pn_so_after_maintenance_editor
+layout pn_so_after_maintenance_mgr
 layout pn_so_after_sales_batch_show
+layout pn_so_after_sales_batch_show1
+layout pn_so_after_sales_delivery_and
+layout pn_so_after_sales_delivery_and_newl
+layout pn_so_after_sales_delivery_and_sales
 layout pn_so_after_sales_editor
 layout pn_so_after_scanning
 layout pn_so_after_storage_editor
+layout pn_so_after_storage_mgr
 layout pn_so_issue_editor
 layout pn_so_issue_mgr
 layout pn_so_return_editor
@@ -2434,6 +2461,7 @@ layout smt_record_items
 layout smt_rejects_popupwindow
 layout smt_rejects_popupwindow1
 layout smt_repair_popupwindow
+layout so_after_batch
 layout sop_activity_listview
 layout sop_viewpager_item
 layout statusbox

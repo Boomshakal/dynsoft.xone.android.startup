@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\IKAHE\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v11\\values-v11.xml",
+            "outputFile": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v11\\values-v11.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\IKAHE\\AndroidStudioProjects\\dynsoft.xone.android.startup\\app\\src\\main\\res\\values-v11\\styles.xml",
+                    "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\values-v11\\styles.xml",
                     "from": {
                         "startLines": "6",
                         "startColumns": "4",

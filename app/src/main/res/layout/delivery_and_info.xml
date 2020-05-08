@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDFDFD"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txt_snnumber_cell"
+            android:text="sn编码"
+            android:background="@color/pink"
+            android:layout_width="0dp"
+            android:textColor="@color/blue"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"></TextView>
+
+        <TextView
+            android:id="@+id/txt_sn_number_cell"
+            android:layout_width="0dp"
+            android:textColor="@color/blue"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"></TextView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txt_itemcode_cell"
+            android:text="产品型号"
+            android:background="@color/pink"
+            android:layout_width="0dp"
+            android:textColor="@color/blue"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"></TextView>
+
+        <TextView
+            android:id="@+id/txt_item_code_cell"
+            android:layout_width="0dp"
+            android:textColor="@color/blue"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txt_itemname_cell"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/pink"
+            android:text="物料编号"
+            android:textColor="@color/blue"></TextView>
+
+        <TextView
+            android:id="@+id/txt_item_name_cell"
+            android:layout_width="0dp"
+            android:textColor="@color/blue"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txt_storagenumber_cell"
+            android:text="所在库位"
+            android:background="@color/pink"
+            android:layout_width="0dp"
+            android:textColor="@color/blue"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"></TextView>
+
+        <TextView
+            android:id="@+id/txt_storage_number_cell"
+            android:layout_width="0dp"
+            android:textColor="@color/blue"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txt_snitemsid_cell"
+            android:text="主id"
+            android:background="@color/pink"
+            android:layout_width="0dp"
+            android:textColor="@color/blue"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:visibility="gone"></TextView>
+
+        <TextView
+            android:id="@+id/txt_sn_items_id_cell"
+            android:layout_width="0dp"
+            android:textColor="@color/blue"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:visibility="gone"></TextView>
+
+
+    </LinearLayout>
+
+
+
+    </LinearLayout>

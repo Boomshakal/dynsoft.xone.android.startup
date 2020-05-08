@@ -1,4 +1,4 @@
-# Referenced at C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:45
+# Referenced at D:\dynsoft.xone.android.startup\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:45
 -keep class android.support.v4.app.CoreComponentFactory { <init>(); }
-# Referenced at C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:45
+# Referenced at D:\dynsoft.xone.android.startup\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:45
 -keep class dynsoft.xone.android.core.App { <init>(); }
