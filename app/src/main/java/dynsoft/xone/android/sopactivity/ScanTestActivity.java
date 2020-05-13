@@ -124,6 +124,7 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
     private boolean isHandleKey = true;
     private ScanGun mScanGun = null;
     private String task_order_code;
+    private String task_order_id;
     private String old_task_order_code;
     private Handler handler = new Handler();
     private Runnable runnable = new Runnable() {
@@ -161,6 +162,7 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
         device = sharedPreferences.getString("device", "");
         station = sharedPreferences.getString("station", "");
         task_order_code = sharedPreferences.getString("task_order", "");
+        task_order_id = sharedPreferences.getString("task_order_id", "");
         old_task_order_code = sharedPreferences.getString("task_order", "");
         String foreman = sharedPreferences.getString("foreman", "");
         String worker = sharedPreferences.getString("work_code", "");
@@ -551,6 +553,38 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
                                         textview_result.setTextColor(Color.RED);
                                         App.Current.playSound(R.raw.hook);
                                     } else {
+                                        final String sql = "exec p_fm_work_check_barcode_v3 ?,?,?,?";
+                                        Parameters p = new Parameters().add(1, task_order_code).add(2, sequence_id).add(3, edittext.toUpperCase()).add(4, work_type);
+                                        App.Current.DbPortal.ExecuteRecordAsync("core_and", sql, p, new ResultHandler<DataRow>() {
+                                            @Override
+                                            public void handleMessage(Message msg) {
+                                                Result<DataRow> value = Value;
+                                                if (value.HasError) {
+                                                    App.Current.toastError(ScanTestActivity.this, value.Error);
+                                                } else {
+                                                    if (!value.Value.getValue("rtnstr", "").equals("OK")) {
+                                                        return;
+                                                    }
+                                                }
+                                            }
+                                        });
+
+                                        final String sql_str = "exec p_fm_work_check_barcode_for_part_and ?,?";
+                                        Parameters pr = new Parameters().add(1, edittext.toUpperCase()).add(2, task_order_id);
+                                        App.Current.DbPortal.ExecuteRecordAsync("core_and", sql_str, pr, new ResultHandler<DataRow>() {
+                                            @Override
+                                            public void handleMessage(Message msg) {
+                                                Result<DataRow> value = Value;
+                                                if (value.HasError) {
+                                                    App.Current.toastError(ScanTestActivity.this, value.Error);
+                                                } else {
+                                                    if (!value.Value.equals("OK")) {
+                                                        return;
+                                                    }
+                                                }
+                                            }
+                                        });
+
                                         childNumber.add(edittext.toUpperCase());
                                         scanString.add(edittext.toUpperCase());
                                         myListAdapter.notifyDataSetChanged();
