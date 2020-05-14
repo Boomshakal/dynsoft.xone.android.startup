@@ -123,8 +123,7 @@ public class pn_sop_mgr extends pn_mgr {
                     if (value.Value != null) {
                         String plan_quantity = value.Value.getValue("plan_quantity", new BigDecimal(0)).toString();
                         edit.putString("plan_quantity", plan_quantity);
-                        Number num=(Number) value.Value.getValue("id",0);
-                        edit.putString("task_order_id", num.toString());
+
                         item_id = value.Value.getValue("item_id", 0);
                         org_id = value.Value.getValue("organization_id", 0);
                         if (item_id != 0) {

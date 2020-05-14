@@ -124,7 +124,7 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
     private boolean isHandleKey = true;
     private ScanGun mScanGun = null;
     private String task_order_code;
-    private String task_order_id;
+    private int task_order_id;
     private String old_task_order_code;
     private Handler handler = new Handler();
     private Runnable runnable = new Runnable() {
@@ -162,7 +162,7 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
         device = sharedPreferences.getString("device", "");
         station = sharedPreferences.getString("station", "");
         task_order_code = sharedPreferences.getString("task_order", "");
-        task_order_id = sharedPreferences.getString("task_order_id", "");
+        task_order_id = sharedPreferences.getInt("order_task_id", 0);
         old_task_order_code = sharedPreferences.getString("task_order", "");
         String foreman = sharedPreferences.getString("foreman", "");
         String worker = sharedPreferences.getString("work_code", "");
@@ -555,35 +555,29 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
                                     } else {
                                         final String sql = "exec p_fm_work_check_barcode_v3 ?,?,?,?";
                                         Parameters p = new Parameters().add(1, task_order_code).add(2, sequence_id).add(3, edittext.toUpperCase()).add(4, work_type);
-                                        App.Current.DbPortal.ExecuteRecordAsync("core_and", sql, p, new ResultHandler<DataRow>() {
-                                            @Override
-                                            public void handleMessage(Message msg) {
-                                                Result<DataRow> value = Value;
-                                                if (value.HasError) {
-                                                    App.Current.toastError(ScanTestActivity.this, value.Error);
-                                                } else {
-                                                    if (!value.Value.getValue("rtnstr", "").equals("OK")) {
-                                                        return;
-                                                    }
-                                                }
-                                            }
-                                        });
+                                        Result<DataRow> value = App.Current.DbPortal.ExecuteRecord("core_and", sql, p);
+                                        if (value.HasError) {
+                                            App.Current.toastError(ScanTestActivity.this, value.Error);
+                                        }
+                                        if (!value.Value.getValue("rtnstr", "").equals("OK")) {
+                                            App.Current.toastError(ScanTestActivity.this, value.Value.getValue("rtnstr", ""));
+                                            break;
+                                        }
 
                                         final String sql_str = "exec p_fm_work_check_barcode_for_part_and ?,?";
                                         Parameters pr = new Parameters().add(1, edittext.toUpperCase()).add(2, task_order_id);
-                                        App.Current.DbPortal.ExecuteRecordAsync("core_and", sql_str, pr, new ResultHandler<DataRow>() {
-                                            @Override
-                                            public void handleMessage(Message msg) {
-                                                Result<DataRow> value = Value;
-                                                if (value.HasError) {
-                                                    App.Current.toastError(ScanTestActivity.this, value.Error);
-                                                } else {
-                                                    if (!value.Value.equals("OK")) {
-                                                        return;
-                                                    }
-                                                }
+                                        Result<DataRow> value_r = App.Current.DbPortal.ExecuteRecord("core_and", sql_str, pr);
+                                        if (value_r.HasError) {
+                                            App.Current.toastError(ScanTestActivity.this, value_r.Error);
+                                        } else {
+
+                                            if (!value_r.Value.getValue("", "").equals("OK")) {
+                                                App.Current.toastError(ScanTestActivity.this,
+                                                        edittext.toUpperCase() + value_r.Value.getValue("", ""));
+//                                                App.Current.playSound(R.raw.hook);
+                                                break;
                                             }
-                                        });
+                                        }
 
                                         childNumber.add(edittext.toUpperCase());
                                         scanString.add(edittext.toUpperCase());
