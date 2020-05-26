@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.bigkoo:pickerview:2.1.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/143503ab1f0343f92d7c35969313b716/pickerview-2.1.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/143503ab1f0343f92d7c35969313b716/pickerview-2.1.1/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/62d05caf1b1da27429cfb484ae890ced/pickerview-2.1.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/62d05caf1b1da27429cfb484ae890ced/pickerview-2.1.1/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.bigkoo/pickerview/2.1.1/b3524d0500b4ed89b2a6a68f4d18da9ca6050f6/pickerview-2.1.1-javadoc.jar!/" />

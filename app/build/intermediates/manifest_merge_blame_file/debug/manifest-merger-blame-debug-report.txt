@@ -2,13 +2,13 @@
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="dynsoft.xone.android.core"
 4    android:versionCode="1"
-5    android:versionName="2020.05.08.1037" >
+5    android:versionName="2020.05.14.1037" >
 6
 7    <uses-sdk
 8        android:minSdkVersion="14"
 8-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="23" />
-9-->[com.arialyy.aria:aria-core:3.5.4] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\fde73ccaaef040e461e0eabdf8fe05a8\aria-core-3.5.4\AndroidManifest.xml:9:9-38
+9-->[com.arialyy.aria:aria-core:3.5.4] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\fe5f6ada8ea636c5f19cf37fb819d460\aria-core-3.5.4\AndroidManifest.xml:9:9-38
 10
 11    <!-- <uses-sdk -->
 12    <!-- android:targetSdkVersion="19" /> -->
@@ -87,16 +87,16 @@
 46        android:name="dynsoft.xone.android.core.App"
 46-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:44:9-53
 47        android:allowBackup="true"
-47-->[com.arialyy.aria:aria-core:3.5.4] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\fde73ccaaef040e461e0eabdf8fe05a8\aria-core-3.5.4\AndroidManifest.xml:14:9-35
+47-->[com.arialyy.aria:aria-core:3.5.4] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\fe5f6ada8ea636c5f19cf37fb819d460\aria-core-3.5.4\AndroidManifest.xml:14:9-35
 48        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
-48-->[com.android.support:support-compat:28.0.0] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\a9755f68d450457a9061779241f459b7\support-compat-28.0.0\AndroidManifest.xml:22:18-91
+48-->[com.android.support:support-compat:28.0.0] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\7e3929fe505e63858149439989a3ce5f\support-compat-28.0.0\AndroidManifest.xml:22:18-91
 49        android:debuggable="true"
 50        android:icon="@drawable/logo"
 50-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:45:9-38
 51        android:label="MEGMEET移动企业管理平台"
 51-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:46:9-40
 52        android:supportsRtl="true"
-52-->[com.arialyy.aria:aria-core:3.5.4] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\fde73ccaaef040e461e0eabdf8fe05a8\aria-core-3.5.4\AndroidManifest.xml:15:9-35
+52-->[com.arialyy.aria:aria-core:3.5.4] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\fe5f6ada8ea636c5f19cf37fb819d460\aria-core-3.5.4\AndroidManifest.xml:15:9-35
 53        android:testOnly="true"
 54        android:theme="@android:style/Theme.NoTitleBar" >
 54-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:47:9-56
@@ -457,27 +457,27 @@
 230-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:261:9-89
 230-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:261:19-86
 231        <activity
-231-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\cdba1ac62706e0f58dc1e823f53f2341\zxing-library-2.2\AndroidManifest.xml:12:9-17:63
+231-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\819f609ac486acdc5d2c0fb23e171b66\zxing-library-2.2\AndroidManifest.xml:12:9-17:63
 232            android:name="com.uuzuche.lib_zxing.activity.CaptureActivity"
-232-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\cdba1ac62706e0f58dc1e823f53f2341\zxing-library-2.2\AndroidManifest.xml:13:13-74
+232-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\819f609ac486acdc5d2c0fb23e171b66\zxing-library-2.2\AndroidManifest.xml:13:13-74
 233            android:configChanges="orientation|keyboardHidden"
-233-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\cdba1ac62706e0f58dc1e823f53f2341\zxing-library-2.2\AndroidManifest.xml:14:13-63
+233-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\819f609ac486acdc5d2c0fb23e171b66\zxing-library-2.2\AndroidManifest.xml:14:13-63
 234            android:screenOrientation="portrait"
-234-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\cdba1ac62706e0f58dc1e823f53f2341\zxing-library-2.2\AndroidManifest.xml:15:13-49
+234-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\819f609ac486acdc5d2c0fb23e171b66\zxing-library-2.2\AndroidManifest.xml:15:13-49
 235            android:theme="@style/Theme.AppCompat.NoActionBar"
-235-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\cdba1ac62706e0f58dc1e823f53f2341\zxing-library-2.2\AndroidManifest.xml:16:13-63
+235-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\819f609ac486acdc5d2c0fb23e171b66\zxing-library-2.2\AndroidManifest.xml:16:13-63
 236            android:windowSoftInputMode="stateAlwaysHidden" />
-236-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\cdba1ac62706e0f58dc1e823f53f2341\zxing-library-2.2\AndroidManifest.xml:17:13-60
+236-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\819f609ac486acdc5d2c0fb23e171b66\zxing-library-2.2\AndroidManifest.xml:17:13-60
 237
 238        <service android:name="com.liulishuo.filedownloader.services.FileDownloadService$SharedMainProcessService" />
-238-->[com.liulishuo.filedownloader:library:1.7.4] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\205f96643f709360c9dea3ef600363e5\library-1.7.4\AndroidManifest.xml:12:9-118
-238-->[com.liulishuo.filedownloader:library:1.7.4] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\205f96643f709360c9dea3ef600363e5\library-1.7.4\AndroidManifest.xml:12:18-115
+238-->[com.liulishuo.filedownloader:library:1.7.4] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\6f356b75b79cf3607d6cc0e0383c19bd\library-1.7.4\AndroidManifest.xml:12:9-118
+238-->[com.liulishuo.filedownloader:library:1.7.4] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\6f356b75b79cf3607d6cc0e0383c19bd\library-1.7.4\AndroidManifest.xml:12:18-115
 239        <service
-239-->[com.liulishuo.filedownloader:library:1.7.4] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\205f96643f709360c9dea3ef600363e5\library-1.7.4\AndroidManifest.xml:13:9-15:49
+239-->[com.liulishuo.filedownloader:library:1.7.4] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\6f356b75b79cf3607d6cc0e0383c19bd\library-1.7.4\AndroidManifest.xml:13:9-15:49
 240            android:name="com.liulishuo.filedownloader.services.FileDownloadService$SeparateProcessService"
-240-->[com.liulishuo.filedownloader:library:1.7.4] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\205f96643f709360c9dea3ef600363e5\library-1.7.4\AndroidManifest.xml:14:13-108
+240-->[com.liulishuo.filedownloader:library:1.7.4] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\6f356b75b79cf3607d6cc0e0383c19bd\library-1.7.4\AndroidManifest.xml:14:13-108
 241            android:process=":filedownloader" />
-241-->[com.liulishuo.filedownloader:library:1.7.4] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\205f96643f709360c9dea3ef600363e5\library-1.7.4\AndroidManifest.xml:15:13-46
+241-->[com.liulishuo.filedownloader:library:1.7.4] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\6f356b75b79cf3607d6cc0e0383c19bd\library-1.7.4\AndroidManifest.xml:15:13-46
 242    </application>
 243
 244</manifest>

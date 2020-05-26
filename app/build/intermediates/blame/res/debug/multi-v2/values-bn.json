@@ -4,7 +4,7 @@
             "outputFile": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-bn\\values-bn.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\lihui\\.gradle\\caches\\transforms-2\\files-2.1\\a9755f68d450457a9061779241f459b7\\support-compat-28.0.0\\res\\values-bn\\values-bn.xml",
+                    "source": "C:\\Users\\lihui\\.gradle\\caches\\transforms-2\\files-2.1\\7e3929fe505e63858149439989a3ce5f\\support-compat-28.0.0\\res\\values-bn\\values-bn.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\lihui\\.gradle\\caches\\transforms-2\\files-2.1\\29e2727cb3e7b3ad6292855055b1a52f\\appcompat-v7-28.0.0\\res\\values-bn\\values-bn.xml",
+                    "source": "C:\\Users\\lihui\\.gradle\\caches\\transforms-2\\files-2.1\\3b98e1767505a65764ce4933d03bfedc\\appcompat-v7-28.0.0\\res\\values-bn\\values-bn.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
