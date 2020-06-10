@@ -990,11 +990,11 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
     }
 
     private void toastChooseResult() {
-        String sql;
-        if (sequence_id == 286)
-            sql = "SELECT code + bad_type name  FROM fm_bad_apperance_appearance ";
-        else sql = "SELECT code + bad_type name  FROM fm_bad_apperance";
-        App.Current.DbPortal.ExecuteDataTableAsync("core_and", sql, new ResultHandler<DataTable>() {
+        String sql = "SELECT code + bad_type name\n" +
+                "FROM fm_bad_apperance\n" +
+                "where sequence_names like + '%' + (select name from fm_eng_sequence where sequence_id = ?) + '%'";
+        Parameters p = new Parameters().add(1, sequence_id);
+        App.Current.DbPortal.ExecuteDataTableAsync("core_and", sql, p, new ResultHandler<DataTable>() {
             @Override
             public void handleMessage(Message msg) {
                 final Result<DataTable> value = Value;
