@@ -321,19 +321,17 @@ public class IKAHEKanbanActivity extends Activity implements SpeechSynthesizerLi
                     curDate = value.Value.Rows.get(0).getValue("cur_date", "");
                     for (int i = 0; i < value.Value.Rows.size(); i++) {
                         String work_stage_code = value.Value.Rows.get(i).getValue("work_stage_code", "");
-                        if (segment.contains("组装")) {
-                            if (work_stage_code.toUpperCase().equals("AS")) {
-                                DataRow dataRow = value.Value.Rows.get(i);
-                                loadData.add(dataRow);
-                                textViewStage = work_stage_code;
-                            }
-                        } else if (segment.contains("包装")) {
-                            if (work_stage_code.toUpperCase().equals("PK")) {
-                                DataRow dataRow = value.Value.Rows.get(i);
-                                loadData.add(dataRow);
-                                textViewStage = work_stage_code;
-                            }
+
+                        if (work_stage_code.toUpperCase().equals("AS")) {
+                            DataRow dataRow = value.Value.Rows.get(i);
+                            loadData.add(dataRow);
+                            textViewStage = work_stage_code;
+                        } else if (work_stage_code.toUpperCase().equals("PK")) {
+                            DataRow dataRow = value.Value.Rows.get(i);
+                            loadData.add(dataRow);
+                            textViewStage = work_stage_code;
                         }
+
 //                        if (work_stage_code.toUpperCase().equals("HI")) {
 //                            DataRow dataRow = value.Value.Rows.get(i);
 //                            hiData.add(dataRow);

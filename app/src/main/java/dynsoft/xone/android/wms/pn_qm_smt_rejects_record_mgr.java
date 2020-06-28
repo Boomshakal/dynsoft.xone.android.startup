@@ -1335,7 +1335,7 @@ public class pn_qm_smt_rejects_record_mgr extends pn_editor {
                             });
                         }
                     } else {
-                        App.Current.toastInfo(getContext(), "提交失败！");
+                        App.Current.toastInfo(getContext(), "提交失败！没有工号为" + textcell_5.getContentText().replace("\n", "") + "作业人员");
                         App.Current.playSound(R.raw.error);
                     }
                 }
