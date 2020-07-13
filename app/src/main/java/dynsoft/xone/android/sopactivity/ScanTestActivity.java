@@ -555,28 +555,16 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
                                     } else {
                                         final String sql = "exec p_fm_work_check_barcode_v3 ?,?,?,?";
                                         Parameters p = new Parameters().add(1, task_order_code).add(2, sequence_id).add(3, edittext.toUpperCase()).add(4, work_type);
-                                        Result<DataRow> value = App.Current.DbPortal.ExecuteRecord("core_and", sql, p);
-                                        if (value.HasError) {
-                                            App.Current.toastError(ScanTestActivity.this, value.Error);
-                                        }
-                                        if (!value.Value.getValue("rtnstr", "").equals("OK")) {
-                                            App.Current.toastError(ScanTestActivity.this, value.Value.getValue("rtnstr", ""));
-                                            break;
+                                        String value = App.Current.DbPortal.ExecuteScalar("core_and", sql, p).toString();
+                                        if (!value.equals("OK")) {
+                                            App.Current.toastError(ScanTestActivity.this, value);
                                         }
 
                                         final String sql_str = "exec p_fm_work_check_barcode_for_part_and ?,?";
                                         Parameters pr = new Parameters().add(1, edittext.toUpperCase()).add(2, task_order_id);
-                                        Result<DataRow> value_r = App.Current.DbPortal.ExecuteRecord("core_and", sql_str, pr);
-                                        if (value_r.HasError) {
-                                            App.Current.toastError(ScanTestActivity.this, value_r.Error);
-                                        } else {
-
-                                            if (!value_r.Value.getValue("", "").equals("OK")) {
-                                                App.Current.toastError(ScanTestActivity.this,
-                                                        edittext.toUpperCase() + value_r.Value.getValue("", ""));
-//                                                App.Current.playSound(R.raw.hook);
-                                                break;
-                                            }
+                                        String value_r = App.Current.DbPortal.ExecuteScalar("core_and", sql_str, pr).toString();
+                                        if (value_r.equals("OK")) {
+                                            App.Current.toastError(ScanTestActivity.this, value_r);
                                         }
 
                                         childNumber.add(edittext.toUpperCase());
