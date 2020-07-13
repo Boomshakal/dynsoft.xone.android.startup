@@ -1,13 +1,26 @@
 package dynsoft.xone.android.sopactivity;
 
 import android.app.AlertDialog;
+import android.app.PendingIntent;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
+import android.nfc.NdefMessage;
+import android.nfc.NdefRecord;
+import android.nfc.NfcAdapter;
+import android.nfc.NfcManager;
+import android.nfc.Tag;
+import android.nfc.tech.Ndef;
+import android.nfc.tech.NfcB;
 import android.os.Handler;
 import android.os.Message;
+import android.os.Parcelable;
+import android.os.SystemClock;
 import android.text.TextUtils;
 import android.text.format.Time;
 import android.util.DisplayMetrics;
@@ -30,28 +43,37 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
+import com.android.barcodescandemo.ScannerInerface;
 import com.chice.scangun.ScanGun;
 import com.google.gson.Gson;
+import com.motorolasolutions.adc.decoder.ScannerController;
 import com.squareup.okhttp.MediaType;
 import com.squareup.okhttp.RequestBody;
 import com.squareup.okhttp.ResponseBody;
+
+import org.nfc.read.TextRecord;
 
 import dynsoft.xone.android.base.BaseActivity;
 import dynsoft.xone.android.bean.ExceptionBean;
 import dynsoft.xone.android.bean.IotBean;
 import dynsoft.xone.android.control.ButtonTextCell;
+import dynsoft.xone.android.control.TextCell;
 import dynsoft.xone.android.core.App;
 import dynsoft.xone.android.core.R;
+import dynsoft.xone.android.core.Workbench;
 import dynsoft.xone.android.data.DataRow;
 import dynsoft.xone.android.data.DataTable;
 import dynsoft.xone.android.data.Parameters;
@@ -72,9 +94,23 @@ import retrofit.Retrofit;
  */
 
 public class ScanTestActivity extends BaseActivity implements View.OnTouchListener {
+    private final static char[] HEX = {'0', '1', '2', '3', '4', '5', '6', '7',
+            '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
     private static final int MAINSCAN = 0;
     private static final int CHILDSCAN = 1;
     private static final int MIXED_FLOW = 3;    //混流
+
+    public static final boolean ScannerEnabled = true;
+    public static final boolean CameraScannerEnabled = false;
+    public static final boolean JieBaoScannerEnabled = false;
+    public static final boolean LianXinScannerEnabled = true;
+    public static final boolean UrovoScannerEnabled = false;
+    public static final boolean IntermecScannerEnabled = true;
+    public static final boolean CilicoScannerEnabled = true;
+    public static final boolean SeuicScannerEnabled = true;
+    private static final String SCANACTION = "com.exmple.broadcast";
+    ;
+
     private ArrayList<Map<String, String>> mixedParameter;   //混流参数，工单和序列号
 
     private static final int TIMENUMBER = 1000;
@@ -109,6 +145,11 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
     private int worker_id;
     private int process_id;
     private String work_type;
+    private String product_type;
+    private float width_value;    //窄边标准
+    private float length_value;   //宽边标准
+    private float diameter_value; //直径标准
+    private String Nominal_size;
     private String edittext;
     private int childScanCount;    //记录需要扫描子码的个数
     private int resultId;
@@ -149,8 +190,21 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
     private ImageView imageViewRed;
     private boolean defectfail;
     private String mac_address;
+    private ScannerInerface _idata_controller;
+    private IntentFilter _idata_filter;
+    private BroadcastReceiver _idata_receiver;
+    private BroadcastReceiver receiver;
+    private ScannerController JieBaoScanner;
+    private IntentFilter seuicfilter;
+    private NfcAdapter defaultAdapter;
+    private PendingIntent pendingIntent;
+    private BroadcastReceiver seuicreceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context arg0, Intent arg1) {
+        }
 
-    //
+    };
+
     @Override
     public View setContentView() {
         sharedPreferences = getApplication().getSharedPreferences("sop", Context.MODE_PRIVATE);
@@ -213,168 +267,30 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
 
         initData();
         initScanNumber();
+        initScanner();
+        edittext_1.setOnKeyListener(null);
 //        edittext_1.setOnKeyListener(new View.OnKeyListener() {
 //            @Override
-//            public boolean onKey(View view, int keyCode, KeyEvent keyEvent) {
-//                if (keyCode == KeyEvent.KEYCODE_ENTER && keyEvent.getAction() == KeyEvent.ACTION_UP) {
-//                    edittext = edittext_1.getText().toString().toUpperCase().replace("\n", "");
-//                    textview_result.setText("");
-//                    if (work_type != null && work_type.equals("defect")) {
-//                        if (edittext.length() < 3) {     //按了按钮
-//                            defectfail = true;
-//                            textview_result.setText("FAIL扫描");
-//                            textview_result.setVisibility(View.VISIBLE);
-//                            textview_result.setTextColor(Color.BLUE);
-//                            check = String.valueOf(System.currentTimeMillis());
-//                        }
-//                    }
-//                    if (edittext.length() > 2 && !check.equals(edittext)) {
-//                        check = edittext;
-//                        switch (status) {
-//                            case MAINSCAN:
-//                                CheckMainScanNumber(edittext);
-//                                break;
-//                            case CHILDSCAN:
-//                                if (isSnBinding) {     //序号绑定
-//                                    if (mainCode.equals(edittext.toUpperCase())) {     //扫描的条码与父条码一样
-//                                        textview_result.setText("第一个条码与当前扫描的条码重复:" + mainCode);
-//                                        textview_result.setTextColor(Color.RED);
-//                                        App.Current.playSound(R.raw.hook);
-//                                    } else {
-//                                        childNumber.add(edittext.toUpperCase());
-//                                        scanString.add(edittext.toUpperCase());
-//                                        myListAdapter.notifyDataSetChanged();
-//                                        xml = getBindXml();
-//                                        CommitScanNumberCreate(mainCode, "PASS");
-//                                    }
-//                                } else if (isConsistencyCheck) {     //是否是一致性检查
-//                                    if (scanCounts > 0) {
-//                                        check = String.valueOf(System.currentTimeMillis());
-//                                        if (checkCounts > scanCounts) {
-//                                            if (scanString.contains(edittext.toUpperCase())) {
-//                                                App.Current.showError(ScanTestActivity.this, "扫描条码重复！");
-//                                                App.Current.playSound(R.raw.hook);
-//                                            } else {
-//                                                scanString.add(edittext.toUpperCase());
-//                                                myListAdapter.notifyDataSetChanged();
-//                                                checkCounts--;
-//                                            }
-//                                        } else if (checkCounts <= scanCounts && checkCounts > 0) {
-//                                            if (scanString2.contains(edittext.toUpperCase())) {
-//                                                App.Current.showError(ScanTestActivity.this, "扫描条码重复！");
-//                                                App.Current.playSound(R.raw.hook);
-//                                            } else {
-//                                                scanString2.add(edittext.toUpperCase());
-//                                                myListAdapter2.notifyDataSetChanged();
-//                                                checkCounts--;
-//                                                if (checkCounts == 0) {
-//                                                    boolean isSame = checkIsSame(scanString, scanString2);
-//                                                    if (isSame) {            //提交数据
-//                                                        xml = getCheckXml();
-//                                                        CommitScanNumberCreate(mainCode, "PASS");
-//                                                        scanString.removeAll(scanString);
-//                                                        scanString2.removeAll(scanString2);
-//                                                        myListAdapter.notifyDataSetChanged();
-//                                                        myListAdapter2.notifyDataSetChanged();
-//                                                        status = MAINSCAN;
-//                                                    } else {
-//                                                        App.Current.showError(ScanTestActivity.this, "两次扫描的内容不一致！");
-//                                                        App.Current.playSound(R.raw.hook);
-//                                                        scanString.removeAll(scanString);
-//                                                        scanString2.removeAll(scanString2);
-//                                                        myListAdapter.notifyDataSetChanged();
-//                                                        myListAdapter2.notifyDataSetChanged();
-//                                                        status = MAINSCAN;
-//                                                    }
-//                                                }
-//                                            }
-//                                        }
-//                                    } else {
-//                                        App.Current.showError(ScanTestActivity.this, "设置的扫描条码个数为0！");
-//                                        App.Current.playSound(R.raw.hook);
-//                                    }
-//
-////                                if (scanString.contains(edittext)) {    //一致
-////                                    childNumber.add(edittext.toUpperCase());
-////                                    scanString.add(edittext.toUpperCase());
-////                                    myListAdapter.notifyDataSetChanged();
-////                                    xml = getBindXml();
-////                                    CommitScanNumberCreate(mainCode, "PASS");
-////                                } else {          //不一致
-////                                    textview_result.setText("扫描的条码不一致");
-////                                    textview_result.setTextColor(Color.RED);
-////                                    textview_result.setVisibility(View.VISIBLE);
-////                                    App.Current.playSound(R.raw.hook);
-////                                    scanString.removeAll(scanString);
-////                                    myListAdapter.notifyDataSetChanged();
-////                                    status = MAINSCAN;
-////                                }
-//                                } else {
-//                                    if (childNumber.contains(edittext.toUpperCase())) {
-//                                        textview_result.setText("条码重复扫描");
-//                                    } else {
-//                                        if (mainCode.equals(edittext.toUpperCase())) {     //扫描的条码与父条码一样
-//                                            textview_result.setText("父条码与当前扫描的条码重复:" + mainCode);
-//                                            textview_result.setTextColor(Color.RED);
-//                                            App.Current.playSound(R.raw.hook);
-//                                        } else {
-//                                            childNumber.add(edittext.toUpperCase());
-//                                            scanString.add(edittext.toUpperCase());
-//                                            myListAdapter.notifyDataSetChanged();
-////                            edittext_1.setText("");
-//                                            childScanCount--;
-//                                            if (childScanCount > 0) {
-//                                                status = CHILDSCAN;
-//                                            } else if (childScanCount == 0) {
-//                                                xml = getBindXml();
-//                                                CommitScanNumberCreate(mainCode, "PASS");
-//                                            } else {
-//                                                clear();
-//                                            }
-//                                        }
-//                                    }
-//                                }
-////                            CheckChildScanNumber(edittext);
-//                                break;
-//                            case MIXED_FLOW:     //混流
-//                                if (scanString.contains(edittext.toUpperCase())) {     //扫描的条码与之前条码一样
-//                                    textview_result.setText("混流扫描条码重复:" + edittext.trim());
-//                                    textview_result.setTextColor(Color.RED);
-//                                    App.Current.playSound(R.raw.hook);
-//                                } else {            //获取混流的子工单ID，判断是否符合规则
-//                                    final String sql = "exec fm_get_mixed_task_message_and ?,?";
-//                                    Parameters p = new Parameters().add(1, old_task_order_code).add(2, scanString.size());
-//                                    App.Current.DbPortal.ExecuteRecordAsync("core_and", sql, p, new ResultHandler<DataRow>() {
-//                                        @Override
-//                                        public void handleMessage(Message msg) {
-//                                            Result<DataRow> value = Value;
-//                                            if (value.HasError) {
-//                                                App.Current.toastError(ScanTestActivity.this, value.Error);
-//                                            } else {
-//                                                if (value.Value != null) {     //返回了混流的工单数据
-//
-//                                                } else {   //混流工单 结束   提交数据
-//                                                    StringBuffer stringBuffer = new StringBuffer();    //获得lot_number 的拼接
-//                                                    for (int i = 0; i < scanString.size(); i++) {
-//                                                        stringBuffer.append(scanString.get(i) + ",");
-//                                                    }
-//                                                    String xml = XmlHelper.createXml("mixed_head", null, "mixed_items", "mixed_item", mixedParameter);
-//                                                    Log.e("len", "xml:" + xml);
-//                                                }
-//                                            }
-//                                        }
-//                                    });
-//                                }
-//                                break;
-//                        }
-//                    } else {
-//                        textview_result.setText("条码重复扫描:" + edittext);
-//                        textview_result.setVisibility(View.VISIBLE);
-//                    }
+//            public boolean onKey(View view, int i, KeyEvent keyEvent) {
+//                if (keyEvent.getKeyCode() == KeyEvent.KEYCODE_ENTER && keyEvent.getAction() == KeyEvent.ACTION_UP) {
+//                    onScanned(edittext_1.getText().toString().replace("\n", ""));
 //                }
 //                return false;
 //            }
 //        });
+
+        NfcManager nfcManager = (NfcManager) getSystemService(NFC_SERVICE);
+        defaultAdapter = nfcManager.getDefaultAdapter();
+        if (defaultAdapter == null) {
+            Log.e("len", "当前设备不支持NFC功能");
+        } else if (!defaultAdapter.isEnabled()) {
+            Log.e("len", "当前设备NFC功能没有打开");
+        } else {
+            pendingIntent = PendingIntent.getActivity(
+                    this, 0, new Intent(this, getClass())
+                            .addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP), 0);
+        }
+
         return view;
     }
 
@@ -454,174 +370,8 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
                 this.isKeySHIFT = false;
                 edittext = _sb.toString().toUpperCase().replace("\n", "");
                 textview_result.setText("");
-                if (work_type != null && work_type.equals("defect")) {
-                    if (edittext.length() < 3) {     //按了按钮
-                        defectfail = true;
-                        textview_result.setText("FAIL扫描");
-                        textview_result.setVisibility(View.VISIBLE);
-                        textview_result.setTextColor(Color.BLUE);
-                        check = String.valueOf(System.currentTimeMillis());
-                    }
-                }
-                if (edittext.length() > 2 && !check.equals(edittext)) {
-                    check = edittext;
-                    switch (status) {
-                        case MAINSCAN:
-                            CheckMainScanNumber(edittext);
-                            break;
-                        case CHILDSCAN:
-                            if (isSnBinding) {     //序号绑定
-                                if (mainCode.equals(edittext.toUpperCase())) {     //扫描的条码与父条码一样
-                                    textview_result.setText("第一个条码与当前扫描的条码重复:" + mainCode);
-                                    textview_result.setTextColor(Color.RED);
-                                    App.Current.playSound(R.raw.hook);
-                                } else {
-                                    childNumber.add(edittext.toUpperCase());
-                                    scanString.add(edittext.toUpperCase());
-                                    myListAdapter.notifyDataSetChanged();
-                                    xml = getBindXml();
-                                    CommitScanNumberCreate(mainCode, "PASS");
-                                }
-                            } else if (isConsistencyCheck) {     //是否是一致性检查
-                                if (scanCounts > 0) {
-                                    check = String.valueOf(System.currentTimeMillis());
-                                    if (checkCounts > scanCounts) {
-                                        if (scanString.contains(edittext.toUpperCase())) {
-                                            App.Current.showError(ScanTestActivity.this, "扫描条码重复！");
-                                            App.Current.playSound(R.raw.hook);
-                                        } else {
-                                            scanString.add(edittext.toUpperCase());
-                                            myListAdapter.notifyDataSetChanged();
-                                            checkCounts--;
-                                        }
-                                    } else if (checkCounts <= scanCounts && checkCounts > 0) {
-                                        if (scanString2.contains(edittext.toUpperCase())) {
-                                            App.Current.showError(ScanTestActivity.this, "扫描条码重复！");
-                                            App.Current.playSound(R.raw.hook);
-                                        } else {
-                                            scanString2.add(edittext.toUpperCase());
-                                            myListAdapter2.notifyDataSetChanged();
-                                            checkCounts--;
-                                            if (checkCounts == 0) {
-                                                boolean isSame = checkIsSame(scanString, scanString2);
-                                                if (isSame) {            //提交数据
-                                                    xml = getCheckXml();
-                                                    CommitScanNumberCreate(mainCode, "PASS");
-                                                    scanString.removeAll(scanString);
-                                                    scanString2.removeAll(scanString2);
-                                                    myListAdapter.notifyDataSetChanged();
-                                                    myListAdapter2.notifyDataSetChanged();
-                                                    status = MAINSCAN;
-                                                } else {
-                                                    App.Current.showError(ScanTestActivity.this, "两次扫描的内容不一致！");
-                                                    App.Current.playSound(R.raw.hook);
-                                                    scanString.removeAll(scanString);
-                                                    scanString2.removeAll(scanString2);
-                                                    myListAdapter.notifyDataSetChanged();
-                                                    myListAdapter2.notifyDataSetChanged();
-                                                    status = MAINSCAN;
-                                                }
-                                            }
-                                        }
-                                    }
-                                } else {
-                                    App.Current.showError(ScanTestActivity.this, "设置的扫描条码个数为0！");
-                                    App.Current.playSound(R.raw.hook);
-                                }
-
-//                                if (scanString.contains(edittext)) {    //一致
-//                                    childNumber.add(edittext.toUpperCase());
-//                                    scanString.add(edittext.toUpperCase());
-//                                    myListAdapter.notifyDataSetChanged();
-//                                    xml = getBindXml();
-//                                    CommitScanNumberCreate(mainCode, "PASS");
-//                                } else {          //不一致
-//                                    textview_result.setText("扫描的条码不一致");
-//                                    textview_result.setTextColor(Color.RED);
-//                                    textview_result.setVisibility(View.VISIBLE);
-//                                    App.Current.playSound(R.raw.hook);
-//                                    scanString.removeAll(scanString);
-//                                    myListAdapter.notifyDataSetChanged();
-//                                    status = MAINSCAN;
-//                                }
-                            } else {
-                                if (childNumber.contains(edittext.toUpperCase())) {
-                                    textview_result.setText("条码重复扫描");
-                                } else {
-                                    if (mainCode.equals(edittext.toUpperCase())) {     //扫描的条码与父条码一样
-                                        textview_result.setText("父条码与当前扫描的条码重复:" + mainCode);
-                                        textview_result.setTextColor(Color.RED);
-                                        App.Current.playSound(R.raw.hook);
-                                    } else {
-                                        final String sql = "exec p_fm_work_check_barcode_v3 ?,?,?,?";
-                                        Parameters p = new Parameters().add(1, task_order_code).add(2, sequence_id).add(3, edittext.toUpperCase()).add(4, work_type);
-                                        String value = App.Current.DbPortal.ExecuteScalar("core_and", sql, p).toString();
-                                        if (!value.equals("OK")) {
-                                            App.Current.toastError(ScanTestActivity.this, value);
-                                        }
-
-                                        final String sql_str = "exec p_fm_work_check_barcode_for_part_and ?,?";
-                                        Parameters pr = new Parameters().add(1, edittext.toUpperCase()).add(2, task_order_id);
-                                        String value_r = App.Current.DbPortal.ExecuteScalar("core_and", sql_str, pr).toString();
-                                        if (value_r.equals("OK")) {
-                                            App.Current.toastError(ScanTestActivity.this, value_r);
-                                        }
-
-                                        childNumber.add(edittext.toUpperCase());
-                                        scanString.add(edittext.toUpperCase());
-                                        myListAdapter.notifyDataSetChanged();
-//                            edittext_1.setText("");
-                                        childScanCount--;
-                                        if (childScanCount > 0) {
-                                            status = CHILDSCAN;
-                                        } else if (childScanCount == 0) {
-                                            xml = getBindXml();
-                                            CommitScanNumberCreate(mainCode, "PASS");
-                                        } else {
-                                            clear();
-                                        }
-                                    }
-                                }
-                            }
-//                            CheckChildScanNumber(edittext);
-                            break;
-                        case MIXED_FLOW:     //混流
-                            if (scanString.contains(edittext.toUpperCase())) {     //扫描的条码与之前条码一样
-                                textview_result.setText("混流扫描条码重复:" + edittext.trim());
-                                textview_result.setTextColor(Color.RED);
-                                App.Current.playSound(R.raw.hook);
-                            } else {            //获取混流的子工单ID，判断是否符合规则
-                                final String sql = "exec fm_get_mixed_task_message_and ?,?";
-                                Parameters p = new Parameters().add(1, old_task_order_code).add(2, scanString.size());
-                                App.Current.DbPortal.ExecuteRecordAsync("core_and", sql, p, new ResultHandler<DataRow>() {
-                                    @Override
-                                    public void handleMessage(Message msg) {
-                                        Result<DataRow> value = Value;
-                                        if (value.HasError) {
-                                            App.Current.toastError(ScanTestActivity.this, value.Error);
-                                        } else {
-                                            if (value.Value != null) {     //返回了混流的工单数据
-
-                                            } else {   //混流工单 结束   提交数据
-                                                StringBuffer stringBuffer = new StringBuffer();    //获得lot_number 的拼接
-                                                for (int i = 0; i < scanString.size(); i++) {
-                                                    stringBuffer.append(scanString.get(i) + ",");
-                                                }
-                                                String xml = XmlHelper.createXml("mixed_head", null, "mixed_items", "mixed_item", mixedParameter);
-                                                Log.e("len", "xml:" + xml);
-                                                CommitScanNumberCreate(mainCode, "PASS");
-                                            }
-                                        }
-                                    }
-                                });
-                            }
-                            break;
-                    }
-                } else {
-                    textview_result.setText("条码重复扫描:" + edittext);
-                    textview_result.setVisibility(View.VISIBLE);
-                }
                 _sb.delete(0, _sb.length());
+                onScanned(edittext);
                 return true;
             } else {
                 if (keyCode >= 7 && keyCode <= 16) {
@@ -681,11 +431,162 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
                         }
                         return true;
                     }
-
                     this.handleNumPadKeys(keyCode);
                 }
             }
             return super.onKeyDown(keyCode, event);
+        }
+    }
+
+    private void onScanned(String edittext) {
+        if (work_type != null && work_type.equals("defect")) {
+            if (edittext.length() < 3) {     //按了按钮
+                defectfail = true;
+                textview_result.setText("FAIL扫描");
+                textview_result.setVisibility(View.VISIBLE);
+                textview_result.setTextColor(Color.BLUE);
+                check = String.valueOf(System.currentTimeMillis());
+            }
+        }
+        if (edittext.length() > 2 && !check.equals(edittext)) {
+            check = edittext;
+            switch (status) {
+                case MAINSCAN:
+                    CheckMainScanNumber(edittext);
+                    break;
+                case CHILDSCAN:
+                    if (isSnBinding) {     //序号绑定
+                        if (mainCode.equals(edittext.toUpperCase())) {     //扫描的条码与父条码一样
+                            textview_result.setText("第一个条码与当前扫描的条码重复:" + mainCode);
+                            textview_result.setTextColor(Color.RED);
+                            App.Current.playSound(R.raw.hook);
+                        } else {
+                            childNumber.add(edittext.toUpperCase());
+                            scanString.add(edittext.toUpperCase());
+                            myListAdapter.notifyDataSetChanged();
+                            xml = getBindXml();
+                            CommitScanNumberCreate(mainCode, "PASS");
+                        }
+                    } else if (isConsistencyCheck) {     //是否是一致性检查
+                        if (scanCounts > 0) {
+                            check = String.valueOf(System.currentTimeMillis());
+                            if (checkCounts > scanCounts) {
+                                if (scanString.contains(edittext.toUpperCase())) {
+                                    App.Current.showError(ScanTestActivity.this, "扫描条码重复！");
+                                    App.Current.playSound(R.raw.hook);
+                                } else {
+                                    scanString.add(edittext.toUpperCase());
+                                    myListAdapter.notifyDataSetChanged();
+                                    checkCounts--;
+                                }
+                            } else if (checkCounts <= scanCounts && checkCounts > 0) {
+                                if (scanString2.contains(edittext.toUpperCase())) {
+                                    App.Current.showError(ScanTestActivity.this, "扫描条码重复！");
+                                    App.Current.playSound(R.raw.hook);
+                                } else {
+                                    scanString2.add(edittext.toUpperCase());
+                                    myListAdapter2.notifyDataSetChanged();
+                                    checkCounts--;
+                                    if (checkCounts == 0) {
+                                        boolean isSame = checkIsSame(scanString, scanString2);
+                                        if (isSame) {            //提交数据
+                                            xml = getCheckXml();
+                                            CommitScanNumberCreate(mainCode, "PASS");
+                                            scanString.removeAll(scanString);
+                                            scanString2.removeAll(scanString2);
+                                            myListAdapter.notifyDataSetChanged();
+                                            myListAdapter2.notifyDataSetChanged();
+                                            status = MAINSCAN;
+                                        } else {
+                                            App.Current.showError(ScanTestActivity.this, "两次扫描的内容不一致！");
+                                            App.Current.playSound(R.raw.hook);
+                                            scanString.removeAll(scanString);
+                                            scanString2.removeAll(scanString2);
+                                            myListAdapter.notifyDataSetChanged();
+                                            myListAdapter2.notifyDataSetChanged();
+                                            status = MAINSCAN;
+                                        }
+                                    }
+                                }
+                            }
+                        } else {
+                            App.Current.showError(ScanTestActivity.this, "设置的扫描条码个数为0！");
+                            App.Current.playSound(R.raw.hook);
+                        }
+                    } else {
+                        if (childNumber.contains(edittext.toUpperCase())) {
+                            textview_result.setText("条码重复扫描");
+                        } else {
+                            if (mainCode.equals(edittext.toUpperCase())) {     //扫描的条码与父条码一样
+                                textview_result.setText("父条码与当前扫描的条码重复:" + mainCode);
+                                textview_result.setTextColor(Color.RED);
+                                App.Current.playSound(R.raw.hook);
+                            } else {
+                                final String sql = "exec p_fm_work_check_barcode_v3 ?,?,?,?";
+                                Parameters p = new Parameters().add(1, task_order_code).add(2, sequence_id).add(3, edittext.toUpperCase()).add(4, work_type);
+                                String value = App.Current.DbPortal.ExecuteScalar("core_and", sql, p).toString();
+                                if (!value.equals("OK")) {
+                                    App.Current.toastError(ScanTestActivity.this, value);
+                                }
+
+                                final String sql_str = "exec p_fm_work_check_barcode_for_part_and ?,?";
+                                Parameters pr = new Parameters().add(1, edittext.toUpperCase()).add(2, task_order_id);
+                                String value_r = App.Current.DbPortal.ExecuteScalar("core_and", sql_str, pr).toString();
+                                if (value_r.equals("OK")) {
+                                    App.Current.toastError(ScanTestActivity.this, value_r);
+                                }
+
+                                childNumber.add(edittext.toUpperCase());
+                                scanString.add(edittext.toUpperCase());
+                                myListAdapter.notifyDataSetChanged();
+                                childScanCount--;
+                                if (childScanCount > 0) {
+                                    status = CHILDSCAN;
+                                } else if (childScanCount == 0) {
+                                    xml = getBindXml();
+                                    CommitScanNumberCreate(mainCode, "PASS");
+                                } else {
+                                    clear();
+                                }
+                            }
+                        }
+                    }
+                    break;
+                case MIXED_FLOW:     //混流
+                    if (scanString.contains(edittext.toUpperCase())) {     //扫描的条码与之前条码一样
+                        textview_result.setText("混流扫描条码重复:" + edittext.trim());
+                        textview_result.setTextColor(Color.RED);
+                        App.Current.playSound(R.raw.hook);
+                    } else {            //获取混流的子工单ID，判断是否符合规则
+                        final String sql = "exec fm_get_mixed_task_message_and ?,?";
+                        Parameters p = new Parameters().add(1, old_task_order_code).add(2, scanString.size());
+                        App.Current.DbPortal.ExecuteRecordAsync("core_and", sql, p, new ResultHandler<DataRow>() {
+                            @Override
+                            public void handleMessage(Message msg) {
+                                Result<DataRow> value = Value;
+                                if (value.HasError) {
+                                    App.Current.toastError(ScanTestActivity.this, value.Error);
+                                } else {
+                                    if (value.Value != null) {     //返回了混流的工单数据
+
+                                    } else {   //混流工单 结束   提交数据
+                                        StringBuffer stringBuffer = new StringBuffer();    //获得lot_number 的拼接
+                                        for (int i = 0; i < scanString.size(); i++) {
+                                            stringBuffer.append(scanString.get(i) + ",");
+                                        }
+                                        String xml = XmlHelper.createXml("mixed_head", null, "mixed_items", "mixed_item", mixedParameter);
+                                        Log.e("len", "xml:" + xml);
+                                        CommitScanNumberCreate(mainCode, "PASS");
+                                    }
+                                }
+                            }
+                        });
+                    }
+                    break;
+            }
+        } else {
+            textview_result.setText("条码重复扫描:" + edittext);
+            textview_result.setVisibility(View.VISIBLE);
         }
     }
 
@@ -722,13 +623,218 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
     @Override
     protected void onResume() {
         super.onResume();
+        if (SeuicScannerEnabled) {
+            seuicfilter.addAction(SCANACTION);
+            seuicfilter.setPriority(Integer.MAX_VALUE);
+            registerReceiver(seuicreceiver, seuicfilter);
+        }
+        if (defaultAdapter != null) {
+            defaultAdapter.enableForegroundDispatch(this, pendingIntent, null, null);
+        }
         handler.postDelayed(runnable, TIMENUMBER);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
+        if (SeuicScannerEnabled) {
+            unregisterReceiver(seuicreceiver);
+        }
+        if (defaultAdapter != null) {
+            defaultAdapter.disableForegroundDispatch(this);
+        }
         handler.removeCallbacks(runnable);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (SeuicScannerEnabled) {
+            seuicreceiver = null;
+            seuicfilter = null;
+        }
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+
+        if (NfcAdapter.ACTION_NDEF_DISCOVERED.equals(intent.getAction())) {
+            Parcelable[] parcelableArrayExtra = getIntent().getParcelableArrayExtra(NfcAdapter.EXTRA_NDEF_MESSAGES);
+            Tag tag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
+            Ndef ndef = Ndef.get(tag);
+            try {
+                ndef.connect();
+                NdefMessage ndefMessage = ndef.getNdefMessage();
+                NdefRecord[] records = ndefMessage.getRecords();
+                for (int i = 0; i < records.length; i++) {
+                    String parse = parse(records[i]);
+                    onScanned(parse);
+                    Log.e("len", "数据 ： " + parse);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+                Log.e("len", e.getLocalizedMessage());
+            }
+
+            NdefMessage[] message = null;
+            if (parcelableArrayExtra != null) {
+                message = new NdefMessage[parcelableArrayExtra.length];
+                for (int i = 0; i < parcelableArrayExtra.length; i++) {
+                    message[i] = (NdefMessage) parcelableArrayExtra[i];
+                }
+            }
+
+            if (message != null) {
+                NdefRecord record = message[0].getRecords()[0];
+                TextRecord textRecord = TextRecord.parse(record);
+                String text = textRecord.getText();
+            }
+        }
+
+        if (NfcAdapter.ACTION_TAG_DISCOVERED.equals(intent.getAction())) {
+            Tag tagFromIntent = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
+
+            NfcB nfcbId = NfcB.get(tagFromIntent);
+            if (nfcbId != null) {
+                try {
+                    nfcbId.connect();
+                    if (nfcbId.isConnected()) {
+
+                        byte[] protocolInfo = nfcbId.getProtocolInfo();
+                        byte[] applicationData = nfcbId.getApplicationData();
+                        for (int i = 0; i < protocolInfo.length; i++) {
+                            Log.e("len", "Datas : " + protocolInfo[i]);
+                        }
+                    }
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            }
+        }
+
+        if (NfcAdapter.ACTION_TECH_DISCOVERED.equals(intent.getAction())) {
+            Tag tagFromIntent = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
+            NfcB nfcbId = NfcB.get(tagFromIntent);
+            if (nfcbId != null) {
+                try {
+                    nfcbId.connect();
+                    if (nfcbId.isConnected()) {
+                        byte[] protocolInfo = nfcbId.getProtocolInfo();
+                        for (int i = 0; i < protocolInfo.length; i++) {
+                            Log.e("len", "Datas : " + protocolInfo[i]);
+                        }
+                    }
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    /**
+     * 解析 ndefRecord 文本数据
+     *
+     * @param ndefRecord
+     * @return
+     */
+    public String parse(NdefRecord ndefRecord) {
+        // verify tnf   得到TNF的值
+        if (ndefRecord.getTnf() != NdefRecord.TNF_WELL_KNOWN) {
+            return null;
+        }
+        // 得到字节数组进行判断
+        if (!Arrays.equals(ndefRecord.getType(), NdefRecord.RTD_TEXT)) {
+            return null;
+        }
+
+        try {
+            // 获得一个字节流
+            byte[] payload = ndefRecord.getPayload();
+            // payload[0]取第一个字节。 0x80：十六进制（最高位是1剩下全是0）
+            String textEncoding = ((payload[0] & 0x80) == 0) ? "UTF-8"
+                    : "UTF-16";
+            // 获得语言编码长度
+            int languageCodeLength = payload[0] & 0x3f;
+            // 获得语言编码
+            String languageCode = new String(payload, 1, languageCodeLength,
+                    "US-ASCII");
+            //
+            String text = new String(payload, languageCodeLength + 1,
+                    payload.length - languageCodeLength - 1, textEncoding);
+
+            return text;
+
+        } catch (Exception e) {
+            throw new IllegalArgumentException();
+        }
+    }
+
+    public String toHexString(byte[] d, int s, int n) {
+        final char[] ret = new char[n * 2];
+        final int e = s + n;
+
+        int x = 0;
+        for (int i = s; i < e; ++i) {
+            final byte v = d[i];
+            ret[x++] = HEX[0x0F & (v >> 4)];
+            ret[x++] = HEX[0x0F & v];
+        }
+        return new String(ret);
+    }
+
+    private void initScanner() {
+        if (ScannerEnabled) {
+            if (LianXinScannerEnabled) {
+                _idata_controller = new ScannerInerface(this);
+                _idata_controller.open();
+                _idata_controller.setOutputMode(1);//使用广播模式
+                _idata_filter = new IntentFilter("android.intent.action.SCANRESULT");
+                _idata_receiver = new BroadcastReceiver() {
+                    @Override
+                    public void onReceive(Context context, Intent intent) {
+                        // 此处获取扫描结果信息
+                        final String barcode = intent.getStringExtra("value");
+                        if (barcode != null && barcode.length() > 0) {
+                            onScanned(barcode);
+                        }
+                    }
+                };
+            }
+
+            if (JieBaoScannerEnabled) {
+                try {
+                    JieBaoScanner = new ScannerController(this, new ScannerController.ScanListener() {
+                        @Override
+                        public void onScan(String result, String error) {
+                            if (result != null) {
+                                onScanned(result.trim());
+                            }
+                        }
+                    });
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
+            if (SeuicScannerEnabled) {
+
+                seuicfilter = new IntentFilter(SCANACTION);
+                seuicreceiver = new BroadcastReceiver() {
+                    @Override
+                    public void onReceive(Context context, Intent intent) {
+                        if (intent.getAction().equals(SCANACTION)) {
+                            String code = intent.getStringExtra("scannerdata");
+                            onScanned(code);
+                        }
+                    }
+
+                };
+
+            }
+        }
     }
 
     private void CheckMainScanNumber(final String text) {
@@ -904,63 +1010,183 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
         });
     }
 
-    private void toastDefectPopupWindow() {
-        App.Current.playSound(R.raw.shake_beep);
-        popupPassFailWindow = new PopupWindow();
-        View view = View.inflate(ScanTestActivity.this, R.layout.defect_popupwindow, null);
-        imageViewGreen = (ImageView) view.findViewById(R.id.imageview_green);
-        imageViewRed = (ImageView) view.findViewById(R.id.imageview_red);
-        LinearLayout linearLayoutRed = (LinearLayout) view.findViewById(R.id.linearlayout_red);
-        LinearLayout linearLayoutGreen = (LinearLayout) view.findViewById(R.id.linearlayout_green);
-        final EditText editText = (EditText) view.findViewById(R.id.edittext);
-        editText.setOnKeyListener(new View.OnKeyListener() {
-            @Override
-            public boolean onKey(View view, int keyCode, KeyEvent keyEvent) {
-                if (keyCode == KeyEvent.KEYCODE_ENTER && keyEvent.getAction() == KeyEvent.ACTION_UP) {
-                    String replace = editText.getText().toString().replace("\n", "");
-                    if ("FAIL".equals(replace)) {
-                        popupPassFailWindow.dismiss();
-                        imageViewGreen.clearAnimation();
-                        imageViewRed.clearAnimation();
-                        toastChooseResult();
-                    } else {
-                        popupPassFailWindow.dismiss();
-                        imageViewGreen.clearAnimation();
-                        imageViewRed.clearAnimation();
-                        xml = getBindXml();
-                        CommitScanNumberCreate(mainCode, "PASS");
-                    }
-                }
-                return false;
-            }
-        });
-        setAnimation(imageViewGreen, imageViewRed);
-        popupPassFailWindow.setContentView(view);
-        popupPassFailWindow.setWidth(ViewGroup.LayoutParams.WRAP_CONTENT);
-        popupPassFailWindow.setHeight(ViewGroup.LayoutParams.WRAP_CONTENT);
-        popupPassFailWindow.setFocusable(true);
-        popupPassFailWindow.setBackgroundDrawable(getResources().getDrawable(R.color.transparent));
-        popupPassFailWindow.showAtLocation(relativeLayout, Gravity.BOTTOM, 20, 30);
-        linearLayoutGreen.setOnClickListener(new View.OnClickListener() {      //PASS  直接下一站
-            @Override
-            public void onClick(View view) {
-                popupPassFailWindow.dismiss();
-                imageViewGreen.clearAnimation();
-                imageViewRed.clearAnimation();
-                xml = getBindXml();
-                CommitScanNumberCreate(mainCode, "PASS");
-            }
-        });
-        linearLayoutRed.setOnClickListener(new View.OnClickListener() {         //FAIL 维修
-            @Override
-            public void onClick(View view) {
-                imageViewGreen.clearAnimation();
-                imageViewRed.clearAnimation();
-                popupPassFailWindow.dismiss();
-                toastChooseResult();
-            }
-        });
+//    private void popupCheckWindow() {
+//        PopupWindow popupWindow = new PopupWindow();
+//        WindowManager wm = (WindowManager) ScanTestActivity.this.getSystemService(Context.WINDOW_SERVICE);
+//        DisplayMetrics dm = new DisplayMetrics();
+//        wm.getDefaultDisplay().getMetrics(dm);
+//
+//        View popupView = View.inflate(ScanTestActivity.this, R.layout.scan_check_popupwindow, null);
+//        initCheckPopupView(popupView, popupWindow);
+//        popupWindow.setContentView(popupView);
+//        Display defaultDisplay = getWindowManager().getDefaultDisplay();
+//        DisplayMetrics displayMetrics = new DisplayMetrics();
+//        defaultDisplay.getMetrics(displayMetrics);
+//        popupWindow.setWidth(displayMetrics.widthPixels / 2);
+//        popupWindow.setHeight(displayMetrics.heightPixels * 3 / 4);
+//        popupWindow.setFocusable(true);
+////                    popupWindow.setBackgroundDrawable(getResources().getDrawable(R.color.style_divider_color));
+//        popupWindow.showAtLocation(relativeLayout, Gravity.CENTER, 20, 30);
+//    }
 
+//    private void initCheckPopupView(final View popupView, final PopupWindow popupWindow) {
+//        TextView textViewNarrow = (TextView) popupView.findViewById(R.id.textview_narrow);
+//        TextView textViewWide = (TextView) popupView.findViewById(R.id.textview_wide);
+//        TextView textViewRadius = (TextView) popupView.findViewById(R.id.textview_radius);
+//        LinearLayout linearLayoutFlat = (LinearLayout) popupView.findViewById(R.id.linearlayout_flat);     //扁线
+//        final TextCell textCellNarrow = (TextCell) popupView.findViewById(R.id.text_cell_narrow);
+//        final TextCell textCellWide = (TextCell) popupView.findViewById(R.id.text_cell_wide);
+//        LinearLayout linearLayoutCircle = (LinearLayout) popupView.findViewById(R.id.linearlayout_circle); //圆线
+//        final TextCell textCellRadius = (TextCell) popupView.findViewById(R.id.text_cell_radius);
+//
+//        final TextCell textCell1 = (TextCell) popupView.findViewById(R.id.text_cell_1);
+//        final TextCell textCell2 = (TextCell) popupView.findViewById(R.id.text_cell_2);
+//        final TextCell textCell3 = (TextCell) popupView.findViewById(R.id.text_cell_3);
+//        final ButtonTextCell buttonTextCell1 = (ButtonTextCell) popupView.findViewById(R.id.button_text_cell_1);
+//        final TextCell textCell4 = (TextCell) popupView.findViewById(R.id.text_cell_4);
+//        TextView cancel = (TextView) popupView.findViewById(R.id.cancel);
+//        TextView confirm = (TextView) popupView.findViewById(R.id.confirm);
+//
+//        if (textCell1 != null) {
+//            textCell1.setLabelText("盐水针孔");
+//        }
+//        if (textCell2 != null) {
+//            textCell2.setLabelText("水中耐压");
+//        }
+//        if (textCell3 != null) {
+//            textCell3.setLabelText("不良内容");
+//        }
+//        if (textCell4 != null) {
+//            textCell4.setLabelText("备注");
+//        }
+//        if (buttonTextCell1 != null) {
+//            buttonTextCell1.setLabelText("判定结果");
+//            buttonTextCell1.Button.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    chooseOKNG(buttonTextCell1);
+//                }
+//            });
+//        }
+//        if (product_type.contains("扁线")) {
+//            linearLayoutFlat.setVisibility(View.VISIBLE);
+//            linearLayoutCircle.setVisibility(View.GONE);
+//            textViewNarrow.setText(String.valueOf(width_value));
+//            textViewWide.setText(String.valueOf(length_value));
+//            if (textCellNarrow != null) {
+//                textCellNarrow.setLabelText("窄边");
+//            }
+//            if (textCellWide != null) {
+//                textCellWide.setLabelText("宽边");
+//            }
+//        } else {
+//            linearLayoutFlat.setVisibility(View.GONE);
+//            linearLayoutCircle.setVisibility(View.VISIBLE);
+//            textViewRadius.setText(String.valueOf(diameter_value));
+//            if (textCellRadius != null) {
+//                textCellRadius.setLabelText("完成外径mm");
+//            }
+//        }
+//
+//        cancel.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                textview_result.setText("");
+//                textview_result.setVisibility(View.INVISIBLE);
+//                check = SystemClock.currentThreadTimeMillis() + "";
+//                popupWindow.dismiss();
+//            }
+//        });
+//
+//        confirm.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Pattern p = Pattern.compile("^(\\-|\\+)?\\d+(\\.\\d+)?$");
+//                if (product_type.contains("扁线")) {
+//                    Matcher m1 = p.matcher(textCellNarrow.getContentText());
+//                    Matcher m2 = p.matcher(textCellWide.getContentText());
+//                    if (TextUtils.isEmpty(textCellNarrow.getContentText())) {
+//                        App.Current.toastError(ScanTestActivity.this, "请先输入窄边数据");
+//                        return;
+//                    } else if (TextUtils.isEmpty(textCellWide.getContentText())) {
+//                        App.Current.toastError(ScanTestActivity.this, "请先输入宽边数据");
+//                        return;
+//                    } else if (!m1.matches()) {
+//                        App.Current.toastError(ScanTestActivity.this, "窄边数据格式错误");
+//                        return;
+//                    } else if (!m2.matches()) {
+//                        App.Current.toastError(ScanTestActivity.this, "宽边数据格式错误");
+//                        return;
+//                    }
+//                } else {
+//                    Matcher m3 = p.matcher(textCellRadius.getContentText());
+//                    if (TextUtils.isEmpty(textCellRadius.getContentText())) {
+//                        App.Current.toastError(ScanTestActivity.this, "请先输入外径数据");
+//                        return;
+//                    } else if (!m3.matches()) {
+//                        App.Current.toastError(ScanTestActivity.this, "外径数据格式错误");
+//                        return;
+//                    }
+//                }
+//                if ("NG".equals(buttonTextCell1.getContentText())) {
+//                    if (TextUtils.isEmpty(textCell3.getContentText())) {
+//                        App.Current.toastError(ScanTestActivity.this, "请输入不良原因");
+//                        return;
+//                    }
+//                }
+//                if (TextUtils.isEmpty(textCell1.getContentText())) {
+//                    App.Current.toastError(ScanTestActivity.this, "请先输入盐水针孔");
+//                } else if (TextUtils.isEmpty(textCell2.getContentText())) {
+//                    App.Current.toastError(ScanTestActivity.this, "请先输入水中耐压");
+//                } else {
+//                    //拼接数据，提交
+//                    ArrayList<Map<String, String>> exceptions = new ArrayList<>();
+//                    HashMap<String, String> exception = new HashMap<>();
+//                    exception.put("sn_no", mainCode);
+//                    exception.put("sn_type", work_type);
+//                    exception.put("width_value", textCellNarrow.getContentText().trim());
+//                    exception.put("length_value", textCellWide.getContentText().trim());
+//                    exception.put("diameter_value", textCellRadius.getContentText().trim());
+//                    exception.put("salt_water_pinhole", textCell1.getContentText());
+//                    exception.put("water_pressure_resistance", textCell2.getContentText());
+//                    exception.put("ng_content", textCell3.getContentText());
+//                    exception.put("ng_result", buttonTextCell1.getContentText());
+//                    exception.put("comment", textCell4.getContentText());
+//                    exceptions.add(exception);
+//                    //"bindings", head_entry, "bindings", "binding", item_entries)
+//                    xml = XmlHelper.createXml("bindings", null, "bindings", "binding", exceptions);
+////                xml = getTestBindXml(buttonTextCell.getContentText(), editText.getText().toString());
+//                    check = String.valueOf(System.currentTimeMillis());
+//                    if ("OK".equals(buttonTextCell1.getContentText())) {
+//                        CommitScanNumberCreate(mainCode, "PASS");
+//                    } else {
+//                        CommitScanNumberCreate(mainCode, "FAIL");
+//                    }
+////                    CommitScanNumberCreate(mainCode, buttonTextCell1.getContentText());
+//                    popupWindow.dismiss();
+//                }
+//            }
+//        });
+//    }
+
+    private void chooseOKNG(final ButtonTextCell buttonTextCell) {
+        final ArrayList<String> result = new ArrayList<String>();
+        result.add("OK");
+        result.add("NG");
+
+        DialogInterface.OnClickListener listener = new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                if (which >= 0) {
+                    String time = result.get(which);
+                    buttonTextCell.setContentText(time);
+                }
+                dialog.dismiss();
+            }
+        };
+        new AlertDialog.Builder(ScanTestActivity.this).setTitle("请选择")
+                .setSingleChoiceItems(result.toArray(new String[0]), result.indexOf(buttonTextCell.getContentText()), listener)
+                .setNegativeButton("取消", null).show();
     }
 
     private void setAnimation(ImageView imageViewGreen, ImageView imageViewRed) {
