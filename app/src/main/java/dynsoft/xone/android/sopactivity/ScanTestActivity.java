@@ -669,8 +669,13 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
                 NdefRecord[] records = ndefMessage.getRecords();
                 for (int i = 0; i < records.length; i++) {
                     String parse = parse(records[i]);
-                    onScanned(parse);
-                    Log.e("len", "数据 ： " + parse);
+                    String code = parse;
+                    if(code.contains("=")){
+                        code = parse.split("=")[1];
+                    }
+                    Log.e("len", "数据 ： " + code);
+                    onScanned(code);
+
                 }
             } catch (Exception e) {
                 e.printStackTrace();
@@ -746,29 +751,50 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
             return null;
         }
         // 得到字节数组进行判断
-        if (!Arrays.equals(ndefRecord.getType(), NdefRecord.RTD_TEXT)) {
+        if (Arrays.equals(ndefRecord.getType(), NdefRecord.RTD_TEXT)) {
+            try {
+                // 获得一个字节流
+                byte[] payload = ndefRecord.getPayload();
+                // payload[0]取第一个字节。 0x80：十六进制（最高位是1剩下全是0）
+                String textEncoding = ((payload[0] & 0x80) == 0) ? "UTF-8"
+                        : "UTF-16";
+                // 获得语言编码长度
+                int languageCodeLength = payload[0] & 0x3f;
+                // 获得语言编码
+                String languageCode = new String(payload, 1, languageCodeLength,
+                        "US-ASCII");
+                //
+                String text = new String(payload, languageCodeLength + 1,
+                        payload.length - languageCodeLength - 1, textEncoding);
+
+                return text;
+
+            } catch (Exception e) {
+                throw new IllegalArgumentException();
+            }
+        } else if (Arrays.equals(ndefRecord.getType(), NdefRecord.RTD_URI)) {
+            try {
+                // 获得一个字节流
+                byte[] payload = ndefRecord.getPayload();
+                // payload[0]取第一个字节。 0x80：十六进制（最高位是1剩下全是0）
+                String textEncoding = ((payload[0] & 0x80) == 0) ? "UTF-8"
+                        : "UTF-16";
+                // 获得语言编码长度
+                int languageCodeLength = payload[0] & 0x3f;
+                // 获得语言编码
+                String languageCode = new String(payload, 1, languageCodeLength,
+                        "US-ASCII");
+                //
+                String text = new String(payload, 1,
+                        payload.length - languageCodeLength - 1, textEncoding);
+
+                return text;
+
+            } catch (Exception e) {
+                throw new IllegalArgumentException();
+            }
+        } else {
             return null;
-        }
-
-        try {
-            // 获得一个字节流
-            byte[] payload = ndefRecord.getPayload();
-            // payload[0]取第一个字节。 0x80：十六进制（最高位是1剩下全是0）
-            String textEncoding = ((payload[0] & 0x80) == 0) ? "UTF-8"
-                    : "UTF-16";
-            // 获得语言编码长度
-            int languageCodeLength = payload[0] & 0x3f;
-            // 获得语言编码
-            String languageCode = new String(payload, 1, languageCodeLength,
-                    "US-ASCII");
-            //
-            String text = new String(payload, languageCodeLength + 1,
-                    payload.length - languageCodeLength - 1, textEncoding);
-
-            return text;
-
-        } catch (Exception e) {
-            throw new IllegalArgumentException();
         }
     }
 
