@@ -524,16 +524,18 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
                             } else {
                                 final String sql = "exec p_fm_work_check_barcode_v3 ?,?,?,?";
                                 Parameters p = new Parameters().add(1, task_order_code).add(2, sequence_id).add(3, edittext.toUpperCase()).add(4, work_type);
-                                String value = App.Current.DbPortal.ExecuteScalar("core_and", sql, p).toString();
+                                String value = App.Current.DbPortal.ExecuteScalar("core_and", sql, p).Value.toString();
                                 if (!value.equals("OK")) {
                                     App.Current.toastError(ScanTestActivity.this, value);
+                                    break;
                                 }
 
                                 final String sql_str = "exec p_fm_work_check_barcode_for_part_and ?,?";
                                 Parameters pr = new Parameters().add(1, edittext.toUpperCase()).add(2, task_order_id);
-                                String value_r = App.Current.DbPortal.ExecuteScalar("core_and", sql_str, pr).toString();
-                                if (value_r.equals("OK")) {
+                                String value_r = App.Current.DbPortal.ExecuteScalar("core_and", sql_str, pr).Value.toString();
+                                if (!value_r.equals("OK")) {
                                     App.Current.toastError(ScanTestActivity.this, value_r);
+                                    break;
                                 }
 
                                 childNumber.add(edittext.toUpperCase());
@@ -670,7 +672,7 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
                 for (int i = 0; i < records.length; i++) {
                     String parse = parse(records[i]);
                     String code = parse;
-                    if(code.contains("=")){
+                    if (code.contains("=")) {
                         code = parse.split("=")[1];
                     }
                     Log.e("len", "Êý¾Ý £º " + code);
@@ -852,7 +854,7 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
                     @Override
                     public void onReceive(Context context, Intent intent) {
                         if (intent.getAction().equals(SCANACTION)) {
-                            String code = intent.getStringExtra("scannerdata");
+                            String code = intent.getStringExtra("scannerdata").replace("\n", "");
                             onScanned(code);
                         }
                     }
