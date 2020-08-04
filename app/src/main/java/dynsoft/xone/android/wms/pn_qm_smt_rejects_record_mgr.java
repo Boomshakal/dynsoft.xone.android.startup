@@ -3,6 +3,7 @@ package dynsoft.xone.android.wms;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Message;
@@ -38,11 +39,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 import dynsoft.xone.android.bean.SmtWhBean;
+import dynsoft.xone.android.blueprint.FaliaoStatusActivity;
+import dynsoft.xone.android.blueprint.Scan_Print_Activity;
 import dynsoft.xone.android.control.ButtonTextCell;
 import dynsoft.xone.android.control.TextCell;
 import dynsoft.xone.android.core.App;
 import dynsoft.xone.android.core.R;
 import dynsoft.xone.android.data.DataRow;
+import dynsoft.xone.android.data.DataSet;
 import dynsoft.xone.android.data.DataTable;
 import dynsoft.xone.android.data.Parameters;
 import dynsoft.xone.android.data.Result;
@@ -497,6 +501,9 @@ public class pn_qm_smt_rejects_record_mgr extends pn_editor {
                                     }
                                 }
                                 //再扫描一个PASS或者FAIL的码
+                            } else if (work_type.equals("scan_print")) {
+                                scan_print(text.toUpperCase());
+                                CommitScanNumberCreate(text.toUpperCase(), "PASS");
                             } else {
                                 xml = "";
                                 CommitScanNumberCreate(text.toUpperCase(), "PASS");
@@ -514,6 +521,27 @@ public class pn_qm_smt_rejects_record_mgr extends pn_editor {
                 }
             }
         });
+    }
+
+    private void scan_print(String text) {
+        final String items[] = {"霍尼韦尔", "芝柯"};
+
+        AlertDialog dialog1 = new AlertDialog.Builder(App.Current.Workbench).setTitle("请选择打印机")
+                .setItems(items, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        if (i == 1) {
+                            Intent intent = new Intent(App.Current.Workbench, Scan_Print_Activity.class);
+                            intent.putExtra("code", text);
+                            App.Current.Workbench.startActivity(intent);
+                        } else {
+                            Map<String, String> parameters = new HashMap<String, String>();
+                            parameters.put("code", text);
+                            App.Current.Print("scan_print", "扫描打印", parameters);
+                        }
+                    }
+                }).create();
+        dialog1.show();
     }
 
     private void initRepairPopupWindow() {      //老化，缺陷登记
