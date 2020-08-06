@@ -2,11 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="dynsoft.xone.android.core"
     android:versionCode="1"
-    android:versionName="2020.07.24.1037">
+    android:versionName="2020.08.03.1037">
 
     <!--<uses-sdk-->
-        <!--android:targetSdkVersion="19" />-->
-        <!--android:minSdkVersion="14"-->
+    <!--android:targetSdkVersion="19" />-->
+    <!--android:minSdkVersion="14"-->
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.SEND_SMS" />
@@ -259,6 +259,10 @@
         <activity android:name="dynsoft.xone.android.blueprint.FaliaoStatusActivity" />
         <activity android:name="dynsoft.xone.android.blueprint.ZaxiangStatusActivity" />
         <activity android:name="dynsoft.xone.android.blueprint.ZhuankuStatusActivity" />
+        <activity android:name="dynsoft.xone.android.blueprint.Scan_Print_Activity" />
+        <activity android:name="dynsoft.xone.android.blueprint.XprinterActivity" />
+        <activity android:name="dynsoft.xone.android.blueprint.PosActivity" />
+        <activity android:name="dynsoft.xone.android.blueprint.P76Activity" />
     </application>
 
 </manifest>
