@@ -120,7 +120,8 @@
     <orderEntry type="library" name="Gradle: ./app/libs/ScannerAPI.jar" level="project" />
     <orderEntry type="library" name="Gradle: ./app/libs/ScannerInterface.jar" level="project" />
     <orderEntry type="library" name="Gradle: ./app/libs/DataCollection.jar" level="project" />
-    <orderEntry type="library" name="Gradle: ./app/libs/posprinterconnectandsendsdk_1.1.13.jar" level="project" />
+    <orderEntry type="library" name="Gradle: ./app/libs/posprinterconnectandsendsdk_1.1.08.jar" level="project" />
+    <orderEntry type="library" name="Gradle: ./app/libs/jxl.jar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:collections:28.0.0@jar" level="project" />
     <orderEntry type="library" name="Gradle: android.arch.lifecycle:common:1.1.1@jar" level="project" />
     <orderEntry type="library" name="Gradle: android.arch.core:common:1.1.1@jar" level="project" />

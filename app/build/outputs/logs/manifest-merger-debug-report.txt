@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-264:12
-INJECTED from D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-264:12
-INJECTED from D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-264:12
-INJECTED from D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-264:12
+ADDED from D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-268:12
+INJECTED from D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-268:12
+INJECTED from D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-268:12
+INJECTED from D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-268:12
 MERGED from [com.arialyy.aria:aria-core:3.5.4] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\fe5f6ada8ea636c5f19cf37fb819d460\aria-core-3.5.4\AndroidManifest.xml:2:1-18:12
 MERGED from [com.android.support:multidex:1.0.2] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\682a0a9d9fef1831436d632cd8ad4507\multidex-1.0.2\AndroidManifest.xml:17:1-22:12
 MERGED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\819f609ac486acdc5d2c0fb23e171b66\zxing-library-2.2\AndroidManifest.xml:2:1-20:12
@@ -39,9 +39,9 @@ MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\lihui\.gradle\cach
 MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\f190ad57309d435f933ec0c8de236d17\livedata-1.1.1\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\a44a754c500bd54306fc976c6d22e387\livedata-core-1.1.1\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\19dfe0bdec11b2285eb17b6ad8760103\runtime-1.1.1\AndroidManifest.xml:17:1-22:12
-INJECTED from D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-264:12
-INJECTED from D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-264:12
-INJECTED from D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-264:12
+INJECTED from D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-268:12
+INJECTED from D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-268:12
+INJECTED from D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:2:1-268:12
 	package
 		ADDED from D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:3:5-40
 		INJECTED from D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml
@@ -135,7 +135,7 @@ ADDED from D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:41:5
 	android:name
 		ADDED from D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:41:19-54
 application
-ADDED from D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:43:5-262:19
+ADDED from D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:43:5-266:19
 MERGED from [com.arialyy.aria:aria-core:3.5.4] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\fe5f6ada8ea636c5f19cf37fb819d460\aria-core-3.5.4\AndroidManifest.xml:13:5-16:19
 MERGED from [com.arialyy.aria:aria-core:3.5.4] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\fe5f6ada8ea636c5f19cf37fb819d460\aria-core-3.5.4\AndroidManifest.xml:13:5-16:19
 MERGED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\819f609ac486acdc5d2c0fb23e171b66\zxing-library-2.2\AndroidManifest.xml:11:5-18:19
@@ -520,6 +520,22 @@ activity#dynsoft.xone.android.blueprint.ZhuankuStatusActivity
 ADDED from D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:261:9-89
 	android:name
 		ADDED from D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:261:19-86
+activity#dynsoft.xone.android.blueprint.Scan_Print_Activity
+ADDED from D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:262:9-87
+	android:name
+		ADDED from D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:262:19-84
+activity#dynsoft.xone.android.blueprint.XprinterActivity
+ADDED from D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:263:9-84
+	android:name
+		ADDED from D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:263:19-81
+activity#dynsoft.xone.android.blueprint.PosActivity
+ADDED from D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:264:9-79
+	android:name
+		ADDED from D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:264:19-76
+activity#dynsoft.xone.android.blueprint.P76Activity
+ADDED from D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:265:9-79
+	android:name
+		ADDED from D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:265:19-76
 uses-sdk
 INJECTED from D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml

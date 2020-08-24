@@ -523,7 +523,7 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
                                 App.Current.playSound(R.raw.hook);
                             } else {
                                 final String sql = "exec p_fm_work_check_barcode_v3 ?,?,?,?";
-                                Parameters p = new Parameters().add(1, task_order_code).add(2, sequence_id).add(3, edittext.toUpperCase()).add(4, work_type);
+                                Parameters p = new Parameters().add(1, task_order_code).add(2, sequence_id).add(3, edittext).add(4, work_type);
                                 String value = App.Current.DbPortal.ExecuteScalar("core_and", sql, p).Value.toString();
                                 if (!value.equals("OK")) {
                                     App.Current.toastError(ScanTestActivity.this, value);
@@ -531,7 +531,7 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
                                 }
 
                                 final String sql_str = "exec p_fm_work_check_barcode_for_part_and ?,?";
-                                Parameters pr = new Parameters().add(1, edittext.toUpperCase()).add(2, task_order_id);
+                                Parameters pr = new Parameters().add(1, edittext).add(2, task_order_id);
                                 String value_r = App.Current.DbPortal.ExecuteScalar("core_and", sql_str, pr).Value.toString();
                                 if (!value_r.equals("OK")) {
                                     App.Current.toastError(ScanTestActivity.this, value_r);
@@ -788,7 +788,7 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
                         "US-ASCII");
                 //
                 String text = new String(payload, 1,
-                        payload.length - languageCodeLength - 1, textEncoding);
+                        payload.length - 1, textEncoding);
 
                 return text;
 

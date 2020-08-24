@@ -531,19 +531,22 @@ public class pn_qm_smt_rejects_record_mgr extends pn_editor {
                 .setItems(items, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        if (i == 1) {
-                            Intent intent = new Intent(App.Current.Workbench, Scan_Print_Activity.class);
-                            intent.putExtra("code", text);
-                            App.Current.Workbench.startActivity(intent);
-                        }
-                        if (i == 2) {
-                            Intent intent = new Intent(App.Current.Workbench, XprinterActivity.class);
-                            intent.putExtra("code", text);
-                            App.Current.Workbench.startActivity(intent);
-                        } else {
-                            Map<String, String> parameters = new HashMap<String, String>();
-                            parameters.put("code", text);
-                            App.Current.Print("scan_print", "…®√Ë¥Ú”°", parameters);
+                        switch (i) {
+                            case 0:
+                                Map<String, String> parameters = new HashMap<String, String>();
+                                parameters.put("code", text);
+                                App.Current.Print("scan_print", "…®√Ë¥Ú”°", parameters);
+                                break;
+                            case 1:
+                                Intent intent = new Intent(App.Current.Workbench, Scan_Print_Activity.class);
+                                intent.putExtra("code", text);
+                                App.Current.Workbench.startActivity(intent);
+                                break;
+                            case 2:
+                                Intent intent1 = new Intent(App.Current.Workbench, XprinterActivity.class);
+                                intent1.putExtra("code", text);
+                                App.Current.Workbench.startActivity(intent1);
+                                break;
                         }
                     }
                 }).create();

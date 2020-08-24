@@ -2,6 +2,8 @@
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="GBK">
     <file url="file://$PROJECT_DIR$/app/build.gradle" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/libs/jxl.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/libs/posprinterconnectandsendsdk_1.1.08.jar" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/activity/AlbumGetPicActivity.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/activity/FileOpenActivity.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/activity/FirstItemActivity.java" charset="GBK" />

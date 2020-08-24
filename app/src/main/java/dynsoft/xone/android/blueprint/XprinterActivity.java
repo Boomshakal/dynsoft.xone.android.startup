@@ -613,9 +613,11 @@ public class XprinterActivity extends Activity {
     }
 
     public void sendble() {
-        Log.e("len", "et:" + et.getText().toString());
-        binder.connectBtPort(et.getText().toString(), new UiExecute() {
+        String var1 = et.getText().toString();
+        Log.e("len:", var1);
+        binder.connectBtPort(var1, new UiExecute() {
 
+            @SuppressLint("WrongConstant")
             @Override
             public void onsucess() {
                 // TODO Auto-generated method stub
@@ -628,7 +630,7 @@ public class XprinterActivity extends Activity {
                 //如果读的过程重出现异常，可以判断连接也发生异常，已经断开
                 //这个读取的方法中，会一直在一条子线程中执行读取打印机发生的数据，
                 //直到连接断开或异常才结束，并执行onfailed
-                binder.acceptDataFromPrinter(new UiExecute() {
+                binder.acceptdatafromprinter(new UiExecute() {
 
                     @Override
                     public void onsucess() {
@@ -636,6 +638,7 @@ public class XprinterActivity extends Activity {
 
                     }
 
+                    @SuppressLint({"WrongConstant", "ShowToast"})
                     @Override
                     public void onfailed() {
                         // TODO Auto-generated method stub
@@ -712,7 +715,7 @@ public class XprinterActivity extends Activity {
                 //如果读的过程重出现异常，可以判断连接也发生异常，已经断开
                 //这个读取的方法中，会一直在一条子线程中执行读取打印机发生的数据，
                 //直到连接断开或异常才结束，并执行onfailed
-                binder.acceptDataFromPrinter(new UiExecute() {
+                binder.acceptdatafromprinter(new UiExecute() {
 
                     @Override
                     public void onsucess() {
