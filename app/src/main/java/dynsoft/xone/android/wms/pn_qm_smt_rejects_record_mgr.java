@@ -370,7 +370,8 @@ public class pn_qm_smt_rejects_record_mgr extends pn_editor {
                     }
                 }
             });
-        } else if ((lot_number.startsWith("M") || lot_number.startsWith("YH") || lot_number.startsWith("XR")) && lot_number.length() <= 10) {      //扫描的工作员
+        }
+        else if ((lot_number.startsWith("M") || lot_number.startsWith("YH") || lot_number.startsWith("XR")) && lot_number.length() <= 10) {      //扫描的工作员
             String sql = "select * from fm_worker where code = ?";
             Parameters p = new Parameters().add(1, lot_number);
             App.Current.DbPortal.ExecuteRecordAsync("core_and", sql, p, new ResultHandler<DataRow>() {
@@ -391,7 +392,8 @@ public class pn_qm_smt_rejects_record_mgr extends pn_editor {
                     }
                 }
             });
-        } else if (lot_number.startsWith("CRQ:")) {          //手贴 料号
+        }
+        else if (lot_number.startsWith("CRQ:")) {          //手贴 料号
             String substring = lot_number.substring(4, lot_number.length());
             String[] split = substring.split("-");
             if (split.length > 2) {
@@ -401,7 +403,8 @@ public class pn_qm_smt_rejects_record_mgr extends pn_editor {
                     getWhFromPartNumber(button_textcell_3, number);
                 }
             }
-        } else if (lot_number.matches("^[1-9]\\d*$")) {
+        }
+        else if (lot_number.matches("^[1-9]\\d*$")) {
             //判断扫描的是条码 还是故障代码
             if (popupOldWindow != null && popupOldWindow.isShowing()) {
                 if (buttonTextCell9 != null) {
@@ -631,6 +634,7 @@ public class pn_qm_smt_rejects_record_mgr extends pn_editor {
 
         if (buttonTextCell_list.size() > 0) {
             for (ButtonTextCell list : buttonTextCell_list) {
+                list.setContentText("OK");
                 setclicklisten(list);
             }
         }
