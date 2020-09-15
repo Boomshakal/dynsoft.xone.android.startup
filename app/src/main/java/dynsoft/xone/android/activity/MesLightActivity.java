@@ -215,6 +215,17 @@ public class MesLightActivity extends Activity {
         final PopupWindow popupWindow = new PopupWindow();
         View view = View.inflate(MesLightActivity.this, R.layout.item_popup_light, null);
         final EditText editTextException = (EditText) view.findViewById(R.id.popup_edittext);
+        ImageView imageButton1 = (ImageView) view.findViewById(R.id.imageview1);
+        if (editTextException != null) {      //异常描述
+            editTextException.setOnKeyListener(null);
+            imageButton1.setImageBitmap(App.Current.ResourceManager.getImage("@/core_acl_white"));
+            imageButton1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    chooseException(editTextException, s);
+                }
+            });
+        }
 
         //影响人数
         final EditText editTextInfluencesCounts = (EditText) view.findViewById(R.id.popup_edittext_1);
@@ -339,6 +350,33 @@ public class MesLightActivity extends Activity {
         popupWindow.showAtLocation(gridView, Gravity.CENTER, 20, 30);
     }
 
+    private void chooseException(final EditText edittext, final String s) {
+        String sql = "exec fm_get_choose_exception_and ?";
+        Parameters p = new Parameters().add(1, s);
+        App.Current.DbPortal.ExecuteDataTableAsync("core_and", sql, p, new ResultHandler<DataTable>() {
+            @Override
+            public void handleMessage(Message msg) {
+                final Result<DataTable> value = Value;
+                if (value.HasError) {
+                    App.Current.toastError(MesLightActivity.this, value.Error);
+                    App.Current.playSound(R.raw.error);
+                    return;
+                }
+                if (value.Value != null && value.Value.Rows.size() > 0) {
+                    ArrayList<String> names = new ArrayList<String>();
+                    for (int i = 0; i < value.Value.Rows.size(); i++) {
+                        names.add(value.Value.Rows.get(i).getValue("name", ""));
+                    }
+                    dataRows = new ArrayList<DataRow>();
+                    multiChoiceDialog_Exception(value.Value, edittext);
+                } else {
+                    App.Current.toastError(MesLightActivity.this, s + "的异常描述没有维护。");
+                    App.Current.playSound(R.raw.error);
+                }
+            }
+        });
+    }
+
     private void chooseRespondMan(final EditText edittext, String macAddress, final String s) {    //选择异常处理人
         String sql = "exec fm_get_choose_exception_respond_workline_and ?,?";
         //s  异常类型
@@ -365,6 +403,31 @@ public class MesLightActivity extends Activity {
                 }
             }
         });
+    }
+
+    private void multiChoiceDialog_Exception(final DataTable dataTable, final EditText editText) {
+        ArrayList<String> names = new ArrayList<String>();
+        for (DataRow dataRow : dataTable.Rows) {
+            String name = dataRow.getValue("name", "");
+            Log.e("len", "name : " + name);
+            names.add(name);
+        }
+        final DialogInterface.OnClickListener listener = new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                if (which >= 0) {
+                    String name = dataTable.Rows.get(which).getValue("name", "");
+                    editText.setText(name);
+                    dataRows.add(dataTable.Rows.get(which));
+                }
+                dialog.dismiss();
+            }
+        };
+        new AlertDialog.Builder(MesLightActivity.this).setTitle("请选择")
+                .setSingleChoiceItems(names.toArray(new String[0]), names.indexOf
+                        (editText.getText().toString()), listener)
+                .setNegativeButton("取消", null).show();
     }
 
     private void multiChoiceDialog(final DataTable dataTable, final EditText editText) {
