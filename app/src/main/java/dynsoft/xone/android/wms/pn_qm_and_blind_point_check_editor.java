@@ -638,56 +638,58 @@ public class pn_qm_and_blind_point_check_editor extends pn_editor {
                 public void onClick(DialogInterface dialog, int which) {
 
                     dialog.dismiss();
-                    for (int j = 0; j < Bimp.tempSelectBitmap.size(); j++) {
-                        int size = getBitmapSize(Bimp.tempSelectBitmap.get(j).getBitmap());
-                        String filename = Bimp.tempSelectBitmap.get(j).imagePath;
-                        File file = new File(filename);
-                        String imagePath = Bimp.tempSelectBitmap.get(j).getImagePath();
-                        Toast.makeText(getContext(), imagePath, Toast.LENGTH_SHORT).show();
-                        try {
-//						new FileInputStream(new File(imagePath));
-//						InputStream str = Bitmap2IS(Bimp.tempSelectBitmap.get(j).getBitmap());
-                            FileInputStream str = new FileInputStream(filename);
-                            String isql = "insert into core_attachment (owner,[group],name,size,data,createtime) select ?,?,?,?,?,getdate()";
-                            Connection conn2 = App.Current.DbPortal.CreateConnection(pn_qm_and_blind_point_check_editor.this.Connector);
-                            PreparedStatement ps;
-                            try {
-                                ps = conn2.prepareStatement(isql);
-                                ps.setString(1, "pn_qm_and_blind_point_check_editor_" + sharedPreferences.getString("code", ""));
-                                ps.setString(2, "pn_qm_and_blind_point_check_editor");
-                                ps.setString(3, "Í¼Æ¬" + String.valueOf(j));
-                                ps.setString(4, String.valueOf(size));
-                                ps.setBinaryStream(5, str, str.available());
-                                ps.execute();
 
-                            } catch (SQLException e1) {
-                                App.Current.showInfo(pn_qm_and_blind_point_check_editor.this.getContext(), e1.getMessage());
-                                e1.printStackTrace();
-                                return;
-                            }
-                        } catch (Exception e) {
-                            App.Current.showError(pn_qm_and_blind_point_check_editor.this.getContext(), "×ª»»Ê§°Ü" + e.getMessage());
-                            e.printStackTrace();
-                            return;
-                        }
-
-                    }
                     String sql = "exec p_qm_and_blind_point_check_create ?,?,?,?,?,?,?,?,?";
                     Parameters p = new Parameters().add(1, button_text_cell_2.getContentText()).add(2, text_cell_3.getContentText()).add(3, button_text_cell_4.getContentText())
                             .add(4, button_text_cell_5.getContentText()).add(5, text_cell_6.getContentText())
                             .add(6, text_cell_7.getContentText()).add(7, text_cell_8.getContentText()).add(8, text_cell_9.getContentText())
                             .add(9, id);
-                    App.Current.DbPortal.ExecuteNonQueryAsync("core_and", sql, p, new ResultHandler<Integer>() {
+                    App.Current.DbPortal.ExecuteScalarAsync("core_and", sql, p, new ResultHandler<Object>() {
                         @Override
                         public void handleMessage(Message msg) {
-                            Result<Integer> value = Value;
+                            Result<Object> value = Value;
                             if (value.HasError) {
                                 App.Current.showError(getContext(), value.Error);
                                 return;
                             }
                             if (value.Value != null) {
-                                int value1 = value.Value;
+                                int value1 = (Integer) value.Value;
                                 if (value1 > 0) {
+                                    for (int j = 0; j < Bimp.tempSelectBitmap.size(); j++) {
+                                        int size = getBitmapSize(Bimp.tempSelectBitmap.get(j).getBitmap());
+                                        String filename = Bimp.tempSelectBitmap.get(j).imagePath;
+                                        File file = new File(filename);
+                                        String imagePath = Bimp.tempSelectBitmap.get(j).getImagePath();
+                                        Toast.makeText(getContext(), imagePath, Toast.LENGTH_SHORT).show();
+                                        try {
+//						new FileInputStream(new File(imagePath));
+//						InputStream str = Bitmap2IS(Bimp.tempSelectBitmap.get(j).getBitmap());
+                                            FileInputStream str = new FileInputStream(filename);
+                                            String isql = "insert into core_attachment (owner,[group],name,size,data,createtime,createuser) select ?,?,?,?,?,getdate(),?";
+                                            Connection conn2 = App.Current.DbPortal.CreateConnection(pn_qm_and_blind_point_check_editor.this.Connector);
+                                            PreparedStatement ps;
+                                            try {
+                                                ps = conn2.prepareStatement(isql);
+                                                ps.setString(1, "pn_qm_and_blind_point_check_editor_" + value1);
+                                                ps.setString(2, "pn_qm_and_blind_point_check_editor");
+                                                ps.setString(3, "Í¼Æ¬" + String.valueOf(j));
+                                                ps.setString(4, String.valueOf(size));
+                                                ps.setString(6, App.Current.UserID);
+                                                ps.setBinaryStream(5, str, str.available());
+                                                ps.execute();
+
+                                            } catch (SQLException e1) {
+                                                App.Current.showInfo(pn_qm_and_blind_point_check_editor.this.getContext(), e1.getMessage());
+                                                e1.printStackTrace();
+                                                return;
+                                            }
+                                        } catch (Exception e) {
+                                            App.Current.showError(pn_qm_and_blind_point_check_editor.this.getContext(), "×ª»»Ê§°Ü" + e.getMessage());
+                                            e.printStackTrace();
+                                            return;
+                                        }
+
+                                    }
                                     App.Current.toastInfo(getContext(), "Ìá½»³É¹¦");
                                     App.Current.playSound(R.raw.pass);
                                     Log.e("len", "ID: " + id);
