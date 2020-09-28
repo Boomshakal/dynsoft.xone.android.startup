@@ -49,14 +49,17 @@ import dynsoft.xone.android.core.R;
 import dynsoft.xone.android.data.DataRow;
 import dynsoft.xone.android.data.DataTable;
 import dynsoft.xone.android.data.Parameters;
+import dynsoft.xone.android.data.PrintRequest;
 import dynsoft.xone.android.data.Result;
 import dynsoft.xone.android.data.ResultHandler;
+import dynsoft.xone.android.helper.PrintHelper;
 import dynsoft.xone.android.retrofit.DingdingService;
 import dynsoft.xone.android.retrofit.MarkDownBean;
 import dynsoft.xone.android.retrofit.RespondBean;
 import dynsoft.xone.android.retrofit.RetrofitDownUtil;
 import dynsoft.xone.android.retrofit.TextBean;
 import dynsoft.xone.android.util.SmsUtilV;
+import dynsoft.xone.android.wms.pn_qm_electric_equipment_check_mgr_editor;
 import retrofit.Call;
 import retrofit.Callback;
 import retrofit.Response;
@@ -326,6 +329,7 @@ public class MesLightActivity extends Activity {
                             });
                         } else {
                             commitException(s, popupWindow, editTextException.getText().toString(), Integer.parseInt(editTextInfluencesCounts.getText().toString()));
+//                            startFlow();
                         }
                     }
                 }
@@ -656,7 +660,7 @@ public class MesLightActivity extends Activity {
 //                }
             responsible_code = "M3933";
             String nrCode = nrContent;
-            String path = "http://192.168.0.10:8000/plmweb/soap.nsf/QsendEIP_ems?OpenAgent&nr=" + nrCode + "&gh={\"LoginName\":\"" + responsible_code + "\"}";
+            String path = "http://10.3.1.11:8443/plmweb/soap.nsf/QsendEIP_ems?OpenAgent&nr=" + nrCode + "&gh={\"LoginName\":\"" + responsible_code + "\"}";
 
             Log.e("len", path);
 
@@ -973,6 +977,48 @@ public class MesLightActivity extends Activity {
 //            e.printStackTrace();
 //            Log.e("len", "AA:" + e.getLocalizedMessage());
 //        }
+    }
+
+    private void startFlow() {
+        App.Current.question(MesLightActivity.this, "确定要发起流程吗？", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                dialog.dismiss();
+                PrintRequest request = new PrintRequest();
+                request.Server = "http://192.168.151.130:6683";
+                request.Printer = "#15";
+                request.Code = "start_eip_flow_comm";
+
+                //准备打印参数
+                request.Parameters = new HashMap<String, String>();
+
+                StringBuffer stringBuffer = new StringBuffer();
+                stringBuffer.append("{\"fd_sheBeiBianHao\":\"");
+                stringBuffer.append(getMacAddress());
+                stringBuffer.append("\",\"fd_sheBeiMingChen\":\"");
+                stringBuffer.append("fd_sheBeiMingChen");
+                stringBuffer.append("\",\"fd_sheBeiSuoZaiWeiZhi\":\"");
+                stringBuffer.append("fd_sheBeiSuoZaiWeiZhi");
+                stringBuffer.append("\",\"fd_guZhangMiaoShu\":\"");
+                stringBuffer.append("123321");
+                stringBuffer.append("\"}");
+
+
+                request.Parameters.put("fdTemplateId", "174a03db3abe33e629c760d4dac89e64");
+                request.Parameters.put("docSubject", "test");
+                request.Parameters.put("formValues", stringBuffer.toString().replace("\\", ""));
+//                request.Parameters.put("formValues:", jsonDatas);
+                request.Parameters.put("TaskUser", App.Current.UserCode);
+                Result<String> result = PrintHelper.print(request);
+                if (result.HasError) {
+                    App.Current.showError(MesLightActivity.this, result.Error + "1111");
+                    App.Current.playSound(R.raw.error);
+                } else {
+                    App.Current.showInfo(MesLightActivity.this, "提交成功");
+                }
+            }
+        });
     }
 
     public void sendMessageToDingding(DataRow rw) {
