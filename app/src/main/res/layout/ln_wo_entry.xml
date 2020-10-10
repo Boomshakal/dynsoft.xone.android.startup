@@ -64,7 +64,7 @@
             android:id="@+id/txt_status"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:singleLine="true"
+            android:singleLine="false"
             android:textColor="#404040"
             android:textSize="14sp"/>
         
