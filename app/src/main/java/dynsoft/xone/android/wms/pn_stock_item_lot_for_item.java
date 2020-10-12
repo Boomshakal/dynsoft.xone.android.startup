@@ -144,6 +144,7 @@ public class pn_stock_item_lot_for_item extends pn_mgr {
 										intent.putExtra("lot_number", row.getValue("lot_number", ""));
 										intent.putExtra("vendor_lot", row.getValue("vendor_lot", ""));
 										intent.putExtra("date_code", row.getValue("date_code", ""));
+										intent.putExtra("station_code", row.getValue("station_code", ""));
 										intent.putExtra("quantity", split_qty);
 										intent.putExtra("ut", row.getValue("uom_code", ""));
 										intent.putExtra("usercode",App.Current.UserCode);
@@ -212,7 +213,7 @@ public class pn_stock_item_lot_for_item extends pn_mgr {
 	     _warehouse_id =this.Parameters.get("warehouse_id",0);
 		SqlExpression expr = new SqlExpression();
         expr.SQL = "with temp as (SELECT row_number() over(order by date_code asc) rownum,";
-        expr.SQL += "org_code,item_num,vendor_lot,vendor_name,item_desc,lot_number,quantity,uom_code,date_code,vendor_model,location_code ";
+        expr.SQL += "org_code,item_num,vendor_lot,vendor_name,item_desc,lot_number,quantity,uom_code,date_code,vendor_model,location_code,station_code ";
         expr.SQL += "FROM dbo.v_mm_stock_lot_init where item_id =? and  warehouse_id =?   ) ";
         expr.SQL += "select (select count(*) from temp) lines_count,* from temp where rownum>=? and rownum<=? order by date_code asc ";
         expr.Parameters = new Parameters().add(1, _item_id).add(2, _warehouse_id).add(3, start).add(4,end);

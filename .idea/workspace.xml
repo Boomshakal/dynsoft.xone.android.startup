@@ -12,30 +12,37 @@
   <component name="ChangeListManager">
     <list default="true" id="bb2c14a7-132f-4fe8-9967-47d2011d65aa" name="Default Changelist" comment="push">
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/debug.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/dynsoft/xone/android/core/BuildConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/dynsoft/xone/android/core/BuildConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/activity/MesLightActivity$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/activity/MesLightActivity$10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/activity/MesLightActivity$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/activity/MesLightActivity$11.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/activity/MesLightActivity$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/activity/MesLightActivity$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/activity/MesLightActivity$LightAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/activity/MesLightActivity$LightAdapter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/activity/MesLightActivity$LightListAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/activity/MesLightActivity$LightListAdapter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/activity/MesLightActivity$LightListViewHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/activity/MesLightActivity$LightListViewHolder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/activity/MesLightActivity$LightViewHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/activity/MesLightActivity$LightViewHolder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/activity/MesLightActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/activity/MesLightActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_ln_wo_entry.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_ln_wo_entry.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/instant_app_manifest/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/instant_app_manifest/debug/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/instant_app_manifest/debug/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/instant_app_manifest/debug/output.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/blueprint/Demo_ad_escActivity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/blueprint/Demo_ad_escActivity$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/blueprint/Demo_ad_escActivity$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/blueprint/Demo_ad_escActivity$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/blueprint/Demo_ad_escActivity$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/blueprint/Demo_ad_escActivity$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/blueprint/Demo_ad_escActivity$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/blueprint/Demo_ad_escActivity$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/blueprint/Demo_ad_escActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/blueprint/Demo_ad_escActivity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/core/BuildConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/core/BuildConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_stock_item_lot_for_item$2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_stock_item_lot_for_item$2$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_stock_item_lot_for_item$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_stock_item_lot_for_item$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_stock_item_lot_for_item.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_stock_item_lot_for_item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/output.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/ln_wo_entry.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/ln_wo_entry.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/debug/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/apk/debug/output.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/blueprint/Demo_ad_escActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/blueprint/Demo_ad_escActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_stock_item_lot_for_item.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_stock_item_lot_for_item.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="59aae4b6" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_R" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -336,22 +343,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1597279813001" />
-    <state width="1493" height="216" key="GridCell.Tab.0.bottom" timestamp="1600762719200">
+    <state width="1493" height="241" key="GridCell.Tab.0.bottom" timestamp="1602491827189">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="216" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600762719200" />
-    <state width="1493" height="216" key="GridCell.Tab.0.center" timestamp="1600762719199">
+    <state width="1493" height="241" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602491827189" />
+    <state width="1493" height="241" key="GridCell.Tab.0.center" timestamp="1602491827189">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="216" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1600762719199" />
-    <state width="1493" height="216" key="GridCell.Tab.0.left" timestamp="1600762719198">
+    <state width="1493" height="241" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602491827189" />
+    <state width="1493" height="241" key="GridCell.Tab.0.left" timestamp="1602491827188">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="216" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1600762719198" />
-    <state width="1493" height="216" key="GridCell.Tab.0.right" timestamp="1600762719199">
+    <state width="1493" height="241" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602491827188" />
+    <state width="1493" height="241" key="GridCell.Tab.0.right" timestamp="1602491827189">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="216" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1600762719199" />
+    <state width="1493" height="241" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602491827189" />
     <state width="1493" height="175" key="GridCell.Tab.1.bottom" timestamp="1600676945537">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -388,14 +395,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="775" height="419" key="XDebugger.FullValuePopup/0.0.1536.824@0.0.1536.824" timestamp="1600659865180" />
-    <state x="100" y="100" width="1336" height="624" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1593739029095">
+    <state x="449" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1602472518592">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="100" y="100" width="1336" height="624" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1536.824@0.0.1536.824" timestamp="1593739029095" />
-    <state x="449" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1602318591501">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="449" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1602318591501" />
+    <state x="449" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1602472518592" />
     <state x="286" y="148" width="964" height="604" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1599721807922">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -404,9 +407,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="426" y="189" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1600657649718" />
-    <state x="550" y="223" width="672" height="676" key="search.everywhere.popup" timestamp="1602318658459">
+    <state x="550" y="223" width="672" height="676" key="search.everywhere.popup" timestamp="1602489851749">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="550" y="223" width="672" height="676" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1602318658459" />
+    <state x="550" y="223" width="672" height="676" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1602489851749" />
   </component>
 </project>

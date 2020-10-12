@@ -54,6 +54,7 @@ public class Demo_ad_escActivity extends Activity {
     private String lot_number;
     private String vendor_lot;
     private String date_code;
+    private String station_code;
     private String quantity;
     private String ut;
     private String cur_date;
@@ -73,6 +74,7 @@ public class Demo_ad_escActivity extends Activity {
         lot_number = intent.getStringExtra("lot_number");
         vendor_lot = intent.getStringExtra("vendor_lot");
         date_code = intent.getStringExtra("date_code");
+        station_code = intent.getStringExtra("station_code");
         quantity = intent.getStringExtra("quantity");
         cur_date = intent.getStringExtra("cur_date");
         ut = intent.getStringExtra("ut");
@@ -277,6 +279,7 @@ public class Demo_ad_escActivity extends Activity {
         zkPrinter.drawText(330, 110, lot_number, 2, 0, true, false, false);
         zkPrinter.drawText(330, 160, vendor_lot, 2, 0, true, false, false);
         zkPrinter.drawText(330, 210, date_code, 2, 0, true, false, false);
+        zkPrinter.drawText(30, 260, station_code, 2, 0, true, false, false);
 
         //        zkPrinter.DrawBarcode1D(520, 10, "1081606261422", "128", 1, 45, 0);
 //        zkPrinter.DrawBarcodeQRcode(101 - 16, 875 - 864, "1081606261422", 1, "128", 45);
