@@ -11,6 +11,7 @@ import java.util.Map;
 
 import dynsoft.xone.android.adapter.TableAdapter;
 import dynsoft.xone.android.blueprint.Demo_ad_escActivity;
+import dynsoft.xone.android.blueprint.Demo_ad_escActivity_for_wo_issue;
 import dynsoft.xone.android.control.ButtonTextCell;
 import dynsoft.xone.android.control.TextCell;
 import dynsoft.xone.android.core.App;
@@ -606,7 +607,7 @@ public class pn_wo_issue_editor extends pn_editor {
                                     }
                                     if (value.Value != null) {
                                         Intent intent = new Intent();
-                                        intent.setClass(App.Current.Workbench, Demo_ad_escActivity.class);
+                                        intent.setClass(App.Current.Workbench, Demo_ad_escActivity_for_wo_issue.class);
                                         String cur_date = value.Value.getValue("cur_date", "");
                                         intent.putExtra("cur_date", cur_date);
                                         intent.putExtra("org_code", _lot_row.getValue("org_code", ""));
@@ -615,6 +616,8 @@ public class pn_wo_issue_editor extends pn_editor {
                                         intent.putExtra("lot_number", _lot_row.getValue("lot_number", ""));
                                         intent.putExtra("vendor_lot", _lot_row.getValue("vendor_lot", ""));
                                         intent.putExtra("date_code", _lot_row.getValue("date_code", ""));
+                                        intent.putExtra("station_code", _lot_row.getValue("station_code", ""));
+                                        intent.putExtra("task_order_code", _lot_row.getValue("task_order_code", ""));
                                         intent.putExtra("quantity", quantity);
                                         intent.putExtra("ut", _order_row.getValue("uom_code", ""));
                                         App.Current.Workbench.startActivity(intent);

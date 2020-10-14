@@ -10,7 +10,27 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb2c14a7-132f-4fe8-9967-47d2011d65aa" name="Default Changelist" comment="push" />
+    <list default="true" id="bb2c14a7-132f-4fe8-9967-47d2011d65aa" name="Default Changelist" comment="push">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/blueprint/Demo_ad_escActivity_for_wo_issue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/dynsoft/xone/android/core/BuildConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/dynsoft/xone/android/core/BuildConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/instant_app_manifest/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/instant_app_manifest/debug/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/instant_app_manifest/debug/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/instant_app_manifest/debug/output.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/core/BuildConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/core/BuildConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/output.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/debug/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/apk/debug/output.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/release/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/release/output.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_mm_splitlabel_editor_yh.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_mm_splitlabel_editor_yh.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_wo_issue_editor.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_wo_issue_editor.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -97,24 +117,24 @@
     <option name="LAST_EDITED_BUILD_TYPE" value="release" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\dynsoft.xone.android.startup\app\src\main\res\layout" />
-      <recent name="D:\dynsoft.xone.android.startup\app\src\main\java\dynsoft\xone\android\wms" />
-      <recent name="C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\java\dynsoft\xone\android\wms" />
-      <recent name="C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\res\layout" />
-      <recent name="C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\res\values" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="dynsoft.xone.android.wms" />
-      <recent name="dynsoft.xone.android.blueprint" />
-      <recent name="dynsoft.xone.android.activity" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\dynsoft.xone.android.startup\app\src\main\java\dynsoft\xone\android\wms" />
       <recent name="D:\dynsoft.xone.android.startup\app\src\main\res\layout" />
       <recent name="D:\dynsoft.xone.android.startup\app\libs" />
       <recent name="D:\dynsoft.xone.android.startup\app\src\main\res" />
       <recent name="C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\java\dynsoft\xone\android\wms" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="dynsoft.xone.android.blueprint" />
+      <recent name="dynsoft.xone.android.wms" />
+      <recent name="dynsoft.xone.android.activity" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\dynsoft.xone.android.startup\app\src\main\res\layout" />
+      <recent name="D:\dynsoft.xone.android.startup\app\src\main\java\dynsoft\xone\android\wms" />
+      <recent name="C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\java\dynsoft\xone\android\wms" />
+      <recent name="C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\res\layout" />
+      <recent name="C:\Users\IKAHE\AndroidStudioProjects\dynsoft.xone.android.startup\app\src\main\res\values" />
     </key>
   </component>
   <component name="RunManager">
@@ -317,38 +337,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1597279813001" />
-    <state width="1493" height="241" key="GridCell.Tab.0.bottom" timestamp="1602491827189">
+    <state width="1493" height="241" key="GridCell.Tab.0.bottom" timestamp="1602574279978">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="241" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602491827189" />
-    <state width="1493" height="241" key="GridCell.Tab.0.center" timestamp="1602491827189">
+    <state width="1493" height="241" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602574279978" />
+    <state width="1493" height="241" key="GridCell.Tab.0.center" timestamp="1602574279977">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="241" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602491827189" />
-    <state width="1493" height="241" key="GridCell.Tab.0.left" timestamp="1602491827188">
+    <state width="1493" height="241" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602574279977" />
+    <state width="1493" height="241" key="GridCell.Tab.0.left" timestamp="1602574279977">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="241" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602491827188" />
-    <state width="1493" height="241" key="GridCell.Tab.0.right" timestamp="1602491827189">
+    <state width="1493" height="241" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602574279977" />
+    <state width="1493" height="241" key="GridCell.Tab.0.right" timestamp="1602574279978">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="241" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602491827189" />
-    <state width="1493" height="175" key="GridCell.Tab.1.bottom" timestamp="1600676945537">
+    <state width="1493" height="241" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602574279978" />
+    <state width="1493" height="241" key="GridCell.Tab.1.bottom" timestamp="1602574279978">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="175" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600676945537" />
-    <state width="1493" height="175" key="GridCell.Tab.1.center" timestamp="1600676945537">
+    <state width="1493" height="241" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602574279978" />
+    <state width="1493" height="241" key="GridCell.Tab.1.center" timestamp="1602574279978">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="175" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1600676945537" />
-    <state width="1493" height="175" key="GridCell.Tab.1.left" timestamp="1600676945537">
+    <state width="1493" height="241" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1602574279978" />
+    <state width="1493" height="241" key="GridCell.Tab.1.left" timestamp="1602574279978">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="175" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1600676945537" />
-    <state width="1493" height="175" key="GridCell.Tab.1.right" timestamp="1600676945537">
+    <state width="1493" height="241" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1602574279978" />
+    <state width="1493" height="241" key="GridCell.Tab.1.right" timestamp="1602574279978">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="175" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1600676945537" />
+    <state width="1493" height="241" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1602574279978" />
     <state x="349" y="155" key="IDE.errors.dialog" timestamp="1600244521487">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -365,25 +385,25 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1596696168391" />
-    <state width="775" height="419" key="XDebugger.FullValuePopup" timestamp="1600659865180">
+    <state width="775" height="419" key="XDebugger.FullValuePopup" timestamp="1602571804505">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="775" height="419" key="XDebugger.FullValuePopup/0.0.1536.824@0.0.1536.824" timestamp="1600659865180" />
-    <state x="449" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1602566395932">
+    <state width="775" height="419" key="XDebugger.FullValuePopup/0.0.1536.824@0.0.1536.824" timestamp="1602571804505" />
+    <state x="449" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1602635644636">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="449" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1602566395932" />
-    <state x="286" y="148" width="964" height="604" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1599721807922">
+    <state x="449" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1602635644636" />
+    <state x="286" y="148" width="964" height="604" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1602572433033">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="286" y="148" width="964" height="604" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1599721807922" />
+    <state x="286" y="148" width="964" height="604" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1602572433033" />
     <state x="426" y="189" key="run.anything.popup" timestamp="1600657649718">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="426" y="189" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1600657649718" />
-    <state x="550" y="223" width="672" height="676" key="search.everywhere.popup" timestamp="1602489851749">
+    <state x="550" y="223" width="672" height="676" key="search.everywhere.popup" timestamp="1602636418406">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="550" y="223" width="672" height="676" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1602489851749" />
+    <state x="550" y="223" width="672" height="676" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1602636418406" />
   </component>
 </project>

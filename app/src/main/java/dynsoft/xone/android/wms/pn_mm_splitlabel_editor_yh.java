@@ -193,6 +193,7 @@ public class pn_mm_splitlabel_editor_yh extends pn_editor {
         pn_mm_splitlabel_editor_yh.this.txt_org_code_cell.setContentText(ri.Value.getValue("org_code", ""));
         pn_mm_splitlabel_editor_yh.this.txt_vendorlot_cell.setContentText(ri.Value.getValue("vendor_lot", ""));
         pn_mm_splitlabel_editor_yh.this.txt_uom_cell.setContentText(ri.Value.getValue("uomcode", ""));
+        pn_mm_splitlabel_editor_yh.this.txt_uom_cell.setTag(ri.Value.getValue("station_code", ""));
     }
 
 
@@ -303,6 +304,7 @@ public class pn_mm_splitlabel_editor_yh extends pn_editor {
         final String qty = this.txt_quantity_cell.getContentText().trim();
         final String vendorlot = this.txt_vendorlot_cell.getContentText().trim();
         final String ut = this.txt_uom_cell.getContentText().trim();
+        final String station_code = (String) this.txt_uom_cell.getTag();
         if (itemnum == null || itemnum.length() == 0) {
             App.Current.showError(this.getContext(), "物料编码为空不能提交！");
             return;
@@ -359,6 +361,7 @@ public class pn_mm_splitlabel_editor_yh extends pn_editor {
                                         intent.putExtra("date_code", datecode);
                                         intent.putExtra("quantity", App.formatNumber(App.parseDecimal(qty, BigDecimal.ZERO), "0.####"));
                                         intent.putExtra("ut", ut);
+                                        intent.putExtra("station_code", station_code);
                                         intent.putExtra("usercode", App.Current.UserCode);
                                         App.Current.Workbench.startActivity(intent);
                                     }
@@ -378,6 +381,7 @@ public class pn_mm_splitlabel_editor_yh extends pn_editor {
                             intent.putExtra("date_code", datecode);
                             intent.putExtra("quantity", App.formatNumber(App.parseDecimal(qty, BigDecimal.ZERO), "0.####"));
                             intent.putExtra("ut", ut);
+                            intent.putExtra("station_code", station_code);
                             intent.putExtra("usercode", App.Current.UserCode);
                             App.Current.Workbench.startActivity(intent);
                         }
