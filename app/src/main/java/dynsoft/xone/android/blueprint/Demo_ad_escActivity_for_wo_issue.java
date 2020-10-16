@@ -46,6 +46,7 @@ public class Demo_ad_escActivity_for_wo_issue extends Activity {
     private String date_code;
     private String station_code;
     private String task_order_code;
+    private String line_name;
     private String quantity;
     private String ut;
     private String cur_date;
@@ -67,6 +68,7 @@ public class Demo_ad_escActivity_for_wo_issue extends Activity {
         date_code = intent.getStringExtra("date_code");
         station_code = intent.getStringExtra("station_code");
         task_order_code = intent.getStringExtra("task_order_code");
+        line_name = intent.getStringExtra("line_name");
         quantity = intent.getStringExtra("quantity");
         cur_date = intent.getStringExtra("cur_date");
         ut = intent.getStringExtra("ut");
@@ -266,7 +268,7 @@ public class Demo_ad_escActivity_for_wo_issue extends Activity {
         zkPrinter.DrawBarcodeQRcode(330, 15, "R:" + item_code, 2, "128", 2);
         zkPrinter.drawLine(540, 10, 540, 60, lineW);
         zkPrinter.drawText(380, 20, item_code, 2, 0, true, false, false);
-        zkPrinter.drawText(543, 20, org_code, 2, 0, true, false, false);
+        zkPrinter.drawText(543, 20, line_name, 2, 0, true, false, false);
         zkPrinter.drawText(330, 70, vendor_model, 2, 0, true, false, false);
         zkPrinter.drawText(330, 110, lot_number, 2, 0, true, false, false);
         zkPrinter.drawText(330, 160, vendor_lot, 2, 0, true, false, false);
@@ -274,7 +276,7 @@ public class Demo_ad_escActivity_for_wo_issue extends Activity {
         zkPrinter.drawText(30, 160, station_code, 2, 0, true, false, false);
         zkPrinter.drawText(30, 260, task_order_code, 2, 0, true, false, false);
 
-        //        zkPrinter.DrawBarcode1D(520, 10, "1081606261422", "128", 1, 45, 0);
+//                zkPrinter.DrawBarcode1D(520, 10, "1081606261422", "128", 1, 45, 0);
 //        zkPrinter.DrawBarcodeQRcode(101 - 16, 875 - 864, "1081606261422", 1, "128", 45);
         zkPrinter.print(0, 0);
     }

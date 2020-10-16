@@ -618,6 +618,7 @@ public class pn_wo_issue_editor extends pn_editor {
                                         intent.putExtra("date_code", _lot_row.getValue("date_code", ""));
                                         intent.putExtra("station_code", _lot_row.getValue("station_code", ""));
                                         intent.putExtra("task_order_code", _lot_row.getValue("task_order_code", ""));
+                                        intent.putExtra("line_name", _lot_row.getValue("line_name", ""));
                                         intent.putExtra("quantity", quantity);
                                         intent.putExtra("ut", _order_row.getValue("uom_code", ""));
                                         App.Current.Workbench.startActivity(intent);

@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="dynsoft.xone.android.core"
     android:versionCode="1"
-    android:versionName="2020.10.13.1037" >
+    android:versionName="2020.10.16.1037" >
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -224,6 +224,7 @@
             android:name="dynsoft.xone.android.activity.MPSActivity"
             android:screenOrientation="landscape" />
         <activity android:name="dynsoft.xone.android.blueprint.Demo_ad_escActivity" />
+        <activity android:name="dynsoft.xone.android.blueprint.Demo_ad_escActivity_for_wo_issue" />
         <activity android:name="dynsoft.xone.android.blueprint.Demo_ad_escActivity2" />
         <activity android:name="dynsoft.xone.android.blueprint.FaliaoStatusActivity" />
         <activity android:name="dynsoft.xone.android.blueprint.ZaxiangStatusActivity" />

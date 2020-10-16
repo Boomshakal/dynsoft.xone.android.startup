@@ -11,9 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb2c14a7-132f-4fe8-9967-47d2011d65aa" name="Default Changelist" comment="push">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/blueprint/Demo_ad_escActivity_for_wo_issue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/dynsoft/xone/android/core/BuildConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/dynsoft/xone/android/core/BuildConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex" afterDir="false" />
@@ -21,14 +19,38 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/instant_app_manifest/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/instant_app_manifest/debug/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/instant_app_manifest/debug/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/instant_app_manifest/debug/output.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/core/BuildConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/core/BuildConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_mm_splitlabel_editor_yh$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_mm_splitlabel_editor_yh$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_mm_splitlabel_editor_yh$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_mm_splitlabel_editor_yh$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_mm_splitlabel_editor_yh$3$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_mm_splitlabel_editor_yh$3$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_mm_splitlabel_editor_yh$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_mm_splitlabel_editor_yh$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_mm_splitlabel_editor_yh.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_mm_splitlabel_editor_yh.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_wo_issue_editor$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_wo_issue_editor$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_wo_issue_editor$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_wo_issue_editor$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_wo_issue_editor$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_wo_issue_editor$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_wo_issue_editor$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_wo_issue_editor$12.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_wo_issue_editor$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_wo_issue_editor$13.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_wo_issue_editor$14$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_wo_issue_editor$14$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_wo_issue_editor$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_wo_issue_editor$14.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_wo_issue_editor$15.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_wo_issue_editor$15.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_wo_issue_editor$16.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_wo_issue_editor$16.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_wo_issue_editor$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_wo_issue_editor$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_wo_issue_editor$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_wo_issue_editor$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_wo_issue_editor$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_wo_issue_editor$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_wo_issue_editor$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_wo_issue_editor$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_wo_issue_editor$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_wo_issue_editor$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_wo_issue_editor$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_wo_issue_editor$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_wo_issue_editor$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_wo_issue_editor$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_wo_issue_editor$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_wo_issue_editor$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_wo_issue_editor.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_wo_issue_editor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/output.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/debug/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/apk/debug/output.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/release/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/release/output.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_mm_splitlabel_editor_yh.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_mm_splitlabel_editor_yh.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/blueprint/Demo_ad_escActivity_for_wo_issue.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/blueprint/Demo_ad_escActivity_for_wo_issue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_wo_issue_editor.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_wo_issue_editor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -337,22 +359,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1597279813001" />
-    <state width="1493" height="241" key="GridCell.Tab.0.bottom" timestamp="1602574279978">
+    <state width="1478" height="247" key="GridCell.Tab.0.bottom" timestamp="1602810588909">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="241" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602574279978" />
-    <state width="1493" height="241" key="GridCell.Tab.0.center" timestamp="1602574279977">
+    <state width="1478" height="247" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602810588909" />
+    <state width="1478" height="247" key="GridCell.Tab.0.center" timestamp="1602810588909">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="241" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602574279977" />
-    <state width="1493" height="241" key="GridCell.Tab.0.left" timestamp="1602574279977">
+    <state width="1478" height="247" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602810588909" />
+    <state width="1478" height="247" key="GridCell.Tab.0.left" timestamp="1602810588909">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="241" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602574279977" />
-    <state width="1493" height="241" key="GridCell.Tab.0.right" timestamp="1602574279978">
+    <state width="1478" height="247" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602810588909" />
+    <state width="1478" height="247" key="GridCell.Tab.0.right" timestamp="1602810588909">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="241" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602574279978" />
+    <state width="1478" height="247" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602810588909" />
     <state width="1493" height="241" key="GridCell.Tab.1.bottom" timestamp="1602574279978">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -389,10 +411,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="775" height="419" key="XDebugger.FullValuePopup/0.0.1536.824@0.0.1536.824" timestamp="1602571804505" />
-    <state x="449" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1602635644636">
+    <state x="449" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1602807897513">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="449" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1602635644636" />
+    <state x="449" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1602807897513" />
     <state x="286" y="148" width="964" height="604" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1602572433033">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -401,9 +423,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="426" y="189" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1600657649718" />
-    <state x="550" y="223" width="672" height="676" key="search.everywhere.popup" timestamp="1602636418406">
+    <state x="550" y="223" width="672" height="676" key="search.everywhere.popup" timestamp="1602810215854">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="550" y="223" width="672" height="676" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1602636418406" />
+    <state x="550" y="223" width="672" height="676" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1602810215854" />
   </component>
 </project>

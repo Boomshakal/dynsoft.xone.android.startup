@@ -2,7 +2,7 @@
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="dynsoft.xone.android.core"
 4    android:versionCode="1"
-5    android:versionName="2020.10.13.1037" >
+5    android:versionName="2020.10.16.1037" >
 6
 7    <uses-sdk
 8        android:minSdkVersion="14"
@@ -83,7 +83,7 @@
 43-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:41:19-54
 44
 45    <application
-45-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:43:5-266:19
+45-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:43:5-267:19
 46        android:name="dynsoft.xone.android.core.App"
 46-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:44:9-53
 47        android:allowBackup="true"
@@ -444,52 +444,55 @@
 226        <activity android:name="dynsoft.xone.android.blueprint.Demo_ad_escActivity" />
 226-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:257:9-87
 226-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:257:19-84
-227        <activity android:name="dynsoft.xone.android.blueprint.Demo_ad_escActivity2" />
-227-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:258:9-88
-227-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:258:19-85
-228        <activity android:name="dynsoft.xone.android.blueprint.FaliaoStatusActivity" />
+227        <activity android:name="dynsoft.xone.android.blueprint.Demo_ad_escActivity_for_wo_issue" />
+227-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:258:9-100
+227-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:258:19-97
+228        <activity android:name="dynsoft.xone.android.blueprint.Demo_ad_escActivity2" />
 228-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:259:9-88
 228-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:259:19-85
-229        <activity android:name="dynsoft.xone.android.blueprint.ZaxiangStatusActivity" />
-229-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:260:9-89
-229-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:260:19-86
-230        <activity android:name="dynsoft.xone.android.blueprint.ZhuankuStatusActivity" />
+229        <activity android:name="dynsoft.xone.android.blueprint.FaliaoStatusActivity" />
+229-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:260:9-88
+229-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:260:19-85
+230        <activity android:name="dynsoft.xone.android.blueprint.ZaxiangStatusActivity" />
 230-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:261:9-89
 230-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:261:19-86
-231        <activity android:name="dynsoft.xone.android.blueprint.Scan_Print_Activity" />
-231-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:262:9-87
-231-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:262:19-84
-232        <activity android:name="dynsoft.xone.android.blueprint.XprinterActivity" />
-232-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:263:9-84
-232-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:263:19-81
-233        <activity android:name="dynsoft.xone.android.blueprint.PosActivity" />
-233-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:264:9-79
-233-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:264:19-76
-234        <activity android:name="dynsoft.xone.android.blueprint.P76Activity" />
+231        <activity android:name="dynsoft.xone.android.blueprint.ZhuankuStatusActivity" />
+231-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:262:9-89
+231-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:262:19-86
+232        <activity android:name="dynsoft.xone.android.blueprint.Scan_Print_Activity" />
+232-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:263:9-87
+232-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:263:19-84
+233        <activity android:name="dynsoft.xone.android.blueprint.XprinterActivity" />
+233-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:264:9-84
+233-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:264:19-81
+234        <activity android:name="dynsoft.xone.android.blueprint.PosActivity" />
 234-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:265:9-79
 234-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:265:19-76
-235        <activity
-235-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\819f609ac486acdc5d2c0fb23e171b66\zxing-library-2.2\AndroidManifest.xml:12:9-17:63
-236            android:name="com.uuzuche.lib_zxing.activity.CaptureActivity"
-236-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\819f609ac486acdc5d2c0fb23e171b66\zxing-library-2.2\AndroidManifest.xml:13:13-74
-237            android:configChanges="orientation|keyboardHidden"
-237-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\819f609ac486acdc5d2c0fb23e171b66\zxing-library-2.2\AndroidManifest.xml:14:13-63
-238            android:screenOrientation="portrait"
-238-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\819f609ac486acdc5d2c0fb23e171b66\zxing-library-2.2\AndroidManifest.xml:15:13-49
-239            android:theme="@style/Theme.AppCompat.NoActionBar"
-239-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\819f609ac486acdc5d2c0fb23e171b66\zxing-library-2.2\AndroidManifest.xml:16:13-63
-240            android:windowSoftInputMode="stateAlwaysHidden" />
-240-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\819f609ac486acdc5d2c0fb23e171b66\zxing-library-2.2\AndroidManifest.xml:17:13-60
-241
-242        <service android:name="com.liulishuo.filedownloader.services.FileDownloadService$SharedMainProcessService" />
-242-->[com.liulishuo.filedownloader:library:1.7.4] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\6f356b75b79cf3607d6cc0e0383c19bd\library-1.7.4\AndroidManifest.xml:12:9-118
-242-->[com.liulishuo.filedownloader:library:1.7.4] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\6f356b75b79cf3607d6cc0e0383c19bd\library-1.7.4\AndroidManifest.xml:12:18-115
-243        <service
-243-->[com.liulishuo.filedownloader:library:1.7.4] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\6f356b75b79cf3607d6cc0e0383c19bd\library-1.7.4\AndroidManifest.xml:13:9-15:49
-244            android:name="com.liulishuo.filedownloader.services.FileDownloadService$SeparateProcessService"
-244-->[com.liulishuo.filedownloader:library:1.7.4] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\6f356b75b79cf3607d6cc0e0383c19bd\library-1.7.4\AndroidManifest.xml:14:13-108
-245            android:process=":filedownloader" />
-245-->[com.liulishuo.filedownloader:library:1.7.4] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\6f356b75b79cf3607d6cc0e0383c19bd\library-1.7.4\AndroidManifest.xml:15:13-46
-246    </application>
-247
-248</manifest>
+235        <activity android:name="dynsoft.xone.android.blueprint.P76Activity" />
+235-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:266:9-79
+235-->D:\dynsoft.xone.android.startup\app\src\main\AndroidManifest.xml:266:19-76
+236        <activity
+236-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\819f609ac486acdc5d2c0fb23e171b66\zxing-library-2.2\AndroidManifest.xml:12:9-17:63
+237            android:name="com.uuzuche.lib_zxing.activity.CaptureActivity"
+237-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\819f609ac486acdc5d2c0fb23e171b66\zxing-library-2.2\AndroidManifest.xml:13:13-74
+238            android:configChanges="orientation|keyboardHidden"
+238-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\819f609ac486acdc5d2c0fb23e171b66\zxing-library-2.2\AndroidManifest.xml:14:13-63
+239            android:screenOrientation="portrait"
+239-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\819f609ac486acdc5d2c0fb23e171b66\zxing-library-2.2\AndroidManifest.xml:15:13-49
+240            android:theme="@style/Theme.AppCompat.NoActionBar"
+240-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\819f609ac486acdc5d2c0fb23e171b66\zxing-library-2.2\AndroidManifest.xml:16:13-63
+241            android:windowSoftInputMode="stateAlwaysHidden" />
+241-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\819f609ac486acdc5d2c0fb23e171b66\zxing-library-2.2\AndroidManifest.xml:17:13-60
+242
+243        <service android:name="com.liulishuo.filedownloader.services.FileDownloadService$SharedMainProcessService" />
+243-->[com.liulishuo.filedownloader:library:1.7.4] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\6f356b75b79cf3607d6cc0e0383c19bd\library-1.7.4\AndroidManifest.xml:12:9-118
+243-->[com.liulishuo.filedownloader:library:1.7.4] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\6f356b75b79cf3607d6cc0e0383c19bd\library-1.7.4\AndroidManifest.xml:12:18-115
+244        <service
+244-->[com.liulishuo.filedownloader:library:1.7.4] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\6f356b75b79cf3607d6cc0e0383c19bd\library-1.7.4\AndroidManifest.xml:13:9-15:49
+245            android:name="com.liulishuo.filedownloader.services.FileDownloadService$SeparateProcessService"
+245-->[com.liulishuo.filedownloader:library:1.7.4] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\6f356b75b79cf3607d6cc0e0383c19bd\library-1.7.4\AndroidManifest.xml:14:13-108
+246            android:process=":filedownloader" />
+246-->[com.liulishuo.filedownloader:library:1.7.4] C:\Users\lihui\.gradle\caches\transforms-2\files-2.1\6f356b75b79cf3607d6cc0e0383c19bd\library-1.7.4\AndroidManifest.xml:15:13-46
+247    </application>
+248
+249</manifest>
