@@ -2,6 +2,7 @@ package dynsoft.xone.android.activity;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -40,11 +41,14 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Enumeration;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import dynsoft.xone.android.bean.RequestBean;
 import dynsoft.xone.android.core.App;
+import dynsoft.xone.android.core.Pane;
 import dynsoft.xone.android.core.R;
 import dynsoft.xone.android.data.DataRow;
 import dynsoft.xone.android.data.DataTable;
@@ -329,7 +333,9 @@ public class MesLightActivity extends Activity {
                             });
                         } else {
                             commitException(s, popupWindow, editTextException.getText().toString(), Integer.parseInt(editTextInfluencesCounts.getText().toString()));
-//                            startFlow();
+                            if ("设备故障".equals(s)) {
+                                startFlow(editTextException);
+                            }
                         }
                     }
                 }
@@ -979,12 +985,30 @@ public class MesLightActivity extends Activity {
 //        }
     }
 
-    private void startFlow() {
+    private void startFlow(EditText edittext) {
         App.Current.question(MesLightActivity.this, "确定要发起流程吗？", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
                 dialog.dismiss();
+
+                String code = null, name = null, location = null;
+                String sql = "select code,\n" +
+                        "       name,\n" +
+                        "       location\n" +
+                        "from fm_work_dev where  mac_address=? ";
+                Parameters p = new Parameters().add(1, getMacAddress());
+
+                Result<DataRow> r = App.Current.DbPortal.ExecuteRecord("core_and", sql, p);
+                if (r != null && r.Value != null) {
+
+                    code = r.Value.getValue("code", String.class);
+                    name = r.Value.getValue("name", String.class);
+                    location = r.Value.getValue("location", String.class);
+
+                }
+
+
                 PrintRequest request = new PrintRequest();
                 request.Server = "http://192.168.151.130:6683";
                 request.Printer = "#15";
@@ -995,18 +1019,18 @@ public class MesLightActivity extends Activity {
 
                 StringBuffer stringBuffer = new StringBuffer();
                 stringBuffer.append("{\"fd_sheBeiBianHao\":\"");
-                stringBuffer.append(getMacAddress());
+                stringBuffer.append(code);
                 stringBuffer.append("\",\"fd_sheBeiMingChen\":\"");
-                stringBuffer.append("fd_sheBeiMingChen");
+                stringBuffer.append(name);
                 stringBuffer.append("\",\"fd_sheBeiSuoZaiWeiZhi\":\"");
-                stringBuffer.append("fd_sheBeiSuoZaiWeiZhi");
+                stringBuffer.append(location);
                 stringBuffer.append("\",\"fd_guZhangMiaoShu\":\"");
-                stringBuffer.append("123321");
+                stringBuffer.append(edittext.getText());
                 stringBuffer.append("\"}");
 
 
                 request.Parameters.put("fdTemplateId", "174a03db3abe33e629c760d4dac89e64");
-                request.Parameters.put("docSubject", "test");
+                request.Parameters.put("docSubject", "设备保修流程");
                 request.Parameters.put("formValues", stringBuffer.toString().replace("\\", ""));
 //                request.Parameters.put("formValues:", jsonDatas);
                 request.Parameters.put("TaskUser", App.Current.UserCode);
