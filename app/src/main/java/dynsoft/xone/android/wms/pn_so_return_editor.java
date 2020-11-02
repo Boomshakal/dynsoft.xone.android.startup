@@ -612,6 +612,7 @@ public class pn_so_return_editor extends pn_editor {
                                         intent.putExtra("lot_number", row.getValue("lot_number", ""));
                                         intent.putExtra("vendor_lot", row.getValue("vendor_lot", ""));
                                         intent.putExtra("date_code", row.getValue("date_code", ""));
+                                        intent.putExtra("station_code", row.getValue("station_code", ""));
                                         intent.putExtra("quantity", App.formatNumber(
                                                 row.getValue("quantity", BigDecimal.ZERO), "0.####"));
                                         intent.putExtra("ut", row.getValue("ut", ""));
