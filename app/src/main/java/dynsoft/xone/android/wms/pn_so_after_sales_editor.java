@@ -47,16 +47,17 @@ public class pn_so_after_sales_editor extends pn_editor implements OnClickListen
     }
 
     private Button txt_b1;
-    public TextCell txt_sn_number_cell; // sn编码
+    public ButtonTextCell txt_sn_number_cell; // sn编码
     public TextCell txt_item_code_cell; //物料编码
     public TextCell txt_item_name_cell; //物料名称
     public TextCell txt_user_cell; //操作用户
+    public TextCell txt_express_cell; //快递单号
     public TextCell txt_comment_cell; //备注
     public TextCell txt_customer_name; //客户名称
     public TextCell txt_field_status;//现场维修
     private CheckBox checkbox_print;//打印标签
     private CheckBox is_history;
-    private String is_history_key="";
+    private String is_history_key = "";
     Date now_t = new Date(System.currentTimeMillis());
     String now_time = new SimpleDateFormat("yyyy-MM-dd").format(now_t);
 
@@ -90,7 +91,7 @@ public class pn_so_after_sales_editor extends pn_editor implements OnClickListen
 
         scan_count = 0;
         checkbool = true;
-        this.txt_sn_number_cell = (TextCell) this
+        this.txt_sn_number_cell = (ButtonTextCell) this
                 .findViewById(R.id.txt_sn_number_cell);
 
         this.txt_item_code_cell = (TextCell) this
@@ -99,6 +100,9 @@ public class pn_so_after_sales_editor extends pn_editor implements OnClickListen
         this.txt_item_name_cell = (TextCell) this
                 .findViewById(R.id.txt_item_name_cell);
 
+        this.txt_express_cell = (TextCell) this
+                .findViewById(R.id.txt_express_cell);
+
         this.txt_customer_name = (TextCell) this
                 .findViewById(R.id.txt_customer_name);
 
@@ -106,7 +110,7 @@ public class pn_so_after_sales_editor extends pn_editor implements OnClickListen
                 .findViewById(R.id.txt_field_status);
 
 
-        this.txt_b1 = (Button) this.findViewById(R.id.txt_b1) ;
+        this.txt_b1 = (Button) this.findViewById(R.id.txt_b1);
         txt_b1.setOnClickListener(this);
         txt_b1.setVisibility(GONE);
 
@@ -116,11 +120,23 @@ public class pn_so_after_sales_editor extends pn_editor implements OnClickListen
         if (this.txt_sn_number_cell != null) {
             this.txt_sn_number_cell.setLabelText("SN编码");
             this.txt_sn_number_cell.setReadOnly();
+            this.txt_sn_number_cell.Button.setImageBitmap(App.Current.ResourceManager.getImage("@/core_close_light"));
+            this.txt_sn_number_cell.Button.setOnClickListener(new OnClickListener(){
+                @Override
+                public void onClick(View v) {
+                    pn_so_after_sales_editor.this.txt_sn_number_cell.setContentText("");
+                }
+            });
         }
 
         if (this.txt_item_code_cell != null) {
             this.txt_item_code_cell.setLabelText("物料编码");
             //this.txt_item_code_cell.setReadOnly();
+        }
+
+        if (this.txt_express_cell != null) {
+            this.txt_express_cell.setLabelText("快递单号");
+            this.txt_express_cell.setReadOnly();
         }
 
         if (this.txt_customer_name != null) {
@@ -176,9 +192,45 @@ public class pn_so_after_sales_editor extends pn_editor implements OnClickListen
     }
 
 
+    private static float getSimilarityRatio(String str, String target) {
 
+        int d[][]; // 矩阵
+        int n = str.length();
+        int m = target.length();
+        int i; // 遍历str的
+        int j; // 遍历target的
+        char ch1; // str的
+        char ch2; // target的
+        int temp; // 记录相同字符,在某个矩阵位置值的增量,不是0就是1
+        if (n == 0 || m == 0) {
+            return 0;
+        }
+        d = new int[n + 1][m + 1];
+        for (i = 0; i <= n; i++) { // 初始化第一列
+            d[i][0] = i;
+        }
 
+        for (j = 0; j <= m; j++) { // 初始化第一行
+            d[0][j] = j;
+        }
 
+        for (i = 1; i <= n; i++) { // 遍历str
+            ch1 = str.charAt(i - 1);
+            // 去匹配target
+            for (j = 1; j <= m; j++) {
+                ch2 = target.charAt(j - 1);
+                if (ch1 == ch2 || ch1 == ch2 + 32 || ch1 + 32 == ch2) {
+                    temp = 0;
+                } else {
+                    temp = 1;
+                }
+                // 左边+1,上边+1, 左上角+temp取最小
+                d[i][j] = Math.min(Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1), d[i - 1][j - 1] + temp);
+            }
+        }
+
+        return (1 - (float) d[n][m] / Math.max(str.length(), target.length())) * 100F;
+    }
 
 
     //扫条码
@@ -186,16 +238,19 @@ public class pn_so_after_sales_editor extends pn_editor implements OnClickListen
     public void onScan(final String barcode) {
         String bar_code = barcode.trim();
 
+        final String sn_number = this.txt_sn_number_cell.getContentText().trim();
+        if (sn_number.length() == 0) {
             this.txt_sn_number_cell.setContentText(bar_code.toString());
             this.loadItem(bar_code);
+        } else if (getSimilarityRatio(bar_code, sn_number) > 68) {
+            Log.e("len", Float.toString(getSimilarityRatio(bar_code, sn_number)));
+            App.Current.showError(this.getContext(), "请扫描快递单号！");
 
+        } else {
+            this.txt_express_cell.setContentText(bar_code.toString());
+        }
 
     }
-
-
-
-
-
 
 
     ///根据SN编号带出物料编码和物料名称
@@ -276,28 +331,28 @@ public class pn_so_after_sales_editor extends pn_editor implements OnClickListen
         if (is_history.isChecked()) {
             String sql_history = "exec is_exists_mm_ar_after_receiving_items ?";
             Parameters p_history = new Parameters();
-            p_history.add(1,sn_number);
+            p_history.add(1, sn_number);
             Result<Integer> result_history = App.Current.DbPortal.ExecuteScalar(this.Connector, sql_history, p_history, Integer.class);
             if (result_history.HasError) {
                 App.Current.showError(pn_so_after_sales_editor.this.getContext(), result_history.Error);
                 return;
             }
-            if (result_history.Value>0){
+            if (result_history.Value > 0) {
                 App.Current.showError(this.getContext(), "该物料已经进入修改流程！");
                 return;
             }
-            is_history_key ="历史物料";
+            is_history_key = "历史物料";
         } else {
 
         }
 
         //String sql = " exec mm_after_receiving_isnert_1 ?,?,?,?,?,?,?,?";
-  String sql = "mm_after_receiving_isnert_1_20181031 ?,?,?,?,?,?,?,?";
+        String sql = "mm_after_receiving_isnert_1_20181031 ?,?,?,?,?,?,?,?,?";
 
         System.out.print(item_code);
         System.out.print(sql);
         Parameters p = new Parameters();
-        p.add(1, sn_number).add(2, item_code).add(3, item_name).add(4, user).add(5, comment).add(6, customer_name).add(7, field_status).add(8,is_history_key);
+        p.add(1, sn_number).add(2, item_code).add(3, item_name).add(4, user).add(5, comment).add(6, customer_name).add(7, field_status).add(8, is_history_key).add(9, txt_express_cell.getContentText());
         App.Current.DbPortal.ExecuteDataTableAsync(this.Connector, sql, p, new ResultHandler<DataTable>() {
             @Override
             public void handleMessage(Message msg) {
@@ -337,6 +392,7 @@ public class pn_so_after_sales_editor extends pn_editor implements OnClickListen
         this.txt_item_name_cell.setContentText("");
         this.txt_customer_name.setContentText("");
         this.txt_field_status.setContentText("");
+        this.txt_express_cell.setContentText("");
         this.is_history.setChecked(false);
     }
 
