@@ -315,6 +315,10 @@ public class pn_so_after_sales_editor extends pn_editor implements OnClickListen
         //}
 
         String customer_name = this.txt_customer_name.getContentText().trim();
+        if (customer_name == null || customer_name.length() == 0) {
+            App.Current.showError(this.getContext(), "客户名称不能为空！");
+            return;
+        }
 
         String field_status = this.txt_field_status.getContentText().trim();
 
