@@ -80,6 +80,7 @@ public class pn_so_after_storage_mgr extends pn_mgr {
     public void openItem(DataRow row) {
         Link link = new Link("pane://x:code=pn_so_after_storage_editor");
         link.Parameters.add("code", row.getValue("code", ""));
+        link.Parameters.add("id", row.getValue("id", ""));
         link.Open(this, this.getContext(), null);
     }
 

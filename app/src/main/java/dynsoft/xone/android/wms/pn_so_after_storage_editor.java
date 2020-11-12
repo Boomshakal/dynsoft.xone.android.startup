@@ -347,14 +347,17 @@ public class pn_so_after_storage_editor extends pn_editor implements OnClickList
         String comment = this.txt_comment_cell.getContentText().trim();
         if (txt_is_batch_cell.getContentText().equals("") && lcount == 0) {
             String datecode = pn_so_after_storage_editor.this.txt_date_code_cell.getContentText().trim();
-            if (datecode ==""){
+            if (datecode == "") {
                 App.Current.showError(this.getContext(), "没有填写周期！");
                 return;
 
             }
-            String sql = " exec mm_after_storage_isnert ?,?,?,?,?,?,?";
+            String code = this.Parameters.get("code", "");
+            String oqc_head_id = this.Parameters.get("id", "");
+
+            String sql = " exec mm_after_storage_isnert_v1 ?,?,?,?,?,?,?,?";
             Parameters p = new Parameters();
-            p.add(1, sn_number).add(2, item_code).add(3, item_name).add(4, customer_name).add(5, sh_date).add(6, user).add(7, comment);
+            p.add(1, sn_number).add(2, item_code).add(3, item_name).add(4, customer_name).add(5, sh_date).add(6, user).add(7, comment).add(8, oqc_head_id);
             App.Current.DbPortal.ExecuteNonQueryAsync(this.Connector, sql, p, new ResultHandler<Integer>() {
                 @Override
                 public void handleMessage(Message msg) {
@@ -384,7 +387,7 @@ public class pn_so_after_storage_editor extends pn_editor implements OnClickList
             String date_code = pn_so_after_storage_editor.this.txt_date_code_cell.getContentText().trim();
             pn_so_after_storage_editor.this.txt_sn_number_cell.setContentText("");
             String sql2 = "exec mm_after_storage_isnert_batch ?,?,?";
-            Parameters p2 = new Parameters().add(1, main_pc_number).add(2, user).add(3,date_code);
+            Parameters p2 = new Parameters().add(1, main_pc_number).add(2, user).add(3, date_code);
             App.Current.DbPortal.ExecuteNonQueryAsync(this.Connector, sql2, p2, new ResultHandler<Integer>() {
                 public void handleMessage(Message msg) {
                     Result<Integer> result = this.Value;
@@ -484,7 +487,7 @@ public class pn_so_after_storage_editor extends pn_editor implements OnClickList
         parameters.put("sh_date", this.txt_sh_date_cell.getContentText().trim());
         parameters.put("is_return", this.txt_is_return.getContentText().trim());
         parameters.put("datecode", this.txt_date_code_cell.getContentText().trim());
-        parameters.put("quantity",quantity+"");
+        parameters.put("quantity", quantity + "");
         parameters.put("item_code", this.txt_item_code_cell.getContentText().trim());
         App.Current.Print("mm_after_storage_barch", "打印条码", parameters);
 
@@ -502,6 +505,7 @@ public class pn_so_after_storage_editor extends pn_editor implements OnClickList
         this.txt_pc_number_cell.setContentText("");
         this.txt_date_code_cell.setContentText("");
     }
+
     @Override
     public void onClick(View view) {
 //        App.Current.Workbench.onShake();
@@ -554,13 +558,14 @@ public class pn_so_after_storage_editor extends pn_editor implements OnClickList
                 });
                 break;
             case R.id.btn_batch_end:
-                if (pn_so_after_storage_editor.this.txt_is_batch_cell.getContentText().trim().equals("等待绑定"))
-                {App.Current.toastInfo(pn_so_after_storage_editor.this.getContext(), "截断该绑定批次号");
-                    pn_so_after_storage_editor.this.txt_is_batch_cell.setContentText("截断绑定");}
-                else
-                {App.Current.showError(pn_so_after_storage_editor.this.getContext(), "不能截断空批次");
+                if (pn_so_after_storage_editor.this.txt_is_batch_cell.getContentText().trim().equals("等待绑定")) {
+                    App.Current.toastInfo(pn_so_after_storage_editor.this.getContext(), "截断该绑定批次号");
+                    pn_so_after_storage_editor.this.txt_is_batch_cell.setContentText("截断绑定");
+                } else {
+                    App.Current.showError(pn_so_after_storage_editor.this.getContext(), "不能截断空批次");
                     pn_so_after_storage_editor.this.Header.setTitleText("不能截断空批次");
-                    return;}
+                    return;
+                }
                 break;
         }
     }
@@ -570,13 +575,11 @@ public class pn_so_after_storage_editor extends pn_editor implements OnClickList
         AlertDialog.Builder builder = new AlertDialog.Builder(pn_so_after_storage_editor.this.getContext());
         TextView title1 = (TextView) view.findViewById(R.id.txt_sn_number_cell);
         String title = title1.getText().toString().trim();
-        builder.setTitle("对物料"+title.toString()+":");
+        builder.setTitle("对物料" + title.toString() + ":");
         builder.setMessage("确定从待绑批次删除吗？");
-        builder.setPositiveButton("确定", new DialogInterface.OnClickListener()
-        {
+        builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialog, int which)
-            {
+            public void onClick(DialogInterface dialog, int which) {
                 TextView item_code_textCell = (TextView) view.findViewById(R.id.txt_item_code_cell);
                 String item_code = item_code_textCell.getText().toString().trim();
                 String pc_number = main_pc_number;
