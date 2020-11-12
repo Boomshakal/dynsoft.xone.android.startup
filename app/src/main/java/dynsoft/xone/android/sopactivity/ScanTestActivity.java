@@ -61,6 +61,8 @@ import com.chice.scangun.ScanGun;
 import com.google.gson.Gson;
 import com.motorolasolutions.adc.decoder.ScannerController;
 import com.squareup.okhttp.MediaType;
+import com.squareup.okhttp.OkHttpClient;
+import com.squareup.okhttp.Request;
 import com.squareup.okhttp.RequestBody;
 import com.squareup.okhttp.ResponseBody;
 
@@ -438,7 +440,25 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
         }
     }
 
+    private boolean check_barcode(String edittext) {
+        /*
+         * edittext 扫描条码
+         * */
+        final String sql = "exec p_fm_work_check_barcode_for_all ?,?";
+        Parameters p = new Parameters().add(1, edittext).add(2, task_order_id);
+        String value_r = App.Current.DbPortal.ExecuteScalar("core_and", sql, p).Value.toString();
+        if (!value_r.equals("OK")) {
+            App.Current.toastError(ScanTestActivity.this, value_r);
+            return false;
+        }
+        return true;
+    }
+
     private void onScanned(String edittext) {
+        if (!check_barcode(edittext)) {
+            return;
+        }
+//        sendByOKHttp();
         if (work_type != null && work_type.equals("defect")) {
             if (edittext.length() < 3) {     //按了按钮
                 defectfail = true;
@@ -1484,10 +1504,28 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
             insertIntoSQL(txt, rslt);
         }
     }
+    private void sendByOKHttp() {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                OkHttpClient client = new OkHttpClient();
+                String url = "http://www.baidu.com/";
+                Request request = new Request.Builder().url(url).build();
+                try {
+                    com.squareup.okhttp.Response response = client.newCall(request).execute();//发送请求
+                    String result = response.body().string();
+                    Log.e("len",result);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+    }
 
     private void uploadCloud(final String mainCode, final String result, String product_id, String equipment_name, final String mac_number) {
         Retrofit uploadCloudRetrofit = RetrofitDownUtil.getInstence().getUploadCloudRetrofit();
-        IotBean info = new IotBean(mac_number, mainCode, TextUtils.isEmpty(equipment_name) ? "SmartBidet" : equipment_name, "", childNumber);  /*** 利用Gson 将对象转json字符串*/
+        IotBean info = new IotBean(mac_number, mainCode, TextUtils.isEmpty(equipment_name) ? "SmartBidet" : equipment_name, "", childNumber);
+        /*** 利用Gson 将对象转json字符串*/
         Gson gson = new Gson();
         String obj = gson.toJson(info);
         IotServiceApi iotServiceApi = uploadCloudRetrofit.create(IotServiceApi.class);
