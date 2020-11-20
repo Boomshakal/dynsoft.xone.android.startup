@@ -444,12 +444,14 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
         /*
          * edittext …®√ËÃı¬Î
          * */
-        final String sql = "exec p_fm_work_check_barcode_for_all ?,?";
-        Parameters p = new Parameters().add(1, edittext).add(2, task_order_id);
-        String value_r = App.Current.DbPortal.ExecuteScalar("core_and", sql, p).Value.toString();
-        if (!value_r.equals("OK")) {
-            App.Current.toastError(ScanTestActivity.this, value_r);
-            return false;
+        if (!work_type.equals("part")) {
+            final String sql = "exec p_fm_work_check_barcode_for_all ?,?";
+            Parameters p = new Parameters().add(1, edittext).add(2, task_order_id);
+            String value_r = App.Current.DbPortal.ExecuteScalar("core_and", sql, p).Value.toString();
+            if (!value_r.equals("OK")) {
+                App.Current.toastError(ScanTestActivity.this, value_r);
+                return false;
+            }
         }
         return true;
     }
@@ -1504,6 +1506,7 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
             insertIntoSQL(txt, rslt);
         }
     }
+
     private void sendByOKHttp() {
         new Thread(new Runnable() {
             @Override
@@ -1514,7 +1517,7 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
                 try {
                     com.squareup.okhttp.Response response = client.newCall(request).execute();//∑¢ÀÕ«Î«Û
                     String result = response.body().string();
-                    Log.e("len",result);
+                    Log.e("len", result);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
