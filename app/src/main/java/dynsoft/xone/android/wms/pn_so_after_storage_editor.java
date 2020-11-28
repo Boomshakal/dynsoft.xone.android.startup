@@ -353,7 +353,7 @@ public class pn_so_after_storage_editor extends pn_editor implements OnClickList
 
             }
             String code = this.Parameters.get("code", "");
-            String oqc_head_id = this.Parameters.get("id", "");
+            Integer oqc_head_id = this.Parameters.get("id", 0);
 
             String sql = " exec mm_after_storage_isnert_v1 ?,?,?,?,?,?,?,?";
             Parameters p = new Parameters();

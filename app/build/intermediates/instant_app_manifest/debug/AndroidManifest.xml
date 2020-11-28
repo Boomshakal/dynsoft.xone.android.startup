@@ -3,7 +3,7 @@
     package="dynsoft.xone.android.core"
     android:targetSandboxVersion="2"
     android:versionCode="1"
-    android:versionName="2020.11.12.1037" >
+    android:versionName="2020.11.13.1037" >
 
     <uses-sdk
         android:minSdkVersion="14"
