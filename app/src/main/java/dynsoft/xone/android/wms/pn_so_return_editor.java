@@ -450,6 +450,7 @@ public class pn_so_return_editor extends pn_editor {
                 pn_so_return_editor.this.txt_date_code_cell.setContentText("");
                 pn_so_return_editor.this.txt_location_cell.setContentText("");
                 pn_so_return_editor.this.txt_return_quantity_cell.setContentText("");
+//                loadVendorInfo();
             }
         });
     }
@@ -526,6 +527,12 @@ public class pn_so_return_editor extends pn_editor {
         final String issue = this.txt_return_quantity_cell.getContentText();
         if (issue == null || issue.length() == 0) {
             App.Current.showError(this.getContext(), "没有输入数量，不能提交。");
+            return;
+        }
+
+        final String vendor_name = this.txt_vendor_name_cell.getContentText();
+        if (vendor_name == null || vendor_name.length() == 0) {
+            App.Current.showError(this.getContext(), "没有厂商名称，不能提交。");
             return;
         }
 
