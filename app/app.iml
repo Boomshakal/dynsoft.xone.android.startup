@@ -169,6 +169,7 @@
     <orderEntry type="library" name="Gradle: com.bigkoo:pickerview:2.1.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.github.hotchemi:permissionsdispatcher:3.1.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.liulishuo.filedownloader:library:1.7.4@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.superluo:textbannerview:1.0.4@aar" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.http.legacy-android-28" level="project" />
   </component>
 </module>

@@ -91,4 +91,6 @@ dependencies {
     }
     annotationProcessor 'com.arialyy.aria:aria-compiler:3.5.4'
     implementation 'cn.yipianfengye.android:zxing-library:2.2'
+    //ÎÄ×ÖÂÖ²¥
+    implementation'com.superluo:textbannerview:1.0.4'
 }

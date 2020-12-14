@@ -1,5 +1,8 @@
 package dynsoft.xone.android.activity;
 
+import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -9,6 +12,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.os.Message;
+import android.os.SystemClock;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.text.TextUtils;
@@ -17,6 +21,7 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AlphaAnimation;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
@@ -27,17 +32,20 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.VideoView;
 
+import com.baidu.tts.client.SpeechError;
+import com.baidu.tts.client.SpeechSynthesizer;
+import com.baidu.tts.client.SpeechSynthesizerListener;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.squareup.picasso.Picasso;
+import com.superluo.textbannerlibrary.ITextBannerItemClickListener;
+import com.superluo.textbannerlibrary.TextBannerView;
 
-import java.io.IOException;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.SocketException;
 import java.util.ArrayList;
 import java.util.Enumeration;
 
-import dalvik.system.DexFile;
 import dynsoft.xone.android.core.App;
 import dynsoft.xone.android.core.R;
 import dynsoft.xone.android.data.DataRow;
@@ -46,7 +54,6 @@ import dynsoft.xone.android.data.Parameters;
 import dynsoft.xone.android.data.Result;
 import dynsoft.xone.android.data.ResultHandler;
 import dynsoft.xone.android.sopactivity.CardRegistrationActivity;
-import dynsoft.xone.android.sopactivity.LocationCheckActivity;
 import dynsoft.xone.android.sopactivity.ProductionKanbanActivity;
 import dynsoft.xone.android.zoom.PhotoView;
 import dynsoft.xone.android.zoom.ViewPagerFixed;
@@ -55,7 +62,7 @@ import dynsoft.xone.android.zoom.ViewPagerFixed;
  * Created by Administrator on 2017/12/7.
  */
 
-public class SopActivity extends Activity {
+public class SopActivity extends Activity implements SpeechSynthesizerListener {
     private ViewPagerFixed viewPager;
     private int curPosition;
     private ListView listView;
@@ -82,6 +89,10 @@ public class SopActivity extends Activity {
     private long head_id;
     private ArrayList<String> chooseImages;
     private ItemSopAdapter itemSopAdapter;
+    private TextBannerView textBanner;
+    private SpeechSynthesizer mSpeechSynthesizer;
+    private String segment;
+
 
 //    private ArrayList<String> exception_types;
 //    private String exception_type;
@@ -97,6 +108,7 @@ public class SopActivity extends Activity {
         sharedPreferences = getApplication().getSharedPreferences("sop", Context.MODE_PRIVATE);
         edit = sharedPreferences.edit();
         head_id = sharedPreferences.getLong("head_id", 0L);
+        segment = sharedPreferences.getString("segment", "");
         viewPager = (ViewPagerFixed) findViewById(R.id.view_pager);
         imageviewLight = (ImageView) findViewById(R.id.imageview_light);
         textview_1 = (TextView) findViewById(R.id.textview_1);
@@ -115,6 +127,19 @@ public class SopActivity extends Activity {
         text_3 = (TextView) findViewById(R.id.text_3);
         text_4 = (TextView) findViewById(R.id.text_4);
         text_5 = (TextView) findViewById(R.id.text_5);
+        textBanner = findViewById(R.id.text_banner);
+        mSpeechSynthesizer = SpeechSynthesizer.getInstance();
+        initLightView(textBanner);
+
+        textBanner.setItemOnClickListener(new ITextBannerItemClickListener() {
+
+            @Override
+            public void onItemClick(String data, int position) {
+                Log.i("点击了：", String.valueOf(position) + ">>" + data);
+            }
+
+        });
+
         linearlayout_worker = (LinearLayout) findViewById(R.id.linearlayout_worker);
         progressBar = (ProgressBar) findViewById(R.id.progressbar);
         progressBar.setVisibility(View.VISIBLE);
@@ -149,6 +174,70 @@ public class SopActivity extends Activity {
         initTextDatas();
         initViewPager(image_urls);
         initSlidingMenu();
+    }
+
+    @SuppressLint("HandlerLeak")
+    private void initLightView(TextBannerView textBanner) {        //获取当前线是否有未处理的异常呼叫
+        String sql = "exec get_fm_kanban_light_notice_sop ?";
+        Parameters p = new Parameters().add(1, segment);
+        App.Current.DbPortal.ExecuteDataTableAsync("core_and", sql, p, new ResultHandler<DataTable>() {
+            @Override
+            public void handleMessage(Message msg) {
+                final Result<DataTable> value = Value;
+                if (value.HasError) {
+                    textBanner.setVisibility(View.GONE);
+                }
+                if (value.Value != null && value.Value.Rows.size() > 0) {
+                    StringBuilder stringBuilder = new StringBuilder();
+                    textBanner.setVisibility(View.VISIBLE);
+                    new Thread() {
+                        @Override
+                        public void run() {
+                            int i = 0;
+                            while (i < value.Value.Rows.size()) {
+                                DataRow dataRow = value.Value.Rows.get(i);
+                                String dev_name = dataRow.getValue("dev_name", "");
+                                String exception_type = dataRow.getValue("exception_type", "");
+                                String rep_user = dataRow.getValue("rep_user", "");
+                                mSpeechSynthesizer.speak(segment + dev_name + "有" + exception_type + "呼叫。" + "请" + rep_user + "速到现场");
+                                mSpeechSynthesizer.setSpeechSynthesizerListener(SopActivity.this);
+                                i++;
+                            }
+                        }
+                    }.start();
+
+                    ArrayList texts = new ArrayList<>();
+
+                    for (int i = 0; i < value.Value.Rows.size(); i++) {
+                        DataRow dataRow = value.Value.Rows.get(i);
+                        String dev_name = dataRow.getValue("dev_name", "");
+                        String exception_type = dataRow.getValue("exception_type", "");
+                        String rep_user = dataRow.getValue("rep_user", "");
+//                        if (i == value.Value.Rows.size() - 1) {
+//                            stringBuilder.append(segment + dev_name + "有" + exception_type + "呼叫。" + "请" + rep_user + "速到现场。");
+//                        } else {
+//                            stringBuilder.append(segment + dev_name + "有" + exception_type + "呼叫," + "请" + rep_user + "速到现场，");
+//                        }
+                        String res = segment + dev_name + "有" + exception_type + "呼叫," + "请" + rep_user + "速到现场。";
+
+                        texts.add(res);
+                    }
+
+                    textBanner.setDatas(texts);
+
+                    ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(textBanner, "alpha", 1, 0, 1, 0, 1, 0, 1, 0, 1);
+                    objectAnimator.setRepeatMode(ValueAnimator.RESTART);
+                    objectAnimator.setDuration(500);
+                    objectAnimator.setRepeatCount(AlphaAnimation.INFINITE);
+                    objectAnimator.start();
+                } else {
+                    textBanner.setVisibility(View.GONE);
+                }
+            }
+        });
+//        if (imageViewFresh != null) {
+//            imageViewFresh.clearAnimation();
+//        }
     }
 
     private void changeImages() {
@@ -202,13 +291,13 @@ public class SopActivity extends Activity {
         confirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            	if(chooseImages.size() > 0) {
-            	    initViewPager(chooseImages);
-            	    textview_1.setText(((curPosition % chooseImages.size()) + 1) + "/" + chooseImages.size());
-            	    popupWindow.dismiss();
-            	} else {
-            	    App.Current.toastInfo(SopActivity.this, "请先选择SOP页");
-            	}
+                if (chooseImages.size() > 0) {
+                    initViewPager(chooseImages);
+                    textview_1.setText(((curPosition % chooseImages.size()) + 1) + "/" + chooseImages.size());
+                    popupWindow.dismiss();
+                } else {
+                    App.Current.toastInfo(SopActivity.this, "请先选择SOP页");
+                }
             }
         });
 
@@ -362,6 +451,7 @@ public class SopActivity extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
+        textBanner.startViewAnimator();
         int sopposition = sharedPreferences.getInt("sopposition", 0);
         viewPager.setCurrentItem(sopposition);
         checkLightStatus();
@@ -374,6 +464,14 @@ public class SopActivity extends Activity {
         edit.putInt("sopposition", curPosition);
         edit.commit();
 
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        textBanner.stopViewAnimator();
+        mSpeechSynthesizer.stop();
+        mSpeechSynthesizer.release();
     }
 
     private void initSlidingMenu() {
@@ -424,12 +522,12 @@ public class SopActivity extends Activity {
                             startActivity(ThirdKanbanActivity.class);
                         } else if (org_name.contains("怡和")) {               //怡和看板
                             startActivity(IKAHEKanbanActivity.class);
-                        }else if (org_name.contains("焊机")) {
+                        } else if (org_name.contains("焊机")) {
                             startActivity(WeldKanbanActivity.class);
-                        }  else {
+                        } else {
                             startActivity(ThirdKanbanActivity.class);
                         }
-                    } 
+                    }
 //                    else if (activityName.contains("LocationCheckActivity")) {
 //                        String org_name = sharedPreferences.getString("org_name", "");
 //                        if(org_name.contains("SMT")) {
@@ -516,6 +614,48 @@ public class SopActivity extends Activity {
         });
     }
 
+    @Override
+    public void onSynthesizeStart(String s) {
+        //监听到合成开始
+        Log.e("len", "onSynthesizeStart;" + s);
+    }
+
+    @Override
+    public void onSynthesizeDataArrived(String s, byte[] bytes, int i) {
+        //监听到有合成数据到达
+        Log.e("len", "onSynthesizeDataArrived;" + s);
+    }
+
+    @Override
+    public void onSynthesizeFinish(String s) {
+        //监听到合成结束
+        Log.e("len", "onSynthesizeFinish;" + s);
+    }
+
+    @Override
+    public void onSpeechStart(String s) {
+        //监听到合成并开始播放
+        Log.e("len", "onSpeechStart;" + s);
+    }
+
+    @Override
+    public void onSpeechProgressChanged(String s, int i) {
+        //监听到播放进度有变化
+        Log.e("len", s + "SpeechProgressChanged;" + i);
+    }
+
+    @Override
+    public void onSpeechFinish(String s) {
+        //监听到播放结束
+        SystemClock.sleep(2000);
+        Log.e("len", "onSpeechFinish;" + s);
+    }
+
+    @Override
+    public void onError(String s, SpeechError speechError) {
+        //监听到出错
+    }
+
     class MyAdapter extends PagerAdapter {
         private ArrayList<String> image_urls;
 
@@ -566,7 +706,7 @@ public class SopActivity extends Activity {
             } else {
                 //如果是图片
                 Log.e("len", "PATH:" + image_urls.get(position % image_urls.size()));
-            	Picasso.with(SopActivity.this).load(image_urls.get(position % image_urls.size())).error(getResources().getDrawable(R.drawable.null_pic)).into(photoView);
+                Picasso.with(SopActivity.this).load(image_urls.get(position % image_urls.size())).error(getResources().getDrawable(R.drawable.null_pic)).into(photoView);
 //                photoView.setImageDrawable(getResources().getDrawable(picResource.get(position)));
             }
             container.addView(view);
