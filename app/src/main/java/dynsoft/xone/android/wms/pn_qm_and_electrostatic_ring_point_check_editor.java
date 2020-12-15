@@ -38,8 +38,8 @@ public class pn_qm_and_electrostatic_ring_point_check_editor extends pn_editor {
     private ButtonTextCell button_text_cell_4;
     private ButtonTextCell button_text_cell_5;
     private ButtonTextCell text_cell_6;
-    private TextCell text_cell_7;
-    private TextCell text_cell_8;
+    private ButtonTextCell button_text_cell_7;
+//    private TextCell text_cell_8;
 
 
     private SharedPreferences sharedPreferences;
@@ -60,7 +60,7 @@ public class pn_qm_and_electrostatic_ring_point_check_editor extends pn_editor {
         edit = sharedPreferences.edit();
 
         LayoutParams lp = new LayoutParams(-1, -1);
-        view = App.Current.Workbench.getLayoutInflater().inflate(R.layout.pn_qm_win_ipqc_point_check_editor_screwdriver, this, true);
+        view = App.Current.Workbench.getLayoutInflater().inflate(R.layout.pn_qm_win_ipqc_point_check_editor_electrostatic_ring, this, true);
         Log.e(getContext().getPackageName(), "setContentView()");
         view.setLayoutParams(lp);
         //noScrollgridview = (GridView) findViewById(R.id.noScrollgridview);
@@ -76,8 +76,8 @@ public class pn_qm_and_electrostatic_ring_point_check_editor extends pn_editor {
         button_text_cell_4 = (ButtonTextCell) findViewById(R.id.button_text_cell_4);
         button_text_cell_5 = (ButtonTextCell) findViewById(R.id.button_text_cell_5);
         text_cell_6 = (ButtonTextCell) findViewById(R.id.text_cell_6);
-        text_cell_7 = (TextCell) findViewById(R.id.text_cell_7);
-        text_cell_8 = (TextCell) findViewById(R.id.text_cell_8);
+        button_text_cell_7 = (ButtonTextCell) findViewById(R.id.button_text_cell_7);
+//        text_cell_8 = (TextCell) findViewById(R.id.text_cell_8);
 
         id = this.Parameters.get("id", 0);
         //任务单号
@@ -176,11 +176,9 @@ public class pn_qm_and_electrostatic_ring_point_check_editor extends pn_editor {
             });
         }
 
-        if (text_cell_7 != null) {
-            text_cell_7.setLabelText("标准值");
-        }
-        if (text_cell_8 != null) {
-            text_cell_8.setLabelText("测试值");
+        if (button_text_cell_7 != null) {
+            button_text_cell_7.setLabelText("结果");
+            setclicklisten(button_text_cell_7);
         }
 
 
@@ -188,6 +186,31 @@ public class pn_qm_and_electrostatic_ring_point_check_editor extends pn_editor {
         loadItem(id);
     }
 
+    private void setclicklisten(ButtonTextCell buttontextcell) {
+        buttontextcell.setReadOnly();
+        buttontextcell.Button.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                chooseOkAndNg(buttontextcell);
+            }
+        });
+    }
+
+    private void chooseOkAndNg(final ButtonTextCell buttonTextCell) {
+        final String[] chooseItems = {"PASS", "FAIL"};
+        AlertDialog alertDialog = new AlertDialog.Builder(getContext())
+                .setTitle("请选择")
+                .setSingleChoiceItems(chooseItems, 0, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        buttonTextCell.setContentText(chooseItems[i]);
+                        dialogInterface.dismiss();
+                    }
+                }).create();
+        if (!alertDialog.isShowing()) {
+            alertDialog.show();
+        }
+    }
 
 //    private void chooseResult(final ButtonTextCell button_text_cell_4) {
 //        final ArrayList<String> result = new ArrayList<String>();
@@ -301,14 +324,7 @@ public class pn_qm_and_electrostatic_ring_point_check_editor extends pn_editor {
                     button_text_cell_4.setContentText(task_code);
                     button_text_cell_5.setContentText(line_name);
                     text_cell_6.setContentText(checked_equip);
-                    text_cell_7.setContentText(n_standard);
-                    text_cell_8.setContentText(n_actual);
-
-                    if (n_actual != "" && n_standard != "") {
-                        if (Math.abs(Float.parseFloat(n_actual.trim()) - Float.parseFloat(n_standard.trim())) > 20.0) {
-                            text_cell_8.TextBox.setTextColor(Color.RED);
-                        } else text_cell_8.TextBox.setTextColor(Color.BLACK);
-                    }
+                    button_text_cell_7.setContentText(n_standard);
 
 
                 }
@@ -336,12 +352,6 @@ public class pn_qm_and_electrostatic_ring_point_check_editor extends pn_editor {
         } else if (TextUtils.isEmpty(text_cell_6.getContentText())) {
             App.Current.toastInfo(getContext(), "请输入设备编号！");
             App.Current.playSound(R.raw.error);
-        } else if (!isNumeric(text_cell_7.getContentText())) {
-            App.Current.toastInfo(getContext(), "请输入标准数值");
-            App.Current.playSound(R.raw.error);
-        } else if (!isNumeric(text_cell_8.getContentText())) {
-            App.Current.toastInfo(getContext(), "请输入测试数值");
-            App.Current.playSound(R.raw.error);
         } else {
             App.Current.question(this.getContext(), "确定要提交吗？", new DialogInterface.OnClickListener() {
                 @Override
@@ -351,7 +361,7 @@ public class pn_qm_and_electrostatic_ring_point_check_editor extends pn_editor {
                     String sql = "exec p_qm_and_electrostatic_ring_point_check_create ?,?,?,?,?,?,?,?";
                     Parameters p = new Parameters().add(1, button_text_cell_2.getContentText()).add(2, text_cell_3.getContentText()).add(3, button_text_cell_4.getContentText())
                             .add(4, button_text_cell_5.getContentText()).add(5, text_cell_6.getContentText())
-                            .add(6, text_cell_7.getContentText()).add(7, text_cell_8.getContentText())
+                            .add(6, button_text_cell_7.getContentText()).add(7, "")
                             .add(8, id);
                     App.Current.DbPortal.ExecuteNonQueryAsync("core_and", sql, p, new ResultHandler<Integer>() {
                         @Override
