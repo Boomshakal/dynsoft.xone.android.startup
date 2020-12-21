@@ -141,13 +141,13 @@ public class pn_so_return_editor extends pn_editor {
         if (this.txt_item_code_cell != null) {
             this.txt_item_code_cell.setLabelText("²úÆ·±àºÅ");
             this.txt_item_code_cell.setReadOnly();
-            this.txt_item_code_cell.setButtonImage(App.Current.ResourceManager.getImage("core_right_light"));
-            this.txt_item_code_cell.Button.setOnClickListener(new OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    openInitLotNumber();
-                }
-            });
+//            this.txt_item_code_cell.setButtonImage(App.Current.ResourceManager.getImage("core_right_light"));
+//            this.txt_item_code_cell.Button.setOnClickListener(new OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    openInitLotNumber();
+//                }
+//            });
         }
 
         if (this.txt_item_name_cell != null) {
