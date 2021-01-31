@@ -1,5 +1,6 @@
 package dynsoft.xone.android.wms;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -35,7 +36,6 @@ import dynsoft.xone.android.link.Link;
  */
 
 public class pn_sop_mgr extends pn_mgr {
-    private DataTable value;
     private ButtonTextCell textcell_1;
     private ButtonTextCell textcell_2;
     private TextCell textcell_3;
@@ -44,18 +44,14 @@ public class pn_sop_mgr extends pn_mgr {
     private TextCell textcell_6;
     private TextCell textcell_7;
 
-    private ImageButton btn_commit;
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor edit;
     private View view;
-    private String code;
     private int seq_id = 0;
     private int item_id;
-    private long task_id;
     private boolean isNew;
     private String org_code;
     private int org_id;
-    private String segment;
 
     public pn_sop_mgr(Context context) {
         super(context);
@@ -68,6 +64,7 @@ public class pn_sop_mgr extends pn_mgr {
         view.setLayoutParams(lp);
     }
 
+    @SuppressLint("HandlerLeak")
     @Override
     public void onPrepared() {
         super.onPrepared();
@@ -81,14 +78,14 @@ public class pn_sop_mgr extends pn_mgr {
         textcell_5 = (ButtonTextCell) view.findViewById(R.id.textcell_5);
         textcell_6 = (TextCell) view.findViewById(R.id.textcell_6);
         textcell_7 = (TextCell) view.findViewById(R.id.textcell_7);
-        segment = sharedPreferences.getString("segment", "");
-        code = this.Parameters.get("code", "");
+        String segment = sharedPreferences.getString("segment", "");
+        String code = this.Parameters.get("code", "");
         //        item_id = this.Parameters.get("item_id", 0);
         isNew = this.Parameters.get("isNew", false);
         if (isNew) {
-            task_id = this.Parameters.get("task_id", 0L);
+            long task_id = this.Parameters.get("task_id", 0L);
             edit.putInt("order_task_id", (int) task_id);
-            edit.commit();
+            edit.apply();
             segment = "";
             loadWorkLineName(textcell_2, code);
         }
@@ -97,12 +94,7 @@ public class pn_sop_mgr extends pn_mgr {
             textcell_1.setLabelText("生产任务");
             textcell_1.setReadOnly();
             textcell_1.setContentText(sharedPreferences.getString("task_order", ""));
-            textcell_1.Button.setOnClickListener(new OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    loadComfirmName(textcell_1);
-                }
-            });
+            textcell_1.Button.setOnClickListener(view -> loadComfirmName(textcell_1));
         }
 
         if (!TextUtils.isEmpty(code)) {
@@ -142,14 +134,11 @@ public class pn_sop_mgr extends pn_mgr {
             textcell_2.setLabelText("线别");
             textcell_2.setReadOnly();
             textcell_2.setContentText(segment);
-            textcell_2.Button.setOnClickListener(new OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (TextUtils.isEmpty(textcell_1.getContentText())) {
-                        App.Current.showError(getContext(), "请先选择生产任务");
-                    } else {
-                        loadWorkLineName(textcell_2, textcell_1.getContentText());
-                    }
+            textcell_2.Button.setOnClickListener(view -> {
+                if (TextUtils.isEmpty(textcell_1.getContentText())) {
+                    App.Current.showError(getContext(), "请先选择生产任务");
+                } else {
+                    loadWorkLineName(textcell_2, textcell_1.getContentText());
                 }
             });
         }
@@ -194,14 +183,11 @@ public class pn_sop_mgr extends pn_mgr {
                 });
             }
 
-            textcell_5.Button.setOnClickListener(new OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (TextUtils.isEmpty(textcell_1.getContentText())) {
-                        App.Current.showError(getContext(), "请先选择生产任务");
-                    } else {
-                        loadProductionName(textcell_5);
-                    }
+            textcell_5.Button.setOnClickListener(view -> {
+                if (TextUtils.isEmpty(textcell_1.getContentText())) {
+                    App.Current.showError(getContext(), "请先选择生产任务");
+                } else {
+                    loadProductionName(textcell_5);
                 }
             });
         }
@@ -217,28 +203,26 @@ public class pn_sop_mgr extends pn_mgr {
             textcell_7.setContentText(sharedPreferences.getString("foreman", ""));
         }
 
-        btn_commit = (ImageButton) findViewById(R.id.btn_commit);
+        ImageButton btn_commit = (ImageButton) findViewById(R.id.btn_commit);
         btn_commit.setImageBitmap(App.Current.ResourceManager.getImage("@/core_commit_white"));
-        btn_commit.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        btn_commit.setOnClickListener(view -> {
 //                getJson();
-                //写数据库，然后做判断，如果对的就跳转到SopActivity，否则报错
-                if (TextUtils.isEmpty(textcell_1.getContentText())) {
-                    App.Current.showInfo(getContext(), "请选择生产任务");
-                } else if (TextUtils.isEmpty(textcell_2.getContentText())) {
-                    App.Current.showInfo(getContext(), "请选择线别");
-                } else if (TextUtils.isEmpty(textcell_4.getContentText())) {
-                    App.Current.showInfo(getContext(), "请输入工位");
-                } else if (TextUtils.isEmpty(textcell_5.getContentText())) {
-                    App.Current.showInfo(getContext(), "请选择工序");
-                } else if (TextUtils.isEmpty(textcell_6.getContentText())) {
-                    App.Current.showInfo(getContext(), "该设备的MAC地址没有维护");
-                } else if (TextUtils.isEmpty(textcell_7.getContentText())) {
-                    App.Current.showInfo(getContext(), "请输入领班工号");
-                } else if (!checkForeMan()) {
-                    App.Current.showError(getContext(), "输入的领班工号有误");
-                } else {
+            //写数据库，然后做判断，如果对的就跳转到SopActivity，否则报错
+            if (TextUtils.isEmpty(textcell_1.getContentText())) {
+                App.Current.showInfo(getContext(), "请选择生产任务");
+            } else if (TextUtils.isEmpty(textcell_2.getContentText())) {
+                App.Current.showInfo(getContext(), "请选择线别");
+            } else if (TextUtils.isEmpty(textcell_4.getContentText())) {
+                App.Current.showInfo(getContext(), "请输入工位");
+            } else if (TextUtils.isEmpty(textcell_5.getContentText())) {
+                App.Current.showInfo(getContext(), "请选择工序");
+            } else if (TextUtils.isEmpty(textcell_6.getContentText())) {
+                App.Current.showInfo(getContext(), "该设备的MAC地址没有维护");
+            } else if (TextUtils.isEmpty(textcell_7.getContentText())) {
+                App.Current.showInfo(getContext(), "请输入领班工号");
+            } else if (!checkForeMan()) {
+                App.Current.showError(getContext(), "输入的领班工号有误");
+            } else {
 //                    edit.putString("task_order", textcell_1.getContentText());
 //                    edit.putString("segment", textcell_2.getContentText());
 //                    edit.putString("work_line", textcell_3.getContentText());
@@ -250,58 +234,58 @@ public class pn_sop_mgr extends pn_mgr {
 ////                        getPic(1L,2L);
 //                    edit.commit();
 
-                    edit.putString("task_order", textcell_1.getContentText());
-                    edit.putString("segment", textcell_2.getContentText());
-                    edit.putString("work_line", textcell_3.getContentText());
-                    edit.putString("station", textcell_4.getContentText());
-                    edit.putString("production", textcell_5.getContentText());
-                    edit.putString("device", textcell_6.getContentText());
-                    edit.putString("foreman", textcell_7.getContentText());
-                    if (isNew) {
-                        edit.putString("org_code", org_code);
-                    } else {
-                        edit.putString("org_code", sharedPreferences.getString("org_code", ""));
-                    }
+                edit.putString("task_order", textcell_1.getContentText());
+                edit.putString("segment", textcell_2.getContentText());
+                edit.putString("work_line", textcell_3.getContentText());
+                edit.putString("station", textcell_4.getContentText());
+                edit.putString("production", textcell_5.getContentText());
+                edit.putString("device", textcell_6.getContentText());
+                edit.putString("foreman", textcell_7.getContentText());
+                if (isNew) {
+                    edit.putString("org_code", org_code);
+                } else {
+                    edit.putString("org_code", sharedPreferences.getString("org_code", ""));
+                }
 //                    edit.putInt("process_id", process_id);
 //                    edit.putInt("seq_id", seq_id);
-                    edit.commit();
+                edit.commit();
 
-                    String sql = "exec fm_sop_get_url ?,?,?";
-                    Parameters p = new Parameters().add(1, item_id).add(2, seq_id).add(3, textcell_4.getContentText());
-                    Log.e("len", item_id + "**" + seq_id + "**" + textcell_4.getContentText());
-                    App.Current.DbPortal.ExecuteDataTableAsync("core_and", sql, p, new ResultHandler<DataTable>() {
-                        @Override
-                        public void handleMessage(Message msg) {
-                            Result<DataTable> value = Value;
-                            if (value.HasError) {
-                                App.Current.showError(getContext(), value.Error);
-                                return;
-                            }
-                            if (value.Value != null && value.Value.Rows.size() > 0) {
-                                ArrayList<String> image_urls = new ArrayList<String>();
-                                long head_id = value.Value.Rows.get(0).getValue("head_id", 0L);
-                                edit.putLong("head_id", head_id);
-                                edit.commit();
-                                for (DataRow rw : value.Value.Rows) {
-                                    image_urls.add(rw.getValue("image_url", ""));
-                                }
-                                Intent intent = new Intent(getContext(), SopActivity.class);
-                                intent.putStringArrayListExtra("image_urls", image_urls);
-                                App.Current.Workbench.startActivity(intent);
-                            } else {
-                                App.Current.showError(getContext(), "请上传SOP");
-                                ArrayList<String> image_urls = new ArrayList<String>();
-                                Intent intent = new Intent(getContext(), SopActivity.class);
-                                intent.putStringArrayListExtra("image_urls", image_urls);
-                                App.Current.Workbench.startActivity(intent);
-                            }
+                String sql = "exec fm_sop_get_url ?,?,?";
+                Parameters p = new Parameters().add(1, item_id).add(2, seq_id).add(3, textcell_4.getContentText());
+                Log.e("len", item_id + "**" + seq_id + "**" + textcell_4.getContentText());
+                App.Current.DbPortal.ExecuteDataTableAsync("core_and", sql, p, new ResultHandler<DataTable>() {
+                    @Override
+                    public void handleMessage(Message msg) {
+                        Result<DataTable> value = Value;
+                        if (value.HasError) {
+                            App.Current.showError(getContext(), value.Error);
+                            return;
                         }
-                    });
-                }
+                        if (value.Value != null && value.Value.Rows.size() > 0) {
+                            ArrayList<String> image_urls = new ArrayList<>();
+                            long head_id = value.Value.Rows.get(0).getValue("head_id", 0L);
+                            edit.putLong("head_id", head_id);
+                            edit.commit();
+                            for (DataRow rw : value.Value.Rows) {
+                                image_urls.add(rw.getValue("image_url", ""));
+                            }
+                            Intent intent = new Intent(getContext(), SopActivity.class);
+                            intent.putStringArrayListExtra("image_urls", image_urls);
+                            App.Current.Workbench.startActivity(intent);
+                        } else {
+                            App.Current.showError(getContext(), "请上传SOP");
+                            ArrayList<String> image_urls = new ArrayList<>();
+                            Intent intent = new Intent(getContext(), SopActivity.class);
+                            intent.putStringArrayListExtra("image_urls", image_urls);
+                            App.Current.Workbench.startActivity(intent);
+                        }
+                    }
+                });
             }
         });
     }
 
+    @SuppressLint("HandlerLeak")
     private void setDeviceNumByMac(final TextCell textcell_6) {
         String sql = "exec get_devnum_by_macaddress_and ?";
         Parameters p = new Parameters().add(1, getMacAddress());
@@ -333,7 +317,7 @@ public class pn_sop_mgr extends pn_mgr {
             InetAddress ip = getLocalInetAddress();
             byte[] b = NetworkInterface.getByInetAddress(ip)
                     .getHardwareAddress();
-            StringBuffer buffer = new StringBuffer();
+            StringBuilder buffer = new StringBuilder();
             for (int i = 0; i < b.length; i++) {
                 if (i != 0) {
                     buffer.append(':');
@@ -349,11 +333,7 @@ public class pn_sop_mgr extends pn_mgr {
         return strMacAddr;
     }
 
-    /**
-     * 获取移动设备本地IP
-     *
-     * @return
-     */
+
     protected static InetAddress getLocalInetAddress() {
         InetAddress ip = null;
         try {
@@ -364,7 +344,7 @@ public class pn_sop_mgr extends pn_mgr {
                 Enumeration en_ip = ni.getInetAddresses();//得到一个ip地址的列举
                 while (en_ip.hasMoreElements()) {
                     ip = (InetAddress) en_ip.nextElement();
-                    if (!ip.isLoopbackAddress() && ip.getHostAddress().indexOf(":") == -1)
+                    if (!ip.isLoopbackAddress() && !ip.getHostAddress().contains(":"))
                         break;
                     else
                         ip = null;
@@ -394,11 +374,7 @@ public class pn_sop_mgr extends pn_mgr {
             App.Current.showError(getContext(), dataRowResult.Error);
             return false;
         }
-        if (dataRowResult.Value != null) {
-            return true;
-        } else {
-            return false;
-        }
+        return dataRowResult.Value != null;
     }
 
 
@@ -419,36 +395,28 @@ public class pn_sop_mgr extends pn_mgr {
         }
         if (result.Value != null) {
 
-            ArrayList<String> names = new ArrayList<String>();
+            ArrayList<String> names = new ArrayList<>();
             for (DataRow row : result.Value.Rows) {
-                StringBuffer name = new StringBuffer();
-                name.append(row.getValue("name", ""));
-                names.add(name.toString());
+                names.add(row.getValue("name", ""));
             }
 
-            DialogInterface.OnClickListener listener = new DialogInterface.OnClickListener() {
-
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    if (which >= 0) {
-                        DataRow row = result.Value.Rows.get(which);
-                        StringBuffer name = new StringBuffer();
-                        name.append(row.getValue("name", ""));
-                        text.setContentText(name.toString());
-                        textcell_3.setContentText(row.getValue("work_name", ""));
-                        org_code = row.getValue("org_code", "");
-                        String foreman_code = row.getValue("foreman_code", "");
-                        textcell_7.setContentText(foreman_code);
-                        edit.putInt("work_line_id", row.getValue("id", 0));
-                        edit.putString("org_name", row.getValue("org_name", ""));
-                        edit.commit();
-                    }
-                    dialog.dismiss();
+            DialogInterface.OnClickListener listener = (dialog, which) -> {
+                if (which >= 0) {
+                    DataRow row = result.Value.Rows.get(which);
+                    text.setContentText(row.getValue("name", ""));
+                    textcell_3.setContentText(row.getValue("work_name", ""));
+                    org_code = row.getValue("org_code", "");
+                    String foreman_code = row.getValue("foreman_code", "");
+                    textcell_7.setContentText(foreman_code);
+                    edit.putInt("work_line_id", row.getValue("id", 0));
+                    edit.putString("org_name", row.getValue("org_name", ""));
+                    edit.commit();
                 }
+                dialog.dismiss();
             };
             new AlertDialog.Builder(pn_sop_mgr.this.getContext()).setTitle("请选择")
                     .setSingleChoiceItems(names.toArray(new String[0]), names.indexOf
-                            (text.getContentText().toString()), listener)
+                            (text.getContentText()), listener)
                     .setNegativeButton("取消", null).show();
         }
     }
@@ -464,31 +432,23 @@ public class pn_sop_mgr extends pn_mgr {
         }
         if (result.Value != null) {
 
-            ArrayList<String> names = new ArrayList<String>();
+            ArrayList<String> names = new ArrayList<>();
             for (DataRow row : result.Value.Rows) {
-                StringBuffer name = new StringBuffer();
-                name.append(row.getValue("name", ""));
-                names.add(name.toString());
+                names.add(row.getValue("name", ""));
             }
 
-            DialogInterface.OnClickListener listener = new DialogInterface.OnClickListener() {
-
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    if (which >= 0) {
-                        DataRow row = result.Value.Rows.get(which);
-                        StringBuffer name = new StringBuffer();
-                        name.append(row.getValue("name", ""));
-                        text.setContentText(name.toString());
-                        seq_id = row.getValue("id", 0);
-                        edit.putInt("seq_id", seq_id);
-                    }
-                    dialog.dismiss();
+            DialogInterface.OnClickListener listener = (dialog, which) -> {
+                if (which >= 0) {
+                    DataRow row = result.Value.Rows.get(which);
+                    text.setContentText(row.getValue("name", ""));
+                    seq_id = row.getValue("id", 0);
+                    edit.putInt("seq_id", seq_id);
                 }
+                dialog.dismiss();
             };
             new AlertDialog.Builder(pn_sop_mgr.this.getContext()).setTitle("请选择")
                     .setSingleChoiceItems(names.toArray(new String[0]), names.indexOf
-                            (text.getContentText().toString()), listener)
+                            (text.getContentText()), listener)
                     .setNegativeButton("取消", null).show();
         }
     }
