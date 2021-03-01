@@ -440,6 +440,30 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
         }
     }
 
+    //TODO 检查电批点检
+    private boolean check_screwdriver() {
+        final String sql = "exec p_fm_work_check_screwdriver ?";
+        Parameters p = new Parameters().add(1, task_order_id);
+        String value_r = App.Current.DbPortal.ExecuteScalar("core_and", sql, p).Value.toString();
+        if (!value_r.equals("OK")) {
+            App.Current.toastError(ScanTestActivity.this, value_r);
+            return false;
+        }
+        return true;
+    }
+
+    //TODO 检查电性点检
+    private boolean check_electrical() {
+        final String sql = "exec p_fm_work_check_electrical ?";
+        Parameters p = new Parameters().add(1, task_order_id);
+        String value_r = App.Current.DbPortal.ExecuteScalar("core_and", sql, p).Value.toString();
+        if (!value_r.equals("OK")) {
+            App.Current.toastError(ScanTestActivity.this, value_r);
+            return false;
+        }
+        return true;
+    }
+
     private boolean check_barcode(String edittext) {
         /*
          * edittext 扫描条码
@@ -458,6 +482,14 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
 
     private void onScanned(String edittext) {
         if (!check_barcode(edittext)) {
+            return;
+        }
+
+        if (!check_screwdriver()) {
+            return;
+        }
+
+        if (!check_electrical()) {
             return;
         }
 //        sendByOKHttp();
