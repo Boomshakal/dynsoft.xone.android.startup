@@ -178,8 +178,8 @@ public class SopActivity extends Activity implements SpeechSynthesizerListener {
 
     @SuppressLint("HandlerLeak")
     private void initLightView(TextBannerView textBanner) {        //获取当前线是否有未处理的异常呼叫
-        String sql = "exec get_fm_kanban_light_notice_sop ?";
-        Parameters p = new Parameters().add(1, segment);
+        String sql = "exec get_fm_kanban_light_notice_sop ?,?";
+        Parameters p = new Parameters().add(1, segment).add(2, sharedPreferences.getString("task_order", ""));
         App.Current.DbPortal.ExecuteDataTableAsync("core_and", sql, p, new ResultHandler<DataTable>() {
             @Override
             public void handleMessage(Message msg) {

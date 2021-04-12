@@ -296,6 +296,10 @@
         "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\activity_first_item_sure.xml"
     },
     {
+        "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_pn_qm_win_ipqc_point_check_editor_comprehensive.xml.flat",
+        "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\pn_qm_win_ipqc_point_check_editor_comprehensive.xml"
+    },
+    {
         "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_null_pic.bmp.flat",
         "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\drawable-xxhdpi\\null_pic.bmp"
     },
