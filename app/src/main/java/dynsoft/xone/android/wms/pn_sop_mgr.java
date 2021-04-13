@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Message;
 import android.text.TextUtils;
 import android.util.Log;
@@ -16,7 +17,9 @@ import java.math.BigDecimal;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.SocketException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Enumeration;
 
 import dynsoft.xone.android.activity.SopActivity;
@@ -307,6 +310,52 @@ public class pn_sop_mgr extends pn_mgr {
                 } else {
                     textcell_6.setContentText(getMacAddress());
                 }
+            }
+        });
+    }
+
+    @Override
+    public void onScan(final String barcode) {
+        final String bar_code = barcode.trim();
+        loadItem(bar_code);
+    }
+
+    private void loadItem(final String barcode) {
+        this.ProgressDialog.show();
+
+        String sql = "exec get_sop_info_by_barcode ?";
+        Parameters p = new Parameters().add(1, barcode);
+        App.Current.DbPortal.ExecuteRecordAsync("core_and", sql, p, new ResultHandler<DataRow>() {
+
+            @Override
+            public void handleMessage(Message msg) {
+                pn_sop_mgr.this.ProgressDialog.dismiss();
+                Result<DataRow> value = Value;
+                if (value.HasError) {
+                    App.Current.showError(getContext(), value.Error);
+                    return;
+                }
+                if (value.Value != null) {
+                    String code = value.Value.getValue("code", "");
+                    String line_name = value.Value.getValue("line_name", "");
+                    String sequence_name = value.Value.getValue("sequence_name", "");
+                    String responsible_man_name = value.Value.getValue("responsible_man_name", "");
+
+
+                    textcell_1.setContentText(code);
+                    loadWorkLineName(textcell_2, textcell_1.getContentText());
+                    textcell_3.setContentText(line_name);
+                    textcell_5.setContentText(sequence_name);
+                    textcell_7.setContentText(responsible_man_name);
+
+                    item_id = value.Value.getValue("item_id", 0);
+                    edit.putInt("item_id", item_id);
+                    edit.commit();
+
+                }
+//                else {
+//                    close();
+//                }
             }
         });
     }
