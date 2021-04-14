@@ -14,9 +14,8 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/debug.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_sop_mgr$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_sop_mgr$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_sop_mgr$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_sop_mgr$2.class" afterDir="false" />
@@ -24,11 +23,9 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_sop_mgr$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_sop_mgr$4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_sop_mgr.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/dynsoft/xone/android/wms/pn_sop_mgr.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_pn_sop_mgr.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_pn_sop_mgr.xml.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_sop_mgr.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dynsoft/xone/android/wms/pn_sop_mgr.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/pn_sop_mgr.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/pn_sop_mgr.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -358,10 +355,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="188" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1618281455601" />
-    <state x="349" y="155" key="IDE.errors.dialog" timestamp="1618282071846">
+    <state x="349" y="155" key="IDE.errors.dialog" timestamp="1618377014239">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="349" y="155" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1618282071846" />
+    <state x="349" y="155" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1618377014239" />
     <state x="508" y="123" key="RollbackChangesDialog" timestamp="1618216129117">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -374,10 +371,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="387" y="265" width="1032" height="460" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1536.824@0.0.1536.824" timestamp="1618020163795" />
-    <state x="449" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1618274457048">
+    <state x="449" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1618376989486">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="449" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1618274457048" />
+    <state x="449" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1618376989486" />
     <state x="286" y="148" width="964" height="604" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1618280790748">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

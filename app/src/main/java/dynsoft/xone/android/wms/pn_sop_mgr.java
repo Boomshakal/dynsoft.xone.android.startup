@@ -10,6 +10,7 @@ import android.graphics.Color;
 import android.os.Message;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageButton;
 
@@ -73,6 +74,20 @@ public class pn_sop_mgr extends pn_mgr {
         super.onPrepared();
         sharedPreferences = getContext().getSharedPreferences("sop", Context.MODE_PRIVATE);
         edit = sharedPreferences.edit();
+
+        if (this.SearchBox != null) {
+            this.SearchBox.setOnKeyListener(new OnKeyListener(){
+                @Override
+                public boolean onKey(View v, int keyCode, KeyEvent event) {
+                    if (keyCode == KeyEvent.KEYCODE_ENTER && event.getAction() == KeyEvent.ACTION_UP){
+                        String bar_code = pn_sop_mgr.this.SearchBox.getText().toString();
+                        loadItem(bar_code);
+                        return true;
+                    }
+                    return false;
+                }
+            });
+        }
 
         textcell_1 = (ButtonTextCell) view.findViewById(R.id.textcell_1);
         textcell_2 = (ButtonTextCell) view.findViewById(R.id.textcell_2);
