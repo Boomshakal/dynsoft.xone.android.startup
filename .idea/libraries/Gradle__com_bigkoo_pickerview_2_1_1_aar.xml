@@ -3,6 +3,7 @@
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/62d05caf1b1da27429cfb484ae890ced/pickerview-2.1.1/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/62d05caf1b1da27429cfb484ae890ced/pickerview-2.1.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/62d05caf1b1da27429cfb484ae890ced/pickerview-2.1.1/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.bigkoo/pickerview/2.1.1/b3524d0500b4ed89b2a6a68f4d18da9ca6050f6/pickerview-2.1.1-javadoc.jar!/" />

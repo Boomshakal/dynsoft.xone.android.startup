@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="dynsoft.xone.android.core"
     android:versionCode="1"
-    android:versionName="2021.04.02.1037">
+    android:versionName="2021.05.07.1037">
 
     <!--<uses-sdk-->
     <!--android:targetSdkVersion="19" />-->
