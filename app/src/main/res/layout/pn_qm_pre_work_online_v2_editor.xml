@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDFDFD"
+    android:orientation="vertical">
+
+    <dynsoft.xone.android.control.PaneHeader
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/body"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <dynsoft.xone.android.control.ButtonTextCell
+                android:id="@+id/textcell_usercode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <dynsoft.xone.android.control.ButtonTextCell
+                android:id="@+id/textcell_taskordercode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <dynsoft.xone.android.control.TextCell
+                android:id="@+id/textcell_lotnumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+<!--            <dynsoft.xone.android.control.TextCell-->
+<!--                android:id="@+id/textcell_wh"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content" />-->
+
+<!--            <dynsoft.xone.android.control.TextCell-->
+<!--                android:id="@+id/textcell_machine"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content" />-->
+
+            <dynsoft.xone.android.control.ButtonTextCell
+                android:id="@+id/textcell_workmethod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+<!--            <dynsoft.xone.android.control.TextCell-->
+<!--                android:id="@+id/txtMinSize"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content" />-->
+<!--            <dynsoft.xone.android.control.TextCell-->
+<!--                android:id="@+id/txtMaxSize"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content" />-->
+<!--            <dynsoft.xone.android.control.TextCell-->
+<!--                android:id="@+id/txtSize1"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content" />-->
+<!--            <dynsoft.xone.android.control.TextCell-->
+<!--                android:id="@+id/txtSize2"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content" />-->
+<!--            <dynsoft.xone.android.control.TextCell-->
+<!--                android:id="@+id/txtSize3"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content" />-->
+<!--            <dynsoft.xone.android.control.TextCell-->
+<!--                android:id="@+id/txtSize4"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content" />-->
+<!--            <dynsoft.xone.android.control.TextCell-->
+<!--                android:id="@+id/txtSize5"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content" />-->
+
+            <EditText
+                android:id="@+id/searchview"
+                android:drawableRight="@drawable/search"
+                android:layout_width="match_parent"
+                android:padding="@dimen/dp_10"
+                android:layout_height="wrap_content" />
+
+            <dynsoft.xone.android.ui.FixScrollListView
+                android:id="@+id/listview"
+                android:divider="@color/gray"
+                android:dividerHeight="@dimen/dp_1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <dynsoft.xone.android.control.PaneFooter
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:scaleType="fitCenter" />
+
+        <ImageButton
+            android:id="@+id/btn_refresh"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:scaleType="fitCenter" />
+
+        <ImageButton
+            android:id="@+id/btn_commit"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:scaleType="fitCenter" />
+    </dynsoft.xone.android.control.PaneFooter>
+</LinearLayout>

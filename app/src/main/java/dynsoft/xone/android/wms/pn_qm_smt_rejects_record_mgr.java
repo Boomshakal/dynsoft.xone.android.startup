@@ -41,7 +41,6 @@ import java.util.Map;
 import dynsoft.xone.android.bean.SmtWhBean;
 import dynsoft.xone.android.blueprint.FaliaoStatusActivity;
 import dynsoft.xone.android.blueprint.Scan_Print_Activity;
-import dynsoft.xone.android.blueprint.XprinterActivity;
 import dynsoft.xone.android.control.ButtonTextCell;
 import dynsoft.xone.android.control.TextCell;
 import dynsoft.xone.android.core.App;
@@ -528,7 +527,7 @@ public class pn_qm_smt_rejects_record_mgr extends pn_editor {
     }
 
     private void scan_print(String text) {
-        final String items[] = {"»ôÄáÎ¤¶û", "Ö¥¿Â", "Xprinter"};
+        final String items[] = {"»ôÄáÎ¤¶û", "Ö¥¿Â"};
 
         AlertDialog dialog1 = new AlertDialog.Builder(App.Current.Workbench).setTitle("ÇëÑ¡Ôñ´òÓ¡»ú")
                 .setItems(items, new DialogInterface.OnClickListener() {
@@ -544,11 +543,6 @@ public class pn_qm_smt_rejects_record_mgr extends pn_editor {
                                 Intent intent = new Intent(App.Current.Workbench, Scan_Print_Activity.class);
                                 intent.putExtra("code", text);
                                 App.Current.Workbench.startActivity(intent);
-                                break;
-                            case 2:
-                                Intent intent1 = new Intent(App.Current.Workbench, XprinterActivity.class);
-                                intent1.putExtra("code", text);
-                                App.Current.Workbench.startActivity(intent1);
                                 break;
                         }
                     }

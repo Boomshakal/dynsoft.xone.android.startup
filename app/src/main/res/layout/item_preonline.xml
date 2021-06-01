@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:src="@color/megmeet_green" />
+
+    <TextView
+        android:id="@+id/textview_message"
+        android:layout_width="0dp"
+        android:layout_weight="5"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/card_text_size" />
+
+
+    <ImageView
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:src="@color/megmeet_green" />
+
+    <TextView
+        android:id="@+id/textview_quantity"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/card_text_size" />
+
+    <ImageView
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:src="@color/megmeet_green" />
+
+    <TextView
+        android:id="@+id/textview_worker"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="4"
+        android:gravity="center"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/card_text_size" />
+
+    <ImageView
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:src="@color/megmeet_green" />
+
+    <TextView
+        android:id="@+id/textview_ontime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/card_text_size" />
+
+    <ImageView
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:src="@color/megmeet_green" />
+
+    <TextView
+        android:id="@+id/textview_itemcode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/card_text_size" />
+
+    <ImageView
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:src="@color/megmeet_green" />
+
+        <TextView
+            android:id="@+id/textview_method"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:lines="2"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/card_text_size" />
+
+    <!--<TextView-->
+    <!--android:id="@+id/textview_offtime"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="4"-->
+    <!--android:gravity="center"-->
+    <!--android:textColor="@color/black"-->
+    <!--android:textSize="@dimen/card_text_size" />-->
+
+    <ImageView
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:src="@color/megmeet_green" />
+
+    <TextView
+        android:id="@+id/textview_wh"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/card_text_size" />
+
+    <!--<TextView-->
+    <!--android:id="@+id/textview_offtime"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="4"-->
+    <!--android:gravity="center"-->
+    <!--android:textColor="@color/black"-->
+    <!--android:textSize="@dimen/card_text_size" />-->
+
+    <ImageView
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:src="@color/megmeet_green" />
+
+    <TextView
+        android:id="@+id/textview_timecount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/card_text_size" />
+
+    <ImageView
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:src="@color/megmeet_green" />
+
+    <TextView
+        android:id="@+id/textview_status"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/card_text_size" />
+
+    <ImageView
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:src="@color/megmeet_green" />
+
+    <HorizontalScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="3"
+        android:scrollbars="none">
+
+        <TextView
+            android:id="@+id/textview_comment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/card_text_size" />
+    </HorizontalScrollView>
+
+    <ImageView
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:src="@color/megmeet_green" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/button_ipqc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="确认"
+            android:textColor="@color/black"
+            android:textSize="@dimen/card_text_size" />
+
+        <TextView
+            android:id="@+id/text_ipqc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/card_text_size"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:src="@color/megmeet_green" />
+
+    <Button
+        android:id="@+id/button_start"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:text="启动"
+        android:textColor="@color/black"
+        android:textSize="@dimen/card_text_size" />
+
+    <ImageView
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:src="@color/megmeet_green" />
+
+    <Button
+        android:id="@+id/button_offline"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:text="离线"
+        android:textColor="@color/black"
+        android:textSize="@dimen/card_text_size" />
+
+    <ImageView
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:src="@color/megmeet_green" />
+</LinearLayout>

@@ -17,10 +17,11 @@
    <dimen name="short_led_text_size">45dp</dimen>
    
    <dimen name="card_text_size">20sp</dimen>
+    <dimen name="card_text_size_wip">23sp</dimen>
     <dimen name="card_text_size_d">25sp</dimen>
     <dimen name="led_text_size1">40dp</dimen>
    
-   <dimen name="kanban_text_size">16sp</dimen>
+   <dimen name="kanban_text_size">18sp</dimen>
    <dimen name="weld_kanban_text_size">16dp</dimen>
 
    <dimen name="ikahe_led_text_size">30dp</dimen>
@@ -35,5 +36,10 @@
     <dimen name="x15">15.0px</dimen>
     <dimen name="x30">30.0px</dimen>
     <dimen name="x40">40.0px</dimen>
-
+    <dimen name="x50">50.0px</dimen>
+    <dimen name="x60">60.0px</dimen>
+    <dimen name="dp_10">10px</dimen>
+    <dimen name="dp_20">20px</dimen>
+    <dimen name="dp_1">1px</dimen>
+    <dimen name="screen_hight">720px</dimen>
 </resources>
