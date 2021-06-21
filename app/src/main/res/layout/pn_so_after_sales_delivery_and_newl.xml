@@ -49,6 +49,11 @@
                 android:layout_height="wrap_content" />
 
             <dynsoft.xone.android.control.TextCell
+                android:id="@+id/txt_sn_number_display_cell"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <dynsoft.xone.android.control.TextCell
                 android:id="@+id/txt_item_name_cell"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />

@@ -570,8 +570,7 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
                     } else {
                         if (childNumber.contains(edittext.toUpperCase())) {
                             textview_result.setText("条码重复扫描");
-                        }
-                        else if (checkIsSimilarity(childNumber, edittext.toUpperCase())) {
+                        } else if (checkIsSimilarity(childNumber, edittext.toUpperCase())) {
                             textview_result.setText("子件配件相似重复扫描");
                         } else {
                             if (mainCode.equals(edittext.toUpperCase())) {     //扫描的条码与父条码一样
@@ -587,14 +586,24 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
                                     break;
                                 }
 
-                                final String sql_str = "exec p_fm_work_check_barcode_for_part_and ?,?";
-                                Parameters pr = new Parameters().add(1, edittext).add(2, task_order_id);
-                                String value_r = App.Current.DbPortal.ExecuteScalar("core_and", sql_str, pr).Value.toString();
-                                if (!value_r.equals("OK")) {
-                                    App.Current.toastError(ScanTestActivity.this, value_r);
-                                    break;
+                                if (work_type.equals("sku_check")) {
+                                    final String sql_str = "exec p_fm_work_check_sku ?,?";
+                                    Parameters pr = new Parameters().add(1, edittext).add(2, task_order_id);
+                                    String value_r = App.Current.DbPortal.ExecuteScalar("core_and", sql_str, pr).Value.toString();
+                                    if (!value_r.equals("OK")) {
+                                        App.Current.toastError(ScanTestActivity.this, value_r);
+                                        break;
+                                    }
                                 }
-
+                                if (work_type.equals("part")) {
+                                    final String sql_str = "exec p_fm_work_check_barcode_for_part_and ?,?";
+                                    Parameters pr = new Parameters().add(1, edittext).add(2, task_order_id);
+                                    String value_r = App.Current.DbPortal.ExecuteScalar("core_and", sql_str, pr).Value.toString();
+                                    if (!value_r.equals("OK")) {
+                                        App.Current.toastError(ScanTestActivity.this, value_r);
+                                        break;
+                                    }
+                                }
                                 childNumber.add(edittext.toUpperCase());
                                 scanString.add(edittext.toUpperCase());
                                 myListAdapter.notifyDataSetChanged();
@@ -652,7 +661,7 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
     private boolean checkIsSimilarity(ArrayList<String> scanString, String barcode) {
 
         for (String str : scanString) {
-            if (str.substring(0,5).equals(barcode.substring(0,5))) {
+            if (str.substring(0, 5).equals(barcode.substring(0, 5))) {
                 return true;
             }
         }
@@ -980,14 +989,15 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
                                             mixedParam.put(task_order_code, edittext.trim());
                                             mixedParameter.add(mixedParam);
                                         } else {
-                                            if (work_type.toLowerCase().equals("consistency_check")) {  //如果是一致性检查
-//                            checkCounts -= 1;
-//                            if (!scanString.contains(text.toUpperCase())) {
-//                                scanString.add(text.toUpperCase());
-//                            }
-//                            myListAdapter.notifyDataSetChanged();
-//                            status = CHILDSCAN;
-//                            isConsistencyCheck = true;
+                                            if (work_type.toLowerCase().equals("consistency_check")) {
+//                                                  如果是一致性检查
+//                                                checkCounts -= 1;
+//                                                if (!scanString.contains(text.toUpperCase())) {
+//                                                    scanString.add(text.toUpperCase());
+//                                                }
+//                                                myListAdapter.notifyDataSetChanged();
+//                                                status = CHILDSCAN;
+//                                                isConsistencyCheck = true;
                                                 if (scanCounts > 0) {
                                                     check = String.valueOf(System.currentTimeMillis());
                                                     if (checkCounts > scanCounts) {
@@ -1052,6 +1062,11 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
                                                             CommitScanNumberCreate(mainCode, "PASS");
                                                         }
                                                     } else if (work_type.toLowerCase().equals("sn_binding")) {      //序号绑定
+                                                        status = CHILDSCAN;
+                                                        isSnBinding = true;
+                                                        scanString.add(text.toUpperCase());
+                                                        myListAdapter.notifyDataSetChanged();
+                                                    } else if (work_type.toLowerCase().equals("sku_check")) {      //SKU检查
                                                         status = CHILDSCAN;
                                                         isSnBinding = true;
                                                         scanString.add(text.toUpperCase());

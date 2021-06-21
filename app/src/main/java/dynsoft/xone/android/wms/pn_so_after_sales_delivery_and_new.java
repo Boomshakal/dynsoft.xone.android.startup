@@ -45,6 +45,7 @@ public class pn_so_after_sales_delivery_and_new extends pn_editor {
     public TextCell txt_code_cell;
     public TextCell txt_customer_name_cell;
     public TextCell txt_sn_number_cell;
+    public TextCell txt_sn_number_display_cell;
     public TextCell txt_pc_number_cell;
     public TextCell txt_item_code_cell;
     public TextCell txt_item_name_cell;
@@ -62,6 +63,7 @@ public class pn_so_after_sales_delivery_and_new extends pn_editor {
     public String fh_type;
     public String quantity;
     public String sh_date;
+    public String sn_number;
 
     // @Override
     public void setContentView() {
@@ -125,6 +127,14 @@ public class pn_so_after_sales_delivery_and_new extends pn_editor {
             this.txt_item_code_cell.setLabelText("ŒÔ¡œ±‡¬Î");
             this.txt_item_code_cell.setReadOnly();
         }
+
+        this.txt_sn_number_display_cell = (TextCell) this
+                .findViewById(R.id.txt_sn_number_display_cell);
+        if (this.txt_sn_number_display_cell != null) {
+            this.txt_sn_number_display_cell.setLabelText("SN_NOºØ");
+            this.txt_sn_number_display_cell.setReadOnly();
+        }
+
         this.txt_item_name_cell = (TextCell) this
                 .findViewById(R.id.txt_item_name_cell);
         if (this.txt_item_name_cell != null) {
@@ -198,11 +208,13 @@ public class pn_so_after_sales_delivery_and_new extends pn_editor {
                     quantity = value.Value.getValue("qty", 0).toString();
                     sh_date = value.Value.getValue("sh_date", "");
                     counts = value.Value.getValue("counts", 0);
+                    sn_number = value.Value.getValue("sn_number", "");
                     txt_type_cell.setContentText(fh_type);
                     txt_sh_date_cell.setContentText(sh_date);
                     txt_item_code_cell.setContentText(item_code);
                     txt_item_name_cell.setContentText(item_name);
                     txt_quantity_cell.setContentText(quantity);
+                    txt_sn_number_display_cell.setContentText(sn_number);
                 }
             }
         });
