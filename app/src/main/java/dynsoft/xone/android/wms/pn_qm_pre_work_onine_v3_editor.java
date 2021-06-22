@@ -1411,10 +1411,10 @@ public class pn_qm_pre_work_onine_v3_editor extends pn_editor {
 
             DataRow dataRow = dataTable.Rows.get(position);
             String type_station = dataRow.getValue("type_station", "");
-            String number = dataRow.getValue("number", "");
+            Long number = dataRow.getValue("number", 0L);
             String processing_methods = dataRow.getValue("processing_methods", "");
             viewHolder.textview_1.setText(type_station);
-            viewHolder.textview_2.setText(number);
+            viewHolder.textview_2.setText(number.toString());
             viewHolder.textview_3.setText(processing_methods);
 
             if (selectedItems.contains(String.valueOf(position))) {

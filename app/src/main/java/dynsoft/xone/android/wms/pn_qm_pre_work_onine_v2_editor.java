@@ -34,10 +34,16 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.lidroid.xutils.view.annotation.event.EventBase;
+import com.squareup.okhttp.OkHttpClient;
+import com.squareup.okhttp.Request;
+import com.squareup.okhttp.RequestBody;
+import com.squareup.okhttp.Response;
+import com.squareup.okhttp.FormEncodingBuilder;
 import com.uuzuche.lib_zxing.activity.CaptureActivity;
 
 //import org.greenrobot.eventbus.EventBus;
 
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.sql.CallableStatement;
 import java.sql.Connection;
@@ -118,6 +124,7 @@ public class pn_qm_pre_work_onine_v2_editor extends pn_editor {
     private EditText txtLotNumber;
     private String indexString = "";
     private Boolean isStatus = false;
+    private Integer item_id;
 
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor edit;
@@ -184,6 +191,11 @@ public class pn_qm_pre_work_onine_v2_editor extends pn_editor {
 
         String code = this.Parameters.get("code", "");
         String user_code = this.Parameters.get("usercode", "");
+        item_id = this.Parameters.get("item_id", 0);
+
+        if (item_id == 0) {
+            item_id = sharedPreferences.getInt("item_id", 0);
+        }
 
         if (this.textcell_usercode != null) {
             this.textcell_usercode.setLabelText("打卡工号");
@@ -270,16 +282,41 @@ public class pn_qm_pre_work_onine_v2_editor extends pn_editor {
             this.textcell_workmethod.Label.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    App.Current.Workbench.scanByCamera();
+//                    App.Current.Workbench.scanByCamera();
+                    sendByOKHttp();
                 }
             });
         }
     }
 
+    private void sendByOKHttp() {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                OkHttpClient client = new OkHttpClient();
+                String url = "http://192.168.1.159:5000/code";
+
+                FormEncodingBuilder builder = new FormEncodingBuilder();
+                builder.add("Secret","GEZVMQJTHEYDSVBU");
+
+                Request request = new Request.Builder().url(url).post(builder.build()).build();
+//                Request request = new Request.Builder().url(url).build();
+                try {
+                    Response response = client.newCall(request).execute();//发送请求
+                    String result = response.body().string();
+                    Log.e("len", result);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+    }
+
 
     private void chooseworkmethod() {    //选择作业方式
-        String sql = "exec p_get_workmethod";
+        String sql = "exec p_get_workmethod_v1 ?";
         Parameters p = new Parameters();
+        p.add(1, item_id);
         App.Current.DbPortal.ExecuteDataTableAsync("core_and", sql, p, new ResultHandler<DataTable>() {
             @Override
             public void handleMessage(Message msg) {
@@ -465,13 +502,11 @@ public class pn_qm_pre_work_onine_v2_editor extends pn_editor {
             else if (barcode.startsWith("FA:")) {
                 String machineCode = barcode.substring(3).replace("\n", "").trim();
                 checkMachine(machineCode);
-            }
-            else if (barcode.startsWith("GZ:") || barcode.startsWith("B40")) {
+            } else if (barcode.startsWith("GZ:") || barcode.startsWith("B40")) {
                 String machineCode = barcode.startsWith("GZ:") ? barcode.substring(3).replace("\n", "").trim() : barcode.replace("\n", "").trim();
 
                 checkMachine(machineCode);
-            }
-            else if (barcode.startsWith("S:")) {
+            } else if (barcode.startsWith("S:")) {
                 final String SeqCode = barcode.replace("\n", "").substring(2);
                 //选择加工方式
                 chooseProcessingMethod(SeqCode);
@@ -1358,8 +1393,8 @@ public class pn_qm_pre_work_onine_v2_editor extends pn_editor {
     }
 
     private void afterStationKeyListener(final ListView listView) {     //选择站位时候的结果
-        String sql = "exec fm_pre_get_process_methods_by_station_test ?";
-        Parameters p = new Parameters().add(1, processStation);
+        String sql = "exec fm_pre_get_process_methods_by_station_test_v1 ?,?";
+        Parameters p = new Parameters().add(1, processStation).add(2, item_id);
         App.Current.DbPortal.ExecuteDataTableAsync("core_and", sql, p, new ResultHandler<DataTable>() {
             @Override
             public void handleMessage(Message msg) {
@@ -1370,6 +1405,8 @@ public class pn_qm_pre_work_onine_v2_editor extends pn_editor {
                     if (value.Value != null) {
                         myListStationAdapter = new MyListStationAdapter(value.Value);
                         listView.setAdapter(myListStationAdapter);
+                    } else {
+                        App.Current.toastError(getContext(), "没有维护数据");
                     }
                 }
             }
@@ -1421,10 +1458,10 @@ public class pn_qm_pre_work_onine_v2_editor extends pn_editor {
 
             DataRow dataRow = dataTable.Rows.get(position);
             String type_station = dataRow.getValue("type_station", "");
-            String number = dataRow.getValue("number", "");
+            Long number = dataRow.getValue("number", 0L);
             String processing_methods = dataRow.getValue("processing_methods", "");
             viewHolder.textview_1.setText(type_station);
-            viewHolder.textview_2.setText(number);
+            viewHolder.textview_2.setText(number.toString());
             viewHolder.textview_3.setText(processing_methods);
 
             if (selectedItems.contains(String.valueOf(position))) {

@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="dynsoft.xone.android.core"
     android:versionCode="1"
-    android:versionName="2021.06.17.1037" >
+    android:versionName="2021.06.22.1037" >
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -230,9 +230,6 @@
         <activity android:name="dynsoft.xone.android.blueprint.ZaxiangStatusActivity" />
         <activity android:name="dynsoft.xone.android.blueprint.ZhuankuStatusActivity" />
         <activity android:name="dynsoft.xone.android.blueprint.Scan_Print_Activity" />
-        <activity android:name="dynsoft.xone.android.blueprint.XprinterActivity" />
-        <activity android:name="dynsoft.xone.android.blueprint.PosActivity" />
-        <activity android:name="dynsoft.xone.android.blueprint.P76Activity" />
         <activity
             android:name="com.uuzuche.lib_zxing.activity.CaptureActivity"
             android:configChanges="orientation|keyboardHidden"

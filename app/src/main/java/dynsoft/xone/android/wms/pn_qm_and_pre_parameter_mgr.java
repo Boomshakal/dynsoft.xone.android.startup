@@ -71,6 +71,7 @@ public class pn_qm_and_pre_parameter_mgr extends pn_mgr {
         Link link = new Link("pane://x:code=pn_qm_pre_work_onine_v2_editor");
 
         edit.putString("code", row.getValue("task_order_code", ""));
+        edit.putInt("item_id", row.getValue("item_id", 0));
         edit.commit();
         link.Parameters.add("code", row.getValue("task_order_code", ""));
         link.Parameters.add("process_id", row.getValue("process_id", 0));
