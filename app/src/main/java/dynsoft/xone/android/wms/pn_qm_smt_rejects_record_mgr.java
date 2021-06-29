@@ -683,9 +683,10 @@ public class pn_qm_smt_rejects_record_mgr extends pn_editor {
                         result = "PASS";
                     }
 
-                    long water_data = Long.parseLong(buttonTextCell16.getContentText());
-                    long seat_data = Long.parseLong(buttonTextCell17.getContentText());
-                    long wind_data = Long.parseLong(buttonTextCell18.getContentText());
+                    double  water_data = Double.parseDouble(buttonTextCell16.getContentText());
+                    double  seat_data = Double.parseDouble(buttonTextCell17.getContentText());
+                    double  wind_data = Double.parseDouble(buttonTextCell18.getContentText());
+
 
                     if (water_data<0 || water_data > 70) {
                         App.Current.toastError(getContext(), "输入水温数据不在0~70范围内");

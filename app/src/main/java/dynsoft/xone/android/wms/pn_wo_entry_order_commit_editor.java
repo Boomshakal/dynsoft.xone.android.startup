@@ -77,6 +77,7 @@ public class pn_wo_entry_order_commit_editor extends pn_editor {
     public TextCell txt_size_cell;//外箱尺寸
     public TextCell txt_net_weight_cell;//单片净重
     public TextCell txt_gross_weight_cell;//毛重
+    public TextCell txt_comment_cell;//备注
     public String lot_number;
     private DataRow _rowv;
     private int scan_count;
@@ -125,6 +126,7 @@ public class pn_wo_entry_order_commit_editor extends pn_editor {
         this.txt_size_cell = (TextCell) this.findViewById(R.id.txt_size_cell);
         this.txt_net_weight_cell = (TextCell) this.findViewById(R.id.txt_net_weight_cell);
         this.txt_gross_weight_cell = (TextCell) this.findViewById(R.id.txt_gross_weight_cell);
+        this.txt_comment_cell = (TextCell) this.findViewById(R.id.txt_comment_cell);
         if (this.task_work_code_cell != null) {
             this.task_work_code_cell.setLabelText("任务单号");
             this.task_work_code_cell.setReadOnly();
@@ -184,6 +186,9 @@ public class pn_wo_entry_order_commit_editor extends pn_editor {
         }
         if (this.txt_gross_weight_cell != null) {
             this.txt_gross_weight_cell.setLabelText("毛重(KG)");
+        }
+        if (this.txt_comment_cell != null) {
+            this.txt_comment_cell.setLabelText("备注");
         }
     }
 
@@ -521,7 +526,7 @@ public class pn_wo_entry_order_commit_editor extends pn_editor {
             stmt.setObject(2, App.Current.UserID);
             stmt.setObject(3, App.Current.BranchID);
             stmt.setObject(4, 1);
-            stmt.setObject(5, "");
+            stmt.setObject(5, this.txt_comment_cell.getContentText());
             stmt.setObject(6, lotnumbers);
             stmt.registerOutParameter(7, Types.VARCHAR);
             stmt.execute();
@@ -564,5 +569,6 @@ public class pn_wo_entry_order_commit_editor extends pn_editor {
         this.txt_size_cell.setContentText("");
         this.txt_net_weight_cell.setContentText("");
         this.txt_gross_weight_cell.setContentText("");
+        this.txt_comment_cell.setContentText("");
     }
 }
