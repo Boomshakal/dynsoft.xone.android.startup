@@ -473,11 +473,11 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
                 Log.e("len", "lot_number:" + str);
             }
 
-            // 遥控器条码检测
-            if (edittext.startsWith("YK") && !edittext.substring(2).equals(scanString.get(0).substring(3))) {
-                App.Current.toastError(ScanTestActivity.this, "遥控器条码与整机条码不匹配！");
-                return false;
-            }
+//            // 遥控器条码检测
+//            if (edittext.startsWith("YK") && !edittext.substring(2).equals(scanString.get(0).substring(3))) {
+//                App.Current.toastError(ScanTestActivity.this, "遥控器条码与整机条码不匹配！");
+//                return false;
+//            }
         } else {
             final String sql = "exec p_fm_work_check_barcode_for_all ?,?";
             Parameters p = new Parameters().add(1, edittext).add(2, task_order_id);

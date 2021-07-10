@@ -696,8 +696,8 @@ public class pn_qm_smt_rejects_record_mgr extends pn_editor {
                         App.Current.toastError(getContext(), "输入座温数据不在0~50范围内");
                         return;
                     }
-                    if (wind_data<0 || wind_data > 50) {
-                        App.Current.toastError(getContext(), "输入风温数据不在0~50范围内");
+                    if (wind_data<0 || wind_data > 65) {
+                        App.Current.toastError(getContext(), "输入风温数据不在0~65范围内");
                         return;
                     }
 

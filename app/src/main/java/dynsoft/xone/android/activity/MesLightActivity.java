@@ -25,6 +25,7 @@ import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.squareup.okhttp.ResponseBody;
+import com.tcpclient.TCPClient;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -76,6 +77,8 @@ import retrofit.Retrofit;
 public class MesLightActivity extends Activity {
     private static final String appKey = "dingwcdrldanxpmn4xzm";
     private static final String appSecret = "4Zlck9BJD_P2INzxCaaUauDoYNCs8WHZ_VxU8vN3vKnuGGJNEGzcjN8qY-YgQTlY";
+    private static final String TCP_IP = "192.168.159.83";
+    private static final int PORT = 6000;
     private GridView gridView;
     private ListView listView;
     private ArrayList<String> allExceptionTypes;
@@ -174,6 +177,9 @@ public class MesLightActivity extends Activity {
             @Override
             public void onClick(View view) {
                 commitRate(s, editTextStar.getText().toString(), popupWindow);
+
+                // TODO：发起TCP请求 PLC 关闭报警灯
+                send_TCP("0");
             }
         });
         buttonCancelStar.setOnClickListener(new View.OnClickListener() {
@@ -337,6 +343,9 @@ public class MesLightActivity extends Activity {
                                 startFlow(editTextException);
                             }
                         }
+                        // TODO：发起TCP请求 PLC 打开报警灯
+
+                        send_TCP("1");
                     }
                 }
             }
@@ -358,6 +367,23 @@ public class MesLightActivity extends Activity {
         popupWindow.setFocusable(true);
 //                    popupWindow.setBackgroundDrawable(getResources().getDrawable(R.color.style_divider_color));
         popupWindow.showAtLocation(gridView, Gravity.CENTER, 20, 30);
+    }
+
+    private void send_TCP(String msg) {
+        TCPClient tcpClient = new TCPClient(TCP_IP, PORT) {
+            @Override
+            protected void onDataReceive(byte[] bytes, int size) {
+                String content = "TCPServer say :" + new String(bytes, 0, size);
+                System.out.println(content);
+            }
+        };
+        tcpClient.connect();//连接TCPServer
+        if (tcpClient.isConnected()) {
+            //发送数据
+            tcpClient.send(msg.getBytes());
+        }
+        //关闭连接
+        tcpClient.close();
     }
 
     private void chooseException(final EditText edittext, final String s) {
