@@ -152,7 +152,7 @@ public class pn_so_issue_editor extends pn_editor {
                 @Override
                 public void onClick(View v) {
                     String sn_nos = pn_so_issue_editor.this.txt_sn_no_cell.getContentText();
-                    pn_so_issue_editor.this.loadsnno(sn_nos);
+//                    pn_so_issue_editor.this.loadsnno(sn_nos);
                 }
             });
         }

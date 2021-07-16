@@ -43,6 +43,7 @@ import java.util.Date;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -63,6 +64,7 @@ import dynsoft.xone.android.retrofit.MarkDownBean;
 import dynsoft.xone.android.retrofit.RespondBean;
 import dynsoft.xone.android.retrofit.RetrofitDownUtil;
 import dynsoft.xone.android.retrofit.TextBean;
+import dynsoft.xone.android.sopactivity.ScanTestActivity;
 import dynsoft.xone.android.util.SmsUtilV;
 import dynsoft.xone.android.wms.pn_qm_electric_equipment_check_mgr_editor;
 import retrofit.Call;
@@ -77,7 +79,8 @@ import retrofit.Retrofit;
 public class MesLightActivity extends Activity {
     private static final String appKey = "dingwcdrldanxpmn4xzm";
     private static final String appSecret = "4Zlck9BJD_P2INzxCaaUauDoYNCs8WHZ_VxU8vN3vKnuGGJNEGzcjN8qY-YgQTlY";
-    private static final String TCP_IP = "192.168.159.83";
+    //    private static final String TCP_IP = "192.168.152.80";
+    private HashMap<String, String> Line_IP;
     private static final int PORT = 6000;
     private GridView gridView;
     private ListView listView;
@@ -94,6 +97,7 @@ public class MesLightActivity extends Activity {
     private int task_order_id;
     private ArrayList<DataRow> dataRows;
     private String workLine;
+    private Integer work_line_id;
     private String production;
 
     @Override
@@ -105,15 +109,26 @@ public class MesLightActivity extends Activity {
         sharedPreferences = getSharedPreferences("sop", MODE_PRIVATE);
         station = sharedPreferences.getString("station", "");
         task_order_id = sharedPreferences.getInt("order_task_id", 0);
-        starMap = new HashMap<Integer, String>();
         workLine = sharedPreferences.getString("segment", "");
+        work_line_id = sharedPreferences.getInt("work_line_id", 0);
+        Log.e("Len", String.valueOf(work_line_id));
         production = sharedPreferences.getString("production", "");
+
         //"差", "一般", "满意", "非常满意", "无可挑剔"
+        starMap = new HashMap<Integer, String>();
         starMap.put(1, "差");
         starMap.put(2, "一般");
         starMap.put(3, "满意");
         starMap.put(4, "非常满意");
         starMap.put(5, "无可挑剔");
+
+        Line_IP = new HashMap<String, String>();
+        // 各个线体对应的PLC IP地址
+        Line_IP.put("Line1", "192.168.152.80");
+        Line_IP.put("Line2", "192.168.152.80");
+        Line_IP.put("Line3", "192.168.152.80");
+        Line_IP.put("Line4", "192.168.152.80");
+
         allExceptionTypes = new ArrayList<String>();
         selectedExceptions = new ArrayList<String>();
         initGridView();
@@ -179,7 +194,19 @@ public class MesLightActivity extends Activity {
                 commitRate(s, editTextStar.getText().toString(), popupWindow);
 
                 // TODO：发起TCP请求 PLC 关闭报警灯
-                send_TCP("0");
+                try {
+
+
+                    int value = get_error_time();
+
+                    int msg = value - 1;
+
+                    send_TCP(Integer.toString(msg));
+                    update_error_time(msg);
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         });
         buttonCancelStar.setOnClickListener(new View.OnClickListener() {
@@ -344,8 +371,17 @@ public class MesLightActivity extends Activity {
                             }
                         }
                         // TODO：发起TCP请求 PLC 打开报警灯
+                        try {
+                            int value = get_error_time();
+                            value = Math.max(value, 0);
+                            int msg = value + 1;
 
-                        send_TCP("1");
+                            send_TCP("1");
+                            update_error_time(msg);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
                     }
                 }
             }
@@ -369,8 +405,44 @@ public class MesLightActivity extends Activity {
         popupWindow.showAtLocation(gridView, Gravity.CENTER, 20, 30);
     }
 
+    private int get_error_time() {
+        final String sql_str = "exec get_work_line_error_time ?";
+        Parameters pr = new Parameters().add(1, work_line_id);
+        return (Integer) App.Current.DbPortal.ExecuteScalar("core_and", sql_str, pr).Value;
+    }
+
+    private void update_error_time(int msg) {
+
+        String sql = "exec update_work_line_error_time ?,?";
+        Parameters p = new Parameters().add(1, work_line_id).add(2, msg);
+        App.Current.DbPortal.ExecuteNonQueryAsync("core_and", sql, p, new ResultHandler<Integer>() {
+            @Override
+            public void handleMessage(Message msg) {
+                Result<Integer> value = Value;
+                if (value.HasError) {
+                    App.Current.showError(MesLightActivity.this, value.Error);
+                    return;
+                }
+                if (value.Value != null) {
+                    int value1 = value.Value;
+                    if (value1 > 0) {
+                        App.Current.toastInfo(MesLightActivity.this, "提交成功");
+                        App.Current.playSound(R.raw.pass);
+                    } else {
+                        App.Current.toastError(MesLightActivity.this, "提交失败,没有更新到数据。");
+                        App.Current.playSound(R.raw.error);
+                    }
+                } else {
+                    App.Current.toastError(MesLightActivity.this, "提交失败");
+                    App.Current.playSound(R.raw.error);
+                }
+            }
+        });
+    }
+
     private void send_TCP(String msg) {
-        TCPClient tcpClient = new TCPClient(TCP_IP, PORT) {
+        String tcp_ip = Line_IP.get(workLine);
+        TCPClient tcpClient = new TCPClient(tcp_ip, PORT) {
             @Override
             protected void onDataReceive(byte[] bytes, int size) {
                 String content = "TCPServer say :" + new String(bytes, 0, size);
@@ -501,7 +573,7 @@ public class MesLightActivity extends Activity {
     private void commitException(final String exception_type, PopupWindow popupWindow, String exception_comment, int influencesCounts) {
         final String sql = "exec p_fm_light_exception_commit_and ?, ?, ?, ?, ?, ?, ?, ?";
         String code = dataRows.get(0).getValue("code", "");
-        Parameters p = new Parameters().add(1, workLine).add(2, production).add(3, exception_type)
+        Parameters p = new Parameters().add(1, work_line_id).add(2, production).add(3, exception_type)
                 .add(4, exception_comment).add(5, task_order_id).add(6, station)
                 .add(7, influencesCounts).add(8, code);
         App.Current.DbPortal.ExecuteRecordAsync("core_and", sql, p, new ResultHandler<DataRow>() {
@@ -1126,8 +1198,9 @@ public class MesLightActivity extends Activity {
                                             MarkDownBean markDownBean = new MarkDownBean();
                                             TextBean textBean = new TextBean();
                                             textBean.setTitle("MES安灯通知");
-                                            String content = "线体：" + workLine
-                                                    + "  \n  工序：" + production
+                                            String content = ""
+                                                    + "  \n  线体：" + workLine
+                                                    + "  \n  工序：" + production + "," + station
                                                     + "  \n  原因：" + sb.toString()
                                                     + "  \n  时间：" + createTime;
                                             String text = "<font color=#FF0000 size=6 face=\"黑体\">MES安灯通知 </font> " +
