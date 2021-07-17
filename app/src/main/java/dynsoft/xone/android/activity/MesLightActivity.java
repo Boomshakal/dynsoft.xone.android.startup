@@ -26,6 +26,7 @@ import android.widget.TextView;
 import com.google.gson.Gson;
 import com.squareup.okhttp.ResponseBody;
 import com.tcpclient.TCPClient;
+import com.tcpclient.socket.TcpClientConnector;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -99,6 +100,7 @@ public class MesLightActivity extends Activity {
     private String workLine;
     private Integer work_line_id;
     private String production;
+    private TcpClientConnector connector;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -135,6 +137,15 @@ public class MesLightActivity extends Activity {
         initListView();
     }
 
+//    @Override
+//    protected void onDestroy() {
+//        super.onDestroy();
+//        try {
+//            connector.disconnect();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
     private void initGridView() {
         String sql = "select * from fm_excpt_class";
@@ -440,13 +451,23 @@ public class MesLightActivity extends Activity {
         });
     }
 
-    private void send_TCP(String msg) {
+    private void send_TCP(String msg) throws IOException {
         String tcp_ip = Line_IP.get(workLine);
+//        connector = TcpClientConnector.getInstance();
+//        connector.setOnConnectLinstener(new TcpClientConnector.ConnectLinstener() {
+//            @Override
+//            public void onReceiveData(String data) {
+//                //do somethings.
+//            }
+//        });
+//        connector.creatConnect(tcp_ip,PORT);
+//        connector.send(msg);
         TCPClient tcpClient = new TCPClient(tcp_ip, PORT) {
             @Override
             protected void onDataReceive(byte[] bytes, int size) {
                 String content = "TCPServer say :" + new String(bytes, 0, size);
-                System.out.println(content);
+                Log.i("TCPServer",content);
+                App.Current.toastInfo(MesLightActivity.this, content);
             }
         };
         tcpClient.connect();//Á¬½ÓTCPServer

@@ -98,7 +98,6 @@ public abstract class TCPClient {
 
 
                 } catch (Throwable e) {
-                    System.out.println(e.getMessage());
                     return;
                 }
             }
