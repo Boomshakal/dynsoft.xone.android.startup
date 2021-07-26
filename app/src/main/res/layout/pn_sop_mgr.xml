@@ -47,6 +47,11 @@
                 android:layout_height="wrap_content"></dynsoft.xone.android.control.TextCell>
 
             <dynsoft.xone.android.control.TextCell
+                android:id="@+id/textcell_4_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></dynsoft.xone.android.control.TextCell>
+
+            <dynsoft.xone.android.control.TextCell
                 android:id="@+id/textcell_4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"></dynsoft.xone.android.control.TextCell>

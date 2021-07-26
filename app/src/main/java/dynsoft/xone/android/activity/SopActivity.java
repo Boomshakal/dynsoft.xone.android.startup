@@ -92,6 +92,8 @@ public class SopActivity extends Activity implements SpeechSynthesizerListener {
     private TextBannerView textBanner;
     private SpeechSynthesizer mSpeechSynthesizer;
     private String segment;
+    private String stage_name;
+    private String station;
 
 
 //    private ArrayList<String> exception_types;
@@ -109,6 +111,8 @@ public class SopActivity extends Activity implements SpeechSynthesizerListener {
         edit = sharedPreferences.edit();
         head_id = sharedPreferences.getLong("head_id", 0L);
         segment = sharedPreferences.getString("segment", "");
+        stage_name = sharedPreferences.getString("stage_name", "");
+        station = sharedPreferences.getString("station", "");
         viewPager = (ViewPagerFixed) findViewById(R.id.view_pager);
         imageviewLight = (ImageView) findViewById(R.id.imageview_light);
         textview_1 = (TextView) findViewById(R.id.textview_1);
@@ -218,7 +222,7 @@ public class SopActivity extends Activity implements SpeechSynthesizerListener {
 //                        } else {
 //                            stringBuilder.append(segment + dev_name + "有" + exception_type + "呼叫," + "请" + rep_user + "速到现场，");
 //                        }
-                        String res = segment + dev_name + "有" + exception_type + "呼叫," + "请" + rep_user + "速到现场。";
+                        String res = segment + dev_name + "," + stage_name + "," + station + "有" + exception_type + "呼叫," + "请" + rep_user + "速到现场。";
 
                         texts.add(res);
                     }

@@ -89,6 +89,7 @@ public class MesLightActivity extends Activity {
     private ArrayList<String> selectedExceptions;
     private SharedPreferences sharedPreferences;
     private String station;
+    private String stage_name;
     private int currentSelect;
     private LightAdapter lightAdapter;
     private HashMap<Integer, String> starMap;
@@ -110,6 +111,7 @@ public class MesLightActivity extends Activity {
         listView = (ListView) findViewById(R.id.listview_light);
         sharedPreferences = getSharedPreferences("sop", MODE_PRIVATE);
         station = sharedPreferences.getString("station", "");
+        stage_name = sharedPreferences.getString("stage_name", "");
         task_order_id = sharedPreferences.getInt("order_task_id", 0);
         workLine = sharedPreferences.getString("segment", "");
         work_line_id = sharedPreferences.getInt("work_line_id", 0);
@@ -466,7 +468,7 @@ public class MesLightActivity extends Activity {
             @Override
             protected void onDataReceive(byte[] bytes, int size) {
                 String content = "TCPServer say :" + new String(bytes, 0, size);
-                Log.i("TCPServer",content);
+                Log.i("TCPServer", content);
                 App.Current.toastInfo(MesLightActivity.this, content);
             }
         };
@@ -509,7 +511,7 @@ public class MesLightActivity extends Activity {
     private void chooseRespondMan(final EditText edittext, String macAddress, final String s) {    //选择异常处理人
         String sql = "exec fm_get_choose_exception_respond_workline_and ?,?";
         //s  异常类型
-        Parameters p = new Parameters().add(1, workLine).add(2, s);
+        Parameters p = new Parameters().add(1, work_line_id).add(2, s);
         App.Current.DbPortal.ExecuteDataTableAsync("core_and", sql, p, new ResultHandler<DataTable>() {
             @Override
             public void handleMessage(Message msg) {
@@ -1220,8 +1222,8 @@ public class MesLightActivity extends Activity {
                                             TextBean textBean = new TextBean();
                                             textBean.setTitle("MES安灯通知");
                                             String content = ""
-                                                    + "  \n  线体：" + workLine
-                                                    + "  \n  工序：" + production + "," + station
+                                                    + "  \n  线体：" + workLine + "," + stage_name + "," + station
+                                                    + "  \n  工序：" + production
                                                     + "  \n  原因：" + sb.toString()
                                                     + "  \n  时间：" + createTime;
                                             String text = "<font color=#FF0000 size=6 face=\"黑体\">MES安灯通知 </font> " +

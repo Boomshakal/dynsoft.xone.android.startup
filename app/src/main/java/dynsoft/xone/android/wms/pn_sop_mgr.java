@@ -44,6 +44,7 @@ public class pn_sop_mgr extends pn_mgr {
     private ButtonTextCell textcell_2;
     private TextCell textcell_3;
     private TextCell textcell_4;
+    private TextCell textcell_4_1;
     private ButtonTextCell textcell_5;
     private TextCell textcell_6;
     private TextCell textcell_7;
@@ -93,6 +94,7 @@ public class pn_sop_mgr extends pn_mgr {
         textcell_2 = (ButtonTextCell) view.findViewById(R.id.textcell_2);
         textcell_3 = (TextCell) view.findViewById(R.id.textcell_3);
         textcell_4 = (TextCell) view.findViewById(R.id.textcell_4);
+        textcell_4_1 = (TextCell) view.findViewById(R.id.textcell_4_1);
         textcell_5 = (ButtonTextCell) view.findViewById(R.id.textcell_5);
         textcell_6 = (TextCell) view.findViewById(R.id.textcell_6);
         textcell_7 = (TextCell) view.findViewById(R.id.textcell_7);
@@ -166,6 +168,12 @@ public class pn_sop_mgr extends pn_mgr {
             textcell_3.setReadOnly();
             textcell_3.setContentText(sharedPreferences.getString("work_line", ""));
         }
+
+        if (textcell_4_1 != null) {
+            textcell_4_1.setLabelText("¹¤¶Î");
+            textcell_4_1.setContentText(sharedPreferences.getString("stage_name", ""));
+        }
+
 
         if (textcell_4 != null) {
             textcell_4.setLabelText("¹¤Î»");
@@ -469,11 +477,13 @@ public class pn_sop_mgr extends pn_mgr {
                     DataRow row = result.Value.Rows.get(which);
                     text.setContentText(row.getValue("name", ""));
                     textcell_3.setContentText(row.getValue("work_name", ""));
+                    textcell_4_1.setContentText(row.getValue("stage_name", ""));
                     org_code = row.getValue("org_code", "");
                     String foreman_code = row.getValue("foreman_code", "");
                     textcell_7.setContentText(foreman_code);
                     edit.putInt("work_line_id", row.getValue("id", 0));
                     edit.putString("org_name", row.getValue("org_name", ""));
+                    edit.putString("stage_name", row.getValue("stage_name", ""));
                     edit.commit();
                 }
                 dialog.dismiss();

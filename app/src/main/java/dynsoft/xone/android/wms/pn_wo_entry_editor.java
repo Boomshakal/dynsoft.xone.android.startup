@@ -117,6 +117,7 @@ public class pn_wo_entry_editor extends pn_editor {
 		
 		if (this.txt_location_cell != null) {
 			this.txt_location_cell.setLabelText("´¢Î»");
+			this.txt_location_cell.setReadOnly();
 		}
 		
 		if (this.Matrix != null) {

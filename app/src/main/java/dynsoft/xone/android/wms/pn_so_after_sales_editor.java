@@ -1,5 +1,6 @@
 package dynsoft.xone.android.wms;
 
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.sql.CallableStatement;
 import java.sql.Connection;
@@ -10,6 +11,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 import dynsoft.xone.android.control.ButtonTextCell;
 import dynsoft.xone.android.control.DecimalCell;
@@ -19,17 +21,23 @@ import dynsoft.xone.android.core.R;
 import dynsoft.xone.android.core.Workbench;
 import dynsoft.xone.android.data.DataRow;
 import dynsoft.xone.android.data.DataTable;
+import dynsoft.xone.android.data.DbPortal;
 import dynsoft.xone.android.data.Parameters;
 import dynsoft.xone.android.data.Result;
 import dynsoft.xone.android.data.ResultHandler;
 import dynsoft.xone.android.helper.XmlHelper;
 import dynsoft.xone.android.link.Link;
 
+import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.wifi.p2p.WifiP2pManager;
+import android.os.Build;
+import android.os.Handler;
 import android.os.Message;
+import android.support.annotation.RequiresApi;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -39,6 +47,13 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+
+import com.google.gson.Gson;
+import com.google.gson.internal.StringMap;
+import com.squareup.okhttp.FormEncodingBuilder;
+import com.squareup.okhttp.OkHttpClient;
+import com.squareup.okhttp.Request;
+import com.squareup.okhttp.Response;
 
 public class pn_so_after_sales_editor extends pn_editor implements OnClickListener {
 
@@ -52,9 +67,11 @@ public class pn_so_after_sales_editor extends pn_editor implements OnClickListen
     public TextCell txt_item_name_cell; //物料名称
     public TextCell txt_user_cell; //操作用户
     public TextCell txt_express_cell; //快递单号
+    public ButtonTextCell txt_express_comp_cell; //快递公司
     public TextCell txt_comment_cell; //备注
     public TextCell txt_customer_name; //客户名称
     public TextCell txt_field_status;//现场维修
+    public ButtonTextCell txt_return_type;//退货类型
     private CheckBox checkbox_print;//打印标签
     private CheckBox is_history;
     private String is_history_key = "";
@@ -103,11 +120,17 @@ public class pn_so_after_sales_editor extends pn_editor implements OnClickListen
         this.txt_express_cell = (TextCell) this
                 .findViewById(R.id.txt_express_cell);
 
+        this.txt_express_comp_cell = (ButtonTextCell) this
+                .findViewById(R.id.txt_express_comp_cell);
+
         this.txt_customer_name = (TextCell) this
                 .findViewById(R.id.txt_customer_name);
 
         this.txt_field_status = (TextCell) this
                 .findViewById(R.id.txt_field_status);
+
+        this.txt_return_type = (ButtonTextCell) this
+                .findViewById(R.id.txt_return_type);
 
 
         this.txt_b1 = (Button) this.findViewById(R.id.txt_b1);
@@ -121,12 +144,7 @@ public class pn_so_after_sales_editor extends pn_editor implements OnClickListen
             this.txt_sn_number_cell.setLabelText("SN编码");
             this.txt_sn_number_cell.setReadOnly();
             this.txt_sn_number_cell.Button.setImageBitmap(App.Current.ResourceManager.getImage("@/core_close_light"));
-            this.txt_sn_number_cell.Button.setOnClickListener(new OnClickListener(){
-                @Override
-                public void onClick(View v) {
-                    pn_so_after_sales_editor.this.txt_sn_number_cell.setContentText("");
-                }
-            });
+            this.txt_sn_number_cell.Button.setOnClickListener(v -> pn_so_after_sales_editor.this.txt_sn_number_cell.setContentText(""));
         }
 
         if (this.txt_item_code_cell != null) {
@@ -139,6 +157,24 @@ public class pn_so_after_sales_editor extends pn_editor implements OnClickListen
             this.txt_express_cell.setReadOnly();
         }
 
+        if (this.txt_express_comp_cell != null) {
+            this.txt_express_comp_cell.setLabelText("快递公司");
+            this.txt_express_comp_cell.setReadOnly();
+            this.txt_express_comp_cell.Button.setOnClickListener(v -> choose_express_comp(this.txt_express_comp_cell));
+            this.txt_express_comp_cell.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    get_express_comp("YT5550969690657", new ResultHandler<String>() {
+                                @Override
+                                public void handleMessage(Message msg) {
+                                    Result<String> result = this.Value;
+                                    pn_so_after_sales_editor.this.txt_express_comp_cell.setContentText(result.Value);
+                                }
+                            }
+                    );
+                }
+            });
+        }
         if (this.txt_customer_name != null) {
             this.txt_customer_name.setLabelText("客户名称");
 
@@ -157,8 +193,7 @@ public class pn_so_after_sales_editor extends pn_editor implements OnClickListen
         }
 
 
-        this.txt_user_cell = (TextCell) this
-                .findViewById(R.id.txt_user_cell);
+        this.txt_user_cell = (TextCell) this.findViewById(R.id.txt_user_cell);
 
         if (this.txt_user_cell != null) {
             this.txt_user_cell.setLabelText("售后人员");
@@ -166,6 +201,13 @@ public class pn_so_after_sales_editor extends pn_editor implements OnClickListen
             this.txt_user_cell.setContentText(App.Current.UserCode);
 
         }
+
+        if (this.txt_return_type != null) {
+            this.txt_return_type.setLabelText("退货类型");
+            this.txt_return_type.setReadOnly();
+            setclicklisten(this.txt_return_type);
+        }
+
 
         this.txt_comment_cell = (TextCell) this
                 .findViewById(R.id.txt_comment_cell);
@@ -189,6 +231,37 @@ public class pn_so_after_sales_editor extends pn_editor implements OnClickListen
 //          }
 //       });
 
+    }
+
+    private void choose_express_comp(final ButtonTextCell buttonTextCell) {
+        final String[] chooseItems = {"顺丰", "百世", "跨越", "德邦", "申通", "中通", "圆通", "韵达", "京东", "安能", "其他"};
+        AlertDialog alertDialog = new AlertDialog.Builder(getContext())
+                .setTitle("请选择")
+                .setSingleChoiceItems(chooseItems, 0, (dialogInterface, i) -> {
+                    buttonTextCell.setContentText(chooseItems[i]);
+                    dialogInterface.dismiss();
+                }).create();
+        if (!alertDialog.isShowing()) {
+            alertDialog.show();
+        }
+    }
+
+    private void setclicklisten(ButtonTextCell buttontextcell) {
+        buttontextcell.setReadOnly();
+        buttontextcell.Button.setOnClickListener(v -> choose_return_type(buttontextcell));
+    }
+
+    private void choose_return_type(final ButtonTextCell buttonTextCell) {
+        final String[] chooseItems = {"7天无理由未使用", "7天无理由已安装", "7天无理由已使用", "维修退货", "品质问题退货"};
+        AlertDialog alertDialog = new AlertDialog.Builder(getContext())
+                .setTitle("请选择")
+                .setSingleChoiceItems(chooseItems, 0, (dialogInterface, i) -> {
+                    buttonTextCell.setContentText(chooseItems[i]);
+                    dialogInterface.dismiss();
+                }).create();
+        if (!alertDialog.isShowing()) {
+            alertDialog.show();
+        }
     }
 
 
@@ -248,8 +321,60 @@ public class pn_so_after_sales_editor extends pn_editor implements OnClickListen
 
         } else {
             this.txt_express_cell.setContentText(bar_code.toString());
+            get_express_comp(bar_code, new ResultHandler<String>() {
+                        @Override
+                        public void handleMessage(Message msg) {
+                            Result<String> result = this.Value;
+                            pn_so_after_sales_editor.this.txt_express_comp_cell.setContentText(result.Value);
+                        }
+                    }
+            );
         }
 
+    }
+
+    private Result<String> send_http(String code) {
+        Result<String> comp_name = new Result<String>();
+        OkHttpClient client = new OkHttpClient();
+        String url = "https://www.kuaidi100.com/autonumber/autoComNum?text=" + code;
+
+//            FormEncodingBuilder builder = new FormEncodingBuilder();
+//            builder.add("Secret", "GEZVMQJTHEYDSVBU");
+//            Request request = new Request.Builder().url(url).post(builder.build()).build();
+        Request request = new Request.Builder()
+                .addHeader("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36")
+                .url(url).build();
+        try {
+            Response response = client.newCall(request).execute();//发送请求
+
+            if (response.isSuccessful()) {
+
+                String result = response.body().string();
+
+                Gson gson = new Gson();
+                HashMap res = gson.fromJson(result, HashMap.class);
+
+                ArrayList list = (ArrayList) res.get("auto");
+                assert list != null;
+                StringMap comp_info = (StringMap) list.get(0);
+                assert comp_info != null;
+
+                comp_name.Value = Objects.requireNonNull(comp_info.get("name")).toString();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            comp_name.HasError = Boolean.FALSE;
+        }
+        return comp_name;
+    }
+
+    private void get_express_comp(String code, final ResultHandler<String> handler) {
+        new Thread(() -> {
+            if (handler != null) {
+                handler.Value = send_http(code);
+                handler.sendEmptyMessage(0);
+            }
+        }).start();
     }
 
 
@@ -325,6 +450,9 @@ public class pn_so_after_sales_editor extends pn_editor implements OnClickListen
         String user = this.txt_user_cell.getContentText().trim();
 
         String comment = this.txt_comment_cell.getContentText().trim();
+        String express = this.txt_express_cell.getContentText().trim();
+        String express_comp = this.txt_express_comp_cell.getContentText().trim();
+        String return_type = this.txt_return_type.getContentText().trim();
 
 
         if (user == null || user.length() == 0) {
@@ -351,12 +479,15 @@ public class pn_so_after_sales_editor extends pn_editor implements OnClickListen
         }
 
         //String sql = " exec mm_after_receiving_isnert_1 ?,?,?,?,?,?,?,?";
-        String sql = "mm_after_receiving_isnert_1_20181031 ?,?,?,?,?,?,?,?,?";
+        String sql = "mm_after_receiving_isnert_1_20181031 ?,?,?,?,?,?,?,?,?,?,?";
 
         System.out.print(item_code);
         System.out.print(sql);
         Parameters p = new Parameters();
-        p.add(1, sn_number).add(2, item_code).add(3, item_name).add(4, user).add(5, comment).add(6, customer_name).add(7, field_status).add(8, is_history_key).add(9, txt_express_cell.getContentText());
+        p.add(1, sn_number).add(2, item_code).add(3, item_name)
+                .add(4, user).add(5, comment).add(6, customer_name)
+                .add(7, field_status).add(8, is_history_key)
+                .add(9, express).add(10, express_comp).add(11, return_type);
         App.Current.DbPortal.ExecuteDataTableAsync(this.Connector, sql, p, new ResultHandler<DataTable>() {
             @Override
             public void handleMessage(Message msg) {

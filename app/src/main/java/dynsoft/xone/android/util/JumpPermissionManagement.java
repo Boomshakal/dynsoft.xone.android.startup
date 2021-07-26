@@ -28,10 +28,7 @@ public class JumpPermissionManagement {
     private static final String MANUFACTURER_YULONG = "YuLong";//酷派
     private static final String MANUFACTURER_LENOVO = "LENOVO";//联想
 
-    /**
-     * 此函数可以自己定义
-     * @param activity
-     */
+
     public static void GoToSetting(Activity activity){
         switch (Build.MANUFACTURER){
             case MANUFACTURER_HUAWEI:
@@ -57,7 +54,7 @@ public class JumpPermissionManagement {
                 break;
             default:
                 ApplicationInfo(activity);
-                Log.e("goToSetting", "目前暂不支持此系统");
+                Log.e("goToSetting", "This system is not supported at present");
                 break;
         }
     }
@@ -90,7 +87,7 @@ public class JumpPermissionManagement {
                 localIntent.setClassName("com.miui.securitycenter", "com.miui.permcenter.permissions.AppPermissionsEditorActivity");
                 localIntent.putExtra("extra_pkgname", activity.getPackageName());
                 activity.startActivity(localIntent);
-            } catch (Exception e1) { // 否则跳转到应用详情
+            } catch (Exception e1) {
                 activity.startActivity(getAppDetailSettingIntent(activity));
             }
         }
@@ -151,10 +148,6 @@ public class JumpPermissionManagement {
         activity.startActivity(intent);
     }
 
-    /**
-     * 只能打开到自带安全软件
-     * @param activity
-     */
     public static void _360(Activity activity) {
         Intent intent = new Intent("android.intent.action.MAIN");
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
