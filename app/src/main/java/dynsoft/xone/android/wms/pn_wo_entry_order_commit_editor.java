@@ -1,5 +1,6 @@
 package dynsoft.xone.android.wms;
 
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.math.BigDecimal;
 import java.sql.CallableStatement;
@@ -7,15 +8,19 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Types;
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.TimeZone;
 import java.util.UUID;
 
+import dynsoft.xone.android.activity.MesLightActivity;
 import dynsoft.xone.android.adapter.TableAdapter;
+import dynsoft.xone.android.bean.RequestBean;
 import dynsoft.xone.android.control.ButtonTextCell;
 import dynsoft.xone.android.control.DecimalCell;
 import dynsoft.xone.android.control.SwitchCell;
@@ -31,7 +36,16 @@ import dynsoft.xone.android.data.Result;
 import dynsoft.xone.android.data.ResultHandler;
 import dynsoft.xone.android.helper.XmlHelper;
 import dynsoft.xone.android.link.Link;
+import dynsoft.xone.android.retrofit.DingdingService;
+import dynsoft.xone.android.retrofit.MarkDownBean;
+import dynsoft.xone.android.retrofit.RespondBean;
+import dynsoft.xone.android.retrofit.RetrofitDownUtil;
+import dynsoft.xone.android.retrofit.TextBean;
 import dynsoft.xone.android.start.FrmLogin;
+import retrofit.Call;
+import retrofit.Callback;
+import retrofit.Response;
+import retrofit.Retrofit;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
@@ -56,7 +70,12 @@ import android.widget.LinearLayout;
 import android.widget.ListAdapter;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
+import com.squareup.okhttp.ResponseBody;
+
 public class pn_wo_entry_order_commit_editor extends pn_editor {
+    private static final String appKey = "dingwcdrldanxpmn4xzm";
+    private static final String appSecret = "4Zlck9BJD_P2INzxCaaUauDoYNCs8WHZ_VxU8vN3vKnuGGJNEGzcjN8qY-YgQTlY";
 
     private String task_order_code;
     private String item_code;
@@ -82,11 +101,12 @@ public class pn_wo_entry_order_commit_editor extends pn_editor {
     private DataRow _rowv;
     private int scan_count;
     private boolean checkbool;
-    public int count1=0;
-    public int count2=0;
-    public int count3=-2;
+    public int count1 = 0;
+    public int count2 = 0;
+    public int count3 = -2;
     public int flage = 1;
     public int qtyy = 0;
+
     @Override
     public void setContentView() {
         LayoutParams lp = new LayoutParams(-1, -1);
@@ -348,6 +368,7 @@ public class pn_wo_entry_order_commit_editor extends pn_editor {
             this.txt_warehouse_cell.setContentText("");
             task_order_code = ri.Value.getValue("code", "");
             this.task_work_code_cell.setContentText(task_order_code);
+            this.task_work_code_cell.setTag(ri.Value.getValue("task_order_id", ""));
             if (!task_order_code.toUpperCase().contains("Z")) {
                 this.txt_size_cell.setContentText(ri.Value.getValue("outer_box_size", ""));
                 float net_weight = ri.Value.getValue("net_weight", new BigDecimal(0)).floatValue();
@@ -372,6 +393,119 @@ public class pn_wo_entry_order_commit_editor extends pn_editor {
         }
     }
 
+    public void sendMessageToDingding(String comment) {
+        if (comment.equals("清尾")) {
+
+            String sql = "exec p_get_ipqc_phone_number ?";
+            Integer task_order_id = (Integer) this.task_work_code_cell.getTag();
+            Parameters p = new Parameters().add(1, task_order_id);
+            String mobile = App.Current.DbPortal.ExecuteScalar("core_and", sql, p).Value.toString();
+
+//            String mobile = "15168633879";
+            if (mobile.equals("")) {
+                App.Current.showError(this.getContext(), "没有维护手机号码");
+                return;
+            }
+
+            //发送钉钉工作通知
+            Retrofit dingdingRetrofit = RetrofitDownUtil.getInstence().getDingdingRetrofit();
+            DingdingService dingdingService = dingdingRetrofit.create(DingdingService.class);
+            Call<ResponseBody> token = dingdingService.getToken(appKey, appSecret);
+            token.enqueue(new Callback<ResponseBody>() {
+                @Override
+                public void onResponse(Response<ResponseBody> response, Retrofit retrofit) {
+                    if (response.code() == 200) {
+                        try {
+                            String string = response.body().string();
+                            Gson gson = new Gson();
+                            RespondBean respondBean = gson.fromJson(string, RespondBean.class);
+                            String access_token = respondBean.getAccess_token();
+
+                            //通过电话获取Userid
+                            Call<ResponseBody> userIdByMobile = dingdingService.getUserIdByMobile(access_token, mobile);
+                            userIdByMobile.enqueue(new Callback<ResponseBody>() {
+                                @Override
+                                public void onResponse(Response<ResponseBody> response, Retrofit retrofit) {
+                                    if (response.code() == 200) {
+                                        try {
+                                            String userMessage = response.body().string();
+                                            Gson gson = new Gson();
+                                            RespondBean respondBean = gson.fromJson(userMessage, RespondBean.class);
+                                            String userid = respondBean.getUserid();
+
+                                            Date currentTime = new Date();
+                                            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                                            String currentTime_str = formatter.format(currentTime);
+
+                                            RequestBean requestBean = new RequestBean();
+                                            requestBean.setAgent_id("648372786");
+                                            requestBean.setUserid_list(userid);
+                                            MarkDownBean markDownBean = new MarkDownBean();
+                                            TextBean textBean = new TextBean();
+                                            textBean.setTitle("MES缴库清尾确认通知");
+                                            String content = ""
+                                                    + "  \n  任务单号：" + task_work_code_cell.getContentText()
+                                                    + "  \n  物料编码：" + txt_item_code_cell.getContentText()
+                                                    + "  \n  机型名称：" + txt_item_name_cell.getContentText()
+                                                    + "  \n  时间：" + currentTime_str;
+                                            String text = "<font color=#FF0000 size=6 face=\"黑体\">MES缴库清尾确认通知 </font> " +
+                                                    " ![](https://www.ikahe.com/style/images/logo.png)\n" +
+                                                    "<font color=#000000 size=4 face=\"黑体\">" + content + "</font> ";
+                                            markDownBean.setMarkdown(textBean);
+                                            textBean.setText(text);
+                                            markDownBean.setMsgtype("markdown");
+                                            requestBean.setMsg(markDownBean);
+                                            Log.e("len", ":::" + new Gson().toJson(requestBean));
+                                            Call<ResponseBody> responseBodyCall = dingdingService.sendMessage(access_token, requestBean);
+                                            responseBodyCall.enqueue(new Callback<ResponseBody>() {
+                                                @Override
+                                                public void onResponse(Response<ResponseBody> response, Retrofit retrofit) {
+                                                    int code = response.code();
+                                                    if (code == 200) {
+                                                        try {
+                                                            Log.e("len", "sss:" + response.body().string());
+                                                        } catch (IOException e) {
+                                                            e.printStackTrace();
+                                                            Log.e("len", e.getLocalizedMessage());
+                                                        }
+                                                    } else {
+                                                        App.Current.toastError(getContext(), code + "");
+                                                    }
+                                                }
+
+                                                @Override
+                                                public void onFailure(Throwable throwable) {
+                                                    Log.e("len", "Fail:" + throwable.getLocalizedMessage());
+                                                }
+                                            });
+                                        } catch (IOException e) {
+                                            e.printStackTrace();
+                                        }
+                                    }
+                                }
+
+                                @Override
+                                public void onFailure(Throwable throwable) {
+
+                                }
+                            });
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+
+                @Override
+                public void onFailure(Throwable throwable) {
+                    Log.e("len", "ERR: " + throwable.getLocalizedMessage());
+                }
+            });
+
+        } else {
+            App.Current.showWarning(getContext(), "提交成功!");
+        }
+    }
+
     public void get_count() {
         String sql1 = "select \n" +
                 "t0.code,t0.work_order_id,t0.create_time,t5.code+' - '+t5.name create_user,t7.code work_order_code,\n" +
@@ -389,7 +523,7 @@ public class pn_wo_entry_order_commit_editor extends pn_editor {
                 "INNER JOIN mm_wo_work_order_head t7 ON t7.id=t0.work_order_id\n" +
                 "left join fm_process t8 on t8.id=t0.process_id\n" +
                 "where t0.code = ?";
-        Parameters p1 = new Parameters().add(1,task_order_code);
+        Parameters p1 = new Parameters().add(1, task_order_code);
         App.Current.DbPortal.ExecuteRecordAsync(this.Connector, sql1, p1, new ResultHandler<DataRow>() {
             @Override
             public void handleMessage(Message msg) {
@@ -401,18 +535,16 @@ public class pn_wo_entry_order_commit_editor extends pn_editor {
 
                 DataRow row = result.Value;
                 if (row == null) {
-                    Log.e("LZH2011",task_order_code);
+                    Log.e("LZH2011", task_order_code);
                     App.Current.showError(pn_wo_entry_order_commit_editor.this.getContext(), "找不到对应数目。");
                     return;
-                }
-                else{
-                    count1 = result.Value.getValue("plan_quantity",new BigDecimal(0)).intValue();
+                } else {
+                    count1 = result.Value.getValue("plan_quantity", new BigDecimal(0)).intValue();
                 }
             }
 
-            });
+        });
     }
-
 
 
     @SuppressLint("HandlerLeak")
@@ -436,7 +568,7 @@ public class pn_wo_entry_order_commit_editor extends pn_editor {
                 "        LEFT JOIN dbo.core_user i ON i.id = m.tester_id\n" +
                 "WHERE   b.code = ?\n" +
                 "GROUP BY b.code";
-        Parameters p1 = new Parameters().add(1,task_order_code);
+        Parameters p1 = new Parameters().add(1, task_order_code);
         App.Current.DbPortal.ExecuteRecordAsync(this.Connector, sql1, p1, new ResultHandler<DataRow>() {
             @Override
             public void handleMessage(Message msg) {
@@ -449,30 +581,24 @@ public class pn_wo_entry_order_commit_editor extends pn_editor {
                 DataRow row = result.Value;
                 if (row != null) {
 
-                    count2 = result.Value.getValue("quantity",new BigDecimal(0)).intValue();
+                    count2 = result.Value.getValue("quantity", new BigDecimal(0)).intValue();
                 }
 
 
-                Log.e("lzh111",String.valueOf(count3));
-                    if(count3==-2) {
-                        count3 = count1 - count2 -qtyy;
-                        txt_size_cell.setContentText(String.valueOf(count3));
-                    }else{
-                        count3 =count3-qtyy;
-                        txt_size_cell.setContentText(String.valueOf(count3));
-                    }
-
-
+                Log.e("lzh111", String.valueOf(count3));
+                if (count3 == -2) {
+                    count3 = count1 - count2 - qtyy;
+                    txt_size_cell.setContentText(String.valueOf(count3));
+                } else {
+                    count3 = count3 - qtyy;
+                    txt_size_cell.setContentText(String.valueOf(count3));
                 }
+
+
+            }
 
         });
     }
-
-
-
-
-
-
 
 
     @Override
@@ -541,6 +667,7 @@ public class pn_wo_entry_order_commit_editor extends pn_editor {
                 clear();
                 scan_count = 0;
                 _rowv = null;
+                sendMessageToDingding(txt_comment_cell.getContentText());
                 if (pn_wo_entry_order_commit_editor.this.chk_commit_print.CheckBox.isChecked()) {
                     //
                     printLabel(rs.Value);
