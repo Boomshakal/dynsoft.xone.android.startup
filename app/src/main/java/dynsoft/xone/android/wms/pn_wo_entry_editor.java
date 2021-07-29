@@ -432,7 +432,7 @@ public class pn_wo_entry_editor extends pn_editor {
 	{
 		_order_row = row;
 		if (_order_row == null) {
-			App.Current.showError(pn_wo_entry_editor.this.getContext(), "待入库数据没有该批号。");
+			App.Current.showError(pn_wo_entry_editor.this.getContext(), "该物料已入库或待入库数据没有该批号。");
 			return;
 		}
 		
