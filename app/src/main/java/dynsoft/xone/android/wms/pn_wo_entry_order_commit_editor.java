@@ -79,6 +79,8 @@ public class pn_wo_entry_order_commit_editor extends pn_editor {
 
     private String task_order_code;
     private String item_code;
+    private String item_name;
+    private String line_name;
 
     public pn_wo_entry_order_commit_editor(Context context) {
         super(context);
@@ -209,6 +211,7 @@ public class pn_wo_entry_order_commit_editor extends pn_editor {
         }
         if (this.txt_comment_cell != null) {
             this.txt_comment_cell.setLabelText("备注");
+            this.txt_comment_cell.setOnClickListener(v -> sendDingtalkMessage(this.txt_comment_cell.getContentText()));
         }
     }
 
@@ -362,11 +365,14 @@ public class pn_wo_entry_order_commit_editor extends pn_editor {
                 }
             }
             item_code = ri.Value.getValue("item_code", "");
+            item_name = ri.Value.getValue("item_name", "");
+            task_order_code = ri.Value.getValue("code", "");
+            line_name = ri.Value.getValue("line_name", "");
             this.txt_org_code_cell.setContentText(ri.Value.getValue("org_code", "") + "," + ri.Value.getValue("warehouse_code", ""));
             this.txt_item_name_cell.setContentText(ri.Value.getValue("item_name", ""));
             this.txt_item_code_cell.setContentText(item_code);
             this.txt_warehouse_cell.setContentText("");
-            task_order_code = ri.Value.getValue("code", "");
+
             this.task_work_code_cell.setContentText(task_order_code);
             this.task_work_code_cell.setTag(ri.Value.getValue("task_order_id", ""));
             if (!task_order_code.toUpperCase().contains("Z")) {
@@ -393,6 +399,45 @@ public class pn_wo_entry_order_commit_editor extends pn_editor {
         }
     }
 
+    private void sendDingtalkMessage(String comment) {
+        if (comment.equals("清尾")) {
+            String sql = "exec p_qm_qingwei_message ?";
+            Date currentTime = new Date();
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            String currentTime_str = formatter.format(currentTime);
+            String content = ""
+                    + "  \n  任务单号：" + task_order_code
+                    + "  \n  线别：" + line_name
+                    + "  \n  物料编码：" + item_code
+                    + "  \n  机型名称：" + item_name
+                    + "  \n  时间：" + currentTime_str;
+            String text = "MES缴库清尾确认通知\n" + content;
+
+            Parameters p = new Parameters().add(1, text);
+            App.Current.DbPortal.ExecuteNonQueryAsync("core_and", sql, p, new ResultHandler<Integer>() {
+                @Override
+                public void handleMessage(Message msg) {
+                    Result<Integer> value = Value;
+                    if (value.HasError) {
+                        App.Current.toastInfo(getContext(), "提交失败" + value.Error);
+                        App.Current.playSound(R.raw.error);
+                    } else {
+                        if (value.Value > 0) {
+
+                            App.Current.toastInfo(getContext(), "提交成功");
+                            App.Current.playSound(R.raw.pass);
+
+                        } else {
+                            App.Current.toastInfo(getContext(), "提交失败");
+                            App.Current.playSound(R.raw.error);
+                        }
+                    }
+                }
+            });
+
+        }
+    }
+
     public void sendMessageToDingding(String comment) {
         if (comment.equals("清尾")) {
 
@@ -401,7 +446,6 @@ public class pn_wo_entry_order_commit_editor extends pn_editor {
             Parameters p = new Parameters().add(1, task_order_id);
             String mobile = App.Current.DbPortal.ExecuteScalar("core_and", sql, p).Value.toString();
 
-//            String mobile = "15168633879";
             if (mobile.equals("")) {
                 App.Current.showError(this.getContext(), "没有维护手机号码");
                 return;
@@ -444,12 +488,13 @@ public class pn_wo_entry_order_commit_editor extends pn_editor {
                                             TextBean textBean = new TextBean();
                                             textBean.setTitle("MES缴库清尾确认通知");
                                             String content = ""
-                                                    + "  \n  任务单号：" + task_work_code_cell.getContentText()
-                                                    + "  \n  物料编码：" + txt_item_code_cell.getContentText()
-                                                    + "  \n  机型名称：" + txt_item_name_cell.getContentText()
+                                                    + "  \n  任务单号：" + task_order_code
+                                                    + "  \n  线别：" + line_name
+                                                    + "  \n  物料编码：" + item_code
+                                                    + "  \n  机型名称：" + item_name
                                                     + "  \n  时间：" + currentTime_str;
                                             String text = "<font color=#FF0000 size=6 face=\"黑体\">MES缴库清尾确认通知 </font> " +
-                                                    " ![](https://www.ikahe.com/style/images/logo.png)\n" +
+                                                    " ![](https://www.ikahe.com/uploads/images/202007/b34252d44750790c75bb369e1768ae36.png)\n" +
                                                     "<font color=#000000 size=4 face=\"黑体\">" + content + "</font> ";
                                             markDownBean.setMarkdown(textBean);
                                             textBean.setText(text);
@@ -664,10 +709,11 @@ public class pn_wo_entry_order_commit_editor extends pn_editor {
                     return;
                 }
                 App.Current.toastInfo(pn_wo_entry_order_commit_editor.this.getContext(), "缴库提交成功");
+//                sendMessageToDingding(txt_comment_cell.getContentText());
+                sendDingtalkMessage(txt_comment_cell.getContentText());
                 clear();
                 scan_count = 0;
                 _rowv = null;
-                sendMessageToDingding(txt_comment_cell.getContentText());
                 if (pn_wo_entry_order_commit_editor.this.chk_commit_print.CheckBox.isChecked()) {
                     //
                     printLabel(rs.Value);

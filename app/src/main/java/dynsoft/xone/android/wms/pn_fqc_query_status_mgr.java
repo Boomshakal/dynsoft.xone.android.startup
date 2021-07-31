@@ -79,7 +79,7 @@ public class pn_fqc_query_status_mgr extends pn_mgr {
                 String showinfo = "检验结果：" + inspection_results + "\n检验状态：" + fqc_status;
                 App.Current.showInfo(this.getContext(), showinfo);
             } else {
-                App.Current.showInfo(this.getContext(), "未创建检验单！");
+                App.Current.showInfo(this.getContext(), "未缴库,请先缴库！");
             }
         }
 
