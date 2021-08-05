@@ -606,8 +606,8 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
                                     }
                                 }
                                 if (work_type.equals("part")) {
-                                    final String sql_str = "exec p_fm_work_check_barcode_for_part_and ?,?";
-                                    Parameters pr = new Parameters().add(1, edittext).add(2, task_order_id);
+                                    final String sql_str = "exec p_fm_work_check_barcode_for_part_and_v1 ?,?,?";
+                                    Parameters pr = new Parameters().add(1, edittext).add(2, task_order_id).add(3,scanString.get(0));
                                     String value_r = App.Current.DbPortal.ExecuteScalar("core_and", sql_str, pr).Value.toString();
                                     if (!value_r.equals("OK")) {
                                         App.Current.toastError(ScanTestActivity.this, value_r);

@@ -682,21 +682,26 @@ public class pn_qm_smt_rejects_record_mgr extends pn_editor {
                     } else {
                         result = "PASS";
                     }
+                    if (!(TextUtils.isDigitsOnly(buttonTextCell16.getContentText()) &&
+                            TextUtils.isDigitsOnly(buttonTextCell17.getContentText()) &&
+                            TextUtils.isDigitsOnly(buttonTextCell18.getContentText()))) {
+                        App.Current.toastError(getContext(), "输入的数据有异常");
+                        return;
+                    }
+                    double water_data = Double.parseDouble(buttonTextCell16.getContentText());
+                    double seat_data = Double.parseDouble(buttonTextCell17.getContentText());
+                    double wind_data = Double.parseDouble(buttonTextCell18.getContentText());
 
-                    double  water_data = Double.parseDouble(buttonTextCell16.getContentText());
-                    double  seat_data = Double.parseDouble(buttonTextCell17.getContentText());
-                    double  wind_data = Double.parseDouble(buttonTextCell18.getContentText());
 
-
-                    if (water_data<0 || water_data > 70) {
+                    if (water_data < 0 || water_data > 70) {
                         App.Current.toastError(getContext(), "输入水温数据不在0~70范围内");
                         return;
                     }
-                    if (seat_data<0 || seat_data > 50) {
+                    if (seat_data < 0 || seat_data > 50) {
                         App.Current.toastError(getContext(), "输入座温数据不在0~50范围内");
                         return;
                     }
-                    if (wind_data<0 || wind_data > 65) {
+                    if (wind_data < 0 || wind_data > 65) {
                         App.Current.toastError(getContext(), "输入风温数据不在0~65范围内");
                         return;
                     }
