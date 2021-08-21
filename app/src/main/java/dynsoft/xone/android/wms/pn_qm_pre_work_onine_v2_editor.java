@@ -125,6 +125,7 @@ public class pn_qm_pre_work_onine_v2_editor extends pn_editor {
     private String indexString = "";
     private Boolean isStatus = false;
     private Integer item_id;
+    private String work_line;
 
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor edit;
@@ -297,7 +298,7 @@ public class pn_qm_pre_work_onine_v2_editor extends pn_editor {
                 String url = "http://192.168.1.159:5000/code";
 
                 FormEncodingBuilder builder = new FormEncodingBuilder();
-                builder.add("Secret","GEZVMQJTHEYDSVBU");
+                builder.add("Secret", "GEZVMQJTHEYDSVBU");
 
                 Request request = new Request.Builder().url(url).post(builder.build()).build();
 //                Request request = new Request.Builder().url(url).build();
@@ -373,6 +374,9 @@ public class pn_qm_pre_work_onine_v2_editor extends pn_editor {
             public void onClick(DialogInterface dialog, int which) {
                 if (which >= 0) {
                     String code = dataTable.Rows.get(which).getValue("code", "");
+                    Long id = dataTable.Rows.get(which).getValue("id", 0L);
+                    work_line = id == 31 ? "ÌÕ´É" : "Ô¤¼Ó¹¤";
+
                     chooseProcessingMethod(code);
                 }
                 dialog.dismiss();
@@ -1005,7 +1009,7 @@ public class pn_qm_pre_work_onine_v2_editor extends pn_editor {
         int hour = time.hour;
         Map<String, String> headMap = new HashMap<>();
         headMap.put("task_order_code", textcell_taskordercode.getContentText());
-        headMap.put("work_line", "Ô¤¼Ó¹¤");
+        headMap.put("work_line", work_line);
         headMap.put("sequence_code", seqCode);
         headMap.put("worker_code", cardNumber);
         headMap.put("work_shift", hour > 18 ? "Ò¹°à" : "°×°à");

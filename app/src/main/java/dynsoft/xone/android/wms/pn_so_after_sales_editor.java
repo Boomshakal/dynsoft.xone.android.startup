@@ -37,8 +37,10 @@ import android.net.wifi.p2p.WifiP2pManager;
 import android.os.Build;
 import android.os.Handler;
 import android.os.Message;
+import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
@@ -161,19 +163,13 @@ public class pn_so_after_sales_editor extends pn_editor implements OnClickListen
             this.txt_express_comp_cell.setLabelText("快递公司");
             this.txt_express_comp_cell.setReadOnly();
             this.txt_express_comp_cell.Button.setOnClickListener(v -> choose_express_comp(this.txt_express_comp_cell));
-            this.txt_express_comp_cell.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    get_express_comp("YT5550969690657", new ResultHandler<String>() {
-                                @Override
-                                public void handleMessage(Message msg) {
-                                    Result<String> result = this.Value;
-                                    pn_so_after_sales_editor.this.txt_express_comp_cell.setContentText(result.Value);
-                                }
-                            }
-                    );
-                }
-            });
+//            this.txt_express_comp_cell.setOnClickListener(v -> get_express_comp("", new ResultHandler<String>() {
+//                @Override
+//                public void handleMessage(Message msg) {
+//                    Result<String> result = this.Value;
+//                    pn_so_after_sales_editor.this.txt_express_comp_cell.setContentText(result.Value);
+//                }
+//            }));
         }
         if (this.txt_customer_name != null) {
             this.txt_customer_name.setLabelText("客户名称");
@@ -460,6 +456,11 @@ public class pn_so_after_sales_editor extends pn_editor implements OnClickListen
             return;
         }
 
+        if (TextUtils.isEmpty(this.txt_return_type.getContentText().trim())) {
+            App.Current.showError(this.getContext(), "请选择退货类型！");
+            return;
+        }
+
         if (is_history.isChecked()) {
             String sql_history = "exec is_exists_mm_ar_after_receiving_items ?";
             Parameters p_history = new Parameters();
@@ -492,6 +493,14 @@ public class pn_so_after_sales_editor extends pn_editor implements OnClickListen
             @Override
             public void handleMessage(Message msg) {
                 pn_so_after_sales_editor.this.ProgressDialog.dismiss();
+
+                Result<DataTable> value = Value;
+
+                if (value.HasError) {
+                    App.Current.toastError(getContext(), value.Error);
+                    return;
+                }
+
                 App.Current.toastInfo(pn_so_after_sales_editor.this.getContext(), "售后收货登记记录成功");
 
                 if (checkbox_print.isChecked()) {

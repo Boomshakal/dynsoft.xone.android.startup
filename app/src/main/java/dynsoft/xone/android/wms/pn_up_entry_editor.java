@@ -365,7 +365,7 @@ public class pn_up_entry_editor extends pn_editor {
 				pn_up_entry_editor.this.txt_vendor_name_cell.setTag(_lot_row.getValue("vendor_id"));
 				pn_up_entry_editor.this.txt_lot_number_cell.setContentText(_lot_row.getValue("lot_number", ""));
 				pn_up_entry_editor.this.txt_date_code_cell.setContentText(_lot_row.getValue("date_code", ""));
-				pn_up_entry_editor.this.txt_location_cell.setContentText(_lot_row.getValue("locations", ""));
+//				pn_up_entry_editor.this.txt_location_cell.setContentText(_lot_row.getValue("locations", ""));
 				
 				pn_up_entry_editor.this.txt_issue_quantity_cell.setContentText(issue_qty);
 				pn_up_entry_editor.this.txt_onhand_cell.setContentText(onhand_qty);

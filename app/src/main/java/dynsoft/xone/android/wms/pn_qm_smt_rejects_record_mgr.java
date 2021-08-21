@@ -37,6 +37,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Pattern;
 
 import dynsoft.xone.android.bean.SmtWhBean;
 import dynsoft.xone.android.blueprint.FaliaoStatusActivity;
@@ -682,9 +683,9 @@ public class pn_qm_smt_rejects_record_mgr extends pn_editor {
                     } else {
                         result = "PASS";
                     }
-                    if (!(TextUtils.isDigitsOnly(buttonTextCell16.getContentText()) &&
-                            TextUtils.isDigitsOnly(buttonTextCell17.getContentText()) &&
-                            TextUtils.isDigitsOnly(buttonTextCell18.getContentText()))) {
+                    if (!(isNumeric(buttonTextCell16.getContentText()) &&
+                            isNumeric(buttonTextCell17.getContentText()) &&
+                            isNumeric(buttonTextCell18.getContentText()))) {
                         App.Current.toastError(getContext(), "输入的数据有异常");
                         return;
                     }
@@ -740,6 +741,11 @@ public class pn_qm_smt_rejects_record_mgr extends pn_editor {
                 }
             }
         });
+    }
+
+    public static boolean isNumeric(String str) {
+        Pattern pattern = Pattern.compile("^[-\\+]?[.\\d]*$");
+        return pattern.matcher(str).matches();
     }
 
     private void setclicklisten(ButtonTextCell buttontextcell) {

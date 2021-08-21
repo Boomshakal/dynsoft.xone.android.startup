@@ -101,6 +101,7 @@ public class MesLightActivity extends Activity {
     private String workLine;
     private Integer work_line_id;
     private String production;
+    private String work_name;
     private TcpClientConnector connector;
 
     @Override
@@ -117,6 +118,7 @@ public class MesLightActivity extends Activity {
         work_line_id = sharedPreferences.getInt("work_line_id", 0);
         Log.e("Len", String.valueOf(work_line_id));
         production = sharedPreferences.getString("production", "");
+        work_name = sharedPreferences.getString("work_name", "");
 
         //"差", "一般", "满意", "非常满意", "无可挑剔"
         starMap = new HashMap<Integer, String>();
@@ -1225,7 +1227,8 @@ public class MesLightActivity extends Activity {
                                                     + "  \n  线体：" + workLine + "," + stage_name + "," + station
                                                     + "  \n  工序：" + production
                                                     + "  \n  原因：" + sb.toString()
-                                                    + "  \n  时间：" + createTime;
+                                                    + "  \n  时间：" + createTime
+                                                    + "  \n  人员：" + work_name;
                                             String text = "<font color=#FF0000 size=6 face=\"黑体\">MES安灯通知 </font> " +
                                                     " ![](https://www.ikahe.com/style/images/logo.png)\n" +
                                                     "<font color=#000000 size=4 face=\"黑体\">" + content + "</font> ";

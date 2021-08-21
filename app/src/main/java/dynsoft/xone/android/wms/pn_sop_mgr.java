@@ -77,10 +77,10 @@ public class pn_sop_mgr extends pn_mgr {
         edit = sharedPreferences.edit();
 
         if (this.SearchBox != null) {
-            this.SearchBox.setOnKeyListener(new OnKeyListener(){
+            this.SearchBox.setOnKeyListener(new OnKeyListener() {
                 @Override
                 public boolean onKey(View v, int keyCode, KeyEvent event) {
-                    if (keyCode == KeyEvent.KEYCODE_ENTER && event.getAction() == KeyEvent.ACTION_UP){
+                    if (keyCode == KeyEvent.KEYCODE_ENTER && event.getAction() == KeyEvent.ACTION_UP) {
                         String bar_code = pn_sop_mgr.this.SearchBox.getText().toString();
                         loadItem(bar_code);
                         return true;
@@ -172,6 +172,7 @@ public class pn_sop_mgr extends pn_mgr {
         if (textcell_4_1 != null) {
             textcell_4_1.setLabelText("工段");
             textcell_4_1.setContentText(sharedPreferences.getString("stage_name", ""));
+            textcell_4_1.setReadOnly();
         }
 
 
@@ -240,6 +241,8 @@ public class pn_sop_mgr extends pn_mgr {
                 App.Current.showInfo(getContext(), "请选择线别");
             } else if (TextUtils.isEmpty(textcell_4.getContentText())) {
                 App.Current.showInfo(getContext(), "请输入工位");
+            } else if (!TextUtils.isDigitsOnly(textcell_4.getContentText())) {
+                App.Current.showInfo(getContext(), "请输入工位数字");
             } else if (TextUtils.isEmpty(textcell_5.getContentText())) {
                 App.Current.showInfo(getContext(), "请选择工序");
             } else if (TextUtils.isEmpty(textcell_6.getContentText())) {

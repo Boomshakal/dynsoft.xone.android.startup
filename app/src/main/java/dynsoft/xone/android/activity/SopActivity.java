@@ -418,6 +418,9 @@ public class SopActivity extends Activity implements SpeechSynthesizerListener {
                     name = value.Value.getValue("name", "");
                     code = value.Value.getValue("code", "");
                     text_3.setText(code + "-" + name);
+
+                    edit.putString("work_name", text_3.getText().toString());
+                    edit.commit();
                 }
             }
         });
