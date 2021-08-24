@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/dynsoft.xone.android.startup/app/src/main/res/layout/activity_first_item_sure.xml" value="0.2115036231884058" />
         <entry key="..\:/dynsoft.xone.android.startup/app/src/main/res/layout/activity_meeting.xml" value="0.1793478260869565" />
         <entry key="..\:/dynsoft.xone.android.startup/app/src/main/res/layout/pn_hr_meeting_mgr.xml" value="0.1" />
+        <entry key="..\:/dynsoft.xone.android.startup/app/src/main/res/layout/pn_qm_electric_equipment_check_mgr_editor.xml" value="0.2115036231884058" />
+        <entry key="..\:/dynsoft.xone.android.startup/app/src/main/res/layout/pn_qm_pre_work_online_v2_editor.xml" value="0.1" />
       </map>
     </option>
   </component>

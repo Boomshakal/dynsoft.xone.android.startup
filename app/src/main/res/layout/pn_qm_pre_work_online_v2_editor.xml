@@ -33,6 +33,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
+            <dynsoft.xone.android.control.ButtonTextCell
+                android:id="@+id/textcell_work_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
             <dynsoft.xone.android.control.TextCell
                 android:id="@+id/textcell_lotnumber"
                 android:layout_width="match_parent"

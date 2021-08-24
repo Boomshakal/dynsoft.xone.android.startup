@@ -85,6 +85,7 @@ public class pn_qm_pre_work_onine_v2_editor extends pn_editor {
     private static final int PREREQUESTCODE = 1212121;
     public ButtonTextCell textcell_usercode;
     public ButtonTextCell textcell_taskordercode;
+    public ButtonTextCell textcell_work_line;
     public TextCell textcell_lotnumber;
     public TextCell textcell_wh;
     public TextCell textcell_machine;
@@ -154,6 +155,7 @@ public class pn_qm_pre_work_onine_v2_editor extends pn_editor {
         stringSelectedItems = new StringBuffer();
         this.textcell_usercode = this.findViewById(R.id.textcell_usercode);
         this.textcell_taskordercode = this.findViewById(R.id.textcell_taskordercode);
+        this.textcell_work_line = this.findViewById(R.id.textcell_work_line);
         this.textcell_lotnumber = this.findViewById(R.id.textcell_lotnumber);
 //        this.textcell_wh = this.findViewById(R.id.textcell_wh);
 //        this.textcell_machine = this.findViewById(R.id.textcell_machine);
@@ -231,6 +233,17 @@ public class pn_qm_pre_work_onine_v2_editor extends pn_editor {
             textcell_taskordercode.setContentText(code);
         }
 
+        if (this.textcell_work_line !=null){
+            this.textcell_work_line.setLabelText("线别");
+            this.textcell_work_line.setReadOnly();
+            textcell_work_line.Button.setImageBitmap(App.Current.ResourceManager.getImage("@/core_acl_gray"));
+            textcell_work_line.Button.setOnClickListener(v -> selectwork_line());
+            if (TextUtils.isEmpty(work_line)) {
+                work_line = sharedPreferences.getString("work_line", "");
+            }
+            textcell_work_line.setContentText(work_line);
+        }
+
         if (this.textcell_lotnumber != null) {
             this.textcell_lotnumber.setLabelText("条码信息");
             this.textcell_lotnumber.setReadOnly();
@@ -288,6 +301,8 @@ public class pn_qm_pre_work_onine_v2_editor extends pn_editor {
                 }
             });
         }
+
+        refreshWorker("");
     }
 
     private void sendByOKHttp() {
@@ -313,6 +328,57 @@ public class pn_qm_pre_work_onine_v2_editor extends pn_editor {
         }).start();
     }
 
+    /**
+     * 选择线体
+     */
+    private void selectwork_line() {
+        String sql = "exec p_get_work_line_v1";
+        Parameters p = new Parameters();
+        App.Current.DbPortal.ExecuteDataTableAsync("core_and", sql, p, new ResultHandler<DataTable>() {
+            @Override
+            public void handleMessage(Message msg) {
+                final Result<DataTable> value = Value;
+                if (value.HasError) {
+                    App.Current.toastError(getContext(), value.Error);
+                    App.Current.playSound(R.raw.error);
+                    return;
+                }
+                if (value.Value != null && value.Value.Rows.size() > 0) {
+
+                    multiChoiceDialog_work_line(value.Value);
+                } else {
+                    App.Current.toastError(getContext(), "没有维护作业方式。");
+                    App.Current.playSound(R.raw.error);
+                }
+            }
+        });
+    }
+
+    private void multiChoiceDialog_work_line(final DataTable dataTable) {
+        ArrayList<String> names = new ArrayList<String>();
+        for (DataRow dataRow : dataTable.Rows) {
+            String name = dataRow.getValue("name", "");
+            Log.e("len", "name : " + name);
+            names.add(name);
+        }
+        final DialogInterface.OnClickListener listener = new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                if (which >= 0) {
+                    String name = dataTable.Rows.get(which).getValue("name", "");
+                    edit.putString("work_line", name);
+                    edit.commit();
+                    textcell_work_line.setContentText(name);
+                }
+                dialog.dismiss();
+            }
+        };
+        new AlertDialog.Builder(getContext()).setTitle("请选择")
+                .setSingleChoiceItems(names.toArray(new String[0]), names.indexOf
+                        (textcell_workmethod.TextBox.getText().toString()), listener)
+                .setNegativeButton("取消", null).show();
+    }
 
     private void chooseworkmethod() {    //选择作业方式
         String sql = "exec p_get_workmethod_v1 ?";
@@ -374,8 +440,6 @@ public class pn_qm_pre_work_onine_v2_editor extends pn_editor {
             public void onClick(DialogInterface dialog, int which) {
                 if (which >= 0) {
                     String code = dataTable.Rows.get(which).getValue("code", "");
-                    Long id = dataTable.Rows.get(which).getValue("id", 0L);
-                    work_line = id == 31 ? "陶瓷" : "预加工";
 
                     chooseProcessingMethod(code);
                 }
@@ -864,6 +928,7 @@ public class pn_qm_pre_work_onine_v2_editor extends pn_editor {
 
     /**
      * 选择加工站位和方式
+     * @param SeqCode 工序编号
      */
     private void chooseProcessingMethod(String SeqCode) {
         final PopupWindow popupWindow = new PopupWindow();
@@ -1009,7 +1074,7 @@ public class pn_qm_pre_work_onine_v2_editor extends pn_editor {
         int hour = time.hour;
         Map<String, String> headMap = new HashMap<>();
         headMap.put("task_order_code", textcell_taskordercode.getContentText());
-        headMap.put("work_line", work_line);
+        headMap.put("work_line", textcell_work_line.getContentText());
         headMap.put("sequence_code", seqCode);
         headMap.put("worker_code", cardNumber);
         headMap.put("work_shift", hour > 18 ? "夜班" : "白班");
@@ -1099,7 +1164,7 @@ public class pn_qm_pre_work_onine_v2_editor extends pn_editor {
 
     private void refreshWorker(String search) {
         String sql = "exec p_fm_pre_work_sign_get_item_list ?,?,?,?";
-        Parameters p = new Parameters().add(1, App.Current.getMacAddress()).add(2, "预加工").add(3, 15).add(4, search);
+        Parameters p = new Parameters().add(1, App.Current.getMacAddress()).add(2, textcell_work_line.getContentText()).add(3, 15).add(4, search);
         App.Current.DbPortal.ExecuteDataTableAsync("core_and", sql, p, new ResultHandler<DataTable>() {
             @Override
             public void handleMessage(Message msg) {
@@ -1301,7 +1366,7 @@ public class pn_qm_pre_work_onine_v2_editor extends pn_editor {
         if (textcell_workmethod.getContentText().contains("散热器")) {
             textcell_machine.setContentText("");
         }
-        textcell_taskordercode.setContentText("");
+//        textcell_taskordercode.setContentText("");
         textcell_usercode.setContentText("");
         textcell_lotnumber.setContentText("");
 //        textcell_wh.setContentText("");
@@ -1802,8 +1867,8 @@ public class pn_qm_pre_work_onine_v2_editor extends pn_editor {
                 public void onClick(View view) {
                     String[] worker = worker_name.split("-");
                     final String workerCode = worker[0].trim();
-                    String sql = "exec fm_sign_start_pre_work_time ?,?";
-                    Parameters p = new Parameters().add(1, workerCode).add(2, task_order_code);
+                    String sql = "exec fm_sign_start_pre_work_time_v1 ?,?,?";
+                    Parameters p = new Parameters().add(1, workerCode).add(2, task_order_code).add(3, work_line);
                     App.Current.DbPortal.ExecuteNonQueryAsync("core_and", sql, p, new ResultHandler<Integer>() {
                         @Override
                         public void handleMessage(Message msg) {
@@ -1834,8 +1899,8 @@ public class pn_qm_pre_work_onine_v2_editor extends pn_editor {
                             if (TextUtils.isEmpty(result)) {
                                 App.Current.toastError(context, "请先输入加工数量");
                             } else if (result.matches("^[0-9]*$")) {
-                                String sql = "exec fm_sign_off_pre_work_time ?,?,?";
-                                Parameters p = new Parameters().add(1, result).add(2, workerCode).add(3, taskOrderCode);
+                                String sql = "exec fm_sign_off_pre_work_time_v1 ?,?,?,?";
+                                Parameters p = new Parameters().add(1, result).add(2, workerCode).add(3, taskOrderCode).add(4, work_line);
                                 App.Current.DbPortal.ExecuteNonQueryAsync("core_and", sql, p, new ResultHandler<Integer>() {
                                     @Override
                                     public void handleMessage(Message msg) {
