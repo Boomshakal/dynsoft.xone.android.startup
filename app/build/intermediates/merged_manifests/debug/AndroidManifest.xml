@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="dynsoft.xone.android.core"
     android:versionCode="1"
-    android:versionName="2021.08.21.1037" >
+    android:versionName="2021.08.24.1037" >
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -29,7 +29,8 @@
 
     <!-- SDK离线地图和cache功能需要读写外部存储器 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- <uses-permission android:name="android.permission.CAMERA" /> -->
+
 
     <!-- 获取设置信息和详情页直接拨打电话需要以下权限 -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />

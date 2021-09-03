@@ -351,15 +351,17 @@ public class pn_so_after_sales_editor extends pn_editor implements OnClickListen
                 HashMap res = gson.fromJson(result, HashMap.class);
 
                 ArrayList list = (ArrayList) res.get("auto");
-                assert list != null;
-                StringMap comp_info = (StringMap) list.get(0);
-                assert comp_info != null;
-
-                comp_name.Value = Objects.requireNonNull(comp_info.get("name")).toString();
+                if (list.size() == 0) {
+                    comp_name.Value = "";
+                } else {
+                    StringMap comp_info = (StringMap) list.get(0);
+                    comp_name.Value = Objects.requireNonNull(comp_info.get("name")).toString();
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();
             comp_name.HasError = Boolean.FALSE;
+            comp_name.Value = "";
         }
         return comp_name;
     }
