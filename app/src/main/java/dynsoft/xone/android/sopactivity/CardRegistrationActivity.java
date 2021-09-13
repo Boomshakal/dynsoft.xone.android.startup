@@ -3,8 +3,10 @@ package dynsoft.xone.android.sopactivity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Message;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -169,14 +171,14 @@ public class CardRegistrationActivity extends BaseActivity implements View.OnCli
         });
 
         Log.e("len", "APP:" + App.Current.Server.Address);
-        if(App.Current.Server.Address.contains("192.168.0.126")) {
+        if (App.Current.Server.Address.contains("192.168.0.126")) {
             edittext.setOnKeyListener(new View.OnKeyListener() {
                 @Override
                 public boolean onKey(View view, int keyCode, KeyEvent keyEvent) {
                     if (keyCode == KeyEvent.KEYCODE_ENTER && keyEvent.getAction() == KeyEvent.ACTION_UP) {
                         edittextdata = edittext.getText().toString().replace("\n", "").toUpperCase();
 //                    edittextdata = edittext.getText().toString();
-                        if ((edittextdata.toUpperCase().startsWith("M") || edittextdata.toUpperCase().startsWith("YH"))&& edittextdata.length() < 8) {
+                        if ((edittextdata.toUpperCase().startsWith("M") || edittextdata.toUpperCase().startsWith("YH")) && edittextdata.length() < 8) {
                             if (status == ONLINE) {
                                 workerOnLine(edittextdata.replace("\n", ""));
                             } else {
@@ -208,7 +210,7 @@ public class CardRegistrationActivity extends BaseActivity implements View.OnCli
                     }
                 }
             });
-        } else if (App.Current.Server.Address.contains("39.108.49.47")){
+        } else if (App.Current.Server.Address.contains("39.108.49.47")) {
             edittext.setOnKeyListener(new View.OnKeyListener() {
                 @Override
                 public boolean onKey(View view, int keyCode, KeyEvent keyEvent) {
@@ -247,7 +249,7 @@ public class CardRegistrationActivity extends BaseActivity implements View.OnCli
                     }
                 }
             });
-        }else {
+        } else {
             edittext.setOnKeyListener(new View.OnKeyListener() {
                 @Override
                 public boolean onKey(View view, int keyCode, KeyEvent keyEvent) {
@@ -302,6 +304,41 @@ public class CardRegistrationActivity extends BaseActivity implements View.OnCli
                 adapter.changSelected(position);
             }
         });
+
+        listview.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int position, long l) {
+                selectWorker = (TextView) view.findViewById(R.id.textview_5);
+                worker_sign_id = dataTable.Rows.get(position).getValue("id", 0L);
+                String worker_code = dataTable.Rows.get(position).getValue("worker_code", "");
+                String url = "https://eip.megmeet.com:8075/webroot/decision/view/report?viewlet=MEGMEET%2Fikahe%2Fwork_license.cpt&cardid=" + worker_code;
+                Log.e("LEN", url);
+                adapter.changSelected(position);
+
+                new AlertDialog.Builder(CardRegistrationActivity.this)
+                        .setTitle("提示")
+                        .setMessage("确定要查看上岗证吗？")
+                        .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                Uri uri = Uri.parse(url);
+                                Intent intent = new Intent();
+                                intent.setAction("android.intent.action.VIEW");
+                                intent.setData(uri);
+                                startActivity(intent);
+                            }
+                        })
+                        .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+
+                            }
+                        })
+                        .show();
+
+                return false;
+            }
+        });
     }
 
     @Override
@@ -310,8 +347,7 @@ public class CardRegistrationActivity extends BaseActivity implements View.OnCli
         return super.onKeyDown(keyCode, event);
     }
 
-    private void checkCard(String edittextdata, final int status) {   //
-        // workerOnLine(edittextdata);
+    private void checkCard(String edittextdata, final int status) {
         String sql = "exec p_fm_card_login ?";
         Parameters p = new Parameters().add(1, edittextdata.replace("\n", ""));
         edittext.setText("");
@@ -419,7 +455,7 @@ public class CardRegistrationActivity extends BaseActivity implements View.OnCli
         Parameters p = new Parameters().add(1, order_task_id).add(2, segment).add(3, seq_id)
                 .add(4, edittextdata).add(5, hour > 18 ? "夜班" : "白班").add(6, station).add(7, device)
                 .add(8, org_code).add(9, foreman_id).add(10, App.Current.UserID);
-        Log.e("len", order_task_id + "," + segment + "," + seq_id + "," + edittextdata + "," + "白班"+ ","
+        Log.e("len", order_task_id + "," + segment + "," + seq_id + "," + edittextdata + "," + "白班" + ","
                 + station + "," + device + "," + org_code + "," + foreman_id + "," + App.Current.UserID);
         App.Current.DbPortal.ExecuteNonQueryAsync("core_and", sql, p, new ResultHandler<Integer>() {
             @Override
@@ -597,8 +633,8 @@ public class CardRegistrationActivity extends BaseActivity implements View.OnCli
                 if (dataTable != null && dataTable.Rows.size() > 0) {
                     changePopupWindow();
                 } else {
-                   App.Current.toastError(CardRegistrationActivity.this, "当前没有打卡人员！");
-                   App.Current.playSound(R.raw.error);
+                    App.Current.toastError(CardRegistrationActivity.this, "当前没有打卡人员！");
+                    App.Current.playSound(R.raw.error);
                 }
                 break;
         }
@@ -616,7 +652,7 @@ public class CardRegistrationActivity extends BaseActivity implements View.OnCli
                         //按下确定键后的事件
                         isInputTaskCodeRight(et.getText().toString());
                     }
-                }).setNegativeButton("取消",null).show();
+                }).setNegativeButton("取消", null).show();
     }
 
     private void isInputTaskCodeRight(String taskCode) {
@@ -626,12 +662,12 @@ public class CardRegistrationActivity extends BaseActivity implements View.OnCli
             @Override
             public void handleMessage(Message msg) {
                 final Result<DataRow> value = Value;
-                if(value.HasError) {
+                if (value.HasError) {
                     App.Current.toastError(CardRegistrationActivity.this, value.Error);
                     App.Current.playSound(R.raw.error);
                     return;
                 }
-                if(value.Value != null) {
+                if (value.Value != null) {
                     //输入正确，转线
                     long id = value.Value.getValue("id", 0L);
                     String sql = "exec fm_work_sign_start_by_seq ?,?,?,?,?";
@@ -641,12 +677,12 @@ public class CardRegistrationActivity extends BaseActivity implements View.OnCli
                         @Override
                         public void handleMessage(Message msg) {
                             Result<DataRow> value1 = value;
-                            if(value1.HasError) {
+                            if (value1.HasError) {
                                 App.Current.toastError(CardRegistrationActivity.this, value1.Error);
                                 App.Current.playSound(R.raw.error);
                                 return;
                             }
-                            if(value1.Value != null) {
+                            if (value1.Value != null) {
                                 App.Current.toastInfo(CardRegistrationActivity.this, "启动成功！");
                                 App.Current.playSound(R.raw.pass);
                                 refreshWorker();

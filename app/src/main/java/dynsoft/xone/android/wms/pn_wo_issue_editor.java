@@ -55,6 +55,7 @@ public class pn_wo_issue_editor extends pn_editor {
     public TextCell txt_planned_quantity_cell;
     public ButtonTextCell txt_issue_quantity_cell;
     public TextCell txt_onhand_cell;
+    public TextCell txt_work_station_cell;
     public TextCell txt_location_cell;
     public ButtonTextCell txt_surplus_cell;
     public ImageButton btn_prev;
@@ -83,6 +84,7 @@ public class pn_wo_issue_editor extends pn_editor {
         this.txt_issue_quantity_cell = (ButtonTextCell) this.findViewById(R.id.txt_issue_quantity_cell);
         this.txt_location_cell = (TextCell) this.findViewById(R.id.txt_location_cell);
         this.txt_onhand_cell = (TextCell) this.findViewById(R.id.txt_onhand_cell);
+        this.txt_work_station_cell = (TextCell) this.findViewById(R.id.txt_work_station_cell);
         this.txt_surplus_cell = (ButtonTextCell) this.findViewById(R.id.txt_surplus_cell);
         this.btn_prev = (ImageButton) this.findViewById(R.id.btn_prev);
         this.btn_next = (ImageButton) this.findViewById(R.id.btn_next);
@@ -199,6 +201,12 @@ public class pn_wo_issue_editor extends pn_editor {
             this.txt_location_cell.setLabelText("储位");
             this.txt_location_cell.setReadOnly();
         }
+
+        if (this.txt_work_station_cell != null) {
+            this.txt_work_station_cell.setLabelText("段别");
+            this.txt_work_station_cell.setReadOnly();
+        }
+
 
         if (this.txt_onhand_cell != null) {
             this.txt_onhand_cell.setLabelText("现有量");
@@ -377,6 +385,7 @@ public class pn_wo_issue_editor extends pn_editor {
 
                 pn_wo_issue_editor.this.txt_planned_quantity_cell.setContentText(qty_str);
                 pn_wo_issue_editor.this.txt_location_cell.setContentText(row.getValue("location", ""));
+                pn_wo_issue_editor.this.txt_work_station_cell.setContentText(row.getValue("work_station", ""));
 
                 pn_wo_issue_editor.this.txt_lot_number_cell.setTag(null);
                 pn_wo_issue_editor.this.txt_lot_number_cell.setContentText("");
@@ -569,6 +578,7 @@ public class pn_wo_issue_editor extends pn_editor {
         pn_wo_issue_editor.this.txt_lot_number_cell.setContentText(_lot_row.getValue("lot_number", ""));
         pn_wo_issue_editor.this.txt_date_code_cell.setContentText(_lot_row.getValue("date_code", ""));
         pn_wo_issue_editor.this.txt_location_cell.setContentText(_lot_row.getValue("locations", ""));
+//        pn_wo_issue_editor.this.txt_work_station_cell.setContentText(_lot_row.getValue("work_station", ""));
 
         pn_wo_issue_editor.this.txt_issue_quantity_cell.setContentText(issue_qty);
         pn_wo_issue_editor.this.txt_onhand_cell.setContentText(onhand_qty);
@@ -839,6 +849,7 @@ public class pn_wo_issue_editor extends pn_editor {
         this.txt_date_code_cell.setContentText("");
         this.txt_lot_number_cell.setContentText("");
         this.txt_location_cell.setContentText("");
+        this.txt_work_station_cell.setContentText("");
         this.txt_issue_quantity_cell.setContentText("0");
     }
 
@@ -855,5 +866,6 @@ public class pn_wo_issue_editor extends pn_editor {
         this.txt_date_code_cell.setContentText("");
         this.txt_lot_number_cell.setContentText("");
         this.txt_location_cell.setContentText("");
+        this.txt_work_station_cell.setContentText("");
     }
 }
