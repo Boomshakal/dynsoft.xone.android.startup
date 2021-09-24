@@ -19,6 +19,7 @@ import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -70,6 +71,8 @@ public class pn_qm_smt_rejects_record_mgr extends pn_editor {
     private LinearLayout relativeLayout;
     private ButtonTextCell editText;
     private TextView textViewTitle;
+
+    private EditText SearchBox;
 
     private ImageButton btn_commit;
     private SharedPreferences sharedPreferences;
@@ -128,6 +131,23 @@ public class pn_qm_smt_rejects_record_mgr extends pn_editor {
         super.onPrepared();
         sharedPreferences = getContext().getSharedPreferences("smt", Context.MODE_PRIVATE);
         edit = sharedPreferences.edit();
+
+        this.SearchBox = (EditText) this.findViewById(R.id.txt_search);
+
+        if (this.SearchBox != null) {
+            this.SearchBox.setOnKeyListener(new OnKeyListener() {
+                @Override
+                public boolean onKey(View v, int keyCode, KeyEvent event) {
+                    if (keyCode == KeyEvent.KEYCODE_ENTER && event.getAction() == KeyEvent.ACTION_UP) {
+                        String bar_code = pn_qm_smt_rejects_record_mgr.this.SearchBox.getText().toString();
+//                        App.Current.toastError(getContext(), bar_code);
+                        initScanNumber(bar_code);
+                        return true;
+                    }
+                    return false;
+                }
+            });
+        }
 
         relativeLayout = (LinearLayout) findViewById(R.id.relativelayout);
         listViewDatas = new ArrayList<SmtWhBean>();
@@ -1384,6 +1404,7 @@ public class pn_qm_smt_rejects_record_mgr extends pn_editor {
                                             } else {
                                                 App.Current.toastInfo(getContext(), "提交成功");
                                                 App.Current.playSound(R.raw.pass);
+                                                SearchBox.setText("");
                                                 loadListView();
                                             }
                                         } else {

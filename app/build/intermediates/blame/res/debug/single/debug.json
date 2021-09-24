@@ -8,12 +8,12 @@
         "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\pn_qm_ipqc_first_sure_editor.xml"
     },
     {
-        "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\anim_activity_translate_out.xml.flat",
-        "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\anim\\activity_translate_out.xml"
-    },
-    {
         "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_pn_mm_splitlabel_editor.xml.flat",
         "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\pn_mm_splitlabel_editor.xml"
+    },
+    {
+        "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\anim_activity_translate_out.xml.flat",
+        "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\anim\\activity_translate_out.xml"
     },
     {
         "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_pn_qm_oqc_mgr.xml.flat",
@@ -52,12 +52,12 @@
         "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\pn_tr_issue_mgr.xml"
     },
     {
-        "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_first_item_popupwindow.xml.flat",
-        "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\item_first_item_popupwindow.xml"
-    },
-    {
         "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_left.png.flat",
         "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\drawable\\img_left.png"
+    },
+    {
+        "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_first_item_popupwindow.xml.flat",
+        "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\item_first_item_popupwindow.xml"
     },
     {
         "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_pn_wo_task_order_mgr.xml.flat",
@@ -152,20 +152,20 @@
         "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\esd_daily_editor_item.xml"
     },
     {
-        "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_pn_qm_and_ipqc_point_check_mgr.xml.flat",
-        "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\pn_qm_and_ipqc_point_check_mgr.xml"
-    },
-    {
-        "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_purchase_exam_item.xml.flat",
-        "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\purchase_exam_item.xml"
+        "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_wip.xml.flat",
+        "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\activity_wip.xml"
     },
     {
         "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_yhcangkuactivity.xml.flat",
         "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\yhcangkuactivity.xml"
     },
     {
-        "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_wip.xml.flat",
-        "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\activity_wip.xml"
+        "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_purchase_exam_item.xml.flat",
+        "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\purchase_exam_item.xml"
+    },
+    {
+        "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_pn_qm_and_ipqc_point_check_mgr.xml.flat",
+        "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\pn_qm_and_ipqc_point_check_mgr.xml"
     },
     {
         "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_pn_po_accept_mgr.xml.flat",
@@ -176,12 +176,12 @@
         "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\ln_wo_receive.xml"
     },
     {
-        "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable_indicator_bg_top.xml.flat",
-        "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\drawable\\indicator_bg_top.xml"
-    },
-    {
         "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_pn_trial_produce_record_editor.xml.flat",
         "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\pn_trial_produce_record_editor.xml"
+    },
+    {
+        "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable_indicator_bg_top.xml.flat",
+        "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\drawable\\indicator_bg_top.xml"
     },
     {
         "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_ln_smt_program.xml.flat",
@@ -212,12 +212,12 @@
         "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\ln_wo_issue.xml"
     },
     {
-        "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_first_item_title.xml.flat",
-        "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\item_first_item_title.xml"
-    },
-    {
         "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_pn_smt_steel_mesh_tension_editor.xml.flat",
         "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\pn_smt_steel_mesh_tension_editor.xml"
+    },
+    {
+        "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_first_item_title.xml.flat",
+        "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\item_first_item_title.xml"
     },
     {
         "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_cpk_second.xml.flat",
@@ -264,12 +264,12 @@
         "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\pn_bom_query_mgr.xml"
     },
     {
-        "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_pn_tr_entry_mgr.xml.flat",
-        "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\pn_tr_entry_mgr.xml"
-    },
-    {
         "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_changesop.xml.flat",
         "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\activity_changesop.xml"
+    },
+    {
+        "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_pn_tr_entry_mgr.xml.flat",
+        "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\pn_tr_entry_mgr.xml"
     },
     {
         "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_search.png.flat",
@@ -304,20 +304,20 @@
         "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\item_preonline_popup_item.xml"
     },
     {
-        "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_oqc.xml.flat",
-        "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\fragment_oqc.xml"
-    },
-    {
         "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_null_pic.bmp.flat",
         "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\drawable-xxhdpi\\null_pic.bmp"
     },
     {
-        "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable_textview_border.xml.flat",
-        "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\drawable\\textview_border.xml"
+        "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_oqc.xml.flat",
+        "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\fragment_oqc.xml"
     },
     {
         "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_ln_po_reject.xml.flat",
         "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\ln_po_reject.xml"
+    },
+    {
+        "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable_textview_border.xml.flat",
+        "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\drawable\\textview_border.xml"
     },
     {
         "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_pn_smt_prepare_editor.xml.flat",
@@ -372,12 +372,12 @@
         "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\animator\\slide_in_from_bottom.xml"
     },
     {
-        "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_ln_sop_parameter_item.xml.flat",
-        "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\ln_sop_parameter_item.xml"
-    },
-    {
         "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_plugin_camera_back_btn_pressed.png.flat",
         "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\drawable-hdpi\\plugin_camera_back_btn_pressed.png"
+    },
+    {
+        "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_ln_sop_parameter_item.xml.flat",
+        "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\ln_sop_parameter_item.xml"
     },
     {
         "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_preonline_pda.xml.flat",
@@ -1152,12 +1152,12 @@
         "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\pn_smt_back_editor.xml"
     },
     {
-        "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_device_daily_check_mgr_item.xml.flat",
-        "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\device_daily_check_mgr_item.xml"
-    },
-    {
         "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_uph_fragment.xml.flat",
         "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\item_uph_fragment.xml"
+    },
+    {
+        "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_device_daily_check_mgr_item.xml.flat",
+        "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\device_daily_check_mgr_item.xml"
     },
     {
         "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_pn_qm_ipqc_record_mgr_editor.xml.flat",
@@ -1404,12 +1404,12 @@
         "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\animator\\slide_out_to_bottom.xml"
     },
     {
-        "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_popupwindow_item_oqc_fragment.xml.flat",
-        "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\popupwindow_item_oqc_fragment.xml"
-    },
-    {
         "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_preonline.xml.flat",
         "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\item_preonline.xml"
+    },
+    {
+        "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_popupwindow_item_oqc_fragment.xml.flat",
+        "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\popupwindow_item_oqc_fragment.xml"
     },
     {
         "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_cpk_first.xml.flat",
@@ -1912,12 +1912,12 @@
         "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\pn_qm_esd_daily_mgr.xml"
     },
     {
-        "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_esd_daily_mgr_item.xml.flat",
-        "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\esd_daily_mgr_item.xml"
-    },
-    {
         "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_ln_mm_stock_check_offset_item.xml.flat",
         "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\ln_mm_stock_check_offset_item.xml"
+    },
+    {
+        "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_esd_daily_mgr_item.xml.flat",
+        "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\esd_daily_mgr_item.xml"
     },
     {
         "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_pn_qm_win_ipqc_point_check_editor_screwdriver.xml.flat",
@@ -1940,20 +1940,20 @@
         "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\third_fragment_wip.xml"
     },
     {
-        "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_published_grida.xml.flat",
-        "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\item_published_grida.xml"
-    },
-    {
-        "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_textview.xml.flat",
-        "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\drawable\\bg_textview.xml"
+        "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_ln_smt_task_order.xml.flat",
+        "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\ln_smt_task_order.xml"
     },
     {
         "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_location_header_item.xml.flat",
         "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\location_header_item.xml"
     },
     {
-        "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_ln_smt_task_order.xml.flat",
-        "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\ln_smt_task_order.xml"
+        "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_textview.xml.flat",
+        "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\drawable\\bg_textview.xml"
+    },
+    {
+        "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_published_grida.xml.flat",
+        "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\item_published_grida.xml"
     },
     {
         "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_smt_rejects_popupwindow1.xml.flat",
@@ -2136,12 +2136,12 @@
         "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\fm_smt_materials.xml"
     },
     {
-        "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_ln_qm_iqc_tasks.xml.flat",
-        "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\ln_qm_iqc_tasks.xml"
-    },
-    {
         "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_sop.png.flat",
         "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\drawable-xhdpi\\sop.png"
+    },
+    {
+        "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_ln_qm_iqc_tasks.xml.flat",
+        "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\ln_qm_iqc_tasks.xml"
     },
     {
         "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_default_ptr_flip.png.flat",
@@ -2340,12 +2340,12 @@
         "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\activity_cardregistrationkey.xml"
     },
     {
-        "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_plugin_camera_no_image_file.xml.flat",
-        "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\plugin_camera_no_image_file.xml"
-    },
-    {
         "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_pn_qm_pre_work_online_v2_editor.xml.flat",
         "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\pn_qm_pre_work_online_v2_editor.xml"
+    },
+    {
+        "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_plugin_camera_no_image_file.xml.flat",
+        "source": "D:\\dynsoft.xone.android.startup\\app\\src\\main\\res\\layout\\plugin_camera_no_image_file.xml"
     },
     {
         "merged": "D:\\dynsoft.xone.android.startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_third_item_wip_fragment.xml.flat",

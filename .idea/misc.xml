@@ -6,12 +6,14 @@
         <entry key="..\:/dynsoft.xone.android.startup/app/src/main/res/layout/activity_cardregistration.xml" value="0.23697916666666666" />
         <entry key="..\:/dynsoft.xone.android.startup/app/src/main/res/layout/activity_first_item_sure.xml" value="0.2115036231884058" />
         <entry key="..\:/dynsoft.xone.android.startup/app/src/main/res/layout/activity_meeting.xml" value="0.1793478260869565" />
-        <entry key="..\:/dynsoft.xone.android.startup/app/src/main/res/layout/cardregistration_item.xml" value="0.22192028985507245" />
+        <entry key="..\:/dynsoft.xone.android.startup/app/src/main/res/layout/cardregistration_item.xml" value="0.1" />
         <entry key="..\:/dynsoft.xone.android.startup/app/src/main/res/layout/item_popupwindows.xml" value="0.23697916666666666" />
         <entry key="..\:/dynsoft.xone.android.startup/app/src/main/res/layout/pn_hr_meeting_mgr.xml" value="0.1" />
         <entry key="..\:/dynsoft.xone.android.startup/app/src/main/res/layout/pn_qm_electric_equipment_check_mgr_editor.xml" value="0.2115036231884058" />
         <entry key="..\:/dynsoft.xone.android.startup/app/src/main/res/layout/pn_qm_pre_work_online_v2_editor.xml" value="0.1" />
+        <entry key="..\:/dynsoft.xone.android.startup/app/src/main/res/layout/pn_qm_smt_rejects_record_mgr.xml" value="0.16077898550724637" />
         <entry key="..\:/dynsoft.xone.android.startup/app/src/main/res/layout/pn_wo_issue_editor.xml" value="0.23143115942028986" />
+        <entry key="..\:/dynsoft.xone.android.startup/app/src/main/res/layout/smt_repair_popupwindow.xml" value="0.11524822695035461" />
       </map>
     </option>
   </component>

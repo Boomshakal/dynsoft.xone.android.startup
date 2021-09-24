@@ -1,53 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativelayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/relativelayout"
     android:background="#FDFDFD"
     android:orientation="vertical">
+
 
     <dynsoft.xone.android.control.PaneHeader
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-        <LinearLayout
-            android:id="@+id/body"
+    <EditText
+        android:id="@+id/txt_search"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:background="#F0F0F0"
+        android:gravity="center_vertical|center_horizontal"
+        android:hint="请扫描条码"
+        android:singleLine="true" />
+
+    <LinearLayout
+        android:id="@+id/body"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <dynsoft.xone.android.control.ButtonTextCell
+            android:id="@+id/textcell_1"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"></dynsoft.xone.android.control.ButtonTextCell>
 
-            <dynsoft.xone.android.control.ButtonTextCell
-                android:id="@+id/textcell_1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"></dynsoft.xone.android.control.ButtonTextCell>
+        <dynsoft.xone.android.control.TextCell
+            android:id="@+id/textcell_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></dynsoft.xone.android.control.TextCell>
 
-            <dynsoft.xone.android.control.TextCell
-                android:id="@+id/textcell_2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"></dynsoft.xone.android.control.TextCell>
+        <dynsoft.xone.android.control.ButtonTextCell
+            android:id="@+id/textcell_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></dynsoft.xone.android.control.ButtonTextCell>
 
-            <dynsoft.xone.android.control.ButtonTextCell
-                android:id="@+id/textcell_3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"></dynsoft.xone.android.control.ButtonTextCell>
+        <dynsoft.xone.android.control.ButtonTextCell
+            android:id="@+id/textcell_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></dynsoft.xone.android.control.ButtonTextCell>
 
-            <dynsoft.xone.android.control.ButtonTextCell
-                android:id="@+id/textcell_4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"></dynsoft.xone.android.control.ButtonTextCell>
+        <dynsoft.xone.android.control.TextCell
+            android:id="@+id/textcell_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></dynsoft.xone.android.control.TextCell>
 
-            <dynsoft.xone.android.control.TextCell
-                android:id="@+id/textcell_5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"></dynsoft.xone.android.control.TextCell>
-
-            <ListView
-                android:id="@+id/listview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"></ListView>
-        </LinearLayout>
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></ListView>
+    </LinearLayout>
 
     <dynsoft.xone.android.control.PaneFooter
         android:id="@+id/footer"
