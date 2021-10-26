@@ -11,6 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import dynsoft.xone.android.blueprint.Demo_ad_escActivity;
+import dynsoft.xone.android.blueprint.So_issue_Activity;
 import dynsoft.xone.android.control.ButtonTextCell;
 import dynsoft.xone.android.control.TextCell;
 import dynsoft.xone.android.core.App;
@@ -21,7 +22,9 @@ import dynsoft.xone.android.data.Result;
 import dynsoft.xone.android.data.ResultHandler;
 import dynsoft.xone.android.helper.XmlHelper;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -56,6 +59,9 @@ public class pn_so_issue_editor extends pn_editor {
     public TextCell txt_location_cell;
     public TextCell txt_onhand_cell;
     public ButtonTextCell txt_surplus_cell;
+
+    public Long order_id;
+
     public ImageButton btn_prev;
     public ImageButton btn_next;
 
@@ -86,6 +92,8 @@ public class pn_so_issue_editor extends pn_editor {
         this.txt_surplus_cell = (ButtonTextCell) this.findViewById(R.id.txt_surplus_cell);
         this.btn_prev = (ImageButton) this.findViewById(R.id.btn_prev);
         this.btn_next = (ImageButton) this.findViewById(R.id.btn_next);
+
+        order_id = this.Parameters.get("order_id", 0L);
 
         if (this.txt_issue_order_cell != null) {
             this.txt_issue_order_cell.setLabelText("销货通知");
@@ -151,7 +159,8 @@ public class pn_so_issue_editor extends pn_editor {
             this.txt_sn_no_cell.Button.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    String sn_nos = pn_so_issue_editor.this.txt_sn_no_cell.getContentText();
+                    String sn_nos = pn_so_issue_editor.this.txt_lot_number_cell.getContentText();
+                    if (!sn_nos.equals("")) print_Label();
 //                    pn_so_issue_editor.this.loadsnno(sn_nos);
                 }
             });
@@ -236,6 +245,7 @@ public class pn_so_issue_editor extends pn_editor {
         this.txt_issue_order_cell.setContentText(_order_code);
 
         this.loadTaskOrderItem(1L);
+        init_so_issue_order_head_info();
     }
 
     private Long _order_id;
@@ -244,6 +254,7 @@ public class pn_so_issue_editor extends pn_editor {
     private Integer _total = 0;
     private DataRow _order_row;
     private DataRow _lot_row;
+    private DataRow so_issue_row;
 
     public void prev() {
         if (_rownum > 1) {
@@ -425,7 +436,18 @@ public class pn_so_issue_editor extends pn_editor {
 
                 _lot_row = r.Value;
 
+                if (so_issue_row.getValue("attribute8", "").equals("08")
+                        || so_issue_row.getValue("attribute8", "").equals("14")
+                        || so_issue_row.getValue("attribute8", "").equals("16")) {
+                    print_Label();
+                } else {
+                    App.Current.question(pn_so_issue_editor.this.getContext(), "确定要打印吗？", (arg0, arg1) -> {
+                        print_Label();
+                    });
+                }
+
                 pn_so_issue_editor.this.showLotNumber(r.Value);
+
 
 
             }
@@ -591,6 +613,67 @@ public class pn_so_issue_editor extends pn_editor {
 
     }
 
+    private void init_so_issue_order_head_info() {
+        String sql = "exec p_get_mm_so_issue_order_info ?";
+        Parameters p = new Parameters().add(1, order_id);
+        App.Current.DbPortal.ExecuteRecordAsync(this.Connector, sql, p, new ResultHandler<DataRow>() {
+            @SuppressLint("HandlerLeak")
+            @Override
+            public void handleMessage(Message msg) {
+
+                pn_so_issue_editor.this.ProgressDialog.dismiss();
+
+                Result<DataRow> r = this.Value;
+                if (r.HasError) {
+                    App.Current.showError(pn_so_issue_editor.this.getContext(), r.Error);
+                    return;
+                }
+
+                so_issue_row = r.Value;
+
+
+            }
+        });
+    }
+
+    public void print_Label() {
+
+
+        final String[] items = {"霍尼韦尔", "芝柯"};
+
+        AlertDialog dialog1 = new AlertDialog.Builder(App.Current.Workbench).setTitle("请选择打印机")
+                .setItems(items, (dialogInterface, i) -> {
+                            if (i == 1) {
+                                String sql = "exec get_pint_date";
+                                Result<DataRow> value = App.Current.DbPortal.ExecuteRecord("core_and", sql);
+
+                                if (value.HasError) {
+                                    App.Current.toastError(pn_so_issue_editor.this.getContext(), value.Error);
+                                    return;
+                                }
+                                if (value.Value != null) {
+                                    Intent intent = new Intent();
+                                    intent.setClass(App.Current.Workbench, So_issue_Activity.class);
+                                    String cur_date = value.Value.getValue("cur_date", "");
+                                    intent.putExtra("cur_date", cur_date);
+                                    intent.putExtra("receive_address", so_issue_row.getValue("attribute1", ""));
+                                    intent.putExtra("receiver", so_issue_row.getValue("attribute10", ""));
+                                    intent.putExtra("phone", so_issue_row.getValue("attribute9", ""));
+
+                                    intent.putExtra("item_name", _lot_row.getValue("item_name", ""));
+                                    intent.putExtra("quantity", _lot_row.getValue("quantity", 0));
+                                    intent.putExtra("ut", _lot_row.getValue("ut", 0));
+                                    intent.putExtra("lot_number", _lot_row.getValue("lot_number", ""));
+                                    intent.putExtra("date_code", _lot_row.getValue("date_code", ""));
+
+                                    App.Current.Workbench.startActivity(intent);
+                                }
+                            }
+                        }
+                ).create();
+        dialog1.show();
+    }
+
     @Override
     public void commit() {
         if (_order_row == null) {
@@ -641,6 +724,7 @@ public class pn_so_issue_editor extends pn_editor {
                 return;
             }
         }
+
 
         if (binding_carton) {
             final EditText txt_split_qty = new EditText(getContext());
@@ -708,8 +792,7 @@ public class pn_so_issue_editor extends pn_editor {
                                 pn_so_issue_editor.this.loadTaskOrderItem(_rownum);
                             }
                         }
-                    }).setNegativeButton("取消", null)
-                    .show();
+                    }).setNegativeButton("取消", null).show();
         } else {
             String carton_no = this.txt_carton_no_cell.getContentText();
 

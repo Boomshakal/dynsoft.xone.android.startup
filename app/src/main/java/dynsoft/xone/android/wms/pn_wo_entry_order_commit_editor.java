@@ -410,6 +410,7 @@ public class pn_wo_entry_order_commit_editor extends pn_editor {
                     + "  \n  线别：" + line_name
                     + "  \n  物料编码：" + item_code
                     + "  \n  机型名称：" + item_name
+                    + "  \n  数量：" + this.txt_quantity_cell.getContentText()
                     + "  \n  时间：" + currentTime_str;
             String text = "MES缴库清尾确认通知\n" + content;
 
