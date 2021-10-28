@@ -61,6 +61,8 @@ public class pn_so_issue_editor extends pn_editor {
     public ButtonTextCell txt_surplus_cell;
 
     public Long order_id;
+    public BigDecimal sum_qty;
+    public BigDecimal sum_issued_qty;
 
     public ImageButton btn_prev;
     public ImageButton btn_next;
@@ -349,12 +351,15 @@ public class pn_so_issue_editor extends pn_editor {
                 binding_carton = row.getValue("binding_carton", false);
 
                 BigDecimal planned_qty = row.getValue("quantity", BigDecimal.ZERO);
+                sum_qty = row.getValue("sum_qty", BigDecimal.ZERO);
+                sum_issued_qty = row.getValue("issued_qty", BigDecimal.ZERO);
                 BigDecimal issued_qty = row.getValue("closed_quantity", BigDecimal.ZERO);
                 BigDecimal open_qty = planned_qty.subtract(issued_qty);
 
                 String qty_str = "总数:" + App.formatNumber(planned_qty, "0.##");
                 qty_str += "/已发:" + App.formatNumber(issued_qty, "0.##");
                 qty_str += "/未发:" + App.formatNumber(open_qty, "0.##");
+                qty_str += "/合计数:" + App.formatNumber(sum_qty, "0.##");
 
                 pn_so_issue_editor.this.txt_quantity_cell.setContentText(qty_str);
 
@@ -447,7 +452,6 @@ public class pn_so_issue_editor extends pn_editor {
                 }
 
                 pn_so_issue_editor.this.showLotNumber(r.Value);
-
 
 
             }
@@ -659,6 +663,8 @@ public class pn_so_issue_editor extends pn_editor {
                                     intent.putExtra("receive_address", so_issue_row.getValue("attribute1", ""));
                                     intent.putExtra("receiver", so_issue_row.getValue("attribute10", ""));
                                     intent.putExtra("phone", so_issue_row.getValue("attribute9", ""));
+                                    intent.putExtra("sum_qty", sum_qty.intValue());
+                                    intent.putExtra("issued_qty", sum_issued_qty.intValue());
 
                                     intent.putExtra("item_name", _lot_row.getValue("item_name", ""));
                                     intent.putExtra("quantity", _lot_row.getValue("quantity", 0));

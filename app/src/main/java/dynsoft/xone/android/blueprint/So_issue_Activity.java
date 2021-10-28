@@ -44,6 +44,7 @@ public class So_issue_Activity extends Activity {
     private String date_code;
     private String item_name;
     private String phone;
+    private String box_no;
     private String receiver;
     private String receive_address;
     private String receive_address0;
@@ -73,9 +74,10 @@ public class So_issue_Activity extends Activity {
 
 
         receiver = intent.getStringExtra("receiver");
-        phone = intent.getStringExtra("phone");
-
-        phone = phone.replaceAll("(\\d{3})\\d{4}(\\d{4})", "$1****$2");
+        box_no = String.valueOf(intent.getIntExtra("sum_qty", 0))
+                + " - " + String.valueOf(intent.getIntExtra("issued_qty", 0) + 1);
+//        phone = intent.getStringExtra("phone");
+//        phone = phone.replaceAll("(\\d{3})\\d{4}(\\d{4})", "$1****$2");
 
 
         item_name = intent.getStringExtra("item_name");
@@ -276,8 +278,8 @@ public class So_issue_Activity extends Activity {
         zkPrinter.drawText(25, 20, "收件人", 2, 0, true, false, false);
         zkPrinter.drawText(25, 90, "收件地址", 2, 0, true, false, false);
 //        zkPrinter.drawText(25, 110, "收件地址", 2, 0, true, false, false);
-        zkPrinter.drawText(25, 160, "联系方式", 2, 0, true, false, false);
-        zkPrinter.drawText(25, 210, "品名", 2, 0, true, false, false);
+        zkPrinter.drawText(25, 160, "品名", 2, 0, true, false, false);
+        zkPrinter.drawText(25, 210, "箱号", 2, 0, true, false, false);
 //        zkPrinter.DrawBarcode1D(80, 260, App.Current.UserCode + "," + format, "128", 1, 25, 0);
         zkPrinter.drawText(150, 260, App.Current.UserCode + "," + cur_date, 2, 0, true, false, false);
 //        zkPrinter.DrawBarcodeQRcode(330, 15, "R:" + item_code, 2, "128", 2);
@@ -285,8 +287,8 @@ public class So_issue_Activity extends Activity {
         zkPrinter.drawText(160, 20, receiver, 2, 0, true, false, false);
         zkPrinter.drawText(160, 70, receive_address0, 2, 0, true, false, false);
         zkPrinter.drawText(160, 110, receive_address1, 2, 0, true, false, false);
-        zkPrinter.drawText(160, 160, phone, 2, 0, true, false, false);
-        zkPrinter.drawText(160, 210, item_name, 2, 0, true, false, false);
+        zkPrinter.drawText(160, 160, item_name, 2, 0, true, false, false);
+        zkPrinter.drawText(160, 210, box_no, 2, 0, true, false, false);
 
         //        zkPrinter.DrawBarcode1D(520, 10, "1081606261422", "128", 1, 45, 0);
 //        zkPrinter.DrawBarcodeQRcode(101 - 16, 875 - 864, "1081606261422", 1, "128", 45);

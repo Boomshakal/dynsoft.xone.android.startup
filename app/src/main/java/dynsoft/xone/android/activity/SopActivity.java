@@ -10,6 +10,7 @@ import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
+import android.media.MediaScannerConnection;
 import android.os.Bundle;
 import android.os.Message;
 import android.os.SystemClock;
@@ -55,6 +56,7 @@ import dynsoft.xone.android.data.Result;
 import dynsoft.xone.android.data.ResultHandler;
 import dynsoft.xone.android.sopactivity.CardRegistrationActivity;
 import dynsoft.xone.android.sopactivity.ProductionKanbanActivity;
+import dynsoft.xone.android.sopactivity.SetParameterActivity;
 import dynsoft.xone.android.zoom.PhotoView;
 import dynsoft.xone.android.zoom.ViewPagerFixed;
 
@@ -154,12 +156,12 @@ public class SopActivity extends Activity implements SpeechSynthesizerListener {
             linearlayout_worker.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-//                    Intent intent = new Intent(SopActivity.this, SetParameterActivity.class);
-//                    startActivity(intent);
-                    Intent intent1 = new Intent(SopActivity.this, MesLightActivity.class);
+                    Intent intent = new Intent(SopActivity.this, SetParameterActivity.class);
+                    startActivity(intent);
+//                    Intent intent1 = new Intent(SopActivity.this, MesLightActivity.class);
 //                    intent1.putExtra("has_exception", hasException);
 //                    intent1.putStringArrayListExtra("exception_types", exception_types);
-                    startActivity(intent1);
+//                    startActivity(intent1);
                 }
             });
         }
@@ -400,6 +402,7 @@ public class SopActivity extends Activity implements SpeechSynthesizerListener {
         }
         return ip;
     }
+
 
 
     private void initTextDatas() {

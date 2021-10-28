@@ -39,13 +39,13 @@ public class pn_mm_handover_list_mgr extends pn_mgr {
        // this.txt_cell = (EditText) this
                // .findViewById(R.id.txt_search);
 
-        this.Matrix.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                putDialog2(i);
-
-            }
-        });
+//        this.Matrix.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                putDialog2(i);
+//
+//            }
+//        });
 	}
 	
     @Override

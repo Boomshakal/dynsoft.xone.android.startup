@@ -491,6 +491,12 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
     }
 
     private void onScanned(String edittext) {
+        if (edittext.startsWith("M") && edittext.length() == 9) {
+            getWorkerId(edittext);
+            App.Current.toastInfo(ScanTestActivity.this,"设置作业人员成功");
+            return;
+        }
+
         if (!check_barcode(edittext)) {
             return;
         }
@@ -607,7 +613,7 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
                                 }
                                 if (work_type.equals("part")) {
                                     final String sql_str = "exec p_fm_work_check_barcode_for_part_and_v1 ?,?,?";
-                                    Parameters pr = new Parameters().add(1, edittext).add(2, task_order_id).add(3,scanString.get(0));
+                                    Parameters pr = new Parameters().add(1, edittext).add(2, task_order_id).add(3, scanString.get(0));
                                     String value_r = App.Current.DbPortal.ExecuteScalar("core_and", sql_str, pr).Value.toString();
                                     if (!value_r.equals("OK")) {
                                         App.Current.toastError(ScanTestActivity.this, value_r);
@@ -1857,6 +1863,9 @@ public class ScanTestActivity extends BaseActivity implements View.OnTouchListen
         }
         if (result.Value != null) {
             worker_id = result.Value.getValue("id", 0);
+            edit.putInt("worker_id",worker_id);
+            edit.putString("work_code", code);
+            edit.commit();
         }
     }
 
